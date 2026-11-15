@@ -39,6 +39,8 @@ Build commands:
 | `npm run verify:migration` | Strict check runner: nonzero if any check fails, including an existing advisory |
 | `npm run security:source -- --history` | Common credential-pattern scan of tracked/current files and Git history; findings print names only |
 
+After deployment, `python3 scripts/check-live-site.py --target preview` checks every published static file against its local build, the old website's availability and exact production CORS/private-report behavior without submitting events. Use `--target custom` after domain activation. `--skip-cors` is only for checking frontend readiness before the backend environment revision is applied; full acceptance includes CORS. Results explicitly distinguish these HTTP checks from browser interaction QA.
+
 ## Validation and existing advisories
 
 The full suite includes source security, project/mission/progression tests, all existing routes, analytics and real SQLite queries, transfer/restore failure handling, release-policy rejection tests, lint, TypeScript, both ranking-balance checks, backend build, three Pages build variants, bundle asset graphs and the original-origin recovery exporter.
