@@ -3,6 +3,7 @@ import {readFileSync,writeFileSync,mkdirSync} from 'node:fs';
 import {spawnSync} from 'node:child_process';
 const html=readFileSync('.sites-runtime/impact-preview/index.html','utf8');
 assert.ok(html.includes('DEMO FIXTURES'));assert.ok(html.includes('NOT REAL'));assert.ok(html.includes('No production data'));
+assert.ok(html.includes('Access states')&&html.includes('Administrator access required.')&&html.includes('DEMO AUTHORIZATION STATES'),'Preview must show the actual independent-administrator access wording and explicit demo boundaries');
 assert.ok(!/<script\b[^>]*\bsrc=/.test(html),'Preview must not depend on an external JavaScript file');
 assert.ok(!/<link\b[^>]*rel="stylesheet"/.test(html),'Preview stylesheet must be embedded');
 assert.ok(!/data-cf-beacon=/.test(html),'The preview must not embed an executable Cloudflare snippet');

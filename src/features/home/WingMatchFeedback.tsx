@@ -568,7 +568,7 @@ function WingMatchFeedback() {
         </div>
 
 
-        <label className="impact-check"><input type="checkbox" checked={feedbackPermission} onChange={e=>setFeedbackPermission(e.target.checked)}/>I choose to send these anonymous ratings and any written feedback to AltWing’s owner.</label>
+        <label className="impact-check"><input type="checkbox" checked={feedbackPermission} onChange={e=>setFeedbackPermission(e.target.checked)}/>I choose to send these anonymous ratings and any written feedback to AltWing’s authorized administrators.</label>
         <label className="impact-check"><input type="checkbox" checked={quotePermission} disabled={!reflection.trim()} onChange={e=>setQuotePermission(e.target.checked)}/>Separately, I allow anonymous public quoting of my written feedback. This permission is optional.</label>
         {error && (
           <p

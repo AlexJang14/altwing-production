@@ -51,7 +51,7 @@ Two checks already fail in the unchanged deployed release: all 42 program verifi
 
 GitHub Pages serves static files. The existing backend remains **https://altwing-engineering-pathways.theanna.chatgpt.site**, using the existing Sites project and D1 binding in `.openai/hosting.json`. The current connected Sites account has the owner role. The complete backend source is included here, but pushing to GitHub deploys the frontend only; backend releases remain a separate Sites operation.
 
-The analytics dashboard continues to use its existing Sign in with ChatGPT protection on that backend. No auth token, session cookie, database credential or signing secret is copied into JavaScript or repository configuration. Existing analytics history stays in the same D1 database. `ANALYTICS_ADMIN_EMAIL` and `ANALYTICS_INGEST_SECRET` remain server-side.
+The analytics dashboard continues to use its existing Sign in with ChatGPT protection on that backend. No auth token, session cookie, database credential or signing secret is copied into JavaScript or repository configuration. Existing analytics history stays in the same D1 database. `ANALYTICS_ADMIN_EMAIL`, the optional `ANALYTICS_ADDITIONAL_ADMIN_EMAILS` allowlist, and `ANALYTICS_INGEST_SECRET` remain server-side. See [administrator access](ADMIN-ACCESS.md) for configuration, validation and rollback; an additional administrator does not receive Site ownership or infrastructure privileges.
 
 The only required runtime configuration change is to merge these exact origins into `ANALYTICS_ALLOWED_ORIGINS`:
 

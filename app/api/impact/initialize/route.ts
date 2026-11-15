@@ -1,7 +1,7 @@
 import {analyticsAuthorization,analyticsDb,json} from '../../../../lib/analytics-server';
 export async function POST(request:Request){
-  const access=await analyticsAuthorization();if(access!==200)return json({error:'Owner sign-in is required.'},access);
-  if(request.headers.get('Origin')!==new URL(request.url).origin)return json({error:'Same-origin owner requests only.'},403);
+  const access=await analyticsAuthorization();if(access!==200)return json({error:'Administrator sign-in is required.'},access);
+  if(request.headers.get('Origin')!==new URL(request.url).origin)return json({error:'Same-origin administrator requests only.'},403);
   try{
     const db=analyticsDb(),now=Math.floor(Date.now()/1000);
     // These are bounded data operations after the schema-only migration. D1

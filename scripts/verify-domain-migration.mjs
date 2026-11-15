@@ -5,6 +5,7 @@ const commands=[
  ['source-security','npm',['run','security:source']],
  ['submission','npm',['run','test:submission']],
  ['analytics','npm',['run','test:analytics']],
+ ['administrator-access','npm',['run','test:admin-access']],
  ['educational-impact','npm',['run','test:impact']],
  ['cloudflare-privacy','npm',['run','test:cloudflare']],
  ['impact-preview-build','npm',['run','build:impact-preview']],

@@ -4,7 +4,7 @@ import {cleanImpactRetention} from '../../../../lib/impact-retention';
 export const dynamic='force-dynamic';
 const columns='sessions,page_views,mission_starts,mission_completions,wingmatch_starts,wingmatch_completions,wingmatch_conversions';
 export async function GET(request:Request){
-  const access=await analyticsAuthorization();if(access!==200)return json({error:access===401?'Sign in to view impact reports.':'Owner access required.'},access);
+  const access=await analyticsAuthorization();if(access!==200)return json({error:access===401?'Sign in to view impact reports.':'Administrator access is required.'},access);
   const range=impactRange(new URL(request.url).searchParams);if(!range)return json({error:'Choose valid UTC dates with a start before the end, up to today.'},400);
   try{
     const db=analyticsDb(),metrics=columns.split(',');

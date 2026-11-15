@@ -18,6 +18,7 @@
     "data:scorecard-probe": "node scripts/scorecard-api.mjs --probe",
     "data:scorecard-api": "node scripts/scorecard-api.mjs",
     "test:analytics": "node scripts/check-analytics.mjs",
+    "test:admin-access": "node scripts/check-admin-access.mjs",
     "test:impact": "node scripts/check-impact.mjs",
     "test:cloudflare": "node scripts/check-cloudflare.mjs",
     "build:impact-preview": "vite build --config vite.impact-preview.config.ts",

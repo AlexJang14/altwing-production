@@ -2,7 +2,7 @@ import { analyticsAuthorization, analyticsDb, json } from '../../../../lib/analy
 import { reportDays } from '../../../../lib/analytics-validation';
 export const dynamic='force-dynamic';
 export async function GET(request:Request){
-  const access=await analyticsAuthorization();if(access!==200)return json({error:access===401?'Sign in to view analytics.':'This dashboard is available to the site owner only.'},access);
+  const access=await analyticsAuthorization();if(access!==200)return json({error:access===401?'Sign in to view analytics.':'Administrator access is required.'},access);
   try{
     const days=reportDays(new URL(request.url).searchParams.get('days')),now=Math.floor(Date.now()/1000),since=days===1?Math.floor(now/86400)*86400:Math.floor(now/86400)*86400-(days-1)*86400,db=analyticsDb();
     const results=await db.batch([

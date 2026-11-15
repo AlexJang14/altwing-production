@@ -4,7 +4,7 @@ import {cleanImpactRetention} from '../../../../lib/impact-retention';
 import {csvCell} from '../../../../src/features/analytics/impactExports';
 export const dynamic='force-dynamic';
 export async function GET(request:Request){
-  const access=await analyticsAuthorization();if(access!==200)return json({error:'Owner sign-in is required.'},access);
+  const access=await analyticsAuthorization();if(access!==200)return json({error:'Administrator sign-in is required.'},access);
   const params=new URL(request.url).searchParams,range=impactRange(params),kind=params.get('kind')??'ratings';
   if(!range||!['ratings','feedback'].includes(kind))return json({error:'Invalid export period or kind.'},400);
   try{
