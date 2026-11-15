@@ -32,6 +32,8 @@ dist-ssr
 !.env.example
 *.pem
 *.p12
+__pycache__/
+*.py[cod]
 
 # AltWing local development snapshots
 *.before-*

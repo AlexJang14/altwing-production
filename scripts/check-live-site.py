@@ -50,10 +50,10 @@ with ThreadPoolExecutor(max_workers=8) as pool:
     results.extend(pool.map(check_asset, sorted(files)))
 
 status, final, headers, body = request('https://junjang06.github.io/altwing/')
-original = Path('/tmp/altwing-current-live.html')
+original = json.loads(Path('deployment/original-site.json').read_text())
 results.append({'name': 'old deployment remains available', 'status': status, 'url': final,
                 'passed': status == 200 and final == 'https://junjang06.github.io/altwing/'
-                and (not original.exists() or original.read_bytes() == body)})
+                and original['indexSha256'] == sha256(body).hexdigest()})
 
 if not args.skip_cors:
     origins = ['https://junjang06.github.io', 'https://alexjang14.github.io', 'https://altwing.org', 'https://www.altwing.org']
