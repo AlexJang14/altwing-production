@@ -1,4 +1,5 @@
 import { trackEvent } from '../analytics/analytics';
+import ImpactSurvey,{RatingQuestion} from '../analytics/ImpactSurvey';
 import { useEffect, useMemo, useState, type CSSProperties } from "react";
 import posthog, { isPostHogConfigured } from "../../posthog";
 import PackReadyBanner from "../home/PackReadyBanner";
@@ -93,12 +94,13 @@ export default function EngineeringMatch({
   onOpenUniverse,
 }: EngineeringMatchProps) {
   const [initialDraft] = useState(() => {
-    const raw = readJSON<{started?: boolean; questionIndex?: number; answers?: Record<string,string>; result?: EngineeringMatchResult} | null>("altwing-match-draft-v1", null);
+    const raw = readJSON<{started?: boolean; questionIndex?: number; answers?: Record<string,string>; result?: EngineeringMatchResult; beforeUnderstanding?: number} | null>("altwing-match-draft-v1", null);
     const answers: Record<string,string> = {};
     if (raw?.answers && typeof raw.answers === "object") ENGINEERING_MATCH_QUESTIONS.forEach(q => {if(q.options.some(o=>o.id===raw.answers?.[q.id])) answers[q.id]=raw.answers![q.id];});
     const validResult=raw?.result && Array.isArray(raw.result.rankings) && raw.result.rankings.length>0 && raw.result.rankings.every(r=>r && Object.hasOwn(ENGINEERING_MAJOR_MAP,r.majorId))?raw.result:null;
-    return {started:raw?.started===true,questionIndex:Number.isInteger(raw?.questionIndex)?Math.max(0,Math.min(7,raw!.questionIndex!)):0,answers,result:validResult};
+    return {started:raw?.started===true,questionIndex:Number.isInteger(raw?.questionIndex)?Math.max(0,Math.min(7,raw!.questionIndex!)):0,answers,result:validResult,beforeUnderstanding:Number.isInteger(raw?.beforeUnderstanding)&&raw!.beforeUnderstanding!>=1&&raw!.beforeUnderstanding!<=5?raw!.beforeUnderstanding!:null};
   });
+  const [beforeUnderstanding,setBeforeUnderstanding]=useState<number|null>(initialDraft.beforeUnderstanding);
   const [started, setStarted] = useState(initialDraft.started);
   const [questionIndex, setQuestionIndex] = useState(initialDraft.questionIndex);
   const [answers, setAnswers] = useState<Record<string, string>>(initialDraft.answers);
@@ -106,7 +108,7 @@ export default function EngineeringMatch({
   const [result, setResult] = useState<EngineeringMatchResult | null>(initialDraft.result);
   const [guideOpen, setGuideOpen] = useState(false);
 
-  useEffect(() => { writeLocal("altwing-match-draft-v1", JSON.stringify({version:1,started,questionIndex,answers,result})); }, [started,questionIndex,answers,result]);
+  useEffect(() => { writeLocal("altwing-match-draft-v1", JSON.stringify({version:1,started,questionIndex,answers,result,beforeUnderstanding})); }, [started,questionIndex,answers,result,beforeUnderstanding]);
   const question = ENGINEERING_MATCH_QUESTIONS[questionIndex];
   const selectedOptionId = question ? answers[question.id] : undefined;
   const activeOptionId = hoveredOptionId ?? selectedOptionId ?? null;
@@ -185,6 +187,7 @@ export default function EngineeringMatch({
               <article><b>02</b><strong>No right answer</strong><span>Choose the move you genuinely want to make first.</span></article>
               <article><b>03</b><strong>One connected shift</strong><span>Each incident reveals another way you approach engineering problems.</span></article>
             </div>
+            <RatingQuestion label="Optional before rating: how well do you understand your engineering interests now? (1–5)" value={beforeUnderstanding} onChange={setBeforeUnderstanding} optional/>
             <button type="button" className="guidance-primary-button scenario-begin-button" onClick={() => {setStarted(true);trackEvent('WingMatch Started');}}>Launch WingMatch</button>
           </div>
 
@@ -242,6 +245,7 @@ export default function EngineeringMatch({
           </section>
         )}
 
+        <ImpactSurvey key={result.completedAt} before={beforeUnderstanding}/>
         <section className="match-result-grid">
           {topThree.map((item, index) => {
             const major = ENGINEERING_MAJOR_MAP[item.majorId];

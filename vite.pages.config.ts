@@ -6,7 +6,7 @@ const target = pagesTarget(process.env.ALTWING_PAGES_TARGET || 'custom');
 const socialImage = `${target.canonical}brand/altwing-penguin.png`;
 export default defineConfig({
   base: target.base,
-  define: { __ALTWING_API_ORIGIN__: JSON.stringify(API_ORIGIN) },
+  define: { __ALTWING_API_ORIGIN__: JSON.stringify(API_ORIGIN), __ALTWING_PRODUCTION_ANALYTICS__: JSON.stringify(Boolean(target.domain)) },
   plugins: [{
     name: 'altwing-pages-domain',
     enforce: 'pre',

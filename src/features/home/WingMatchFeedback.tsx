@@ -1,3 +1,5 @@
+import {submitImpactFeedback} from '../analytics/analytics';
+import {IMPACT_VERSION} from '../analytics/impactTypes';
 import {
   useEffect,
   useState,
@@ -8,6 +10,7 @@ import posthog, {
 } from "../../posthog";
 
 import "./wingmatch-feedback.css";
+import "../analytics/impact.css";
 
 
 const FEEDBACK_PENDING_KEY =
@@ -167,6 +170,8 @@ function Rating({
 
 
 function WingMatchFeedback() {
+  const [submissionId]=useState(()=>crypto.randomUUID());
+  const [submitting,setSubmitting]=useState(false),[feedbackPermission,setFeedbackPermission]=useState(false),[quotePermission,setQuotePermission]=useState(false);
 
   const [
     open,
@@ -355,138 +360,17 @@ function WingMatchFeedback() {
   );
 
 
-  function submitFeedback() {
-
-    if (
-      understanding ===
-        null ||
-      direction ===
-        null ||
-      action ===
-        null
-    ) {
-      setError(
-        "Please answer the three rating questions.",
-      );
-
-      return;
-    }
-
-    const wing =
-      readSavedWing();
-
-    if (!wing?.selectedAt) {
-      setError(
-        "We could not connect this feedback to your WingMatch result.",
-      );
-
-      return;
-    }
-
-    /*
-     * Do not pretend feedback was
-     * saved if analytics is offline.
-     */
-    if (!isPostHogConfigured) {
-      setError(
-        "Feedback analytics are not connected right now. Your response has not been submitted.",
-      );
-
-      return;
-    }
-
-    const cleanReflection =
-      reflection
-        .trim()
-        .slice(
-          0,
-          400,
-        );
-
-    const averageScore =
-      Number(
-        (
-          (
-            understanding +
-            direction +
-            action
-          ) /
-          3
-        ).toFixed(
-          2,
-        ),
-      );
-
-
-    /*
-     * This is the central dataset.
-     */
-    posthog.capture(
-      "wingmatch_feedback_submitted",
-      {
-        feedback_version:
-          "v1",
-
-        understanding_score:
-          understanding,
-
-        direction_score:
-          direction,
-
-        action_score:
-          action,
-
-        average_score:
-          averageScore,
-
-        reflection_provided:
-          cleanReflection.length >
-          0,
-
-        reflection_text:
-          cleanReflection ||
-          null,
-
-        reflection_length:
-          cleanReflection.length,
-
-        selected_wing_id:
-          wing.id,
-
-        recommended_wing_id:
-          wing.recommendedWing ??
-          null,
-
-        source:
-          wing.source ??
-          "wingmatch-v7",
-      },
-    );
-
-
-    /*
-     * Local storage remembers only
-     * that this specific WingMatch
-     * result submitted feedback.
-     */
-    localStorage.setItem(
-      submittedKey(
-        wing.selectedAt,
-      ),
-      "1",
-    );
-
-    localStorage.removeItem(
-      FEEDBACK_PENDING_KEY,
-    );
-
-    setError(
-      "",
-    );
-
-    setSubmitted(
-      true,
-    );
+  async function submitFeedback() {
+    if(submitting)return;
+    if(understanding===null||direction===null||action===null){setError('Please answer the three rating questions.');return;}
+    if(!feedbackPermission){setError('Please confirm that you choose to share this optional anonymous feedback.');return;}
+    const wing=readSavedWing();if(!wing?.selectedAt){setError('We could not connect this feedback to your WingMatch result.');return;}
+    setSubmitting(true);setError('');
+    try{
+      await submitImpactFeedback({id:submissionId,version:IMPACT_VERSION,source:'legacy-wingmatch',legacy_understanding:understanding,legacy_direction:direction,legacy_action:action,testimonial:reflection.trim().slice(0,400),feedback_permission:true,quote_permission:quotePermission&&Boolean(reflection.trim())});
+      try{localStorage.setItem(submittedKey(wing.selectedAt),'1');localStorage.removeItem(FEEDBACK_PENDING_KEY);}catch{/* A successful database save does not depend on local storage. */}
+      setSubmitted(true);setReflection('');
+    }catch(error){setError((error as Error).message);}finally{setSubmitting(false);}
   }
 
 
@@ -684,6 +568,8 @@ function WingMatchFeedback() {
         </div>
 
 
+        <label className="impact-check"><input type="checkbox" checked={feedbackPermission} onChange={e=>setFeedbackPermission(e.target.checked)}/>I choose to send these anonymous ratings and any written feedback to AltWing’s owner.</label>
+        <label className="impact-check"><input type="checkbox" checked={quotePermission} disabled={!reflection.trim()} onChange={e=>setQuotePermission(e.target.checked)}/>Separately, I allow anonymous public quoting of my written feedback. This permission is optional.</label>
         {error && (
           <p
             className="awfb-error"
@@ -709,11 +595,12 @@ function WingMatchFeedback() {
           <button
             type="button"
             className="awfb-submit"
+            disabled={submitting}
             onClick={
               submitFeedback
             }
           >
-            SUBMIT FEEDBACK →
+            {submitting?'SAVING…':'SUBMIT FEEDBACK →'}
           </button>
 
         </div>
@@ -722,8 +609,7 @@ function WingMatchFeedback() {
         <small className="awfb-privacy">
           Anonymous product feedback.
           Ratings and the optional
-          reflection are sent to
-          AltWing analytics.
+          reflection are sent to AltWing’s database only when you choose to submit them.
         </small>
 
       </section>

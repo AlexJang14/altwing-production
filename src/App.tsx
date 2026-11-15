@@ -11,6 +11,7 @@ import type { EngineeringMajorId, GuidanceTab } from './features/guidance/guidan
 import { readEngineeringMatch, readSelectedMajor, saveSelectedMajor } from './features/guidance/guidanceStorage';
 import { parseRoute, routeTo, type AppView } from './lib/routes';
 import {normalizeHomeAddress} from './lib/domainRouting';
+import {startCloudflareBeacon} from './features/analytics/cloudflareBeacon';
 const EngineeringMatch = lazy(() => import('./features/guidance/EngineeringMatch'));
 const EngineeringExplorer = lazy(() => import('./features/guidance/EngineeringExplorer'));
 const CounselorHub = lazy(() => import('./features/guidance/CounselorHub'));
@@ -31,6 +32,7 @@ function App() {
   const hash = useSyncExternalStore(subscribe, () => window.location.hash);
   const route = parseRoute(hash);
   useEffect(()=>{if(normalizeHomeAddress())window.dispatchEvent(new Event('hashchange'));},[]);
+  useEffect(startCloudflareBeacon,[]);
   useEffect(() => {trackPage(hash);},[hash]);
   useEffect(() => {document.addEventListener('click',trackNavigation);return()=>document.removeEventListener('click',trackNavigation);},[]);
   const selectedMajor = route.major ?? readSelectedMajor() ?? readEngineeringMatch()?.rankings[0]?.majorId ?? 'mechanical';

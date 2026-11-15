@@ -1,15 +1,21 @@
 import { analyticsEndpoint } from './analyticsEndpoint';
-import { readLocal, writeLocal } from '../../lib/storage';
+import { writeLocal,invalidateCachedLocal } from '../../lib/storage';
 import { EVENT_NAMES, pageContext, routeKey, safeProperties, type AnalyticsEventName } from './analyticsModel';
+import {browserPrivacyBlocked,usageTrackingAllowed,productionTrackingAllowed} from './trackingPolicy';
+import type {ImpactSubmission} from './impactTypes';
 const listeners=new Set<()=>void>();
 let revision=0,lastKey='',lastPage='',lastTime=0;
 let fallbackSession={id:crypto.randomUUID(),last:0};
 try{sessionStorage.removeItem('altwing-analytics-session-v1');sessionStorage.removeItem('altwing-mixpanel-session-id');}catch{/* Old diagnostics are no longer used. */}
 export function subscribeAnalytics(listener:()=>void){listeners.add(listener);return()=>{listeners.delete(listener);};}
 export function analyticsRevision(){return revision;}
-export function doNotTrack(){return navigator.doNotTrack==='1' || (navigator as Navigator & {globalPrivacyControl?:boolean}).globalPrivacyControl===true;}
-export function analyticsEnabled(){return readLocal('altwing-analytics-consent-v1')!=='no' && !doNotTrack();}
-export function setAnalyticsConsent(value:'yes'|'no'){writeLocal('altwing-analytics-consent-v1',value);lastKey='';lastPage='';lastTime=0;revision++;listeners.forEach(fn=>fn());}
+export function doNotTrack(){return browserPrivacyBlocked();}
+export function analyticsEnabled(){return usageTrackingAllowed();}
+export function setAnalyticsConsent(value:'yes'|'no'){writeLocal('altwing-analytics-consent-v1',value);lastKey='';lastPage='';lastTime=0;revision++;listeners.forEach(fn=>fn());if(typeof window!=='undefined')window.dispatchEvent(new Event('altwing:analytics-consent'));}
+if(typeof window!=='undefined'&&typeof window.addEventListener==='function')window.addEventListener('storage',event=>{
+  if(event.key!==null&&event.key!=='altwing-analytics-consent-v1')return;
+  invalidateCachedLocal('altwing-analytics-consent-v1');lastKey='';lastPage='';lastTime=0;revision++;listeners.forEach(fn=>fn());window.dispatchEvent(new Event('altwing:analytics-consent'));
+});
 function sessionId(){
   let value=fallbackSession;const now=Date.now();
   try{const stored=JSON.parse(sessionStorage.getItem('altwing-visit-session-v1')??'null');if(stored && typeof stored.id==='string' && /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(stored.id) && Number.isFinite(stored.last) && stored.last<=now)value=stored;}catch{/* Use memory fallback. */}
@@ -28,6 +34,7 @@ function visitCapability(id:string){
     .then(token=>{if(!token)entry.expires=Date.now()+5000;return token;});
   capabilityCache=entry;return entry.promise;
 }
+const milestones=new Set<string>();
 export function trackEvent(event:AnalyticsEventName,properties:Record<string,unknown>={}){
   if(/^#\/?progress-transfer(?:\?|$)/.test(location.hash))return;
   if(!EVENT_NAMES.includes(event) || !analyticsEnabled())return;
@@ -37,11 +44,23 @@ export function trackEvent(event:AnalyticsEventName,properties:Record<string,unk
   // First-party, anonymous, write-only ingestion. No history or identity in the browser.
   const generation=revision;
   const payload={id:crypto.randomUUID(),session_id:sessionId(),event,properties:clean};
+  if(['Mission Started','Mission Completed'].includes(event)){
+    const key=[payload.session_id,event,clean.project??clean.wing].join(':');if(milestones.has(key))return;milestones.add(key);
+  }
   void visitCapability(payload.session_id).then(token=>{
     if(!token || !analyticsEnabled() || generation!==revision)return;
     return fetch(analyticsEndpoint('/api/analytics/events'),{method:'POST',headers:{'Content-Type':'application/json','X-AltWing-Visit':token},body:JSON.stringify(payload),credentials:'omit',referrerPolicy:'no-referrer',keepalive:true,signal:AbortSignal.timeout(8000)})
       .then(response=>{if(response.status===403 && capabilityCache?.session===payload.session_id)capabilityCache=null;});
   }).catch(()=>{});
+}
+export async function submitImpactFeedback(value:Omit<ImpactSubmission,'session_id'>){
+  if(!productionTrackingAllowed())throw Error('Feedback submission is disabled in development and previews.');
+  const id=sessionId(),token=await visitCapability(id);
+  if(!token)throw Error('Feedback could not be authorized. Please retry.');
+  const response=await fetch(analyticsEndpoint('/api/impact/surveys'),{method:'POST',headers:{'Content-Type':'application/json','X-AltWing-Visit':token},body:JSON.stringify({...value,session_id:id}),credentials:'omit',referrerPolicy:'no-referrer',signal:AbortSignal.timeout(10000)});
+  const result=await response.json() as {error?:string;accepted?:boolean};
+  if(!response.ok||!result.accepted){if(response.status===403)capabilityCache=null;throw Error(result.error??'Feedback was not saved. Please retry.');}
+  return true;
 }
 export function trackPage(hash:string){
   if(/^#\/?progress-transfer(?:\?|$)/.test(hash)){lastKey='';lastPage='';lastTime=0;return;}

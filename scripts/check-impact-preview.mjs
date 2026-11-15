@@ -1,0 +1,14 @@
+import assert from 'node:assert/strict';
+import {readFileSync,writeFileSync,mkdirSync} from 'node:fs';
+import {spawnSync} from 'node:child_process';
+const html=readFileSync('.sites-runtime/impact-preview/index.html','utf8');
+assert.ok(html.includes('DEMO FIXTURES'));assert.ok(html.includes('NOT REAL'));assert.ok(html.includes('No production data'));
+assert.ok(!/<script\b[^>]*\bsrc=/.test(html),'Preview must not depend on an external JavaScript file');
+assert.ok(!/<link\b[^>]*rel="stylesheet"/.test(html),'Preview stylesheet must be embedded');
+assert.ok(!/data-cf-beacon=/.test(html),'The preview must not embed an executable Cloudflare snippet');
+const script=html.match(/<script type="module">([\s\S]*?)<\/script>/)?.[1];assert.ok(script);
+mkdirSync('.sites-runtime/impact-preview-check',{recursive:true});writeFileSync('.sites-runtime/impact-preview-check/inline.mjs',script);
+const parsed=spawnSync(process.execPath,['--check','.sites-runtime/impact-preview-check/inline.mjs'],{encoding:'utf8'});assert.equal(parsed.status,0,parsed.stderr);
+const migration=readFileSync('drizzle/0001_impact_measurement.sql','utf8');
+for(const statement of migration.split('--> statement-breakpoint').map(value=>value.trim()).filter(Boolean))assert.ok(/^(CREATE|ALTER)\b/.test(statement),'Keep hosted migrations schema-only; data backfill belongs in the bounded owner endpoint');
+console.log('PASS: self-contained actual-component preview, clearly marked demo data, embedded CSS/JS, valid inline module, no executable beacon snippet, and schema-only migration with separate owner backfill');

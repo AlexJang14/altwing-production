@@ -6,6 +6,7 @@ import { createRequire } from 'node:module';
 import { DatabaseSync } from 'node:sqlite';
 const nativeRequire=createRequire(import.meta.url),sqlite=new DatabaseSync(':memory:');
 sqlite.exec(fs.readFileSync('drizzle/0000_reflective_shockwave.sql','utf8'));
+sqlite.exec(fs.readFileSync('drizzle/0001_impact_measurement.sql','utf8'));
 let authHeaders=new Headers();
 const env={ANALYTICS_ADMIN_EMAIL:'owner@example.test',ANALYTICS_INGEST_SECRET:'test-only-ingestion-secret',DB:{
  prepare(sql){return {sql,args:[],bind(...args){this.args=args;return this;},async run(){const result=sqlite.prepare(this.sql).run(...this.args);return {meta:{changes:result.changes}};},async all(){return {results:sqlite.prepare(this.sql).all(...this.args)};}};},
@@ -55,7 +56,7 @@ const limited=crypto.randomUUID();for(let i=0;i<61;i++)await ingest.POST(await r
 const store=new Map(),session=new Map(),calls=[];
 globalThis.localStorage={getItem:k=>store.get(k)??null,setItem:(k,v)=>store.set(k,v)};
 globalThis.sessionStorage={getItem:k=>session.get(k)??null,setItem:(k,v)=>session.set(k,v),removeItem:k=>session.delete(k)};
-globalThis.location={hash:'#/'};globalThis.window={dispatchEvent(){}};
+globalThis.__ALTWING_PRODUCTION_ANALYTICS__=true;globalThis.location={hash:'#/',origin:'https://altwing.org'};globalThis.window={dispatchEvent(){}};
 Object.defineProperty(globalThis,'navigator',{value:{doNotTrack:'0',globalPrivacyControl:false},configurable:true});
 globalThis.fetch=async(url,options)=>{calls.push({url,options});return {ok:true,json:async()=>({token:'signed-local-test-token'})};};
 const analytics=load('src/features/analytics/analytics.ts');

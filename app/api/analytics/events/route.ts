@@ -12,12 +12,16 @@ async function ingest(request:Request){
   let input:unknown;try{input=JSON.parse(new TextDecoder().decode(Uint8Array.from(chunks.flatMap(chunk=>Array.from(chunk)))));}catch{return json({error:'Invalid JSON.'},400);}
   const event=validateEvent(input);if(!event)return json({error:'Invalid event.'},400);
   if(!await verifyVisit(request.headers.get('X-AltWing-Visit'),event.sessionId,env.ANALYTICS_INGEST_SECRET))return json({error:'Invalid visit authorization.'},403);
+  if(request.headers.get('DNT')==='1'||request.headers.get('Sec-GPC')==='1')return json({accepted:true,recorded:false},202);
   try{
     const db=analyticsDb(),now=Math.floor(Date.now()/1000),p=event.properties;
-    const inserted=await db.prepare(`INSERT OR IGNORE INTO analytics_events (id,session_id,event,created_at,page,from_page,to_page,placement,project,major,wing,seconds)
-      SELECT ?,?,?,?,?,?,?,?,?,?,?,? WHERE (SELECT COUNT(*) FROM analytics_events WHERE session_id=? AND created_at>=?)<60 AND (SELECT COUNT(*) FROM analytics_events WHERE session_id=? AND created_at>=?)<500`)
-      .bind(event.id,event.sessionId,event.event,now,p.page,p.from_page??null,p.to_page??null,p.placement??null,p.project??null,p.major??null,p.wing??null,p.previous_page_seconds??null,event.sessionId,now-60,event.sessionId,now-86400).run();
-    if(event.id.startsWith('0'))await db.prepare('DELETE FROM analytics_events WHERE created_at < ?').bind(now-90*86400).run();
+    const inserted=await db.prepare(`INSERT OR IGNORE INTO analytics_events (id,session_id,event,created_at,page,from_page,to_page,placement,project,major,wing,seconds,origin)
+      SELECT ?,?,?,?,?,?,?,?,?,?,?,?,? WHERE (SELECT COUNT(*) FROM analytics_events WHERE session_id=? AND created_at>=?)<60 AND (SELECT COUNT(*) FROM analytics_events WHERE session_id=? AND created_at>=?)<500`)
+      .bind(event.id,event.sessionId,event.event,now,p.page,p.from_page??null,p.to_page??null,p.placement??null,p.project??null,p.major??null,p.wing??null,p.previous_page_seconds??null,request.headers.get('Origin'),event.sessionId,now-60,event.sessionId,now-86400).run();
+    if(event.id.startsWith('0')){
+      const history=await db.prepare('SELECT backfill_done FROM impact_meta WHERE id=1').all<{backfill_done:number}>();
+      if(!history.results.length||history.results[0].backfill_done===1)await db.prepare('DELETE FROM analytics_events WHERE created_at < ?').bind(now-90*86400).run();
+    }
     return json({accepted:true,recorded:inserted.meta.changes>0},202);
   }catch{return json({error:'Analytics is temporarily unavailable.'},503);}
 }

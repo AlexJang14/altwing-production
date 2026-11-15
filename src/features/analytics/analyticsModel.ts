@@ -1,8 +1,8 @@
 import { parseRoute } from '../../lib/routes';
 
 export const PAGE_LABELS: Record<string,string> = {home:'Home',match:'Find My Wing',explore:'Explore Engineering',major:'Engineering Field Guide',colleges:'Unlock Opportunities',programs:'Student Programs',projects:'Try Projects',universe:'My Universe',aerospace:'Aerospace Labs','aerospace-build':'Aerospace Experiment',sitemap:'Site Map',privacy:'Privacy',analytics:'Analytics'};
-export type AnalyticsEventName = 'Page Viewed' | 'Navigation Clicked' | 'WingMatch Started' | 'WingMatch Completed' | 'Project Test Run' | 'Project Completed';
-export const EVENT_NAMES: AnalyticsEventName[] = ['Page Viewed','Navigation Clicked','WingMatch Started','WingMatch Completed','Project Test Run','Project Completed'];
+export type AnalyticsEventName = 'Page Viewed' | 'Navigation Clicked' | 'WingMatch Started' | 'WingMatch Completed' | 'Project Test Run' | 'Project Completed' | 'Mission Started' | 'Mission Completed';
+export const EVENT_NAMES: AnalyticsEventName[] = ['Page Viewed','Navigation Clicked','WingMatch Started','WingMatch Completed','Project Test Run','Project Completed','Mission Started','Mission Completed'];
 export type SafeProperties = Record<string,string | number>;
 export function pageContext(hash:string): SafeProperties {
   const route=parseRoute(hash);

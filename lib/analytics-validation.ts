@@ -7,6 +7,7 @@ export function validateEvent(input:unknown){
   if(!value.properties || typeof value.properties!=='object' || Array.isArray(value.properties))return null;
   const properties=safeProperties(value.properties as Record<string,unknown>);
   if(!properties.page || ['analytics','privacy'].includes(String(properties.page)))return null;
+  if(['Mission Started','Mission Completed'].includes(String(value.event))&&!(properties.page==='projects'&&properties.project||properties.page==='aerospace-build'&&properties.wing))return null;
   return {id:value.id,sessionId:value.session_id,event:String(value.event),properties};
 }
 export function reportDays(value:string|null){return value==='1'?1:value==='30'?30:7;}

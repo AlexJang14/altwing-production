@@ -1,6 +1,8 @@
 // A blocked or full browser store must never prevent exploration.
 const memory = new Map<string, string>();
 let memoryOnly=false;
+// A storage event from another tab must invalidate cached privacy choices.
+export function invalidateCachedLocal(key:string){memory.delete(key);}
 export function isMemoryOnly(){return memoryOnly;}
 export function readLocal(key: string): string | null {
   try { return memory.get(key) ?? localStorage.getItem(key); }

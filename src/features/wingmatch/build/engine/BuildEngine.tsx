@@ -1,3 +1,4 @@
+import {trackEvent} from '../../../analytics/analytics';
 import { readBuildDraft } from "./buildDraft";
 import { writeLocal, downloadText } from "../../../../lib/storage";
 import ThermalLab
@@ -189,6 +190,7 @@ export default function BuildEngine({
       .replace(/^-|-$/g, "")}`;
 
 
+  useEffect(()=>{trackEvent('Mission Started',{wing:build.wingId});},[build.wingId]);
   const draftKey = `altwing-build-draft-v1:${buildStorageId}`;
   const [initialDraft] = useState(() => readBuildDraft(draftKey));
 
@@ -562,6 +564,7 @@ export default function BuildEngine({
 
   function saveProof() {
     if (!evidenceComplete) return;
+    trackEvent('Mission Completed',{wing:build.wingId});
 
     if (isPostHogConfigured) {
       posthog.capture(
