@@ -1,5 +1,7 @@
 # Built-in AltWing analytics
 
+Current frontend: **https://altwing.org/**, deployed from **AlexJang14/altwing-production**. The authenticated API/dashboard remains on **https://altwing-engineering-pathways.theanna.chatgpt.site** with the same database and owner identity. Pages builds use an absolute backend origin. The runtime CORS allowlist now retains `https://junjang06.github.io` and adds `https://alexjang14.github.io`, `https://altwing.org` and `https://www.altwing.org`; only anonymous session/event endpoints allow those exact origins. Report access remains protected and does not expose a cross-origin read API. See [production operations](docs/PRODUCTION.md).
+
 Open `/#/analytics` (Site analytics in the footer) and sign in with the ChatGPT account that owns this Sites project. Visitor statistics are collected on the same Site and stored in its provisioned D1 database. No Mixpanel account, API token, provider configuration, or tab-local inspector is required. The Site remains public; report access is checked server-side against its configured owner. Student pages do not require sign-in.
 
 The dashboard provides today/7-day/30-day periods, visit sessions, page views, pages per session, navigation clicks, daily activity, most visited pages, common page transitions, learning milestones, WingMatch completion among sessions that started, last pages for inactive sessions, and aggregate report downloads. It refreshes every 30 seconds while visible. Calendar buckets use UTC as labelled. Sessions are anonymous tab visits, not identified people; they reset after 30 minutes of inactivity. A last page is not proof of abandonment.
@@ -8,7 +10,7 @@ Only explicit page navigation and learning milestones are recorded. Scores, grad
 
 ## Server design
 
-- `POST /api/analytics/session`: issues a one-hour signed capability scoped to an anonymous session. Same-origin JSON only, 256-byte limit. It creates no database record.
+- `POST /api/analytics/session`: issues a one-hour signed capability scoped to an anonymous session. JSON from the same origin or an exact configured frontend origin only, 256-byte limit. It creates no database record.
 - `POST /api/analytics/events`: requires the scoped capability, validates and sanitizes explicit event names/properties, accepts at most 2 KB, writes with server time, deduplicates UUID event IDs, limits each session to 60 events/minute and 500/day, and never returns reports.
 - `GET /api/analytics/report`: requires the authenticated Site owner's email and returns aggregates only, with private/no-store caching. Anonymous requests get 401, other authenticated users 403. No session IDs, emails, or individual timelines are returned.
 - D1 binding `DB` and schema-only Drizzle migration are deployed with the Site. Data is not bundled in the release archive.
