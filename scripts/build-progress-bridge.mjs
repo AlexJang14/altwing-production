@@ -23,6 +23,11 @@ if(location.origin!==${JSON.stringify(LEGACY_ORIGIN)}){
 });
 </script></body></html>`;
 writeFileSync(`${dir}/index.html`,html);writeFileSync(`${dir}/.nojekyll`,'');
+// An explicit user-run bookmark also works while the old deployment is kept
+// unchanged and its repository cannot publish a new recovery screen.
+const compactPolicy=ts.transpileModule(readFileSync('src/lib/progressBackup.ts','utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022,removeComments:true}}).outputText.replaceAll('\n',' ');
+const bookmark=`javascript:(()=>{if(location.origin!==${JSON.stringify(LEGACY_ORIGIN)}){alert('Open the original AltWing page at ${LEGACY_ORIGIN}/altwing/ first.');return;}try{const exports={};${compactPolicy}const value=exports.createProgressBackup(exports.snapshotProgress(localStorage),location.origin);const count=Object.keys(value.entries).length;if(!count){alert('No saved AltWing progress was found in this browser profile.');return;}const blob=new Blob([JSON.stringify(value)],{type:'application/json'});const url=URL.createObjectURL(blob),link=document.createElement('a');link.href=url;link.download='altwing-progress-backup.json';link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);alert(count+' saved items exported. Keep the file private, then restore it on the new AltWing progress-transfer page.');}catch{alert('The original browser storage could not be read. Your data was not changed.');}})();`;
+writeFileSync(`${dir}/original-origin-export.bookmarklet.txt`,bookmark+'\n');
 writeFileSync(`${dir}/README.txt`,[
   'AltWing original-origin progress recovery',
   '',
@@ -34,5 +39,11 @@ writeFileSync(`${dir}/README.txt`,[
   'Test with the original browser profile before cutover. Keep this bridge available after cutover.',
   'Only the exact original origin can export. This is a read-only, network-free localStorage exporter.',
   'Open-tab memory changes and browser data already cleared cannot be recovered here.',
+  '',
+  'If the old owner cannot publish this recovery page, original-origin-export.bookmarklet.txt is a user-run alternative.',
+  'Create a browser bookmark and replace its URL with the entire one-line text in that file.',
+  'Open https://junjang06.github.io/altwing/ in the original browser profile, then click the bookmark.',
+  'It downloads the same private JSON format, without uploading data or modifying the old app/storage.',
+  'Restore that file at the new AltWing website, footer: Transfer saved progress.',
 ].join('\n')+'\n');
 console.log('Prepared standalone original-origin recovery bridge: progress-bridge-dist (no CNAME)');
