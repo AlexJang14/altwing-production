@@ -1,0 +1,145 @@
+{
+  "checkedAt": "2026-11-15T02:28:45.078Z",
+  "productionChanged": false,
+  "results": [
+    {
+      "name": "submission",
+      "command": "npm run test:submission",
+      "passed": true,
+      "exitCode": 0,
+      "signal": null,
+      "durationMs": 1205,
+      "log": ".sites-runtime/migration-validation/submission.log"
+    },
+    {
+      "name": "analytics",
+      "command": "npm run test:analytics",
+      "passed": true,
+      "exitCode": 0,
+      "signal": null,
+      "durationMs": 876,
+      "log": ".sites-runtime/migration-validation/analytics.log"
+    },
+    {
+      "name": "migration",
+      "command": "npm run test:migration",
+      "passed": true,
+      "exitCode": 0,
+      "signal": null,
+      "durationMs": 661,
+      "log": ".sites-runtime/migration-validation/migration.log"
+    },
+    {
+      "name": "types",
+      "command": "npm run typecheck",
+      "passed": true,
+      "exitCode": 0,
+      "signal": null,
+      "durationMs": 2796,
+      "log": ".sites-runtime/migration-validation/types.log"
+    },
+    {
+      "name": "lint",
+      "command": "npm run lint",
+      "passed": true,
+      "exitCode": 0,
+      "signal": null,
+      "durationMs": 11022,
+      "log": ".sites-runtime/migration-validation/lint.log"
+    },
+    {
+      "name": "engineering-balance",
+      "command": "npm run guidance:balance",
+      "passed": true,
+      "exitCode": 0,
+      "signal": null,
+      "durationMs": 1076,
+      "log": ".sites-runtime/migration-validation/engineering-balance.log"
+    },
+    {
+      "name": "legacy-wing-balance",
+      "command": "python3 scripts/check-wingmatch-v5-balance.py",
+      "passed": true,
+      "exitCode": 0,
+      "signal": null,
+      "durationMs": 16,
+      "log": ".sites-runtime/migration-validation/legacy-wing-balance.log"
+    },
+    {
+      "name": "guidance-freshness",
+      "command": "npm run guidance:freshness",
+      "passed": false,
+      "exitCode": 1,
+      "signal": null,
+      "durationMs": 265,
+      "log": ".sites-runtime/migration-validation/guidance-freshness.log"
+    },
+    {
+      "name": "legacy-source-audit",
+      "command": "python3 scripts/final-altwing-qa.py",
+      "passed": false,
+      "exitCode": 1,
+      "signal": null,
+      "durationMs": 23,
+      "log": ".sites-runtime/migration-validation/legacy-source-audit.log"
+    },
+    {
+      "name": "backend-build",
+      "command": "npm run build",
+      "passed": true,
+      "exitCode": 0,
+      "signal": null,
+      "durationMs": 5071,
+      "log": ".sites-runtime/migration-validation/backend-build.log"
+    },
+    {
+      "name": "custom-pages-build",
+      "command": "npm run build:pages",
+      "passed": true,
+      "exitCode": 0,
+      "signal": null,
+      "durationMs": 850,
+      "log": ".sites-runtime/migration-validation/custom-pages-build.log"
+    },
+    {
+      "name": "legacy-pages-build",
+      "command": "npm run build:pages:legacy",
+      "passed": true,
+      "exitCode": 0,
+      "signal": null,
+      "durationMs": 1191,
+      "log": ".sites-runtime/migration-validation/legacy-pages-build.log"
+    },
+    {
+      "name": "progress-bridge-build",
+      "command": "npm run build:progress-bridge",
+      "passed": true,
+      "exitCode": 0,
+      "signal": null,
+      "durationMs": 530,
+      "log": ".sites-runtime/migration-validation/progress-bridge-build.log"
+    },
+    {
+      "name": "pages-assets",
+      "command": "npm run test:pages",
+      "passed": true,
+      "exitCode": 0,
+      "signal": null,
+      "durationMs": 261,
+      "log": ".sites-runtime/migration-validation/pages-assets.log"
+    },
+    {
+      "name": "progress-bridge",
+      "command": "npm run test:progress-bridge",
+      "passed": true,
+      "exitCode": 0,
+      "signal": null,
+      "durationMs": 241,
+      "log": ".sites-runtime/migration-validation/progress-bridge.log"
+    }
+  ],
+  "failed": [
+    "guidance-freshness",
+    "legacy-source-audit"
+  ]
+}

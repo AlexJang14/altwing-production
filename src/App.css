@@ -1,0 +1,1297 @@
+.counter {
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: var(--accent);
+  background: var(--accent-bg);
+  border: 2px solid transparent;
+  transition: border-color 0.3s;
+  margin-bottom: 24px;
+
+  &:hover {
+    border-color: var(--accent-border);
+  }
+  &:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+}
+
+.hero {
+  position: relative;
+
+  .base,
+  .framework,
+  .vite {
+    inset-inline: 0;
+    margin: 0 auto;
+  }
+
+  .base {
+    width: 170px;
+    position: relative;
+    z-index: 0;
+  }
+
+  .framework,
+  .vite {
+    position: absolute;
+  }
+
+  .framework {
+    z-index: 1;
+    top: 34px;
+    height: 28px;
+    transform: perspective(2000px) rotateZ(300deg) rotateX(44deg) rotateY(39deg)
+      scale(1.4);
+  }
+
+  .vite {
+    z-index: 0;
+    top: 107px;
+    height: 26px;
+    width: auto;
+    transform: perspective(2000px) rotateZ(300deg) rotateX(40deg) rotateY(39deg)
+      scale(0.8);
+  }
+}
+
+#center {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  place-content: center;
+  place-items: center;
+  flex-grow: 1;
+
+  @media (max-width: 1024px) {
+    padding: 32px 20px 24px;
+    gap: 18px;
+  }
+}
+
+#next-steps {
+  display: flex;
+  border-top: 1px solid var(--border);
+  text-align: left;
+
+  & > div {
+    flex: 1 1 0;
+    padding: 32px;
+    @media (max-width: 1024px) {
+      padding: 24px 20px;
+    }
+  }
+
+  .icon {
+    margin-bottom: 16px;
+    width: 22px;
+    height: 22px;
+  }
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+#docs {
+  border-right: 1px solid var(--border);
+
+  @media (max-width: 1024px) {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+}
+
+#next-steps ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 8px;
+  margin: 32px 0 0;
+
+  .logo {
+    height: 18px;
+  }
+
+  a {
+    color: var(--text-h);
+    font-size: 16px;
+    border-radius: 6px;
+    background: var(--social-bg);
+    display: flex;
+    padding: 6px 12px;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    transition: box-shadow 0.3s;
+
+    &:hover {
+      box-shadow: var(--shadow);
+    }
+    .button-icon {
+      height: 18px;
+      width: 18px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    li {
+      flex: 1 1 calc(50% - 8px);
+    }
+
+    a {
+      width: 100%;
+      justify-content: center;
+      box-sizing: border-box;
+    }
+  }
+}
+
+#spacer {
+  height: 88px;
+  border-top: 1px solid var(--border);
+  @media (max-width: 1024px) {
+    height: 48px;
+  }
+}
+
+.ticks {
+  position: relative;
+  width: 100%;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: -4.5px;
+    border: 5px solid transparent;
+  }
+
+  &::before {
+    left: 0;
+    border-left-color: var(--border);
+  }
+  &::after {
+    right: 0;
+    border-right-color: var(--border);
+  }
+}
+
+/* =========================================================
+   ALTWING HOME — PRODUCT STORY
+   ========================================================= */
+
+.journey-intro {
+  max-width: 720px;
+  margin: 18px 0 36px;
+
+  color: #687087;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.journey-grid {
+  grid-template-columns:
+    repeat(5, minmax(0, 1fr));
+}
+
+.home-section-shell {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.outcomes-section,
+.why-section,
+.founder-section,
+.launch-section {
+  padding:
+    clamp(76px, 9vw, 130px)
+    0;
+}
+
+.home-section-heading {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1.25fr)
+    minmax(260px, .75fr);
+
+  gap: 60px;
+  align-items: end;
+
+  margin-top: 18px;
+}
+
+.home-section-heading h2,
+.why-copy h2,
+.founder-copy h2,
+.launch-panel h2 {
+  margin: 0;
+
+  color: #0d132b;
+
+  font-size:
+    clamp(40px, 5.5vw, 72px);
+
+  line-height: .98;
+  letter-spacing: -.055em;
+}
+
+.home-section-heading p,
+.why-copy p,
+.founder-copy p,
+.launch-panel p {
+  color: #687087;
+
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.outcomes-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 14px;
+
+  margin-top: 50px;
+}
+
+.outcome-card {
+  min-height: 245px;
+
+  padding: 27px;
+
+  border:
+    1px solid
+    rgba(13, 19, 43, .09);
+
+  border-radius: 20px;
+
+  background: #fff;
+}
+
+.outcome-card > span {
+  color: #5b8def;
+
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .12em;
+}
+
+.outcome-card h3 {
+  margin: 46px 0 12px;
+
+  color: #0d132b;
+
+  font-size: 24px;
+  line-height: 1.08;
+  letter-spacing: -.035em;
+}
+
+.outcome-card p {
+  margin: 0;
+
+  color: #747b90;
+
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.why-section {
+  background: #0d132b;
+}
+
+.why-section .section-label {
+  color: #5b8def;
+}
+
+.why-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(400px, .8fr);
+
+  gap: clamp(50px, 8vw, 110px);
+
+  margin-top: 20px;
+  align-items: center;
+}
+
+.why-copy h2 {
+  color: #fff;
+}
+
+.why-copy p {
+  max-width: 690px;
+
+  color:
+    rgba(255, 255, 255, .48);
+}
+
+.why-contrast {
+  display: grid;
+  gap: 12px;
+}
+
+.why-contrast article {
+  padding: 27px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, .09);
+
+  border-radius: 18px;
+
+  background:
+    rgba(255, 255, 255, .025);
+}
+
+.why-contrast article > span {
+  color:
+    rgba(255, 255, 255, .34);
+
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .13em;
+}
+
+.why-contrast strong {
+  display: block;
+
+  margin-top: 18px;
+
+  color: #fff;
+
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.why-contrast strong b {
+  color:
+    rgba(255, 255, 255, .22);
+
+  font-weight: 400;
+}
+
+.why-contrast p {
+  margin: 11px 0 0;
+
+  color:
+    rgba(255, 255, 255, .38);
+
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.why-contrast .why-altwing {
+  border-color:
+    rgba(255, 200, 87, .28);
+
+  background:
+    linear-gradient(
+      125deg,
+      rgba(255, 200, 87, .055),
+      rgba(91, 141, 239, .04)
+    );
+}
+
+.why-altwing > span {
+  color: #ffc857 !important;
+}
+
+.founder-section {
+  background: #f7f6f2;
+}
+
+.founder-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.05fr)
+    minmax(400px, .95fr);
+
+  gap: clamp(50px, 8vw, 110px);
+
+  align-items: start;
+}
+
+.founder-copy p {
+  max-width: 660px;
+}
+
+.founder-proof {
+  display: grid;
+  gap: 10px;
+}
+
+.founder-proof article {
+  padding: 23px;
+
+  border:
+    1px solid
+    rgba(13, 19, 43, .09);
+
+  border-radius: 16px;
+
+  background:
+    rgba(255, 255, 255, .72);
+}
+
+.founder-proof span {
+  color: #ff6b6b;
+
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .12em;
+}
+
+.founder-proof h3 {
+  margin: 10px 0 0;
+
+  color: #0d132b;
+
+  font-size: 20px;
+  line-height: 1.25;
+  letter-spacing: -.025em;
+}
+
+.launch-section {
+  padding-top: 90px;
+  padding-bottom: 100px;
+
+  background: #fff;
+}
+
+.launch-panel {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: flex-end;
+
+  gap: 50px;
+
+  padding:
+    clamp(34px, 6vw, 72px);
+
+  border-radius: 28px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f4f6ff,
+      #fff7ea
+    );
+
+  border:
+    1px solid
+    rgba(13, 19, 43, .08);
+}
+
+.launch-panel > div {
+  max-width: 760px;
+}
+
+.launch-panel p {
+  max-width: 610px;
+
+  margin-bottom: 0;
+}
+
+.launch-panel .button {
+  flex-shrink: 0;
+}
+
+.launch-note {
+  margin: 16px 0 0;
+
+  text-align: center;
+
+  color: #8a90a0;
+
+  font-size: 12px;
+}
+
+@media (max-width: 1050px) {
+  .journey-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .outcomes-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .why-grid,
+  .founder-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .home-section-heading {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .journey-grid,
+  .outcomes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .launch-panel {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .launch-panel .button {
+    width: 100%;
+  }
+}
+
+
+
+/* =========================================================
+   ALTWING SIMPLE HOME V1
+   ========================================================= */
+
+.simple-gateway {
+  width:
+    min(
+      1180px,
+      calc(100% - 40px)
+    );
+
+  margin:
+    20px auto 90px;
+}
+
+.simple-gateway-heading {
+  max-width: 660px;
+
+  margin-bottom: 20px;
+}
+
+.simple-gateway-heading > span {
+  color: #5b8def;
+
+  font-size: 8px;
+  font-weight: 900;
+
+  letter-spacing: .17em;
+}
+
+.simple-gateway-heading h2 {
+  margin:
+    7px 0 5px;
+
+  font-size:
+    clamp(
+      28px,
+      4vw,
+      43px
+    );
+
+  letter-spacing: -.04em;
+}
+
+.simple-gateway-heading p {
+  margin: 0;
+
+  color:
+    rgba(13,19,43,.55);
+}
+
+.simple-gateway-grid {
+  display: grid;
+
+  grid-template-columns:
+    1.3fr 1fr 1fr;
+
+  gap: 11px;
+}
+
+.gateway-card {
+  min-height: 170px;
+
+  padding: 20px;
+
+  display: grid;
+
+  grid-template-columns:
+    auto 1fr auto;
+
+  gap: 13px;
+
+  align-items: start;
+
+  border:
+    1px solid
+    rgba(13,19,43,.09);
+
+  border-radius: 20px;
+
+  text-decoration: none;
+
+  text-align: left;
+
+  color: #0d132b;
+
+  background: white;
+
+  box-shadow:
+    0 16px 40px
+    rgba(13,19,43,.06);
+
+  cursor: pointer;
+
+  transition:
+    transform .18s ease,
+    box-shadow .18s ease;
+}
+
+.gateway-card:hover {
+  transform:
+    translateY(-4px);
+
+  box-shadow:
+    0 22px 55px
+    rgba(13,19,43,.1);
+}
+
+.gateway-card > span {
+  font-size: 25px;
+}
+
+.gateway-card small {
+  color: #5b8def;
+
+  font-size: 6px;
+  font-weight: 950;
+
+  letter-spacing: .15em;
+}
+
+.gateway-card strong {
+  display: block;
+
+  margin-top: 8px;
+
+  font-size: 20px;
+}
+
+.gateway-card p {
+  margin: 6px 0 0;
+
+  color:
+    rgba(13,19,43,.53);
+
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.gateway-card > b {
+  color: #5b8def;
+}
+
+.gateway-card-main {
+  color: white;
+
+  background:
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(91,141,239,.25),
+      transparent 35%
+    ),
+    #0d132b;
+
+  border-color:
+    rgba(91,141,239,.2);
+}
+
+.gateway-card-main p {
+  color:
+    rgba(255,255,255,.52);
+}
+
+.gateway-card-main > b {
+  color: #ffc857;
+}
+
+@media (max-width: 820px) {
+  .simple-gateway-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+  .gateway-card {
+    min-height: 0;
+  }
+}
+
+
+
+
+/* =========================================================
+   HOME — ALTWING MASCOT
+   ========================================================= */
+
+.mission-preview-button {
+  position: relative;
+
+  overflow: visible !important;
+}
+
+
+.hero-mascot-home {
+  position: absolute;
+
+  z-index: 9;
+
+  top: -54px;
+  right: -24px;
+
+  pointer-events: none;
+
+  filter:
+    drop-shadow(
+      0 24px 35px
+      rgba(0,0,0,.3)
+    );
+}
+
+
+.gateway-penguin {
+  width: 48px;
+  height: 48px;
+
+  display: grid;
+
+  place-items: center;
+}
+
+
+.gateway-penguin img {
+  width: 43px;
+  height: 43px;
+
+  object-fit: contain;
+}
+
+
+/* MAIN PAGE READABILITY */
+
+.hero-copy,
+.journey-intro,
+.journey-card p {
+  color:
+    rgba(255,255,255,.67)
+    !important;
+}
+
+
+.hero-copy {
+  font-size:
+    16px !important;
+
+  line-height:
+    1.65 !important;
+}
+
+
+.hero-note {
+  color:
+    rgba(255,255,255,.5)
+    !important;
+
+  font-size:
+    12px !important;
+}
+
+
+.journey-intro,
+.journey-card p {
+  font-size:
+    14px !important;
+
+  line-height:
+    1.6 !important;
+}
+
+
+@media (
+  max-width: 760px
+) {
+
+  .hero-mascot-home {
+    top: -28px;
+    right: -5px;
+
+    transform:
+      scale(.82);
+  }
+}
+
+
+
+/* =========================================================
+   HOME HERO ONLY — SAFE READABILITY FIX
+   Do not override light cards.
+   ========================================================= */
+
+.hero h1 {
+  color: #f7f9ff !important;
+}
+
+.hero .hero-highlight {
+  color: #ff6b6b !important;
+}
+
+.hero .hero-copy {
+  color: rgba(247, 249, 255, .78) !important;
+  font-size: 17px !important;
+  line-height: 1.65 !important;
+}
+
+.hero .hero-note {
+  color: rgba(247, 249, 255, .56) !important;
+  font-size: 12px !important;
+}
+
+.hero .eyebrow {
+  color: #79a5ff !important;
+  font-size: 12px !important;
+  font-weight: 850 !important;
+}
+
+/*
+ * Light cards need DARK text.
+ * These selectors intentionally override any older
+ * accidental white-text rules.
+ */
+
+.gateway-card:not(.gateway-card-primary) h3,
+.gateway-card:not(.gateway-card-primary) strong,
+.gateway-card:not(.gateway-card-primary) p,
+.gateway-card:not(.gateway-card-primary) small {
+  color: #17213b !important;
+}
+
+.gateway-card:not(.gateway-card-primary) p {
+  color: #5c6476 !important;
+}
+
+.journey-card h3,
+.journey-card p {
+  color: #17213b;
+}
+
+/* only if the journey card itself is light */
+.journey-card[style*="white"] p,
+.journey-card[style*="#fff"] p {
+  color: #5c6476 !important;
+}
+
+
+
+/* =========================================================
+   JOURNEY CARDS — FINAL LIGHT-CARD READABILITY FIX
+   ========================================================= */
+
+.journey-card {
+  color: #111b36 !important;
+}
+
+.journey-card h3 {
+  color: #111b36 !important;
+  opacity: 1 !important;
+}
+
+.journey-card p,
+.journey-card .journey-card-description {
+  color: #596274 !important;
+  opacity: 1 !important;
+}
+
+.journey-card small {
+  opacity: 1 !important;
+}
+
+.journey-card .journey-number {
+  opacity: 1 !important;
+}
+
+/* Make body copy clearly readable without turning it black */
+.journey-card p {
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+  font-weight: 500 !important;
+}
+
+
+
+/* =========================================================
+   EXPLORE GATEWAY BUTTON RESET
+   ========================================================= */
+
+button.gateway-card {
+  width: 100%;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+
+
+/* =========================================================
+   START HERE + DARK GATEWAY CARD
+   FINAL READABILITY FIX
+   ========================================================= */
+
+/* Section heading on dark background */
+
+.simple-gateway-heading h2 {
+  color: #f7f9ff !important;
+  opacity: 1 !important;
+}
+
+.simple-gateway-heading p {
+  color: rgba(247, 249, 255, .68) !important;
+  opacity: 1 !important;
+
+  font-size: 15px !important;
+  line-height: 1.6 !important;
+}
+
+.simple-gateway-heading > span {
+  color: #79a5ff !important;
+  opacity: 1 !important;
+
+  font-size: 10px !important;
+  font-weight: 900 !important;
+}
+
+
+/* FIRST / DARK Find My Wing card */
+
+.gateway-card.gateway-card-main {
+  color: #ffffff !important;
+}
+
+.gateway-card.gateway-card-main small {
+  color: #91afff !important;
+  opacity: 1 !important;
+
+  font-size: 9px !important;
+  font-weight: 900 !important;
+  letter-spacing: .12em !important;
+}
+
+.gateway-card.gateway-card-main strong {
+  color: #ffffff !important;
+  opacity: 1 !important;
+
+  font-size: 22px !important;
+  line-height: 1.25 !important;
+}
+
+.gateway-card.gateway-card-main p {
+  color: rgba(255, 255, 255, .70) !important;
+  opacity: 1 !important;
+
+  font-size: 13px !important;
+  line-height: 1.55 !important;
+}
+
+.gateway-card.gateway-card-main > b {
+  color: #ffc857 !important;
+  opacity: 1 !important;
+}
+
+
+/* Keep the two LIGHT cards dark and readable */
+
+.gateway-card:not(.gateway-card-main) strong {
+  color: #111b36 !important;
+  opacity: 1 !important;
+}
+
+.gateway-card:not(.gateway-card-main) p {
+  color: #596274 !important;
+  opacity: 1 !important;
+}
+
+.gateway-card:not(.gateway-card-main) small {
+  color: #5079d7 !important;
+  opacity: 1 !important;
+}
+
+
+
+/* =========================================================
+   HOME BEGINNER CLARITY
+   ========================================================= */
+
+.home-value-section {
+  padding:
+    74px 24px;
+
+  background:
+    #f6f4f0;
+}
+
+
+.home-value-inner {
+  width:
+    min(
+      1160px,
+      100%
+    );
+
+  margin:
+    0 auto;
+}
+
+
+.home-value-heading {
+  max-width:
+    720px;
+}
+
+
+.home-value-heading > span {
+  color:
+    #ff6269;
+
+  font-size:
+    11px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    .12em;
+}
+
+
+.home-value-heading h2 {
+  margin:
+    13px 0 0;
+
+  color:
+    #10172f;
+
+  font-size:
+    clamp(
+      34px,
+      4vw,
+      50px
+    );
+
+  line-height:
+    1.04;
+
+  letter-spacing:
+    -.045em;
+}
+
+
+.home-value-heading p {
+  margin:
+    15px 0 0;
+
+  color:
+    #59637a;
+
+  font-size:
+    17px;
+
+  line-height:
+    1.55;
+}
+
+
+.home-value-grid {
+  margin-top:
+    34px;
+
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(
+      3,
+      1fr
+    );
+
+  gap:
+    15px;
+}
+
+
+.home-value-grid article {
+  min-height:
+    205px;
+
+  padding:
+    27px;
+
+  border:
+    1px solid
+    rgba(
+      13,
+      19,
+      43,
+      .12
+    );
+
+  border-radius:
+    20px;
+
+  background:
+    #ffffff;
+}
+
+
+.home-value-grid b {
+  color:
+    #5b8def;
+
+  font-size:
+    11px;
+
+  letter-spacing:
+    .1em;
+}
+
+
+.home-value-grid strong {
+  display:
+    block;
+
+  margin-top:
+    24px;
+
+  color:
+    #10172f;
+
+  font-size:
+    22px;
+
+  line-height:
+    1.15;
+}
+
+
+.home-value-grid p {
+  margin:
+    11px 0 0;
+
+  color:
+    #5e687d;
+
+  font-size:
+    15px;
+
+  line-height:
+    1.55;
+}
+
+
+/* =========================================================
+   FIX DARK OUTCOMES CONTRAST
+   ========================================================= */
+
+.outcomes-section
+.home-section-heading h2 {
+  color:
+    #f7f9ff !important;
+
+  opacity:
+    1 !important;
+}
+
+
+.outcomes-section
+.home-section-heading p {
+  color:
+    rgba(
+      235,
+      241,
+      255,
+      .72
+    ) !important;
+
+  opacity:
+    1 !important;
+}
+
+
+.outcomes-section
+.section-label {
+  color:
+    #73a4ff !important;
+
+  opacity:
+    1 !important;
+}
+
+
+.outcomes-section
+.outcome-card h3 {
+  color:
+    #10172f !important;
+}
+
+
+.outcomes-section
+.outcome-card p {
+  color:
+    #5e687d !important;
+}
+
+
+/* =========================================================
+   BEGINNER-FRIENDLY MOBILE
+   ========================================================= */
+
+@media (
+  max-width: 760px
+) {
+
+  .home-value-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .home-value-section {
+    padding:
+      52px 16px;
+  }
+
+}
+
+
+/* Explore route buttons converted from legacy anchors */
+.explore-route-button {
+  appearance: none;
+  font: inherit;
+  color: inherit;
+  text-align: inherit;
+  cursor: pointer;
+}
+
+a.explore-route-button,
+button.explore-route-button {
+  text-decoration: none;
+}
+

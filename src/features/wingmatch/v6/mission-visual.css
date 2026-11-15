@@ -1,0 +1,2669 @@
+/* =========================================================
+   ALTWING V6 INTERACTIVE ENGINEERING VISUAL
+   ========================================================= */
+
+.aw6-viz-shell {
+  margin-top: 34px;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    rgba(124, 151, 220, .18);
+
+  border-radius: 24px;
+
+  background:
+    #0b1124;
+
+  box-shadow:
+    0 28px 80px
+    rgba(0, 0, 0, .24);
+}
+
+
+.aw6-viz-header {
+  min-height: 68px;
+
+  padding: 0 24px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom:
+    1px solid
+    rgba(255,255,255,.07);
+}
+
+
+.aw6-viz-header > div:first-child {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+}
+
+
+.aw6-viz-header span {
+  color:
+    rgba(160, 184, 238, .70) !important;
+
+  font-size: 11px !important;
+
+  font-weight: 850 !important;
+
+  letter-spacing:
+    .10em !important;
+}
+
+
+.aw6-viz-header strong {
+  color: #f8faff !important;
+
+  font-size: 15px !important;
+
+  font-weight: 800 !important;
+}
+
+
+.aw6-viz-status {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  color:
+    rgba(238,243,255,.66);
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: .07em;
+}
+
+
+.aw6-viz-status i {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #ffc857;
+
+  box-shadow:
+    0 0 0 5px
+    rgba(255,200,87,.08);
+}
+
+
+.aw6-viz-body {
+  display: grid;
+
+  grid-template-columns:
+    170px minmax(0, 1fr);
+}
+
+
+.aw6-viz-metrics {
+  padding: 22px 18px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+
+  border-right:
+    1px solid
+    rgba(255,255,255,.07);
+
+  background:
+    rgba(255,255,255,.015);
+}
+
+
+.aw6-viz-metric {
+  padding:
+    15px 13px;
+
+  border:
+    1px solid
+    rgba(255,255,255,.07);
+
+  border-radius: 14px;
+
+  background:
+    rgba(255,255,255,.025);
+}
+
+
+.aw6-viz-metric span {
+  display: block;
+
+  color:
+    rgba(175,192,231,.55) !important;
+
+  font-size: 10px !important;
+
+  font-weight: 850 !important;
+
+  letter-spacing:
+    .08em !important;
+}
+
+
+.aw6-viz-metric strong {
+  display: block;
+
+  margin-top: 5px;
+
+  color: #f7f9ff !important;
+
+  font-size: 18px !important;
+
+  font-weight: 780 !important;
+}
+
+
+.aw6-viz-metric--warning strong {
+  color: #ff7a74 !important;
+}
+
+
+.aw6-viz-metric--good strong {
+  color: #77e1c3 !important;
+}
+
+
+.aw6-viz-canvas {
+  min-height: 390px;
+
+  position: relative;
+
+  background:
+    radial-gradient(
+      circle at 50% 48%,
+      rgba(91,141,239,.09),
+      transparent 40%
+    ),
+    #090f20;
+}
+
+
+.aw6-viz-canvas svg {
+  display: block;
+
+  width: 100%;
+  height: 390px;
+}
+
+
+.aw6-viz-grid line {
+  stroke:
+    rgba(124,151,220,.055);
+
+  stroke-width: 1;
+}
+
+
+.aw6-viz-links path {
+  fill: none;
+
+  stroke:
+    rgba(104,142,232,.17);
+
+  stroke-width: 1.5;
+
+  stroke-dasharray: 5 8;
+
+  transition:
+    stroke
+    .18s ease,
+    stroke-width
+    .18s ease;
+}
+
+
+.aw6-viz-links path.is-active {
+  stroke: #5b8def;
+
+  stroke-width: 2.4;
+}
+
+
+.aw6-viz-node {
+  cursor: pointer;
+
+  outline: none;
+}
+
+
+.aw6-viz-node-ring {
+  fill:
+    rgba(11,17,36,.9);
+
+  stroke:
+    rgba(128,158,232,.35);
+
+  stroke-width: 2;
+
+  transition:
+    stroke
+    .18s ease,
+    fill
+    .18s ease,
+    r
+    .18s ease;
+}
+
+
+.aw6-viz-node-core {
+  fill:
+    #5b8def;
+
+  transition:
+    fill
+    .18s ease,
+    r
+    .18s ease;
+}
+
+
+.aw6-viz-node-number {
+  fill:
+    rgba(193,207,242,.55);
+
+  text-anchor: middle;
+
+  font-size: 14px;
+
+  font-weight: 800;
+
+  letter-spacing: .08em;
+}
+
+
+.aw6-viz-node:hover
+.aw6-viz-node-ring,
+
+.aw6-viz-node:focus
+.aw6-viz-node-ring,
+
+.aw6-viz-node.is-active
+.aw6-viz-node-ring {
+  fill:
+    rgba(91,141,239,.10);
+
+  stroke:
+    #5b8def;
+}
+
+
+.aw6-viz-node:hover
+.aw6-viz-node-core,
+
+.aw6-viz-node:focus
+.aw6-viz-node-core,
+
+.aw6-viz-node.is-active
+.aw6-viz-node-core {
+  r: 12;
+
+  fill: #9ab7ff;
+}
+
+
+.aw6-viz-node.is-selected
+.aw6-viz-node-ring {
+  fill:
+    rgba(255,200,87,.09);
+
+  stroke:
+    #ffc857;
+}
+
+
+.aw6-viz-node.is-selected
+.aw6-viz-node-core {
+  fill:
+    #ffc857;
+}
+
+
+/* =========================================================
+   SCENE DRAWINGS
+   ========================================================= */
+
+.aw6-mars-horizon {
+  fill: url(#aw6Mars);
+  opacity: .92;
+}
+
+
+.aw6-entry-glow {
+  fill: url(#aw6Heat);
+}
+
+
+.aw6-capsule {
+  fill: #dce4f7;
+
+  stroke: #ffffff;
+
+  stroke-width: 2;
+}
+
+
+.aw6-heat-line {
+  fill: none;
+
+  stroke: #ff755f;
+
+  stroke-width: 5;
+
+  stroke-linecap: round;
+}
+
+
+.aw6-trajectory {
+  fill: none;
+
+  stroke: #5b8def;
+
+  stroke-width: 2;
+
+  stroke-dasharray: 7 8;
+}
+
+
+.aw6-target {
+  fill: none;
+
+  stroke: #ffc857;
+
+  stroke-width: 2;
+}
+
+
+.aw6-rover-body,
+.aw6-lander-body,
+.aw6-power-core,
+.aw6-fuel-tank {
+  fill: #b9c7e6;
+
+  stroke:
+    rgba(255,255,255,.65);
+
+  stroke-width: 2;
+}
+
+
+.aw6-rover-wheel {
+  fill: #263656;
+
+  stroke: #5b8def;
+
+  stroke-width: 2;
+}
+
+
+.aw6-rover-sensor {
+  fill: #5b8def;
+}
+
+
+.aw6-sensor-beam {
+  fill: none;
+
+  stroke-width: 2;
+
+  stroke-dasharray: 6 7;
+}
+
+
+.aw6-sensor-beam-a {
+  stroke: #64dfd1;
+}
+
+
+.aw6-sensor-beam-b {
+  stroke: #a67aff;
+}
+
+
+.aw6-reading {
+  fill:
+    rgba(8,14,31,.85);
+
+  stroke-width: 2;
+}
+
+
+.aw6-reading-a {
+  stroke: #64dfd1;
+}
+
+
+.aw6-reading-b {
+  stroke: #a67aff;
+}
+
+
+.aw6-reading-text {
+  fill: #f8faff;
+
+  text-anchor: middle;
+
+  font-size: 17px;
+
+  font-weight: 800;
+}
+
+
+.aw6-fuel-level {
+  fill:
+    rgba(91,141,239,.50);
+}
+
+
+.aw6-engine {
+  fill: none;
+
+  stroke: #dce4f7;
+
+  stroke-width: 6;
+
+  stroke-linejoin: round;
+}
+
+
+.aw6-thrust {
+  fill: none;
+
+  stroke: #ff755f;
+
+  stroke-width: 7;
+
+  stroke-linecap: round;
+}
+
+
+.aw6-gauge {
+  stroke:
+    rgba(255,255,255,.12);
+
+  stroke-width: 16;
+
+  stroke-linecap: round;
+}
+
+
+.aw6-gauge-level {
+  stroke: #ffc857;
+
+  stroke-width: 16;
+
+  stroke-linecap: round;
+}
+
+
+.aw6-leg {
+  stroke: #c9d5ed;
+
+  stroke-width: 7;
+
+  stroke-linecap: round;
+}
+
+
+.aw6-leg-alert {
+  stroke: #ff746f;
+}
+
+
+.aw6-vibration {
+  fill: none;
+
+  stroke: #ff746f;
+
+  stroke-width: 3;
+}
+
+
+.aw6-power-fill {
+  fill:
+    rgba(119,225,195,.34);
+
+  stroke: #77e1c3;
+
+  stroke-width: 2;
+}
+
+
+.aw6-power-line {
+  fill: none;
+
+  stroke: #5b8def;
+
+  stroke-width: 3;
+}
+
+
+.aw6-subsystem {
+  fill: #101b37;
+
+  stroke: #5b8def;
+
+  stroke-width: 2;
+}
+
+
+.aw6-terrain-line {
+  fill: none;
+
+  stroke: #d56c4f;
+
+  stroke-width: 5;
+
+  stroke-linejoin: round;
+}
+
+
+.aw6-route {
+  fill: none;
+
+  stroke: #5b8def;
+
+  stroke-width: 2;
+
+  stroke-dasharray: 7 8;
+}
+
+
+.aw6-site {
+  fill:
+    rgba(255,200,87,.08);
+
+  stroke: #ffc857;
+
+  stroke-width: 2;
+}
+
+
+.aw6-site-label {
+  fill: #ffc857;
+
+  text-anchor: middle;
+
+  font-size: 17px;
+
+  font-weight: 900;
+}
+
+
+.aw6-fault-box {
+  fill:
+    rgba(91,141,239,.08);
+
+  stroke:
+    rgba(91,141,239,.48);
+
+  stroke-width: 2;
+}
+
+
+.aw6-fault-box-alert {
+  fill:
+    rgba(255,107,107,.08);
+
+  stroke: #ff6b6b;
+}
+
+
+.aw6-fault-label {
+  fill: #f8faff;
+
+  text-anchor: middle;
+
+  font-size: 13px;
+
+  font-weight: 800;
+}
+
+
+.aw6-fault-link {
+  stroke:
+    rgba(139,163,222,.42);
+
+  stroke-width: 2;
+}
+
+
+.aw6-priority-triangle {
+  fill:
+    rgba(91,141,239,.04);
+
+  stroke:
+    rgba(91,141,239,.45);
+
+  stroke-width: 2;
+}
+
+
+.aw6-priority-node {
+  fill: #101a35;
+
+  stroke: #5b8def;
+
+  stroke-width: 2;
+}
+
+
+.aw6-priority-text {
+  fill: #f8faff;
+
+  text-anchor: middle;
+
+  font-size: 12px;
+
+  font-weight: 900;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.aw6-viz-footer {
+  min-height: 54px;
+
+  padding: 0 24px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  border-top:
+    1px solid
+    rgba(255,255,255,.07);
+}
+
+
+.aw6-viz-footer span {
+  color:
+    rgba(211,220,244,.50) !important;
+
+  font-size: 12px !important;
+}
+
+
+.aw6-viz-footer strong {
+  color: #ffc857 !important;
+
+  font-size: 11px !important;
+
+  font-weight: 900 !important;
+
+  letter-spacing:
+    .09em !important;
+}
+
+
+@media (
+  max-width: 800px
+) {
+
+  .aw6-viz-body {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .aw6-viz-metrics {
+    display: grid;
+
+    grid-template-columns:
+      repeat(3, 1fr);
+
+    border-right: 0;
+
+    border-bottom:
+      1px solid
+      rgba(255,255,255,.07);
+  }
+
+
+  .aw6-viz-canvas,
+  .aw6-viz-canvas svg {
+    min-height: 310px;
+
+    height: 310px;
+  }
+
+}
+
+
+@media (
+  max-width: 560px
+) {
+
+  .aw6-viz-header {
+    padding:
+      16px;
+
+    align-items:
+      flex-start;
+
+    flex-direction:
+      column;
+
+    gap: 8px;
+  }
+
+
+  .aw6-viz-metrics {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .aw6-viz-canvas,
+  .aw6-viz-canvas svg {
+    min-height: 260px;
+
+    height: 260px;
+  }
+
+
+  .aw6-viz-footer {
+    padding:
+      12px 16px;
+
+    align-items:
+      flex-start;
+
+    flex-direction:
+      column;
+
+    gap: 5px;
+  }
+
+}
+
+/* ARES-7 ENTRY VISUAL REALISM */
+
+.aw6-entry-v2 {
+  transform-box:
+    fill-box;
+
+  transform-origin:
+    center;
+}
+
+
+.aw6-entry-mars {
+  filter:
+    drop-shadow(
+      0 -9px 24px
+      rgba(255,106,63,.10)
+    );
+}
+
+
+.aw6-entry-crater {
+  fill:
+    rgba(87,32,26,.24);
+
+  stroke:
+    rgba(82,29,24,.32);
+
+  stroke-width: 2;
+}
+
+
+.aw6-entry-path-reference,
+.aw6-entry-path-active {
+  fill: none;
+
+  stroke-linecap: round;
+}
+
+
+.aw6-entry-path-reference {
+  stroke:
+    rgba(119,150,206,.28);
+
+  stroke-width: 2;
+
+  stroke-dasharray:
+    5 11;
+}
+
+
+.aw6-entry-path-active {
+  stroke:
+    #6da8ff;
+
+  stroke-width: 2.4;
+
+  stroke-dasharray:
+    10 10;
+
+  filter:
+    drop-shadow(
+      0 0 6px
+      rgba(109,168,255,.38)
+    );
+
+  animation:
+    aw6EntryPath
+    1.2s linear infinite;
+}
+
+
+.aw6-entry-plasma-wake {
+  opacity: .58;
+
+  animation:
+    aw6EntryWake
+    .24s ease-in-out infinite alternate;
+}
+
+
+.aw6-entry-vehicle {
+  transform-box:
+    fill-box;
+
+  transform-origin:
+    center;
+
+  filter:
+    drop-shadow(
+      0 15px 18px
+      rgba(0,0,0,.44)
+    );
+
+  animation:
+    aw6EntryVehicle
+    1.7s ease-in-out infinite alternate;
+}
+
+
+.aw6-entry-heat-shell {
+  animation:
+    aw6EntryHeat
+    .20s ease-in-out infinite alternate;
+}
+
+
+.aw6-entry-flap {
+  transform-box:
+    fill-box;
+
+  transform-origin:
+    center;
+}
+
+
+.aw6-entry-forward-left {
+  animation:
+    aw6EntryForwardLeft
+    1.6s ease-in-out infinite alternate;
+}
+
+
+.aw6-entry-aft-right {
+  animation:
+    aw6EntryAftRight
+    1.6s ease-in-out infinite alternate;
+}
+
+
+.aw6-entry-bank path {
+  fill: none;
+
+  stroke:
+    #79bfff;
+
+  stroke-width: 2.2;
+
+  stroke-linecap:
+    round;
+}
+
+
+.aw6-entry-bank path:nth-child(2) {
+  fill:
+    #79bfff;
+
+  stroke: none;
+}
+
+
+.aw6-entry-bank text {
+  fill:
+    #86c6ff;
+
+  font-size: 8px;
+
+  font-weight: 900;
+
+  letter-spacing: .11em;
+}
+
+
+.aw6-entry-bank {
+  animation:
+    aw6EntryBank
+    1.3s ease-in-out infinite;
+}
+
+
+.aw6-entry-label-main {
+  fill:
+    rgba(240,246,255,.90);
+
+  font-size: 11px;
+
+  font-weight: 950;
+
+  letter-spacing: .12em;
+}
+
+
+.aw6-entry-label-sub {
+  fill:
+    rgba(127,190,255,.80);
+
+  font-size: 7px;
+
+  font-weight: 900;
+
+  letter-spacing: .12em;
+}
+
+
+/*
+ * Make the telemetry feel like flight HUD
+ * instead of three large rectangular cards.
+ */
+
+.aw6-viz-metric {
+  border-radius:
+    14px !important;
+
+  border:
+    1px solid
+    rgba(146,176,220,.12) !important;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(15,25,44,.72),
+      rgba(8,15,30,.46)
+    ) !important;
+
+  box-shadow:
+    inset 0 1px 0
+    rgba(255,255,255,.025) !important;
+
+  backdrop-filter:
+    blur(9px);
+}
+
+
+.aw6-viz-header {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(8,17,34,.95),
+      rgba(9,20,40,.70)
+    ) !important;
+}
+
+
+.aw6-viz-footer {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(6,14,29,.92),
+      rgba(8,18,35,.84)
+    ) !important;
+}
+
+
+@keyframes aw6EntryPath {
+
+  to {
+    stroke-dashoffset:
+      -40;
+  }
+
+}
+
+
+@keyframes aw6EntryWake {
+
+  from {
+    opacity: .42;
+
+    transform:
+      scale(.98);
+  }
+
+  to {
+    opacity: .68;
+
+    transform:
+      scale(1.03);
+  }
+
+}
+
+
+@keyframes aw6EntryVehicle {
+
+  to {
+    transform:
+      translateY(4px)
+      rotate(-1.5deg);
+  }
+
+}
+
+
+@keyframes aw6EntryHeat {
+
+  from {
+    opacity: .55;
+  }
+
+  to {
+    opacity: .92;
+  }
+
+}
+
+
+@keyframes aw6EntryForwardLeft {
+
+  to {
+    transform:
+      rotate(-7deg);
+  }
+
+}
+
+
+@keyframes aw6EntryAftRight {
+
+  to {
+    transform:
+      rotate(6deg);
+  }
+
+}
+
+
+@keyframes aw6EntryBank {
+
+  50% {
+    opacity: .48;
+
+    transform:
+      rotate(-7deg);
+  }
+
+}
+
+
+@media (
+  prefers-reduced-motion:
+  reduce
+) {
+
+  .aw6-entry-v2 *,
+  .aw6-entry-v2 *::before,
+  .aw6-entry-v2 *::after {
+    animation:
+      none !important;
+  }
+
+}
+
+/* ARES-7 ENTRY CLARITY V5 */
+
+.aw6-viz-canvas:has(
+  .aw6-entry-v5
+)
+.aw6-viz-grid {
+  opacity: .07;
+}
+
+
+/* ENTRY PATH */
+
+.aw6-v5-incoming {
+  fill: none;
+
+  stroke:
+    rgba(116,179,255,.72);
+
+  stroke-width: 2.5;
+
+  stroke-dasharray:
+    10 10;
+
+  stroke-linecap: round;
+
+  animation:
+    aw6V5Dash
+    1.2s linear infinite;
+}
+
+
+.aw6-v5-step {
+  fill:
+    rgba(188,207,235,.63);
+
+  font-size: 8px;
+
+  font-weight: 950;
+
+  letter-spacing: .13em;
+}
+
+
+/* MARS */
+
+.aw6-v5-mars {
+  filter:
+    drop-shadow(
+      0 -8px 23px
+      rgba(255,102,58,.10)
+    );
+}
+
+
+.aw6-v5-crater {
+  fill:
+    rgba(80,27,22,.25);
+
+  stroke:
+    rgba(71,23,20,.38);
+
+  stroke-width: 2;
+}
+
+
+/* IDEAL PATH */
+
+.aw6-v5-ideal {
+  fill: none;
+
+  stroke:
+    #69dfba;
+
+  stroke-width: 2.4;
+
+  stroke-dasharray:
+    7 7;
+
+  opacity: .72;
+}
+
+
+/* CURRENT BAD PATH */
+
+.aw6-v5-current {
+  fill: none;
+
+  stroke:
+    #ff7d66;
+
+  stroke-width: 3.2;
+
+  stroke-dasharray:
+    9 8;
+
+  opacity: .95;
+
+  animation:
+    aw6V5Dash
+    .9s linear infinite;
+}
+
+
+/* TARGET */
+
+.aw6-v5-target .outer {
+  fill:
+    rgba(105,223,186,.08);
+
+  stroke:
+    #69dfba;
+
+  stroke-width: 2.4;
+}
+
+
+.aw6-v5-target .inner {
+  fill:
+    #69dfba;
+}
+
+
+.aw6-v5-target text {
+  fill:
+    #91e8cc;
+
+  font-size: 8px;
+
+  font-weight: 950;
+
+  letter-spacing: .09em;
+}
+
+
+/* OVERSHOOT */
+
+.aw6-v5-overshoot circle {
+  fill:
+    rgba(255,112,91,.08);
+
+  stroke:
+    #ff8069;
+
+  stroke-width: 2;
+}
+
+
+.aw6-v5-overshoot line {
+  stroke:
+    #ff8069;
+
+  stroke-width: 2;
+}
+
+
+.aw6-v5-overshoot .label {
+  fill:
+    #ffa08d;
+
+  font-size: 7px;
+
+  font-weight: 950;
+
+  letter-spacing: .07em;
+}
+
+
+.aw6-v5-overshoot .long {
+  fill:
+    #ff765e;
+
+  font-size: 9px;
+
+  font-weight: 950;
+}
+
+
+/* VEHICLE */
+
+.aw6-v5-vehicle {
+  transform-box:
+    fill-box;
+
+  transform-origin:
+    center;
+
+  filter:
+    drop-shadow(
+      0 15px 18px
+      rgba(0,0,0,.47)
+    );
+
+  animation:
+    aw6V5Vehicle
+    1.8s ease-in-out infinite alternate;
+}
+
+
+.aw6-v5-heat {
+  opacity: .82;
+
+  animation:
+    aw6V5Heat
+    .22s ease-in-out infinite alternate;
+}
+
+
+/* PROBLEM */
+
+.aw6-v5-problem .step {
+  fill:
+    rgba(188,207,235,.54);
+
+  font-size: 7px;
+
+  font-weight: 950;
+
+  letter-spacing: .12em;
+}
+
+
+.aw6-v5-problem .heat {
+  fill:
+    #ff8770;
+
+  font-size: 11px;
+
+  font-weight: 950;
+}
+
+
+.aw6-v5-problem .range {
+  fill:
+    #86c1ff;
+
+  font-size: 10px;
+
+  font-weight: 950;
+}
+
+
+/* QUESTION */
+
+.aw6-v5-question {
+  fill:
+    rgba(235,241,249,.91);
+
+  font-size: 9px;
+
+  font-weight: 950;
+
+  letter-spacing: .10em;
+}
+
+
+/* ========================================================
+   ENTRY PATH OPTIONS
+   ======================================================== */
+
+.aw6-entry-v5
+~ .aw6-viz-links
+path {
+  opacity: .20;
+
+  stroke-width: 2.2;
+
+  stroke-dasharray:
+    8 9;
+}
+
+
+.aw6-entry-v5
+~ .aw6-viz-links
+path:nth-child(1) {
+  stroke:
+    #69dfba;
+}
+
+
+.aw6-entry-v5
+~ .aw6-viz-links
+path:nth-child(2) {
+  stroke:
+    #6da9ff;
+}
+
+
+.aw6-entry-v5
+~ .aw6-viz-links
+path:nth-child(3) {
+  stroke:
+    #ffd06d;
+}
+
+
+.aw6-entry-v5
+~ .aw6-viz-links
+path.is-active {
+  opacity: 1;
+
+  stroke-width: 4;
+
+  animation:
+    aw6V5Dash
+    .85s linear infinite;
+}
+
+
+/* ========================================================
+   ENTRY DECISION NODES
+   ======================================================== */
+
+.aw6-entry-v5
+~ .aw6-viz-node
+.aw6-viz-node-ring {
+  fill:
+    rgba(5,13,28,.92);
+
+  stroke-width: 2.2;
+}
+
+
+.aw6-entry-v5
+~ .aw6-viz-node--0
+.aw6-viz-node-ring {
+  stroke:
+    #69dfba;
+}
+
+
+.aw6-entry-v5
+~ .aw6-viz-node--1
+.aw6-viz-node-ring {
+  stroke:
+    #6da9ff;
+}
+
+
+.aw6-entry-v5
+~ .aw6-viz-node--2
+.aw6-viz-node-ring {
+  stroke:
+    #ffd06d;
+}
+
+
+.aw6-entry-v5
+~ .aw6-viz-node--0
+.aw6-viz-node-core {
+  fill:
+    #69dfba;
+}
+
+
+.aw6-entry-v5
+~ .aw6-viz-node--1
+.aw6-viz-node-core {
+  fill:
+    #6da9ff;
+}
+
+
+.aw6-entry-v5
+~ .aw6-viz-node--2
+.aw6-viz-node-core {
+  fill:
+    #ffd06d;
+}
+
+
+.aw6-entry-v5
+~ .aw6-viz-node
+.aw6-viz-node-label {
+  fill:
+    rgba(232,240,250,.86);
+
+  font-size: 7px;
+
+  font-weight: 950;
+
+  letter-spacing: .11em;
+
+  text-anchor:
+    middle;
+}
+
+
+/* ANIMATIONS */
+
+@keyframes aw6V5Dash {
+
+  to {
+    stroke-dashoffset:
+      -38;
+  }
+
+}
+
+
+@keyframes aw6V5Vehicle {
+
+  to {
+    transform:
+      translateY(4px)
+      rotate(-1deg);
+  }
+
+}
+
+
+@keyframes aw6V5Heat {
+
+  from {
+    opacity: .58;
+  }
+
+  to {
+    opacity: .96;
+  }
+
+}
+
+
+@media (
+  prefers-reduced-motion:
+  reduce
+) {
+
+  .aw6-entry-v5 *,
+  .aw6-entry-v5 *::before,
+  .aw6-entry-v5 *::after {
+    animation:
+      none !important;
+  }
+
+}
+
+/* ALTWING CLEAN MISSION LAYOUT V1 */
+
+
+/* ========================================================
+   A. REMOVE CLUTTER FROM THE VISUAL CANVAS
+   ======================================================== */
+
+
+/*
+ * The large circular 01 / 02 / 03 nodes were competing
+ * visually with the spacecraft and actual engineering data.
+ *
+ * The choices now live in a dedicated rail below the model.
+ */
+
+.aw6-viz-node {
+  opacity: 0 !important;
+
+  pointer-events:
+    none !important;
+}
+
+
+/*
+ * Do not show all three hypothetical paths at once.
+ * Only reveal a path while its decision is being previewed.
+ */
+
+.aw6-viz-links path {
+  opacity: 0 !important;
+
+  pointer-events:
+    none;
+
+  transition:
+    opacity .20s ease,
+    stroke-width .20s ease,
+    filter .20s ease;
+}
+
+
+.aw6-viz-links path.is-active {
+  opacity: .82 !important;
+
+  stroke-width:
+    3.5 !important;
+
+  stroke-dasharray:
+    9 9;
+
+  filter:
+    drop-shadow(
+      0 0 7px
+      rgba(112,178,255,.42)
+    );
+
+  animation:
+    aw6CleanPathFlow
+    .85s linear infinite;
+}
+
+
+
+/* ========================================================
+   B. Q1 — REMOVE ALL OVERLAPPING EXPLANATORY TEXT
+   ======================================================== */
+
+
+/*
+ * The telemetry cards and target/current markers already
+ * communicate these ideas.
+ *
+ * Removing these three labels gives the vehicle and flight
+ * paths enough breathing room.
+ */
+
+.aw6-v5-step,
+.aw6-v5-problem,
+.aw6-v5-question {
+  display:
+    none !important;
+}
+
+
+/*
+ * Keep only the useful labels:
+ * TARGET and CURRENT PREDICTION.
+ */
+
+.aw6-v5-target text,
+.aw6-v5-overshoot text {
+  paint-order:
+    stroke fill;
+
+  stroke:
+    rgba(4,9,24,.92);
+
+  stroke-width:
+    3px;
+
+  stroke-linejoin:
+    round;
+}
+
+
+/*
+ * Slightly enlarge the important markers.
+ */
+
+.aw6-v5-target {
+  transform-box:
+    fill-box;
+
+  transform-origin:
+    center;
+
+  filter:
+    drop-shadow(
+      0 0 9px
+      rgba(105,223,186,.26)
+    );
+}
+
+
+.aw6-v5-overshoot {
+  transform-box:
+    fill-box;
+
+  transform-origin:
+    center;
+
+  filter:
+    drop-shadow(
+      0 0 9px
+      rgba(255,124,99,.24)
+    );
+}
+
+
+
+/* ========================================================
+   C. CANVAS — MORE SPACE FOR THE ACTUAL ENGINEERING VISUAL
+   ======================================================== */
+
+.aw6-viz-canvas {
+  position:
+    relative;
+
+  overflow:
+    hidden;
+}
+
+
+.aw6-viz-canvas svg {
+  display:
+    block;
+
+  width:
+    100%;
+
+  height:
+    auto;
+}
+
+
+
+/* ========================================================
+   D. DECISION RAIL — USED BY EVERY MISSION
+   ======================================================== */
+
+.aw6-viz-decision-rail {
+  padding:
+    18px 22px 20px;
+
+  border-top:
+    1px solid
+    rgba(130,160,210,.13);
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(7,14,29,.72),
+      rgba(5,11,24,.92)
+    );
+}
+
+
+.aw6-viz-decision-heading {
+  display:
+    flex;
+
+  align-items:
+    flex-end;
+
+  justify-content:
+    space-between;
+
+  gap:
+    18px;
+
+  margin-bottom:
+    13px;
+
+  text-align:
+    left;
+}
+
+
+.aw6-viz-decision-heading > span {
+  color:
+    rgba(143,173,221,.65);
+
+  font-size:
+    7px;
+
+  font-weight:
+    950;
+
+  letter-spacing:
+    .14em;
+}
+
+
+.aw6-viz-decision-heading > strong {
+  color:
+    rgba(235,241,250,.86);
+
+  font-size:
+    11px;
+
+  font-weight:
+    850;
+
+  line-height:
+    1.35;
+}
+
+
+
+/* ========================================================
+   E. THREE CLEAN CHOICES
+   ======================================================== */
+
+.aw6-viz-decision-options {
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(
+        0,
+        1fr
+      )
+    );
+
+  gap:
+    10px;
+}
+
+
+.aw6-viz-decision-option {
+  position:
+    relative;
+
+  min-width:
+    0;
+
+  min-height:
+    92px;
+
+  padding:
+    13px 14px 12px;
+
+  border:
+    1px solid
+    rgba(125,158,211,.16);
+
+  border-radius:
+    16px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(15,27,48,.78),
+      rgba(8,16,32,.62)
+    );
+
+  color:
+    #f4f7fb;
+
+  font:
+    inherit;
+
+  text-align:
+    left;
+
+  cursor:
+    pointer;
+
+  transition:
+    transform .18s ease,
+    border-color .18s ease,
+    background .18s ease,
+    box-shadow .18s ease;
+}
+
+
+.aw6-viz-decision-option:hover,
+.aw6-viz-decision-option:focus-visible,
+.aw6-viz-decision-option.is-active {
+  transform:
+    translateY(-2px);
+
+  outline:
+    none;
+
+  border-color:
+    rgba(118,183,255,.56);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(20,39,70,.92),
+      rgba(9,20,40,.84)
+    );
+
+  box-shadow:
+    0 10px 26px
+    rgba(0,0,0,.18),
+    inset 0 1px 0
+    rgba(255,255,255,.035);
+}
+
+
+.aw6-viz-decision-option.is-selected {
+  border-color:
+    rgba(105,223,186,.58);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(15,54,51,.72),
+      rgba(8,25,31,.82)
+    );
+}
+
+
+.aw6-viz-decision-number {
+  display:
+    block;
+
+  margin-bottom:
+    7px;
+
+  color:
+    rgba(135,169,220,.68);
+
+  font-size:
+    8px;
+
+  font-weight:
+    950;
+
+  letter-spacing:
+    .13em;
+}
+
+
+.aw6-viz-decision-option > strong {
+  display:
+    block;
+
+  min-height:
+    30px;
+
+  color:
+    #f6f8fc;
+
+  font-size:
+    11px;
+
+  font-weight:
+    850;
+
+  line-height:
+    1.35;
+}
+
+
+.aw6-viz-decision-preview {
+  display:
+    block;
+
+  margin-top:
+    8px;
+
+  color:
+    rgba(120,185,255,.62);
+
+  font-size:
+    6px;
+
+  font-weight:
+    950;
+
+  letter-spacing:
+    .12em;
+
+  transition:
+    color .18s ease,
+    transform .18s ease;
+}
+
+
+.aw6-viz-decision-option:hover
+.aw6-viz-decision-preview,
+.aw6-viz-decision-option:focus-visible
+.aw6-viz-decision-preview,
+.aw6-viz-decision-option.is-active
+.aw6-viz-decision-preview {
+  color:
+    #87c4ff;
+
+  transform:
+    translateX(2px);
+}
+
+
+
+/* ========================================================
+   F. OPTIONAL COLOR SIGNAL
+   ======================================================== */
+
+.aw6-viz-decision-option--0:hover,
+.aw6-viz-decision-option--0.is-active {
+  border-color:
+    rgba(105,223,186,.58);
+}
+
+
+.aw6-viz-decision-option--1:hover,
+.aw6-viz-decision-option--1.is-active {
+  border-color:
+    rgba(109,169,255,.62);
+}
+
+
+.aw6-viz-decision-option--2:hover,
+.aw6-viz-decision-option--2.is-active {
+  border-color:
+    rgba(255,208,109,.58);
+}
+
+
+
+/* ========================================================
+   G. FOOTER
+   ======================================================== */
+
+.aw6-viz-footer {
+  min-height:
+    54px;
+
+  padding:
+    14px 22px !important;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    space-between;
+
+  gap:
+    20px;
+
+  background:
+    rgba(4,10,23,.94) !important;
+}
+
+
+.aw6-viz-footer > span {
+  max-width:
+    68%;
+
+  color:
+    rgba(176,194,220,.60);
+
+  font-size:
+    9px;
+
+  line-height:
+    1.45;
+}
+
+
+.aw6-viz-footer > strong {
+  flex:
+    0 0 auto;
+
+  color:
+    #ffc857;
+
+  font-size:
+    8px;
+
+  letter-spacing:
+    .12em;
+
+  white-space:
+    nowrap;
+}
+
+
+
+/* ========================================================
+   H. MOBILE
+   ======================================================== */
+
+@media (
+  max-width:
+  720px
+) {
+
+  .aw6-viz-decision-heading {
+    display:
+      block;
+  }
+
+
+  .aw6-viz-decision-heading > strong {
+    display:
+      block;
+
+    margin-top:
+      5px;
+  }
+
+
+  .aw6-viz-decision-options {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .aw6-viz-decision-option {
+    min-height:
+      0;
+  }
+
+
+  .aw6-viz-footer {
+    align-items:
+      flex-start;
+
+    flex-direction:
+      column;
+  }
+
+
+  .aw6-viz-footer > span {
+    max-width:
+      100%;
+  }
+
+}
+
+
+
+/* ========================================================
+   I. REDUCED MOTION
+   ======================================================== */
+
+@keyframes aw6CleanPathFlow {
+
+  to {
+    stroke-dashoffset:
+      -36;
+  }
+
+}
+
+
+@media (
+  prefers-reduced-motion:
+  reduce
+) {
+
+  .aw6-viz-decision-option,
+  .aw6-viz-links path {
+    animation:
+      none !important;
+
+    transition:
+      none !important;
+  }
+
+}
+
+/* ALTWING SCIENCE V3 VISUALS */
+
+
+/* COMMON */
+
+.aw6-science-caption {
+  fill: rgba(207,220,241,.72);
+  font-size: 9px;
+  font-weight: 950;
+  letter-spacing: .13em;
+}
+
+
+.aw6-science-label {
+  fill: rgba(204,219,239,.70);
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: .09em;
+}
+
+
+.aw6-science-tiny-dark {
+  fill: #25313d;
+  font-size: 7px;
+  font-weight: 950;
+  letter-spacing: .08em;
+}
+
+
+.aw6-science-mars {
+  fill: #b95643;
+  stroke: rgba(234,112,75,.45);
+  stroke-width: 2;
+}
+
+
+/* ========================================================
+   Q2 RANGE TRIGGER
+   ======================================================== */
+
+.aw6-range-window {
+  fill: rgba(82,152,255,.055);
+  stroke: rgba(105,171,255,.38);
+  stroke-width: 2;
+  stroke-dasharray: 8 9;
+}
+
+
+.aw6-range-window-label,
+.aw6-range-edge {
+  fill: rgba(126,183,255,.76);
+  font-size: 8px;
+  font-weight: 950;
+  letter-spacing: .11em;
+}
+
+
+.aw6-range-edge {
+  fill: rgba(255,147,116,.67);
+}
+
+
+.aw6-range-flight {
+  fill: none;
+  stroke: #6faeff;
+  stroke-width: 3;
+  stroke-dasharray: 10 9;
+  animation: aw6ScienceDash 1s linear infinite;
+}
+
+
+.aw6-range-parachute path {
+  fill: none;
+  stroke: rgba(220,232,243,.62);
+  stroke-width: 1.5;
+}
+
+
+.aw6-range-marker {
+  stroke: #ffd166;
+  stroke-width: 2;
+  stroke-dasharray: 5 7;
+}
+
+
+.aw6-range-marker-dot {
+  fill: #ffd166;
+}
+
+
+/* ========================================================
+   Q3 NAVIGATION
+   ======================================================== */
+
+.aw6-nav-heatshield path {
+  fill: #bd674d;
+  stroke: #f0a07b;
+}
+
+
+.aw6-nav-sensor rect {
+  fill: rgba(14,27,49,.88);
+  stroke: rgba(115,158,215,.35);
+  stroke-width: 2;
+}
+
+
+.aw6-nav-sensor text {
+  fill: rgba(224,234,247,.80);
+  font-size: 9px;
+  font-weight: 900;
+}
+
+
+.aw6-nav-sensor .good {
+  fill: #70ddb8;
+}
+
+
+.aw6-nav-sensor path {
+  fill: none;
+  stroke: rgba(109,171,255,.50);
+  stroke-width: 2;
+  stroke-dasharray: 6 7;
+}
+
+
+.aw6-nav-state circle {
+  fill: rgba(24,65,98,.42);
+  stroke: #79baff;
+  stroke-width: 2.5;
+}
+
+
+.aw6-nav-state text {
+  fill: #dbeaff;
+  font-size: 10px;
+  font-weight: 950;
+  letter-spacing: .09em;
+}
+
+
+/* ========================================================
+   Q4 TRN
+   ======================================================== */
+
+.aw6-trn-map {
+  fill: rgba(115,58,44,.23);
+  stroke: rgba(214,117,84,.34);
+  stroke-width: 2;
+}
+
+
+.aw6-trn-contour {
+  fill: none;
+  stroke: rgba(218,135,102,.28);
+  stroke-width: 2;
+}
+
+
+.aw6-trn-reachable {
+  fill: rgba(90,170,255,.04);
+  stroke: rgba(91,166,255,.48);
+  stroke-width: 2;
+  stroke-dasharray: 8 8;
+}
+
+
+.aw6-trn-hazard circle {
+  fill: rgba(255,103,90,.09);
+  stroke: rgba(255,113,97,.70);
+  stroke-width: 2;
+}
+
+
+.aw6-trn-hazard text,
+.aw6-trn-original text {
+  fill: #ff8a78;
+  font-size: 8px;
+  font-weight: 950;
+}
+
+
+.aw6-trn-original circle,
+.aw6-trn-original path {
+  fill: none;
+  stroke: #ff7967;
+  stroke-width: 2;
+}
+
+
+.aw6-trn-safe circle:first-child {
+  fill: rgba(103,223,182,.08);
+  stroke: #69dfba;
+  stroke-width: 2.5;
+}
+
+
+.aw6-trn-safe circle:nth-child(2) {
+  fill: #69dfba;
+}
+
+
+.aw6-trn-safe text {
+  fill: #83e6c5;
+  font-size: 8px;
+  font-weight: 950;
+}
+
+
+.aw6-trn-vehicle path {
+  fill: #cbd9e7;
+  stroke: #7cb7ff;
+}
+
+
+/* ========================================================
+   Q5 POWERED DESCENT
+   ======================================================== */
+
+.aw6-pd-backshell path:first-child {
+  fill: rgba(210,219,228,.42);
+  stroke: #879aaa;
+  stroke-width: 2;
+}
+
+
+.aw6-pd-backshell path:nth-child(2) {
+  fill: none;
+  stroke: rgba(230,238,245,.55);
+  stroke-width: 2;
+}
+
+
+.aw6-pd-separation {
+  fill: none;
+  stroke: rgba(123,181,255,.55);
+  stroke-width: 2;
+  stroke-dasharray: 7 8;
+}
+
+
+.aw6-pd-lander > path:not(.aw6-pd-engines path) {
+  stroke-linecap: round;
+}
+
+
+.aw6-pd-engines path {
+  fill: #ff8a45;
+  stroke: #ffd166;
+  opacity: .90;
+  filter: drop-shadow(0 0 8px rgba(255,112,55,.45));
+  animation: aw6EnginePulse .18s ease-in-out infinite alternate;
+}
+
+
+.aw6-pd-altitude {
+  stroke: rgba(164,190,223,.45);
+  stroke-width: 2;
+  stroke-dasharray: 6 7;
+}
+
+
+.aw6-pd-label {
+  fill: #ffbf67;
+  font-size: 9px;
+  font-weight: 950;
+  letter-spacing: .11em;
+}
+
+
+/* ========================================================
+   Q6 FAULT MANAGEMENT
+   ======================================================== */
+
+.aw6-fm-channel rect {
+  fill: rgba(12,25,45,.90);
+  stroke-width: 2;
+}
+
+
+.aw6-fm-channel text {
+  font-size: 9px;
+  font-weight: 950;
+}
+
+
+.aw6-fm-bad rect {
+  stroke: #ff746a;
+}
+
+
+.aw6-fm-bad text {
+  fill: #ff887d;
+}
+
+
+.aw6-fm-good rect {
+  stroke: #69dcb8;
+}
+
+
+.aw6-fm-good text {
+  fill: #78e0bf;
+}
+
+
+.aw6-fm-bad-line {
+  fill: none;
+  stroke: #ff756c;
+  stroke-width: 3;
+}
+
+
+.aw6-fm-good-line {
+  fill: none;
+  stroke: #68dcb8;
+  stroke-width: 2.5;
+}
+
+
+.aw6-fm-estimator circle {
+  fill: rgba(46,100,146,.24);
+  stroke: #77baff;
+  stroke-width: 2.5;
+}
+
+
+.aw6-fm-estimator text {
+  fill: #deedff;
+  font-size: 11px;
+  font-weight: 950;
+}
+
+
+.aw6-fm-output {
+  stroke: #77baff;
+  stroke-width: 3;
+}
+
+
+.aw6-fm-vehicle path {
+  fill: #d9e3eb;
+  stroke: #93a4b2;
+}
+
+
+/* ========================================================
+   Q7 TERMINAL DESCENT
+   ======================================================== */
+
+.aw6-td-ground {
+  fill: #a64e3e;
+  stroke: #d06b50;
+}
+
+
+.aw6-td-slope {
+  stroke: #ffd166;
+  stroke-width: 3;
+}
+
+
+.aw6-td-plume,
+.aw6-lc-plume {
+  fill: #ff9148;
+  opacity: .84;
+  filter: drop-shadow(0 0 8px rgba(255,126,62,.42));
+  animation: aw6EnginePulse .18s ease-in-out infinite alternate;
+}
+
+
+.aw6-td-lateral {
+  stroke: #ff8c78;
+  stroke-width: 4;
+}
+
+
+.aw6-td-arrow {
+  fill: none;
+  stroke: #ff8c78;
+  stroke-width: 4;
+}
+
+
+.aw6-td-warning {
+  fill: #ff9481;
+  font-size: 10px;
+  font-weight: 950;
+  letter-spacing: .08em;
+}
+
+
+.aw6-td-dust ellipse,
+.aw6-lc-dust ellipse {
+  fill: rgba(205,126,87,.22);
+}
+
+
+/* ========================================================
+   Q8 LANDING COMMIT
+   ======================================================== */
+
+.aw6-lc-target circle {
+  fill: none;
+  stroke: #68dfba;
+  stroke-width: 2;
+}
+
+
+.aw6-lc-target circle:last-child {
+  fill: #68dfba;
+}
+
+
+.aw6-lc-camera rect,
+.aw6-lc-state rect {
+  fill: rgba(12,25,45,.90);
+  stroke-width: 2;
+}
+
+
+.aw6-lc-camera rect {
+  stroke: #ff766b;
+}
+
+
+.aw6-lc-state rect {
+  stroke: #69dfba;
+}
+
+
+.aw6-lc-camera text,
+.aw6-lc-state text {
+  fill: rgba(227,236,247,.85);
+  font-size: 9px;
+  font-weight: 950;
+}
+
+
+.aw6-lc-camera .warning {
+  fill: #ff8579;
+}
+
+
+.aw6-lc-state .good {
+  fill: #72dfbd;
+}
+
+
+.aw6-lc-lock {
+  stroke: #69dfba;
+  stroke-width: 2.5;
+  stroke-dasharray: 6 7;
+}
+
+
+/* ========================================================
+   ANIMATION
+   ======================================================== */
+
+@keyframes aw6ScienceDash {
+  to {
+    stroke-dashoffset: -38;
+  }
+}
+
+
+@keyframes aw6EnginePulse {
+  from {
+    opacity: .60;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+@media (
+  prefers-reduced-motion:
+  reduce
+) {
+
+  .aw6-science *,
+  .aw6-science *::before,
+  .aw6-science *::after {
+    animation:
+      none !important;
+  }
+
+}

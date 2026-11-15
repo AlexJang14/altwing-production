@@ -1,0 +1,16 @@
+import {spawnSync} from 'node:child_process';
+import {readFileSync,writeFileSync} from 'node:fs';
+import {evaluateRelease} from './release-policy.mjs';
+const started=Date.now();
+const run=spawnSync(process.execPath,['scripts/verify-domain-migration.mjs'],{stdio:'inherit'});
+if(run.error)throw run.error;
+if(run.signal||![0,1].includes(run.status))throw Error('The validation runner did not complete.');
+const report=JSON.parse(readFileSync('.sites-runtime/migration-validation/results.json','utf8'));
+if(Date.parse(report.checkedAt)<started)throw Error('Validation evidence is stale.');
+const baseline=JSON.parse(readFileSync('deployment/existing-advisories.json','utf8'));
+const result=evaluateRelease(report,baseline);
+writeFileSync('.sites-runtime/migration-validation/release.json',JSON.stringify({...result,checkedAt:report.checkedAt},null,2)+'\n');
+for(const entry of result.known)console.log(`::warning title=Existing ${entry.name} advisory::${entry.reason}`);
+for(const entry of result.unexpected)console.error(`BLOCKED: ${entry.name}: ${entry.reason}`);
+console.log(`${report.results.filter(e=>e.passed).length}/${report.results.length} checks passed; ${result.known.length} unchanged advisories; ${result.unexpected.length} blocking failures.`);
+if(!result.canDeploy)process.exit(1);

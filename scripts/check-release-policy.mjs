@@ -1,0 +1,17 @@
+import assert from 'node:assert/strict';
+import {createHash} from 'node:crypto';
+import {evaluateRelease} from './release-policy.mjs';
+const files={'catalog.ts':'unchanged catalog','advisory.log':'42 records are stale'};
+const baseline={requiredChecks:['features','freshness'],advisories:{freshness:{files:{'catalog.ts':createHash('sha256').update(files['catalog.ts']).digest('hex')},requiredOutput:['42 records are stale'],reason:'Reviewed existing content advisory.'}}};
+const read=file=>{if(!(file in files))throw Error('missing');return files[file];};
+const report={results:[{name:'features',passed:true,exitCode:0},{name:'freshness',passed:false,exitCode:1,signal:null,log:'advisory.log'}]};
+assert.equal(evaluateRelease(report,baseline,read).canDeploy,true);
+assert.equal(evaluateRelease(report,baseline,read).known.length,1);
+assert.equal(evaluateRelease({results:report.results.map(e=>({...e,passed:true,exitCode:0}))},baseline,read).known.length,0);
+assert.equal(evaluateRelease({results:report.results.map(e=>e.name==='features'?{...e,passed:false,exitCode:1}:e)},baseline,read).canDeploy,false);
+assert.equal(evaluateRelease({results:[report.results[0]]},baseline,read).canDeploy,false);
+assert.equal(evaluateRelease(report,baseline,file=>file==='catalog.ts'?'changed content':read(file)).canDeploy,false);
+assert.equal(evaluateRelease(report,baseline,file=>file==='advisory.log'?'different failure':read(file)).canDeploy,false);
+assert.equal(evaluateRelease({results:report.results.map(e=>e.name==='freshness'?{...e,exitCode:2}:e)},baseline,read).canDeploy,false);
+assert.throws(()=>evaluateRelease({results:[report.results[0],report.results[0]]},baseline,read));
+console.log('PASS: release policy blocks new failures, changed advisory inputs, different errors, missing checks and duplicate results; known advisories stay explicit');

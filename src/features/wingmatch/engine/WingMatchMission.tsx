@@ -1,0 +1,1038 @@
+import {
+  useEffect,
+  useMemo,
+  useState,
+} from "react";
+
+import WingMatchGameVisual from "../visuals/WingMatchGameVisual";
+
+import WingMatchMiniTask, {
+  type MiniTaskResult,
+} from "../interactions/WingMatchMiniTask";
+
+import WingMatchResult from "../result/WingMatchResult";
+
+import WingRevealLoading from "../result/WingRevealLoading";
+
+import BuildWing from "../build/BuildWing";
+
+import {
+  V5_CHOICE_MISSIONS,
+  WING_PROFILES,
+  addWeights,
+
+  type PrimaryWingId,
+  type StyleScores,
+  type ThinkingStyleId,
+  type V5ChoiceMission,
+  type V5Option,
+  type WingEvidence,
+  type WingScores,
+} from "./wingmatchV5";
+
+import {
+  awardMilestone,
+} from "../../progression/progression";
+
+import "../styles/beginner-first.css";
+import "../styles/wingmatch-game-v4.css";
+import "../styles/wingmatch-v5.css";
+import "../../../styles/wingmatch-final-large.css";
+
+
+interface Props {
+  onExit: () => void;
+}
+
+
+interface HistoryItem {
+  sceneId: string;
+
+  phase: string;
+
+  title: string;
+
+  consequence: string;
+
+  primaryWing?:
+    PrimaryWingId;
+}
+
+
+interface PersistedState {
+  version: 5;
+
+  sceneIndex: number;
+
+  wingScores:
+    WingScores;
+
+  styleScores:
+    StyleScores;
+
+  wingEvidence:
+    WingEvidence;
+
+  history:
+    HistoryItem[];
+
+  optionOrders:
+    Record<
+      string,
+      string[]
+    >;
+
+  completed:
+    boolean;
+}
+
+
+type FlowItem =
+  | {
+      kind:
+        "choice";
+
+      missionId:
+        string;
+    }
+
+  | {
+      kind:
+        "control";
+    }
+
+  | {
+      kind:
+        "diagnostic";
+    };
+
+
+const FLOW:
+  FlowItem[] = [
+
+  {
+    kind: "choice",
+    missionId:
+      "landing-intelligence",
+  },
+
+  {
+    kind: "choice",
+    missionId:
+      "sensor-conflict",
+  },
+
+  {
+    kind:
+      "control",
+  },
+
+  {
+    kind: "choice",
+    missionId:
+      "thermal-limits",
+  },
+
+  {
+    kind: "choice",
+    missionId:
+      "landing-structure",
+  },
+
+  {
+    kind:
+      "diagnostic",
+  },
+
+  {
+    kind: "choice",
+    missionId:
+      "remaining-power",
+  },
+
+  {
+    kind: "choice",
+    missionId:
+      "final-upgrade",
+  },
+];
+
+
+const STORAGE_KEY =
+  "altwing-wingmatch-v5-state";
+
+
+function shuffle<T>(
+  values: T[],
+) {
+  const next = [
+    ...values,
+  ];
+
+  for (
+    let i =
+      next.length - 1;
+    i > 0;
+    i -= 1
+  ) {
+    const j =
+      Math.floor(
+        Math.random() *
+        (i + 1),
+      );
+
+    [
+      next[i],
+      next[j],
+    ] = [
+      next[j],
+      next[i],
+    ];
+  }
+
+  return next;
+}
+
+
+function createOrders() {
+  return Object.fromEntries(
+    V5_CHOICE_MISSIONS.map(
+      (
+        mission,
+      ) => [
+        mission.id,
+
+        shuffle(
+          mission.options.map(
+            (
+              option,
+            ) =>
+              option.id,
+          ),
+        ),
+      ],
+    ),
+  );
+}
+
+
+function readState():
+  PersistedState | null {
+
+  try {
+    const raw =
+      localStorage.getItem(
+        STORAGE_KEY,
+      );
+
+    if (!raw) {
+      return null;
+    }
+
+    const parsed =
+      JSON.parse(
+        raw,
+      ) as
+        PersistedState;
+
+    if (
+      parsed.version !==
+        5 ||
+      parsed.sceneIndex <
+        0 ||
+      parsed.sceneIndex >=
+        FLOW.length
+    ) {
+      return null;
+    }
+
+    return parsed;
+  } catch {
+    return null;
+  }
+}
+
+
+function WingMatchMission({
+  onExit,
+}: Props) {
+
+  const [
+    initial,
+  ] =
+    useState(
+      () =>
+        readState(),
+    );
+
+
+  const [
+    sceneIndex,
+    setSceneIndex,
+  ] =
+    useState(
+      initial
+        ?.sceneIndex ??
+        0,
+    );
+
+
+  const [
+    wingScores,
+    setWingScores,
+  ] =
+    useState<WingScores>(
+      initial
+        ?.wingScores ??
+        {},
+    );
+
+
+  const [
+    styleScores,
+    setStyleScores,
+  ] =
+    useState<StyleScores>(
+      initial
+        ?.styleScores ??
+        {},
+    );
+
+
+  const [
+    wingEvidence,
+    setWingEvidence,
+  ] =
+    useState<WingEvidence>(
+      initial
+        ?.wingEvidence ??
+        {},
+    );
+
+
+  const [
+    history,
+    setHistory,
+  ] =
+    useState<
+      HistoryItem[]
+    >(
+      initial
+        ?.history ??
+        [],
+    );
+
+
+  const [
+    optionOrders,
+  ] =
+    useState<
+      Record<
+        string,
+        string[]
+      >
+    >(
+      initial
+        ?.optionOrders ??
+        createOrders(),
+    );
+
+
+  const [
+    completed,
+    setCompleted,
+  ] =
+    useState(
+      initial
+        ?.completed ??
+        false,
+    );
+
+
+  const [
+    locked,
+    setLocked,
+  ] =
+    useState(false);
+
+
+  const [
+    neutralFlash,
+    setNeutralFlash,
+  ] =
+    useState(false);
+
+
+  const [
+    buildWing,
+    setBuildWing,
+  ] =
+    useState<
+      PrimaryWingId | null
+    >(null);
+
+
+  const item =
+    FLOW[
+      sceneIndex
+    ];
+
+
+  const choiceMission:
+    V5ChoiceMission | null =
+      item.kind ===
+      "choice"
+        ? V5_CHOICE_MISSIONS.find(
+            (
+              mission,
+            ) =>
+              mission.id ===
+              item.missionId,
+          ) ??
+          null
+        : null;
+
+
+  const orderedOptions =
+    useMemo(
+      () => {
+
+        if (
+          !choiceMission
+        ) {
+          return [];
+        }
+
+        const order =
+          optionOrders[
+            choiceMission.id
+          ] ??
+          choiceMission
+            .options
+            .map(
+              (
+                option,
+              ) =>
+                option.id,
+            );
+
+
+        return order
+          .map(
+            (
+              id,
+            ) =>
+              choiceMission
+                .options
+                .find(
+                  (
+                    option,
+                  ) =>
+                    option.id ===
+                    id,
+                ),
+          )
+          .filter(
+            (
+              option,
+            ): option is
+              V5Option =>
+              Boolean(
+                option,
+              ),
+          );
+      },
+      [
+        choiceMission,
+        optionOrders,
+      ],
+    );
+
+
+  useEffect(() => {
+
+    const state:
+      PersistedState = {
+
+      version: 5,
+
+      sceneIndex,
+
+      wingScores,
+
+      styleScores,
+
+      wingEvidence,
+
+      history,
+
+      optionOrders,
+
+      completed,
+    };
+
+
+    localStorage.setItem(
+      STORAGE_KEY,
+      JSON.stringify(
+        state,
+      ),
+    );
+
+  }, [
+    sceneIndex,
+    wingScores,
+    styleScores,
+    wingEvidence,
+    history,
+    optionOrders,
+    completed,
+  ]);
+
+
+  function restart() {
+
+    localStorage.removeItem(
+      STORAGE_KEY,
+    );
+
+    setSceneIndex(0);
+
+    setWingScores({});
+    setStyleScores({});
+    setWingEvidence({});
+    setHistory([]);
+
+    setCompleted(false);
+
+    setLocked(false);
+    setNeutralFlash(false);
+
+    setBuildWing(null);
+
+    window.location.reload();
+  }
+
+
+  function advance() {
+
+    setLocked(false);
+    setNeutralFlash(false);
+
+    if (
+      sceneIndex >=
+      FLOW.length - 1
+    ) {
+      setCompleted(true);
+
+      awardMilestone(
+        "aerospace:wingmatch:complete",
+        50,
+        {
+          systemsThinking: 1,
+          tradeoffs: 1,
+          evidenceReasoning: 1,
+        },
+        "Aerospace WingMatch V5 complete",
+      );
+
+      window.scrollTo({
+        top: 0,
+        behavior:
+          "smooth",
+      });
+
+      return;
+    }
+
+
+    setSceneIndex(
+      (
+        current,
+      ) =>
+        current + 1,
+    );
+
+    window.scrollTo({
+      top: 0,
+      behavior:
+        "smooth",
+    });
+  }
+
+
+  function recordAndAdvance(
+    nextHistory:
+      HistoryItem[],
+  ) {
+
+    setHistory(
+      nextHistory,
+    );
+
+    setLocked(true);
+    setNeutralFlash(true);
+
+    window.setTimeout(
+      advance,
+      760,
+    );
+  }
+
+
+  function choose(
+    option:
+      V5Option,
+  ) {
+
+    if (
+      locked ||
+      !choiceMission
+    ) {
+      return;
+    }
+
+
+    setWingScores(
+      (
+        current,
+      ) =>
+        addWeights<
+          PrimaryWingId
+        >(
+          current,
+          option
+            .wingWeights,
+        ),
+    );
+
+
+    setStyleScores(
+      (
+        current,
+      ) =>
+        addWeights<
+          ThinkingStyleId
+        >(
+          current,
+          option
+            .styleWeights,
+        ),
+    );
+
+
+    setWingEvidence(
+      (
+        current,
+      ) => ({
+        ...current,
+
+        [option.primaryWing]:
+          (
+            current[
+              option
+                .primaryWing
+            ] ??
+            0
+          ) +
+          1,
+      }),
+    );
+
+
+    awardMilestone(
+      `aerospace:v5:${choiceMission.id}`,
+      10,
+      {},
+      `${choiceMission.phase} recorded`,
+    );
+
+
+    recordAndAdvance([
+      ...history,
+
+      {
+        sceneId:
+          choiceMission.id,
+
+        phase:
+          choiceMission.phase,
+
+        title:
+          option.title,
+
+        consequence:
+          option.consequence,
+
+        primaryWing:
+          option.primaryWing,
+      },
+    ]);
+  }
+
+
+  function completeMini(
+    result:
+      MiniTaskResult,
+  ) {
+
+    if (locked) {
+      return;
+    }
+
+
+    setStyleScores(
+      (
+        current,
+      ) =>
+        addWeights<
+          ThinkingStyleId
+        >(
+          current,
+          result
+            .styleWeights,
+        ),
+    );
+
+
+    const phase =
+      item.kind ===
+      "control"
+        ? "CONTROL LAB"
+        : "DIAGNOSTIC LAB";
+
+
+    awardMilestone(
+      `aerospace:v5:${item.kind}`,
+      10,
+      {},
+      `${phase} recorded`,
+    );
+
+
+    recordAndAdvance([
+      ...history,
+
+      {
+        sceneId:
+          item.kind,
+
+        phase,
+
+        title:
+          result.title,
+
+        consequence:
+          result.consequence,
+      },
+    ]);
+  }
+
+
+  if (buildWing) {
+
+    return (
+      <BuildWing
+        wingId={
+          buildWing
+        }
+
+        wingName={
+          WING_PROFILES[
+            buildWing
+          ].name
+        }
+
+        onBack={() =>
+          setBuildWing(
+            null,
+          )
+        }
+      />
+    );
+  }
+
+
+  if (completed) {
+
+    return (
+      <WingRevealLoading>
+
+        <WingMatchResult
+          wingScores={
+            wingScores
+          }
+
+          styleScores={
+            styleScores
+          }
+
+          wingEvidence={
+            wingEvidence
+          }
+
+          missionHistory={
+            history
+          }
+
+          onRestart={
+            restart
+          }
+
+          onContinue={(
+            wingId,
+          ) =>
+            setBuildWing(
+              wingId,
+            )
+          }
+        />
+
+      </WingRevealLoading>
+    );
+  }
+
+
+  const miniSituation =
+    item.kind ===
+    "control"
+      ? "The lander keeps correcting too strongly and wobbling around its target."
+      : item.kind ===
+          "diagnostic"
+        ? "One spacecraft signal suddenly becomes unreliable."
+        : "";
+
+
+  return (
+    <main className="wm-v5-shell">
+
+      <header className="wm-v5-nav">
+
+        <button
+          type="button"
+          className="wm-v5-brand"
+          onClick={onExit}
+        >
+          Alt
+          <strong>
+            Wing
+          </strong>
+        </button>
+
+
+        <div className="wm-v5-progress">
+
+          <span>
+            {sceneIndex + 1}
+            {" / "}
+            {FLOW.length}
+          </span>
+
+          <div>
+            <i
+              style={{
+                width:
+                  `${
+                    (
+                      (
+                        sceneIndex +
+                        1
+                      ) /
+                      FLOW.length
+                    ) *
+                    100
+                  }%`,
+              }}
+            />
+          </div>
+
+        </div>
+
+
+        <div className="wm-v5-actions">
+
+          <button
+            type="button"
+            onClick={
+              restart
+            }
+          >
+            Restart
+          </button>
+
+          <button
+            type="button"
+            onClick={onExit}
+          >
+            Exit
+          </button>
+
+        </div>
+
+      </header>
+
+
+      <section className="wm-v5-main">
+
+        <div className="wm-v5-intro">
+
+          <span>
+            MISSION{" "}
+            {String(
+              sceneIndex + 1,
+            ).padStart(
+              2,
+              "0",
+            )}
+          </span>
+
+          <h1>
+            {choiceMission
+              ? choiceMission
+                  .situation
+              : miniSituation}
+          </h1>
+
+          <p>
+            No aerospace knowledge
+            is required.
+          </p>
+
+        </div>
+
+
+        {choiceMission ? (
+          <>
+
+            <WingMatchGameVisual
+              sceneId={
+                choiceMission
+                  .visualId
+              }
+            />
+
+
+            <div className="wm-v5-question">
+
+              <span>
+                YOUR MOVE
+              </span>
+
+              <h2>
+                {
+                  choiceMission
+                    .question
+                }
+              </h2>
+
+            </div>
+
+
+            <div className="wm-v5-options">
+
+              {orderedOptions.map(
+                (
+                  option,
+                  index,
+                ) => (
+                  <button
+                    type="button"
+                    key={
+                      option.id
+                    }
+
+                    disabled={
+                      locked
+                    }
+
+                    onClick={() =>
+                      choose(
+                        option,
+                      )
+                    }
+                  >
+
+                    <small>
+                      OPTION{" "}
+                      {index + 1}
+                    </small>
+
+                    <strong>
+                      {
+                        option.title
+                      }
+                    </strong>
+
+                    <p>
+                      {
+                        option.description
+                      }
+                    </p>
+
+                    <b>
+                      CHOOSE →
+                    </b>
+
+                  </button>
+                ),
+              )}
+
+            </div>
+
+          </>
+        ) : (
+
+          <WingMatchMiniTask
+            task={
+              item.kind === "control"
+                ? "control"
+                : "diagnostic"
+            }
+
+            locked={
+              locked
+            }
+
+            onComplete={
+              completeMini
+            }
+          />
+
+        )}
+
+
+        {neutralFlash && (
+          <div
+            className="wm-v5-neutral-flash"
+            role="status"
+          >
+            <span>
+              DECISION RECORDED ✓
+            </span>
+
+            <strong>
+              Mission updated.
+            </strong>
+
+            <small>
+              Next scene incoming...
+            </small>
+          </div>
+        )}
+
+
+        <p className="wm-v5-disclaimer">
+          AltWing does not score
+          choices as right or wrong.
+          Interpretation is shown
+          only after the full mission.
+        </p>
+
+      </section>
+
+    </main>
+  );
+}
+
+
+export default WingMatchMission;

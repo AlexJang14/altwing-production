@@ -1,0 +1,5 @@
+import {PROJECTS,readDraft,STAGES} from './projectModel';
+export default function ProjectProgress(){
+  const saved=PROJECTS.map(project=>({project,draft:readDraft(project)})).filter(x=>x.draft.updatedAt);
+  return <section className="guidance-vault"><div className="guidance-vault-heading"><span>MY PROJECTS</span><h2>Your next step is still here.</h2><p>Continue at your own pace. Your support choices are not ability labels.</p></div>{saved.length===0?<div className="next-step-release"><p>Make a prediction, try a browser experiment, and keep a record of what you learned.</p><a className="release-button" href="#/projects">Choose a first project →</a></div>:<div className="vault-saved-grid">{saved.map(({project,draft})=><article key={project.id}><h3>{project.title}</h3><p>{draft.completedAt?'Exploration record saved':`Continue from ${STAGES[draft.stage].toLowerCase()}`}</p><p>{draft.runs.length} simulated tests recorded</p><a className="release-button" href={`#/projects?project=${project.id}`}>Resume my work →</a></article>)}</div>}</section>;
+}
