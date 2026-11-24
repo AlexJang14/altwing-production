@@ -61,5 +61,6 @@
   "databaseOperationsAuthorized": false,
   "scheduledPublishingAuthorized": false,
   "mascotDecision": "APPROVED retention exception; unchanged asset",
-  "qaAttempt": 1
+  "qaAttempt": 2,
+  "qaOnlyCorrection": "Unique CTA selector, modal-aware navigation, implicit-label selectors, actual field filter, arrow labels, lazy-route readiness, explicit print media, duplicate-save assertion and browser videos; frozen product inputs unchanged."
 }
