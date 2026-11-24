@@ -1,0 +1,25 @@
+{
+  "schema": 1,
+  "sourceFingerprint": "9ac38bc651421859dd21b296725c84f29562e70880254afdf9e717db63525e66",
+  "browserRun": 45499900337,
+  "browserQaCommit": "25aa381a508ed0694d0fdf9771f1ffa8a6dce379",
+  "browserArtifact": 14968604178,
+  "browserArtifactName": "AltWing-Corrective-Acceptance-45499900337",
+  "reviewedAtUTC": "2026-11-24T22:32:04.538363+00:00",
+  "scope": "Evidence-only reconciliation plus non-publishing deployable builds. Do not rerun browser cases or modify product/production/database/schedules.",
+  "expectedCaseTotals": {
+    "PASS": 24,
+    "FAIL": 0,
+    "UNVERIFIED": 7
+  },
+  "expectedUnverifiedCases": [
+    "M01",
+    "M02",
+    "M03",
+    "M04",
+    "A03",
+    "A04",
+    "I02"
+  ],
+  "manualScopeDecision": "PENDING \u2014 no unperformed case waived or marked passed"
+}

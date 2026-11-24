@@ -1,0 +1,62 @@
+name: AltWing final corrective evidence review
+
+on:
+  push:
+    branches: [qa/golden-horizon-corrective-20261124]
+    paths: [qa/FINAL-REVIEW-READY.json]
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  final-review:
+    if: github.ref == 'refs/heads/qa/golden-horizon-corrective-20261124'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Reconstruct and verify exact corrective source
+        run: |
+          node qa/verify-inputs.mjs
+          node qa/prepare-corrective.mjs
+      - name: Install unchanged locked application dependencies
+        run: npm ci --prefix qa/corrective/source --ignore-scripts --no-audit --no-fund
+      - name: Build custom-domain frontend and existing backend without publishing
+        run: node qa/build-production-targets.mjs
+      - name: Read successful actual browser evidence
+        if: always()
+        uses: actions/download-artifact@v4
+        with:
+          name: AltWing-Corrective-Acceptance-45499900337
+          run-id: 45499900337
+          github-token: ${{ github.token }}
+          path: qa/review-input
+      - name: Read existing passed rotation and dialog evidence
+        if: always()
+        uses: actions/download-artifact@v4
+        with:
+          name: AltWing-Corrective-Acceptance-45498111815
+          run-id: 45498111815
+          github-token: ${{ github.token }}
+          path: qa/reused-dialog
+      - name: Reconcile real visual and owner observations without rerunning browsers
+        if: always()
+        run: node qa/final-corrective-review.mjs
+      - name: Upload consolidated report and populated acceptance workflow
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: AltWing-Final-Corrective-Results-${{ github.run_id }}
+          path: qa/final-reports/
+          if-no-files-found: error
+          retention-days: 7
+          compression-level: 6
+      - name: Enforce observed corrections and honest manual status
+        if: always()
+        run: node qa/final-corrective-review.mjs --enforce

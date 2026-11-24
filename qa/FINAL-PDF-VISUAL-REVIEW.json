@@ -1,0 +1,192 @@
+{
+  "schema": 1,
+  "origin": "Assistant visual inspection of actual GitHub Actions browser PDFs and screenshots; not a new browser execution",
+  "reviewedAtUTC": "2026-11-24T22:32:04.538363+00:00",
+  "sourceFingerprint": "9ac38bc651421859dd21b296725c84f29562e70880254afdf9e717db63525e66",
+  "browserRun": 45499900337,
+  "browserQaCommit": "25aa381a508ed0694d0fdf9771f1ffa8a6dce379",
+  "artifactId": 14968604178,
+  "pdfs": [
+    {
+      "path": "pdf/chromium-A4-default.pdf",
+      "engine": "chromium",
+      "paper": "A4",
+      "pages": 5,
+      "sha256": "e4d92ab9b2965fec70c419ad1084eeb0e6d0079f89d07a9999350964ba7d7dbe",
+      "inspectedPages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "renderMethod": "pdftoppm -scale-to 1400 -png",
+      "images": [
+        {
+          "path": "pdf/chromium-A4-default-page-1.png",
+          "sha256": "4a0f9cdf7a208e29b59dfa82366b10b6236400c22a40d39398b043fe97002f4f"
+        },
+        {
+          "path": "pdf/chromium-A4-default-page-2.png",
+          "sha256": "ec7552441d94e1debf5fa14055409148463f5bf7c5304218979717c6a350a7ec"
+        },
+        {
+          "path": "pdf/chromium-A4-default-page-3.png",
+          "sha256": "133b9b7cb12261f8dd936b7615b517b156580d8c330b42807b3f8da222e13fb1"
+        },
+        {
+          "path": "pdf/chromium-A4-default-page-4.png",
+          "sha256": "1502032f420b9f9d89a494dbd0d0d4e721d58296ff856f84a2cffe07e5e7c1db"
+        },
+        {
+          "path": "pdf/chromium-A4-default-page-5.png",
+          "sha256": "49e5497acfcdab2a455560d8dbc1c875ffcac780c8a613e054c35208555a59b6"
+        }
+      ],
+      "contrast": "PASS \u2014 dark legible foreground on white paper on every inspected page",
+      "pagination": "PASS \u2014 headings accompanied by content; no clipped columns, broken rows, blank or overlapping pages; final limitations present",
+      "scope": "Actual browser-rendered synthetic report. No production/student data."
+    },
+    {
+      "path": "pdf/chromium-Letter-default.pdf",
+      "engine": "chromium",
+      "paper": "Letter",
+      "pages": 6,
+      "sha256": "3824bbd1f9a3ce92e32b63b1e97b697c9656a54cd634d1ab3f14024adaf9feb9",
+      "inspectedPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "renderMethod": "pdftoppm -scale-to 1400 -png",
+      "images": [
+        {
+          "path": "pdf/chromium-Letter-default-page-1.png",
+          "sha256": "c38cb81f9a9b31ed7f31544000e309a3705b9d9a927ff3bcfdee2c77323efe84"
+        },
+        {
+          "path": "pdf/chromium-Letter-default-page-2.png",
+          "sha256": "dc02c0a63c2ea6aa56b42b19331fcc3e8c7b116dc1fcfe4724c6e24aa2c24233"
+        },
+        {
+          "path": "pdf/chromium-Letter-default-page-3.png",
+          "sha256": "3c969f014c85b896683c01806a8a39eb2aad1e56de9d10e87ebc206dde1d6950"
+        },
+        {
+          "path": "pdf/chromium-Letter-default-page-4.png",
+          "sha256": "633d173e22ef312c51810670f1e571ea24973f6b49b45cef3349efe69aad809f"
+        },
+        {
+          "path": "pdf/chromium-Letter-default-page-5.png",
+          "sha256": "55ea52c0e9c2ce036b9c3def7af9ccc02a0ce9d1087af24da2f0905e23844864"
+        },
+        {
+          "path": "pdf/chromium-Letter-default-page-6.png",
+          "sha256": "2633285561391338e8b7f5d9b2d29b8aa8e6887deb954855cc3b81e58d8a0853"
+        }
+      ],
+      "contrast": "PASS \u2014 dark legible foreground on white paper on every inspected page",
+      "pagination": "PASS \u2014 headings accompanied by content; no clipped columns, broken rows, blank or overlapping pages; final limitations present",
+      "scope": "Actual browser-rendered synthetic report. No production/student data."
+    },
+    {
+      "path": "pdf/firefox-A4-default.pdf",
+      "engine": "firefox",
+      "paper": "A4",
+      "pages": 5,
+      "sha256": "ae88a497679e24aeeca5939f1bc5e8de9df5594e269866ccab75e7f0c86820e5",
+      "inspectedPages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "renderMethod": "pdftoppm -scale-to 1400 -png",
+      "images": [
+        {
+          "path": "pdf/firefox-A4-default-page-1.png",
+          "sha256": "d8267df572b2f40212f1a95bd6e3613d867f7592204cab906bc7f9a49f94e8ec"
+        },
+        {
+          "path": "pdf/firefox-A4-default-page-2.png",
+          "sha256": "9c3a6a73a427b1754e099af6ea18dd41209dfe1fffd5c8c776a799047d0d0804"
+        },
+        {
+          "path": "pdf/firefox-A4-default-page-3.png",
+          "sha256": "91527a0d9cfdb8b483c8a4f71b13a866ff82ac318364ab81fb57f6bee24ba4f1"
+        },
+        {
+          "path": "pdf/firefox-A4-default-page-4.png",
+          "sha256": "86d4bf5010f46ebef24b8474abeb48b765a8a0f0797447d6e58017dfe4d4456a"
+        },
+        {
+          "path": "pdf/firefox-A4-default-page-5.png",
+          "sha256": "332f8b90c21ad81428784565ace7984b54ccced9b80baf9221c753bb4bf5b5ec"
+        }
+      ],
+      "contrast": "PASS \u2014 dark legible foreground on white paper on every inspected page",
+      "pagination": "PASS \u2014 headings accompanied by content; no clipped columns, broken rows, blank or overlapping pages; final limitations present",
+      "scope": "Actual browser-rendered synthetic report. No production/student data."
+    },
+    {
+      "path": "pdf/firefox-Letter-default.pdf",
+      "engine": "firefox",
+      "paper": "Letter",
+      "pages": 5,
+      "sha256": "785dd3e8d08c44e8a8cb7156d5a6e24e940e5082c88f1c66e3fa4338973480f0",
+      "inspectedPages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "renderMethod": "pdftoppm -scale-to 1400 -png",
+      "images": [
+        {
+          "path": "pdf/firefox-Letter-default-page-1.png",
+          "sha256": "5478a050c618b3a28b2955e6af6202db6f7195447607fe25cf22be3d34f24d4a"
+        },
+        {
+          "path": "pdf/firefox-Letter-default-page-2.png",
+          "sha256": "ee074d9a2ab598c498d88c79d8bf82020ab989246252605cc62b90b217002bf5"
+        },
+        {
+          "path": "pdf/firefox-Letter-default-page-3.png",
+          "sha256": "f5a09623790e2a05cdfd21eb960e20a503e7da778ec32bb98c63710aab144361"
+        },
+        {
+          "path": "pdf/firefox-Letter-default-page-4.png",
+          "sha256": "0a605c60f9bbc33b98bdf215006510d692cbc8f2235e274d5faf66960009e565"
+        },
+        {
+          "path": "pdf/firefox-Letter-default-page-5.png",
+          "sha256": "3275727eca66ea84cd607231dcd7dc6567d205213c1ad4b957b9f0045d2e6a5e"
+        }
+      ],
+      "contrast": "PASS \u2014 dark legible foreground on white paper on every inspected page",
+      "pagination": "PASS \u2014 headings accompanied by content; no clipped columns, broken rows, blank or overlapping pages; final limitations present",
+      "scope": "Actual browser-rendered synthetic report. No production/student data."
+    }
+  ],
+  "totalInspectedPdfPages": 21,
+  "cases": {
+    "P03": {
+      "status": "PASS",
+      "observed": "All 21 pages in four actual Chromium/Firefox A4/Letter default PDFs visually inspected: readable dark text on white background, separate dimensions, counts, version/source/period, demo label, limitations. No navigation or private story library printed. Actual text-extraction/privacy checks are retained separately."
+    },
+    "P04": {
+      "status": "PASS",
+      "observed": "Every page visually inspected. No orphaned headings, blank/overlapping pages, truncated rows, tiny illegible text or missing final limitations. Tables and behavioral heading stay with content. Selectable text and print-area/heading geometry passed in the actual browser-PDF checks."
+    }
+  },
+  "limitations": [
+    "Synthetic fixtures only; these PDF values are not real usage or impact statistics.",
+    "PDF.js assertions and visual inspection are separately attributed.",
+    "The first corrective run exposed a native Firefox behavioral-heading orphan; that failed evidence remains preserved."
+  ]
+}

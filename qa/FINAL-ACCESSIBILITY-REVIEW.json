@@ -1,0 +1,222 @@
+{
+  "schema": 1,
+  "sourceFingerprint": "9ac38bc651421859dd21b296725c84f29562e70880254afdf9e717db63525e66",
+  "browserRun": 45499900337,
+  "reviewedAtUTC": "2026-11-24T22:32:04.538363+00:00",
+  "caseId": "A06",
+  "status": "PASS",
+  "scope": "Measured assessment normal, selected, focus and error states; valid progress role/name and underlined Privacy link. This is not complete WCAG certification or screen-reader testing.",
+  "screenshots": [
+    {
+      "path": "screenshots/chromium-A06-question-rendered.png",
+      "sha256": "1fe1c497d46dcd7d5c4a73d6eef6f94862c2bcf7dc50b7e8495baa52eb68bc96",
+      "inspected": true,
+      "observed": "Question, labels and/or focused control visibly legible; heading unobscured; Privacy link underlined when present."
+    },
+    {
+      "path": "screenshots/chromium-A06-selected-focus-rendered.png",
+      "sha256": "efd271c13c7b27ad989af663a0fa197f0cac38ace0e85a804222fba7c0237491",
+      "inspected": true,
+      "observed": "Question, labels and/or focused control visibly legible; heading unobscured; Privacy link underlined when present."
+    },
+    {
+      "path": "screenshots/chromium-A06-close-focus-rendered.png",
+      "sha256": "e4b802b854dec98bebf8d31fe6cd83740045c7413be2e460632e992800ce5e53",
+      "inspected": true,
+      "observed": "Question, labels and/or focused control visibly legible; heading unobscured; Privacy link underlined when present."
+    },
+    {
+      "path": "screenshots/chromium-A06-privacy-focus-rendered.png",
+      "sha256": "e27b1b62081c7d25b0859ba212b64d7a1de4fa546d6b82265d5dc8e3cbbe1a79",
+      "inspected": true,
+      "observed": "Question, labels and/or focused control visibly legible; heading unobscured; Privacy link underlined when present."
+    },
+    {
+      "path": "screenshots/chromium-A06-error-rendered.png",
+      "sha256": "aafdbdf5c0799898a9c83280960870889037742b05287b9673b3c5481b6ea94b",
+      "inspected": true,
+      "observed": "Legible question/story content and visible controls; long story scrolls within modal. Focus outlines on selected radio, close and underlined Privacy link are visible. The long-story screenshot does not show the below-fold error paragraph; its actual rendered axe measurement is recorded separately."
+    },
+    {
+      "path": "screenshots/firefox-A06-question-rendered.png",
+      "sha256": "f7197f2c4265ed4a3ba9c1653edd61b36dea4029f07743517e499af2a24bdede",
+      "inspected": true,
+      "observed": "Question, labels and/or focused control visibly legible; heading unobscured; Privacy link underlined when present."
+    },
+    {
+      "path": "screenshots/firefox-A06-selected-focus-rendered.png",
+      "sha256": "237ee074e1054b0ee586aa6280776e3954f2dcb729c72d0bd9e4f286bcd70835",
+      "inspected": true,
+      "observed": "Question, labels and/or focused control visibly legible; heading unobscured; Privacy link underlined when present."
+    },
+    {
+      "path": "screenshots/firefox-A06-close-focus-rendered.png",
+      "sha256": "4e17598f50d129012ad5003a832a63ea6e19392c6c6579005ebdfdb038c8d991",
+      "inspected": true,
+      "observed": "Question, labels and/or focused control visibly legible; heading unobscured; Privacy link underlined when present."
+    },
+    {
+      "path": "screenshots/firefox-A06-privacy-focus-rendered.png",
+      "sha256": "bc1011a3bd7b12b1ffd768570c9f5e73e741cfd87072598679e9a7abe48c4c97",
+      "inspected": true,
+      "observed": "Question, labels and/or focused control visibly legible; heading unobscured; Privacy link underlined when present."
+    },
+    {
+      "path": "screenshots/firefox-A06-error-rendered.png",
+      "sha256": "ced5923cd5a12486b0d8f530ed6402e9a252b9882f0218461d07fac19ad1024c",
+      "inspected": true,
+      "observed": "Legible question/story content and visible controls; long story scrolls within modal. Focus outlines on selected radio, close and underlined Privacy link are visible. The long-story screenshot does not show the below-fold error paragraph; its actual rendered axe measurement is recorded separately."
+    }
+  ],
+  "renderedMeasurements": {
+    "count": 60,
+    "allPass": true,
+    "minimumRatio": 7.8118921264411165,
+    "files": [
+      {
+        "path": "chromium-A06-close-focus-contrast.json",
+        "sha256": "7d5054c8520569d1de579b92e958561dfa3560f503f165cf102454a7839073ae"
+      },
+      {
+        "path": "chromium-A06-error-contrast.json",
+        "sha256": "3e15f0d039e96b7d1554cccbf4000a0cfd9a9fe6f5d4d66554bdada894d74472"
+      },
+      {
+        "path": "chromium-A06-privacy-focus-contrast.json",
+        "sha256": "54d64ab2da755e7a72c6ad00320d9d2edb16eb21f1736dafefdce8e8cb333837"
+      },
+      {
+        "path": "chromium-A06-question-contrast.json",
+        "sha256": "6ed7b727caa1f6a7e5c726889c5405bee884989e0a6175a523ced460d7df0c02"
+      },
+      {
+        "path": "chromium-A06-selected-contrast.json",
+        "sha256": "be925c9852a10b7463184877205351723e7b8fddc156cfe99b76204bd1ef7a25"
+      },
+      {
+        "path": "chromium-A06-selected-focus-contrast.json",
+        "sha256": "9efb512f642d9408b9d0672e8d9704b33f6c5d47d83d52999c2032390ff564c5"
+      },
+      {
+        "path": "firefox-A06-close-focus-contrast.json",
+        "sha256": "62d12431ebc5dbd0c7c26675a69751975d400b131d95f4961fc24587def2fe18"
+      },
+      {
+        "path": "firefox-A06-error-contrast.json",
+        "sha256": "374e4fc25fd087ef2c6ac62371f2ab1b3630f2f429ac91afa1cf13b3aefd9a52"
+      },
+      {
+        "path": "firefox-A06-privacy-focus-contrast.json",
+        "sha256": "412a814ad5787733f9c06c2c92540f06a2e57290d447ad6036b8ded79c15a014"
+      },
+      {
+        "path": "firefox-A06-question-contrast.json",
+        "sha256": "1f8428a47f260a1fa24e10de45362e587ab64ed2958169b1e8955e4984e650de"
+      },
+      {
+        "path": "firefox-A06-selected-contrast.json",
+        "sha256": "85b17dcee511a3dde08501ead36e8b2243bc742d3ee2497b400eda05a5d7005a"
+      },
+      {
+        "path": "firefox-A06-selected-focus-contrast.json",
+        "sha256": "a27064782b86f1c9f99337d4bb432834584416fb35c2124b8431b85cf8bda41f"
+      }
+    ],
+    "method": "Actual rendered PNG background samples paired with browser foreground/outline styles; text >=4.5 or large >=3, focus >=3."
+  },
+  "errorStateMeasurement": {
+    "engines": [
+      "chromium",
+      "firefox"
+    ],
+    "foreground": "#f3a5a0",
+    "background": "#15181d",
+    "ratio": 9.06,
+    "minimum": 4.5,
+    "selector": ".assessment-error",
+    "origin": "Actual axe color-contrast PASS node in each error-state browser capture; not inferred from the below-fold screenshot."
+  },
+  "axe": [
+    {
+      "path": "chromium-A06-error-axe.json",
+      "sha256": "b2c3c318aecfa729c0c87e378173c44e72a9ff36166c90ee7fd695c2fde8cb69",
+      "violations": 0,
+      "incompleteRules": [
+        "color-contrast"
+      ]
+    },
+    {
+      "path": "chromium-A06-question-axe.json",
+      "sha256": "f125ab6392a678cd6ce70662a34acda611e3a831bcca0060fb3d21173e907897",
+      "violations": 0,
+      "incompleteRules": [
+        "color-contrast"
+      ]
+    },
+    {
+      "path": "chromium-A06-selected-axe.json",
+      "sha256": "9d25a0efa3839c9d206ea9f376de39b2346f01928051a332d0b85178f3105b49",
+      "violations": 0,
+      "incompleteRules": [
+        "color-contrast"
+      ]
+    },
+    {
+      "path": "firefox-A06-error-axe.json",
+      "sha256": "2ec0c6fda31234376b38b7263c10709b68e3ae7d5b2fe68e00cf9bcc8a2ee174",
+      "violations": 0,
+      "incompleteRules": [
+        "color-contrast"
+      ]
+    },
+    {
+      "path": "firefox-A06-question-axe.json",
+      "sha256": "b349060e62167986082b85ef9a855048219e81e9cdb6ee5d5e61f995cea0d105",
+      "violations": 0,
+      "incompleteRules": [
+        "color-contrast"
+      ]
+    },
+    {
+      "path": "firefox-A06-selected-axe.json",
+      "sha256": "f8b3714d423939297ae1d737e31adb3934ea3ebc26ce22ed752b8caa84f6cff6",
+      "violations": 0,
+      "incompleteRules": [
+        "color-contrast"
+      ]
+    }
+  ],
+  "incompleteFindingDispositions": [
+    {
+      "target": "aside > span, aside > p",
+      "issue": "axe bgOverlap",
+      "disposition": "Decorative aria-hidden artwork/caption, not an accessible control; visible in inspected screenshots. Kept as a tool incomplete, not called an axe PASS."
+    },
+    {
+      "target": "#_r_1_-title",
+      "issue": "axe elmPartiallyObscuring",
+      "disposition": "Actual normal/selected PNGs show unobscured question heading; sampled rendered foreground/background pass. No incomplete finding deleted."
+    },
+    {
+      "target": ".assessment-primary > span",
+      "issue": "axe nonBmp arrow glyph",
+      "disposition": "Visible arrow glyph supplements the named Continue text; label, keyboard operation and button contrast checked. No incomplete finding deleted."
+    }
+  ],
+  "keyboardNamingEvidence": {
+    "run": 45498111815,
+    "cases": [
+      "A01",
+      "A02",
+      "A07"
+    ],
+    "status": "PASS",
+    "scope": "Actual keyboard focus containment/Escape, named native single-choice group and disabled/error semantics. Authentication and screen readers not inferred."
+  },
+  "observed": "Zero axe violations in Chromium151/Firefox153. All 60 captured contrast measurements pass, with visible focus and underlined Privacy link in both browsers. Remaining automatic contrast incompletes reconciled using the actual screenshots/measurements; raw reports retained.",
+  "remainingLimitations": [
+    "A03 actual NVDA/VoiceOver execution remains UNVERIFIED.",
+    "A04 actual browser/OS zoom remains UNVERIFIED.",
+    "No full WCAG conformance or physical-device claim."
+  ]
+}
