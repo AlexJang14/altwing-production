@@ -1,0 +1,11 @@
+{
+  "frozenCandidateUnchanged": true,
+  "baselineRun": 45480635837,
+  "baselineArtifact": "AltWing-Launch-browser-45480635837-1",
+  "focusedCases": [
+    "M01"
+  ],
+  "productionChangesAuthorized": false,
+  "databaseOperationsAuthorized": false,
+  "scheduledPublishingAuthorized": false
+}

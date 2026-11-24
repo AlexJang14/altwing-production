@@ -1,0 +1,59 @@
+name: AltWing acceptance evidence and focused mobile follow-up
+
+on:
+  push:
+    branches: [qa/launch-browser-20261124-de87a266]
+    paths: [qa/REVIEW-READY.json]
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  consolidate-observed-evidence:
+    if: github.ref == 'refs/heads/qa/launch-browser-20261124-de87a266'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: qa/AltWing-Browser-QA/package-lock.json
+      - name: Verify frozen candidate unchanged
+        run: node qa/verify-inputs.mjs
+      - name: Reuse completed full-suite evidence
+        uses: actions/download-artifact@v4
+        with:
+          name: AltWing-Launch-browser-45480635837-1
+          run-id: 45480635837
+          github-token: ${{ github.token }}
+          path: qa/baseline
+      - name: Install diagnostic browser dependencies
+        run: |
+          npm ci --prefix qa/AltWing-Browser-QA --ignore-scripts --no-audit --no-fund
+          node qa/AltWing-Browser-QA/node_modules/playwright/cli.js install --with-deps chromium firefox
+      - name: Diagnose only mobile viewport bounds
+        shell: bash
+        run: |
+          set +e
+          node qa/runner-ci.mjs --case=M01 2>&1 | tee qa/mobile-diagnostic.log
+          exit 0
+      - name: Consolidate actual browser and visual PDF observations
+        if: always()
+        run: node qa/merge-review.mjs
+      - name: Upload consolidated reports and original evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: AltWing-Launch-acceptance-results-${{ github.run_id }}
+          path: qa/consolidated-reports/
+          if-no-files-found: error
+          retention-days: 7
+          compression-level: 6
+      - name: Keep observed release failures visible
+        if: always()
+        run: node qa/merge-review.mjs --enforce

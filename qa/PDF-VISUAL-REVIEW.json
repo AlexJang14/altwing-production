@@ -1,0 +1,47 @@
+{
+  "scope": "Actual GitHub Chromium browser-generated PDF visual review; not earlier synthetic PDF samples",
+  "reviewer": "Assistant visual inspection using rendered PDF pages",
+  "reviewedAtUTC": "2026-11-24T20:35:35.118413+00:00",
+  "basedOnRun": 45480635837,
+  "sourceFingerprint": "de87a266322da35b223d5910b8b435278e472dac34fc9728635b0cd35d347fb3",
+  "cases": {
+    "P03": {
+      "status": "FAIL",
+      "observed": "Both actual Chromium PDFs have near-dark #152535 text on a graphite background. Default quotation exclusion and selectable-text assertions passed, but the required readable report failed."
+    },
+    "P04": {
+      "status": "FAIL",
+      "observed": "All 10 pages visually inspected: 5 A4 and 5 US Letter. Dark text on dark background prevents readable review. US Letter page 2 leaves Action Readiness heading without its following question content; continuing tables cross page boundaries. No unperformed visual review marked PASS."
+    }
+  },
+  "pdfs": [
+    {
+      "path": "pdf/chromium-A4-default.pdf",
+      "sha256": "03e7d8ceb170ff784296179257ab4ea20eff69cb1c43d25e78999038c63bc21a",
+      "paper": "A4",
+      "pages": 5,
+      "inspectedPages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "path": "pdf/chromium-Letter-default.pdf",
+      "sha256": "987a6f305f6808bb08fad6053dd312ad7cf5e4aa119597f2bf1a2c386ce1443c",
+      "paper": "Letter",
+      "pages": 5,
+      "inspectedPages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    }
+  ],
+  "applicationSourceChanged": false,
+  "productionChanged": false
+}
