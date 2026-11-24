@@ -8,7 +8,7 @@ const sha=b=>createHash('sha256').update(b).digest('hex');
 const baseline=JSON.parse(fs.readFileSync('qa/SOURCE-MANIFEST.json'));
 const current=JSON.parse(fs.readFileSync('qa/CORRECTIVE-MANIFEST.json'));
 assert.equal(baseline.sourceFingerprint,current.baselineSourceFingerprint);
-assert.deepEqual(current.changedFiles.map(x=>x.path).sort(),['src/design/golden-horizon/interactions.css','src/features/analytics/AssessmentDialog.tsx','src/features/analytics/research-report.css']);
+assert.deepEqual(current.changedFiles.map(x=>x.path).sort(),['src/design/golden-horizon/interactions.css','src/features/analytics/AssessmentDialog.tsx','src/features/analytics/ResearchImpactDashboard.tsx','src/features/analytics/research-report.css']);
 const root=path.resolve('qa/corrective');fs.mkdirSync(root,{recursive:true});
 const temp=fs.mkdtempSync(path.join(os.tmpdir(),'altwing-corrective-'));
 try{

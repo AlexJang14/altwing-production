@@ -33,7 +33,7 @@ export async function nativeFirefoxPrint({playwright,pdfjs,origin,out}){
       result.files.push(await inspectPdf(pdfjs,bytes,name,out));
     }
     result.status='PASS';
-  }catch(e){result.status='UNVERIFIED';result.error=String(e.stack||e).slice(0,3500);}
+  }catch(e){result.status=e.code==='ERR_ASSERTION'?'FAIL':'UNVERIFIED';result.error=String(e.stack||e).slice(0,3500);}
   finally{if(session)await call('DELETE','/session/'+session).catch(()=>{});if(proc)proc.kill();fs.writeFileSync(path.join(out,'firefox-native-print.json'),JSON.stringify(result,null,2)+'\n');fs.writeFileSync(path.join(out,'firefox-native-print.log'),logs.slice(-16000));}
   return result;
 }

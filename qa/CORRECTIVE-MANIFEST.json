@@ -2,7 +2,7 @@
   "candidate": "ALTWING-GH-LIVE-INTELLIGENCE-LAUNCH",
   "branch": "release/golden-horizon-launch",
   "basedOnProduction": "443f965f2c5f45b2199c24b0b5db800eb5fee60b",
-  "sourceFingerprint": "722519753d43d3a26c5181cff2397516e2d1f7ed1e2908ec4a52f6c01e360638",
+  "sourceFingerprint": "9ac38bc651421859dd21b296725c84f29562e70880254afdf9e717db63525e66",
   "sourceFiles": [
     {
       "bytes": 322,
@@ -1480,9 +1480,9 @@
       "sha256": "ab6ce7c3110431f8871bba865bbe13869c7d6a3270a2a84072c170f3f8e65485"
     },
     {
-      "bytes": 19877,
+      "bytes": 19932,
       "path": "src/features/analytics/ResearchImpactDashboard.tsx",
-      "sha256": "433ae6926c155968a3bc7e1b24dd8219422862dc815b73ae25b9410d6461e310"
+      "sha256": "14d4db720b38a9e428500ac61a6674a667d9bcb3af688a990ec6e88b8f682090"
     },
     {
       "bytes": 4913,
@@ -2446,6 +2446,11 @@
       "path": "src/features/analytics/AssessmentDialog.tsx",
       "before": "4475d34f9b16b3be961469e7043cdd290ab0a7ebce391b867093671d68aa15a0",
       "after": "a4aebe4de8bb4627138beb8cc46a74122b6829990d13744677371817f4b19346"
+    },
+    {
+      "path": "src/features/analytics/ResearchImpactDashboard.tsx",
+      "before": "433ae6926c155968a3bc7e1b24dd8219422862dc815b73ae25b9410d6461e310",
+      "after": "14d4db720b38a9e428500ac61a6674a667d9bcb3af688a990ec6e88b8f682090"
     },
     {
       "path": "src/features/analytics/research-report.css",

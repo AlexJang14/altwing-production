@@ -1,7 +1,7 @@
 {
   "baselineQaCommit": "bff31ef1122924216cba40ab7d0ae7fc448d145e",
   "baselineSourceFingerprint": "de87a266322da35b223d5910b8b435278e472dac34fc9728635b0cd35d347fb3",
-  "correctiveSourceFingerprint": "722519753d43d3a26c5181cff2397516e2d1f7ed1e2908ec4a52f6c01e360638",
+  "correctiveSourceFingerprint": "9ac38bc651421859dd21b296725c84f29562e70880254afdf9e717db63525e66",
   "failedCases": [
     "M01",
     "A06",
@@ -16,5 +16,16 @@
   "productionChangesAuthorized": false,
   "databaseOperationsAuthorized": false,
   "scheduledPublishingAuthorized": false,
-  "attempt": 1
+  "attempt": 2,
+  "focusedCases": [
+    "A06",
+    "P01",
+    "P02",
+    "P03",
+    "P04",
+    "P05",
+    "P06"
+  ],
+  "reuseFromRun": 45498111815,
+  "followupReason": "Actual Gecko PDF exposed an orphaned behavioral heading; grouped print content. M01 and functional dialog passes reused; add rendered accessibility/keyboard-focus evidence."
 }

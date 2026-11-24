@@ -26,7 +26,7 @@ jobs:
             qa/AltWing-Browser-QA/package-lock.json
       - name: Verify preserved Launch baseline
         run: node qa/verify-inputs.mjs
-      - name: Prepare exact three-file corrective candidate
+      - name: Prepare exact four-file corrective candidate
         run: node qa/prepare-corrective.mjs
       - name: Install unchanged application and QA dependencies
         run: |
@@ -45,11 +45,18 @@ jobs:
           run-id: 45482814358
           github-token: ${{ github.token }}
           path: qa/prior-evidence
-      - name: Run failed cases and affected regressions only
+      - name: Reuse passed corrective dialog and motion evidence
+        uses: actions/download-artifact@v4
+        with:
+          name: AltWing-Corrective-Acceptance-45498111815
+          run-id: 45498111815
+          github-token: ${{ github.token }}
+          path: qa/corrective-previous
+      - name: Run report follow-up and capture rendered accessibility evidence
         shell: bash
         run: |
           set +e
-          node qa/run-corrective.mjs 2>&1 | tee qa/corrective-browser.log
+          node qa/run-corrective.mjs --case=A06,P01,P02,P03,P04,P05,P06 2>&1 | tee qa/corrective-browser.log
           echo "runner_exit=${PIPESTATUS[0]}" >> "$GITHUB_STEP_SUMMARY"
           exit 0
       - name: Generate corrective evidence report
