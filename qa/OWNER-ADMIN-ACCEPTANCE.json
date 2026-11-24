@@ -1,0 +1,34 @@
+{
+  "origin": "Owner-reported manual acceptance; not automated browser evidence",
+  "receivedAtUTC": "2026-11-24T22:03:49.271764+00:00",
+  "performedAtUTC": null,
+  "browserDevice": null,
+  "browserDeviceLimitation": "Not supplied; no browser or device is inferred.",
+  "testedUrl": "https://altwing-engineering-pathways.theanna.chatgpt.site/#/analytics",
+  "cases": {
+    "I01": {
+      "status": "PASS",
+      "observed": "Both existing authorized administrators independently signed in, accessed existing reports/feedback and used export functionality. No errors reported."
+    },
+    "I03": {
+      "status": "PASS",
+      "observed": "Independent authorized dashboard navigation and exports worked without shared credentials. No settings or historical preparation actions performed."
+    }
+  },
+  "accounts": [
+    {
+      "label": "Alex",
+      "status": "PASS"
+    },
+    {
+      "label": "Existing owner",
+      "status": "PASS"
+    }
+  ],
+  "historicalReportingPreparation": "NOT PERFORMED",
+  "privateRecordsIncluded": false,
+  "credentialsIncluded": false,
+  "preservePermissions": true,
+  "repeatOnlyIfAuthenticationOrExportAccessChanges": true,
+  "scopeLimitation": "Existing production backend authorization/access. Does not prove undeployed endpoints, future migration or historical setup; post-deployment L05/L06 remain separate."
+}

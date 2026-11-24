@@ -1,0 +1,69 @@
+name: AltWing final corrective browser acceptance
+
+on:
+  push:
+    branches: [qa/golden-horizon-corrective-20261124]
+    paths: [qa/CORRECTIVE-READY.json]
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  corrective-acceptance:
+    if: github.ref == 'refs/heads/qa/golden-horizon-corrective-20261124'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: |
+            qa/AltWing-Browser-QA/package-lock.json
+      - name: Verify preserved Launch baseline
+        run: node qa/verify-inputs.mjs
+      - name: Prepare exact three-file corrective candidate
+        run: node qa/prepare-corrective.mjs
+      - name: Install unchanged application and QA dependencies
+        run: |
+          npm ci --prefix qa/corrective/source --ignore-scripts --no-audit --no-fund
+          npm ci --prefix qa/AltWing-Browser-QA --ignore-scripts --no-audit --no-fund
+      - name: Typecheck and build actual corrected previews
+        run: node qa/build-corrective.mjs
+      - name: Install Chromium and Firefox
+        run: |
+          node qa/AltWing-Browser-QA/node_modules/playwright/cli.js install --with-deps chromium firefox
+          geckodriver --version
+      - name: Preserve historical acceptance evidence
+        uses: actions/download-artifact@v4
+        with:
+          name: AltWing-Launch-acceptance-results-45482814358
+          run-id: 45482814358
+          github-token: ${{ github.token }}
+          path: qa/prior-evidence
+      - name: Run failed cases and affected regressions only
+        shell: bash
+        run: |
+          set +e
+          node qa/run-corrective.mjs 2>&1 | tee qa/corrective-browser.log
+          echo "runner_exit=${PIPESTATUS[0]}" >> "$GITHUB_STEP_SUMMARY"
+          exit 0
+      - name: Generate corrective evidence report
+        if: always()
+        run: node qa/report-corrective.mjs
+      - name: Upload actual new and historical evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: AltWing-Corrective-Acceptance-${{ github.run_id }}
+          path: qa/corrective-reports/
+          if-no-files-found: error
+          retention-days: 7
+          compression-level: 6
+      - name: Enforce actual corrective regression outcomes
+        if: always()
+        run: node qa/report-corrective.mjs --enforce
