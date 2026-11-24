@@ -51,12 +51,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: AltWing-Launch-browser-${{ github.run_id }}-${{ github.run_attempt }}
-          path: |
-            qa/AltWing-Browser-QA/results/
-            qa/browser-run.log
-            qa/verification.json
-            qa/SOURCE-MANIFEST.json
-            qa/READY.json
+          path: qa/reports/
           if-no-files-found: error
           retention-days: 7
           compression-level: 6

@@ -1,8 +1,0 @@
-{"name":"legacy root","url":"https://junjang06.github.io/altwing/","status":"200","finalUrl":"https://junjang06.github.io/altwing/","redirects":0,"passed":false}
-{"name":"new root","url":"https://altwing.org/","status":"000","finalUrl":"https://altwing.org/","redirects":0,"passed":false,"error":"curl: (56) CONNECT tunnel failed, response 403"}
-{"name":"www alias","url":"https://www.altwing.org/","status":"000","finalUrl":"https://www.altwing.org/","redirects":0,"passed":false,"error":"curl: (56) CONNECT tunnel failed, response 403"}
-{"name":"canonical sitemap","url":"https://altwing.org/sitemap.xml","status":"000","finalUrl":"https://altwing.org/sitemap.xml","redirects":0,"passed":false,"error":"curl: (56) CONNECT tunnel failed, response 403"}
-{"name":"social image","url":"https://altwing.org/brand/altwing-penguin.png","status":"000","finalUrl":"https://altwing.org/brand/altwing-penguin.png","redirects":0,"passed":false,"error":"curl: (56) CONNECT tunnel failed, response 403"}
-{"name":"backend CORS","origin":"https://altwing.org","passed":false}
-{"name":"backend CORS","origin":"https://www.altwing.org","passed":false}
-7 checks are not yet satisfied. URL fragments are browser-only and need separate browser Back/Forward/deep-link QA.

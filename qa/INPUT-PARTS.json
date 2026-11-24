@@ -1,0 +1,208 @@
+{
+  "archives": [
+    {
+      "output": "qa/frozen-candidate.tar.gz",
+      "sha256": "e07642c9d05cb29d8b7499cf1bad1bd5449934d1c882b3a7c9739f5201a3dc93",
+      "parts": [
+        {
+          "path": "qa/input-parts/source-000.bin",
+          "bytes": 300000,
+          "sha256": "7213fe4c819880714075b3124a42f9e49a3e06f7672f6c7a6bf9c24a990729a1",
+          "gitBlobSha": "a3e0bafca351fbdbd58c25058899ad3a919dfcbb"
+        },
+        {
+          "path": "qa/input-parts/source-001.bin",
+          "bytes": 300000,
+          "sha256": "f88cc04fd03c2417045376632249ba2b45dea2594ad2369e3f7818ee5dc11c74",
+          "gitBlobSha": "044abd9b64c31fba6b2d2a12e4e6ae8672827bcc"
+        },
+        {
+          "path": "qa/input-parts/source-002.bin",
+          "bytes": 300000,
+          "sha256": "1cc563d8eb1fcf5265b2aa6e1e3a67aedca54a780bef7416fbc8e1a5b84c3908",
+          "gitBlobSha": "c1286813f55c63329c07efd8187f76053f81d614"
+        },
+        {
+          "path": "qa/input-parts/source-003.bin",
+          "bytes": 300000,
+          "sha256": "43e74f5fab572502b2643efc68906092c04bd6ff2e12b0b3e7f760985a59ea56",
+          "gitBlobSha": "d2ecad5990d0236b233251e0adf94eab504631ea"
+        },
+        {
+          "path": "qa/input-parts/source-004.bin",
+          "bytes": 300000,
+          "sha256": "9c2965a8d5e401a1282a0e5b88106efa64736fab7b001c3a41869d2ba9d33cf5",
+          "gitBlobSha": "b4b997c811f769269bc917682e9a7ffccc5a7e9d"
+        },
+        {
+          "path": "qa/input-parts/source-005.bin",
+          "bytes": 300000,
+          "sha256": "a906d92147b19d7b86b8cbf482e33e8b8abc1c51c645309e4a23a2bbeb029afe",
+          "gitBlobSha": "cc25ed379edea3a84ff1cc5c3d3e0cfeada8ab77"
+        },
+        {
+          "path": "qa/input-parts/source-006.bin",
+          "bytes": 300000,
+          "sha256": "78f89cc479a4c0cf87bd3d784994171fc8200a8e3724376a6b5b32fc76c2a67c",
+          "gitBlobSha": "e17b4e9dfd2ab4006ab0a5204ce3f52ce2695bab"
+        },
+        {
+          "path": "qa/input-parts/source-007.bin",
+          "bytes": 300000,
+          "sha256": "e0b94769edc3019131e56001b9507cf1321a907e8515d63d535b85129c1d65e1",
+          "gitBlobSha": "48e7f7a8cd8d23bb82990c6e932b9f1fe037f8b5"
+        },
+        {
+          "path": "qa/input-parts/source-008.bin",
+          "bytes": 300000,
+          "sha256": "8d2d80f442c41495a4ab166d0acd909a9c7815570c988d9c56236aeb54f011b3",
+          "gitBlobSha": "fdd2a88b04bca3672322202e329dcdfb4fcfda71"
+        },
+        {
+          "path": "qa/input-parts/source-009.bin",
+          "bytes": 300000,
+          "sha256": "0d6f71b4c75f12bf133cf50a6e94cfd597e223ad1c1613ebd7f2bdc7b56e4f41",
+          "gitBlobSha": "39fbca9d60f1ae61337b95a1aecb0aef5945f066"
+        },
+        {
+          "path": "qa/input-parts/source-010.bin",
+          "bytes": 272390,
+          "sha256": "d758f4e222c277c13d882a1b19fe4f3bc0b2c7fa2ea42dbdcd7012a436402e11",
+          "gitBlobSha": "6f3d7814340313649b91d8ec4575e0fdc434b924"
+        }
+      ]
+    },
+    {
+      "output": "qa/browser-inputs.br",
+      "sha256": "1f571180ab02390cf6a29fb2a8b69bcdbaee6ed850aa54a0d6e758209654a63b",
+      "parts": [
+        {
+          "path": "qa/input-parts/browser-000.bin",
+          "bytes": 300000,
+          "sha256": "df6e693bec9b251ea8f167c489948ce6742ee1506c31d6af2ab4a3d1ef225bd6",
+          "gitBlobSha": "f623dc5a393c83bb51233b35926dc00be9a5b8c5"
+        },
+        {
+          "path": "qa/input-parts/browser-001.bin",
+          "bytes": 300000,
+          "sha256": "fab49f45d1ece5d1fb510c678c9088eb095c478def9e6da9c8b2768a7316c286",
+          "gitBlobSha": "61f9f0c73d3c0e5601abf816b1da3dcf99682934"
+        },
+        {
+          "path": "qa/input-parts/browser-002.bin",
+          "bytes": 300000,
+          "sha256": "47fc3d0a7d8ab3638419ee6c50e4aeda3dd39bf8e16752f95259ebf641cdf8ac",
+          "gitBlobSha": "25a264a405b1013ec934f99a9cfbf8db5167f47f"
+        },
+        {
+          "path": "qa/input-parts/browser-003.bin",
+          "bytes": 300000,
+          "sha256": "78f2b3d9bbf2e5773d7c1b1e56f355a13a19d99df113a09a185f2a711ac5df56",
+          "gitBlobSha": "b080c792d614f6604e96ececde1f00dc128e8abe"
+        },
+        {
+          "path": "qa/input-parts/browser-004.bin",
+          "bytes": 300000,
+          "sha256": "9083b3e52a985ef5ce1799bbcaec83bd068a031a12bef183aaf56905cbfd4b21",
+          "gitBlobSha": "9e1098b4508741af04859552af5bcedd078f87be"
+        },
+        {
+          "path": "qa/input-parts/browser-005.bin",
+          "bytes": 300000,
+          "sha256": "545bc32dcec86e3430aa67cd370672d9705e4fe9ba9ed9734a525bdac2f2fe7b",
+          "gitBlobSha": "91b05a111a464a2a38dc00d79c361a04b9c9b489"
+        },
+        {
+          "path": "qa/input-parts/browser-006.bin",
+          "bytes": 300000,
+          "sha256": "3c46e206a1dd87b38524a38b17c71da813a1327204b60240694d8acee0602aba",
+          "gitBlobSha": "59f144191e481efe4bc75eba62d659e1c7c6993b"
+        },
+        {
+          "path": "qa/input-parts/browser-007.bin",
+          "bytes": 300000,
+          "sha256": "91952435eb38aac9a5a9513ca8b3f7abbed46c59f45898ccd9ac453e5e0dd826",
+          "gitBlobSha": "44cb9e4042b32c2e6a70f9d70497eded19ed5161"
+        },
+        {
+          "path": "qa/input-parts/browser-008.bin",
+          "bytes": 300000,
+          "sha256": "25c90244c2b68620ba44f383df0f8b506674c4127e1ffb2431bd58ea54c6fcfe",
+          "gitBlobSha": "f837e69e3c8c3d6bc2fa9b7a7deea57d5fd54d5b"
+        },
+        {
+          "path": "qa/input-parts/browser-009.bin",
+          "bytes": 300000,
+          "sha256": "640d2a1dadb136ed10b87c782d2dc8ffdfaf71ba1d0cc7939276d79902738794",
+          "gitBlobSha": "9ee5c2a595fd52560e12bc0a70c0835aef1c98d3"
+        },
+        {
+          "path": "qa/input-parts/browser-010.bin",
+          "bytes": 300000,
+          "sha256": "87b2f0fa384b113888be0e6d8c1036cec4cfc76b108ab056d161aa392c09a938",
+          "gitBlobSha": "1d34f633526e43d3bb13341a01de0b427dfb375f"
+        },
+        {
+          "path": "qa/input-parts/browser-011.bin",
+          "bytes": 300000,
+          "sha256": "32cb25e649374ec1958badeee7fa308fc84c39a121ca3453613dc99408efc326",
+          "gitBlobSha": "d70c877700c973a5b00e7e9649c4cfd11a5e5bbe"
+        },
+        {
+          "path": "qa/input-parts/browser-012.bin",
+          "bytes": 300000,
+          "sha256": "a2f3836ac455525a7381d6b2acfbcd80fdae1da5744467f9d6ef27f625fc2ec6",
+          "gitBlobSha": "417d44d97a75232bfc2d2683d2eeeaba831bf14e"
+        },
+        {
+          "path": "qa/input-parts/browser-013.bin",
+          "bytes": 300000,
+          "sha256": "060d38002c05868421d618c61a263b6baa4da1c7b2eecfcfbf7553d0479ecdaa",
+          "gitBlobSha": "629c584c8844ed683ba8a3d41547f0b09c50d646"
+        },
+        {
+          "path": "qa/input-parts/browser-014.bin",
+          "bytes": 300000,
+          "sha256": "2e77b53a1c9cefc0a668739fc17c1cd085db1a22f2b67306dbf54e9a8d02d847",
+          "gitBlobSha": "a9e1fe6254a215110318d5b2c348f93679002c91"
+        },
+        {
+          "path": "qa/input-parts/browser-015.bin",
+          "bytes": 300000,
+          "sha256": "0c0b0b498776651987072106e63d5b6f7598af0328e76a064bda9a509e5c4a51",
+          "gitBlobSha": "e0bdd45124426ac999c71912c21ca68093d3a26c"
+        },
+        {
+          "path": "qa/input-parts/browser-016.bin",
+          "bytes": 300000,
+          "sha256": "65a66a683e61f5377872124fe7ef25477c30ce5508df2bc0132ba06244fe660e",
+          "gitBlobSha": "1bd5b3e93f0defed07d41b24d436e4da5cfccd63"
+        },
+        {
+          "path": "qa/input-parts/browser-017.bin",
+          "bytes": 300000,
+          "sha256": "4b45fbd673b6fe193f641b714347c5fe033270673ee85aed8828714d001a6312",
+          "gitBlobSha": "02b9721bcc251eb1a5122917e9351c9dd14ddc0d"
+        },
+        {
+          "path": "qa/input-parts/browser-018.bin",
+          "bytes": 300000,
+          "sha256": "5005a8fb7502855b1296217edbb019384e424cb5f1550296b820aadeea7118d2",
+          "gitBlobSha": "1656b440f2b5becfbda653582cb3dd03ef6153d4"
+        },
+        {
+          "path": "qa/input-parts/browser-019.bin",
+          "bytes": 300000,
+          "sha256": "95c7d67ef9d3e639cb4d5673fe8182316828c0a2df580ada8694d53028957460",
+          "gitBlobSha": "d76703136be2818e3e61d47af80db800b48eb12a"
+        },
+        {
+          "path": "qa/input-parts/browser-020.bin",
+          "bytes": 225051,
+          "sha256": "a2e0edc8aa5708cfd7ea88638ba59549ac34d151d13f33675b23709ec8b2409c",
+          "gitBlobSha": "1e06f21bbc5a3f565714197da8d5463c74acda7f"
+        }
+      ]
+    }
+  ]
+}
