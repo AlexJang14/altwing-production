@@ -1,0 +1,351 @@
+{
+  "schema": 1,
+  "recordedAtUTC": "2026-11-24T23:16:28.101874+00:00",
+  "sourceFingerprint": "9ac38bc651421859dd21b296725c84f29562e70880254afdf9e717db63525e66",
+  "productQaCommit": "25aa381a508ed0694d0fdf9771f1ffa8a6dce379",
+  "reviewEvidenceCommit": "049fa61b922c5b1e4275153942e7d8134a18f2d2",
+  "readiness": "READY FOR FINAL EXPLICIT PRODUCTION APPROVAL",
+  "productionApproval": "NOT GRANTED",
+  "progress": {
+    "PASS": 24,
+    "FAIL": 0,
+    "UNVERIFIED": 7
+  },
+  "manualDeferral": {
+    "recordedAtUTC": "2026-11-24T23:16:28.101874+00:00",
+    "clientDate": "2026-11-24",
+    "status": "APPROVED INITIAL-RELEASE DEFERRAL \u2014 CONDITION SATISFIED",
+    "decisionSource": "Explicit owner message in this conversation",
+    "condition": "Existing automated server-side authorization tests demonstrate unauthenticated/unauthorized denial before private reports/exports are accessible",
+    "conditionStatus": "PASS",
+    "conditionEvidence": "AUTHORIZATION-EVIDENCE-CONFIRMATION.json",
+    "caseStatusesUnchanged": true,
+    "cases": [
+      {
+        "caseId": "M01",
+        "status": "UNVERIFIED",
+        "phase": "post-launch",
+        "priority": "P2",
+        "notes": "Owner explicitly deferred initial-release manual coverage. Retain exact original steps/expected results; no unperformed PASS."
+      },
+      {
+        "caseId": "M02",
+        "status": "UNVERIFIED",
+        "phase": "post-launch",
+        "priority": "P2",
+        "notes": "Owner explicitly deferred initial-release manual coverage. Retain exact original steps/expected results; no unperformed PASS."
+      },
+      {
+        "caseId": "M03",
+        "status": "UNVERIFIED",
+        "phase": "post-launch",
+        "priority": "P2",
+        "notes": "Owner explicitly deferred initial-release manual coverage. Retain exact original steps/expected results; no unperformed PASS."
+      },
+      {
+        "caseId": "M04",
+        "status": "UNVERIFIED",
+        "phase": "post-launch",
+        "priority": "P2",
+        "notes": "Owner explicitly deferred initial-release manual coverage. Retain exact original steps/expected results; no unperformed PASS."
+      },
+      {
+        "caseId": "A03",
+        "status": "UNVERIFIED",
+        "phase": "post-launch",
+        "priority": "P2",
+        "notes": "Owner explicitly deferred initial-release manual coverage. Retain exact original steps/expected results; no unperformed PASS."
+      },
+      {
+        "caseId": "A04",
+        "status": "UNVERIFIED",
+        "phase": "post-launch",
+        "priority": "P2",
+        "notes": "Owner explicitly deferred initial-release manual coverage. Retain exact original steps/expected results; no unperformed PASS."
+      },
+      {
+        "caseId": "I02",
+        "status": "UNVERIFIED",
+        "phase": "post-launch",
+        "priority": "P1",
+        "notes": "Actual signed-in unauthorized account report/export denial first, plus live anonymous checks; maps toL05. Synthetic server-denial evidence is separate."
+      }
+    ],
+    "productionApproval": "NOT GRANTED \u2014 final explicit request follows",
+    "mascotDecision": "ExistingNovember24 approval retained; unchanged penguin; no new rights claim or decision requested"
+  },
+  "authorizationEvidence": {
+    "status": "PASS",
+    "verificationType": "Review and scoped reuse of existing actual-handler automated execution; not a rerun or a real signed-in unlisted-account observation",
+    "confirmedAtUTC": "2026-11-24T23:16:28.101874+00:00",
+    "executedAtUTC": "2026-11-24T02:13:18.691Z",
+    "endpointChecks": 150,
+    "workerBoundaryChecks": 56,
+    "assessmentAuthorizationChecks": 40,
+    "malformedConfigurationCases": 21,
+    "actualWorkerEntryVerified": true,
+    "serverPageGuardVerified": true,
+    "denialAssertions": [
+      "Anonymous APIs401, signed-in unlisted APIs403; generic private dashboard404",
+      "Denied requests do not query the database, invoke private rendering or return report/export/feedback bodies",
+      "HTML, RSC, HEAD, encoded private paths, research-v2/v3 reports, private stories and export variants are guarded",
+      "Private responses use private,no-store and no permissive CORS; no automatic login redirect for denied dashboard entry",
+      "Both existing synthetic grants succeed and share the same preserved data; at most two configured administrators; revocation and21 malformed allowlist cases fail closed",
+      "Public anonymous feedback handler remains reachable with its separate submission protections"
+    ],
+    "evidenceFiles": [
+      {
+        "path": "/workspace/altwing-final-integrated/source/.sites-runtime/admin-access-validation/results.json",
+        "sha256": "eba81e597547343aa1008ab52a5f7640ec53b41d547716c9f0db49874e1b5178"
+      },
+      {
+        "path": "/workspace/altwing-final-integrated/source/.sites-runtime/research-assessment-validation/results.json",
+        "sha256": "2d901b82dff071d9a54559303cdb7c332643410232d02d27eece2bb1eb57e3f9"
+      },
+      {
+        "path": "/workspace/altwing-final-integrated/source/.sites-runtime/migration-validation/administrator-access.log",
+        "sha256": "f5d36a0203ec566615737543ee3b703c82026de9cc50afa7cc7747cd7c5525f0"
+      },
+      {
+        "path": "/workspace/altwing-final-integrated/source/.sites-runtime/migration-validation/research-assessment.log",
+        "sha256": "2cafc9b672697b0df9c1aaf415e7bdc7f46348f30a084e8ac057a8b92278ad19"
+      }
+    ],
+    "unchangedSourceProof": [
+      {
+        "path": "lib/analytics-access.ts",
+        "sha256": "d77eb0979b4ccb8c91a1ec7617f2b166eab0fd8cd3debfae37c99029cee925dd",
+        "matchesPreviouslyTestedSource": true
+      },
+      {
+        "path": "lib/analytics-capability.ts",
+        "sha256": "a397b0a448b6fa600223ace135d11c217940199427e283f249eefa3e28b09992",
+        "matchesPreviouslyTestedSource": true
+      },
+      {
+        "path": "lib/analytics-server.ts",
+        "sha256": "b0979ec4dd5f1bd0fe71352bf66f279d47d2c0f586ff4fd48f31460dfedc6ec3",
+        "matchesPreviouslyTestedSource": true
+      },
+      {
+        "path": "lib/analytics-validation.ts",
+        "sha256": "6ac481f3cce291e7012401c17e5616cfa0fbf0b70067c237e1cefc9a3456137a",
+        "matchesPreviouslyTestedSource": true
+      },
+      {
+        "path": "lib/assessment-reporting.ts",
+        "sha256": "1ea027f56bd6ea7e5252ca77020715dc84bc00c848048ee7d77bbb8c7a8bd8b0",
+        "matchesPreviouslyTestedSource": true
+      },
+      {
+        "path": "lib/assessment-server.ts",
+        "sha256": "53fa65d19eca82b8f21e451808a19f0ec97307b4762f0e19bcf77fc7ae787a01",
+        "matchesPreviouslyTestedSource": true
+      },
+      {
+        "path": "lib/connector-context.ts",
+        "sha256": "bbddff68689cb0f6926fecd4b8b96f12f2054277c296e97b0df07d4ad5ece24e",
+        "matchesPreviouslyTestedSource": true
+      },
+      {
+        "path": "lib/connector-contract.mts",
+        "sha256": "e1a7b24a8793af34b595690d9b1300c897c7321c14f215cedf58ad95799d7c3e",
+        "matchesPreviouslyTestedSource": true
+      },
+      {
+        "path": "lib/connector-errors.mts",
+        "sha256": "a22edf13d6873ae832c4a2a0d579fc666c73ec996ef0722d39172649d38f0871",
+        "matchesPreviouslyTestedSource": true
+      },
+      {
+        "path": "lib/connector-preview.d.ts",
+        "sha256": "abd69a94f7f61f1359063bb557574faae35e8ff5a028cc4c04b9ee248ef52642",
+        "matchesPreviouslyTestedSource": true
+      },
+      {
+        "path": "lib/connectors.ts",
+        "sha256": "1c93d747e384c8e17e3e3dd5361b24412babf5eba2a11d2ae7a75f4e0924112c",
+        "matchesPreviouslyTestedSource": true
+      },
+      {
+        "path": "lib/impact-retention.ts",
+        "sha256": "ec6f3cb7e456512e7fd55087c33afdf1519e85ef2182802bd15fa6169321ea51",
+        "matchesPreviouslyTestedSource": true
+      },
+      {
+        "path": "lib/impact-validation.ts",
+        "sha256": "901aec004c4c0c820273c5bd8f50100dd2467ddab4de9767877d1991b8cbe259",
+        "matchesPreviouslyTestedSource": true
+      },
+      {
+        "path": "lib/utils.ts",
+        "sha256": "53f3d3d070f0a9082934da25b875f9499855c2b0693868dd28be8c23d8730f68",
+        "matchesPreviouslyTestedSource": true
+      },
+      {
+        "path": "app/api/analytics/events/route.ts",
+        "sha256": "5b20261c15ccbe8d151383062a113bfd54e9ff01fc6838028e569057fd8c302f",
+        "matchesPreviouslyTestedSource": true
+      },
+      {
+        "path": "app/api/analytics/report/route.ts",
+        "sha256": "45cd3d2094c9d388f19834046e78dccc402563e50fe63858d61ceb05403e79e6",
+        "matchesPreviouslyTestedSource": true
+      },
+      {
+        "path": "app/api/analytics/session/route.ts",
+        "sha256": "196a4bdf69f0be0db904e09c7dca89ae307bfc8cf5458a78877d701321da456d",
+        "matchesPreviouslyTestedSource": true
+      },
+      {
+        "path": "app/api/impact/assessment-events/route.ts",
+        "sha256": "7f5d21bdd19ac2a949b8c256d6cea297d7bbbcc5f4f24c607f37eb9840990ce3",
+        "matchesPreviouslyTestedSource": true
+      },
+      {
+        "path": "app/api/impact/assessment-export/route.ts",
+        "sha256": "2eea302e5e6e33692d0f5e0262f69e018b3587b55842384703a255180de48657",
+        "matchesPreviouslyTestedSource": true
+      },
+      {
+        "path": "app/api/impact/assessment-report/route.ts",
+        "sha256": "a0440041293a8e12896e2b374751ea3b02861db66c8c61783a4940654d7744e4",
+        "matchesPreviouslyTestedSource": true
+      },
+      {
+        "path": "app/api/impact/export/route.ts",
+        "sha256": "0903b2d1321fe293547fa6cc0b5d74a90260ab45ebca625ceb80450478997687",
+        "matchesPreviouslyTestedSource": true
+      },
+      {
+        "path": "app/api/impact/initialize/route.ts",
+        "sha256": "694f0789c755d7c0bfec555aa241e3a83c7407156b8cb1a05a8d2c45cc821566",
+        "matchesPreviouslyTestedSource": true
+      },
+      {
+        "path": "app/api/impact/report/route.ts",
+        "sha256": "389004bf9f9efc2b52a9f5e73b7421e82162c005119dd605d9c23d6e9b459a5a",
+        "matchesPreviouslyTestedSource": true
+      },
+      {
+        "path": "app/api/impact/stories/route.ts",
+        "sha256": "aa92857a3da017e5636eecfbe4ea15c263d6555a3e2d47e2637cb0e7412551b7",
+        "matchesPreviouslyTestedSource": true
+      },
+      {
+        "path": "app/api/impact/surveys/route.ts",
+        "sha256": "f55aea0403c336fab3369fa80aef7d6ce4b9c52f75fa33ee0f96de893c82ce9b",
+        "matchesPreviouslyTestedSource": true
+      },
+      {
+        "path": "app/admin/login/page.tsx",
+        "sha256": "53ca27ed0b418e172d564d5a425f389488a0dfa8b0f0b890bec121ed2e81b918",
+        "matchesPreviouslyTestedSource": true
+      },
+      {
+        "path": "app/admin/page.tsx",
+        "sha256": "e0b796c0412abc502bd6d0a8400db54bf2cf5cec997d346c0ce6ab151366de4f",
+        "matchesPreviouslyTestedSource": true
+      },
+      {
+        "path": "worker/index.ts",
+        "sha256": "e5ccbb4b931a3b3cc4fd8ddb690795319741aa0a3ee5734351586166e4a54310",
+        "matchesPreviouslyTestedSource": true
+      },
+      {
+        "path": "scripts/check-admin-access.mjs",
+        "sha256": "d017e4a202d785d773850faf38d9f1b53e5066d81add2aa01a5ee13bfe4d13a0",
+        "matchesPreviouslyTestedSource": true
+      },
+      {
+        "path": "scripts/check-research-assessment.mjs",
+        "sha256": "ca61babf1b1e8b22d7cf867bce047a66ed4a003b28220d16a3cbc46a781a06aa",
+        "matchesPreviouslyTestedSource": true
+      },
+      {
+        "path": ".openai/hosting.json",
+        "sha256": "b0374a51c6db5bc6184b8d5b25672e12f50235a45b7929ff7baeafc4d575b1ea",
+        "matchesPreviouslyTestedSource": true
+      }
+    ],
+    "realSignedInUnlistedTest": "UNVERIFIED \u2014 deferredI02; highest-priority post-launch identity test",
+    "productionDataUsed": false,
+    "productionModified": false
+  },
+  "browserEvidence": "https://github.com/AlexJang14/altwing-production/actions/runs/45502350981",
+  "releaseTargets": {
+    "frontend": "https://altwing.org",
+    "repository": "AlexJang14/altwing-production",
+    "frontendWorkflow": ".github/workflows/pages.yml",
+    "backend": "https://altwing-engineering-pathways.theanna.chatgpt.site/",
+    "backendProjectId": "appgprj_6ade62e44e9081919499f0bdeb1a7261",
+    "administratorLoginAfterRelease": "https://altwing-engineering-pathways.theanna.chatgpt.site/admin/login"
+  },
+  "migration": {
+    "preserveExistingTables": 8,
+    "newTables": 4,
+    "newIndexesOnNewTables": 5,
+    "newAggregationTriggers": 3,
+    "historicalUniqueIndexIncluded": false,
+    "atomicIngestionDeduplicationRetained": true,
+    "productionRecoveryVerified": false,
+    "codeRollbackRestoresDatabase": false,
+    "stopOnPartialConflictingUnknownState": true
+  },
+  "liveIntelligence": {
+    "daily": "05:37 America/New_York",
+    "weekly": "Monday 06:17 America/New_York",
+    "activation": [
+      "Run weekly with dry_run=true",
+      "Run daily with dry_run=true",
+      "After healthy actual runs, set ALTWING_CONTENT_AUTOMATION_ENABLED=true and ALTWING_CONTENT_PUBLISH_ENABLED=true",
+      "Run weekly and daily with dry_run=false; verify actual collection/publication and exact-SHA Pages deployment",
+      "Verify live official-source freshness and all 733 retained records"
+    ],
+    "disabled": [
+      "126 unreviewed sources",
+      "Unverified College Scorecard collector",
+      "Monthly cron"
+    ]
+  },
+  "rollback": {
+    "previousFrontendCommit": "443f965f2c5f45b2199c24b0b5db800eb5fee60b",
+    "previousBackendVersion": 11,
+    "method": "Use normal git revert through existing Pages and the supported previous backend version. Retain every table and all old/new rows. No down-migration, force-push or automatic DB restore. Disable content publishing on unhealthy collection."
+  },
+  "postLaunch": {
+    "priorityFirst": "I02: anonymous and genuinely signed-in unlisted private dashboard/report/stories/export denial; new-endpoint checkL05",
+    "required": "L01-L07: exact live source/navigation/features; both administrators and new endpoints; genuine voluntary survey acceptance and stored retrieval; behavioral progression/rewards; CSV/PDF; supported historical preparation; privacy/DNT/GPC; Cloudflare transmission and Visits; real daily/weekly Actions execution and freshness.",
+    "otherDeferred": [
+      "M01",
+      "M02",
+      "M03",
+      "M04",
+      "A03",
+      "A04"
+    ]
+  },
+  "noProductionChangeThisRequest": true,
+  "orderedReleasePlan": [
+    {
+      "step": 1,
+      "action": "Refresh main revision and existing Site supported table/migration metadata; preserve main443f965f2c5f45b2199c24b0b5db800eb5fee60b and backendversion11 as rollback references. Stop on divergence, unexpected/partial migration application or uncertain migration outcome. An unavailable standalone SQL console is not a new routine gate."
+    },
+    {
+      "step": 2,
+      "action": "Use the manifest-verified complete corrective source, not the QA-root branch. Through existing Sites publishing, apply the reviewed narrow additive0002 and deploy the complete backend on the same Site,DB binding,audience,secrets and both grants. Preserve0000/0001 and all8existing tables/records. Verify actual hosting outcome before frontend push."
+    },
+    {
+      "step": 3,
+      "action": "Commit/push the complete latest editable frontend/config/content to AlexJang14/altwing-production main using normal history. Deploy through existing .github/workflows/pages.yml and verify the exact approved product source on altwing.org. No DNS/domain changes."
+    },
+    {
+      "step": 4,
+      "action": "Run verifiedweekly anddaily content workflow dry runs on the published default branch. If healthy, activate the two existing repository variables and runweekly/daily publishing. Verify actual runs,new content SHA when changed,reused Pages deployment and live freshness; preserve733records and truthful verification dates."
+    },
+    {
+      "step": 5,
+      "action": "Perform prioritizedI02/L05 real unauthorized denial, independent admin/new export access, genuine voluntary survey receipt and stored retrieval, progression/rewards,privacy andCloudflare transmission/Visits. Complete supported bounded historical reporting through an authenticated admin session. Retain all UNVERIFIED observations until actually performed."
+    }
+  ]
+}
