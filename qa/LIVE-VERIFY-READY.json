@@ -10,5 +10,16 @@
   "productionDatabaseWrites": false,
   "requiresRealVisitorSessionForPrivateReads": true,
   "ownerRequestedAt": "2026-11-24 America/New_York",
-  "previousReviewedFrontend": "f23651c0837d42941205c7a505b5e662f24d6347"
+  "previousReviewedFrontend": "f23651c0837d42941205c7a505b5e662f24d6347",
+  "engines": [
+    "chromium"
+  ],
+  "reuseAnonymousEvidence": {
+    "run": 45532981985,
+    "anonymousChecks": "13/13 PASS",
+    "firefoxChecks": "9/9 PASS, actual Firefox153.0",
+    "artifact": 14986020177,
+    "digest": "sha256:cfcbea1217e1f02a67e045528c4243f9148e51a05dc6889d9efe207fe6f96098",
+    "chromiumOriginalFailure": "Immediate assertion ran before requestAnimationFrame focus restoration; rerun awaits actual focus up to2.5sec without changing the requirement or product."
+  }
 }
