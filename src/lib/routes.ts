@@ -1,8 +1,8 @@
 import type { EngineeringMajorId, GuidanceTab } from '../features/guidance/guidanceTypes';
 import { ENGINEERING_MAJOR_MAP } from '../features/guidance/engineeringMajors';
 import type { WingId } from '../features/wingmatch/build/catalog/buildCatalog';
-export type AppView = 'home' | 'match' | 'explore' | 'counselor' | 'universe' | 'aerospace' | 'aerospace-build' | 'projects' | 'sitemap' | 'major' | 'colleges' | 'programs' | 'privacy' | 'analytics' | 'progress-transfer';
-const views: AppView[] = ['home','match','explore','counselor','universe','aerospace','aerospace-build','projects','sitemap','major','colleges','programs','privacy','analytics','progress-transfer'];
+export type AppView = 'home' | 'match' | 'explore' | 'counselor' | 'universe' | 'aerospace' | 'aerospace-build' | 'projects' | 'sitemap' | 'major' | 'colleges' | 'programs' | 'privacy' | 'analytics' | 'progress-transfer' | 'research' | 'credits' | 'terms';
+const views: AppView[] = ['home','match','explore','counselor','universe','aerospace','aerospace-build','projects','sitemap','major','colleges','programs','privacy','analytics','progress-transfer','research','credits','terms'];
 const tabs: GuidanceTab[] = ['PLAN','COLLEGES','OPPORTUNITIES','CAREERS','IDEAS'];
 const wings: WingId[] = ['propulsion','gnc','structures','thermal','avionics','mission-design'];
 export function parseRoute(hash: string) {

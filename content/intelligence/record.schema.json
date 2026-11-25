@@ -1,0 +1,310 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://altwing.org/schemas/public-content-record-v1",
+  "title": "AltWing public information record \u2014 no student or private data",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "display",
+    "facts",
+    "first_discovered_at",
+    "history",
+    "id",
+    "imported_legacy",
+    "kind",
+    "last_changed_at",
+    "legacy_id",
+    "lifecycle",
+    "verification"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9:_.-]{1,160}$"
+    },
+    "legacy_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "kind": {
+      "enum": [
+        "admissions",
+        "career_resource",
+        "college",
+        "competition",
+        "internship",
+        "major",
+        "mentorship",
+        "research",
+        "scholarship",
+        "summer_program"
+      ]
+    },
+    "facts": {
+      "type": "object",
+      "required": [
+        "accreditation",
+        "admissions_requirements",
+        "age_max",
+        "age_min",
+        "application_cycle",
+        "application_url",
+        "career_resources",
+        "citizenship",
+        "cost",
+        "deadline",
+        "deadline_timezone",
+        "disciplines",
+        "financial_aid",
+        "format",
+        "grades",
+        "location",
+        "name",
+        "opening_date",
+        "organization",
+        "program_information",
+        "residency",
+        "source_published_at",
+        "source_status",
+        "source_url",
+        "statistics",
+        "stipend"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "cost": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "financial_aid": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_published_at": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "age_min": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 100
+        },
+        "stipend": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "accreditation": {
+          "type": [
+            "string",
+            "object",
+            "null"
+          ]
+        },
+        "residency": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "format": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "deadline_timezone": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "citizenship": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "disciplines": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "enum": [
+              "aerospace",
+              "biomedical",
+              "chemical",
+              "civil",
+              "computer",
+              "electrical",
+              "environmental",
+              "industrial",
+              "materials",
+              "mechanical",
+              "nuclear",
+              "petroleum",
+              "robotics",
+              "software"
+            ]
+          }
+        },
+        "deadline": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "application_url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "age_max": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 100
+        },
+        "organization": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "application_cycle": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "grades": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "enum": [
+              9,
+              10,
+              11,
+              12
+            ]
+          }
+        },
+        "source_url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "opening_date": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "statistics": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "location": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_status": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "admissions_requirements": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "program_information": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "career_resources": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "object"
+          }
+        }
+      }
+    },
+    "display": {
+      "type": "object"
+    },
+    "first_discovered_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "imported_legacy": {
+      "type": "boolean"
+    },
+    "last_changed_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "verification": {
+      "type": "object",
+      "required": [
+        "status",
+        "last_verified_at",
+        "verified_fields",
+        "evidence"
+      ]
+    },
+    "lifecycle": {
+      "type": "object",
+      "required": [
+        "status",
+        "as_of",
+        "deadline_precision"
+      ]
+    },
+    "history": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    }
+  }
+}

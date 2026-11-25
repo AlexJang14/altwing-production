@@ -18,7 +18,8 @@ for(const [event,page] of [['Page Viewed','home'],['WingMatch Started','match'],
 const originalHistory=db.prepare('SELECT * FROM analytics_events ORDER BY rowid').all();
 for(const sql of fs.readFileSync('drizzle/0001_impact_measurement.sql','utf8').split('--> statement-breakpoint').map(s=>s.trim()).filter(Boolean))db.prepare(sql).run();
 
-let identityHeaders=new Headers(),queries=0;
+for(const sql of fs.readFileSync('drizzle/0002_research_assessment.sql','utf8').split('--> statement-breakpoint').map(s=>s.trim()).filter(Boolean))db.prepare(sql).run();
+let identityHeaders=new Headers(),queries=0,workerFrameworkCalls=0;
 const env={ANALYTICS_ADMIN_EMAIL:'owner@example.test',ANALYTICS_ADDITIONAL_ADMIN_EMAILS:JSON.stringify(['additional@example.test']),ANALYTICS_INGEST_SECRET:'isolated-admin-test-capability',ANALYTICS_ALLOWED_ORIGINS:'https://altwing.org',DB:{
   prepare(sql){queries++;return {args:[],bind(...args){this.args=args;return this;},async run(){const result=db.prepare(sql).run(...this.args);return {meta:{changes:result.changes}};},async all(){return {results:db.prepare(sql).all(...this.args)};}};},
   async batch(statements){db.exec('BEGIN');try{const results=[];for(const statement of statements)results.push(await statement.all());db.exec('COMMIT');return results;}catch(error){db.exec('ROLLBACK');throw error;}},
@@ -27,12 +28,15 @@ const cache=new Map();
 function load(file){
   const absolute=path.resolve(file);if(cache.has(absolute))return cache.get(absolute).exports;
   const module={exports:{}};cache.set(absolute,module);
-  const output=ts.transpileModule(fs.readFileSync(absolute,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022,jsx:ts.JsxEmit.ReactJSX}}).outputText;
+  const source=fs.readFileSync(absolute,'utf8').replaceAll('import.meta.env.DEV','false');
+  const output=ts.transpileModule(source,{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022,jsx:ts.JsxEmit.ReactJSX}}).outputText;
   const require=name=>{
     if(name==='cloudflare:workers')return {env};
+    if(name==='vinext/server/fetch-handler')return {__esModule:true,default:{fetch(){workerFrameworkCalls++;return new Response('FRAMEWORK RESPONSE FIXTURE');}}};
     if(name==='next/headers')return {headers:async()=>identityHeaders};
-    if(name==='next/navigation')return {redirect(){throw Error('Unexpected redirect');}};
-    if(name.startsWith('.')){const resolved=path.resolve(path.dirname(absolute),name);return load(fs.existsSync(resolved+'.ts')?resolved+'.ts':resolved+'.tsx');}
+    if(name==='next/navigation')return {redirect(location){throw Object.assign(Error('Redirect'),{location});},notFound(){throw Object.assign(Error('Not found'),{status:404});}};
+    if(name.endsWith('.css'))return {};
+    if(name.startsWith('.')){const resolved=path.resolve(path.dirname(absolute),name);return load(fs.existsSync(resolved)?resolved:fs.existsSync(resolved+'.ts')?resolved+'.ts':resolved+'.tsx');}
     return nativeRequire(name);
   };
   new Function('require','module','exports',output)(require,module,module.exports);return module.exports;
@@ -52,6 +56,11 @@ const routes=[
   ['all private written feedback',()=>exportsRoute.GET(new Request('https://backend.test/api/impact/export?range=all&kind=feedback'))],
   ['historical initialization',()=>initialize.POST(new Request('https://backend.test/api/impact/initialize',{method:'POST',headers:{Origin:'https://backend.test','Content-Type':'application/json'},body:'{}'}))],
 ];
+for(const version of ['impact-v2','impact-v3']){
+ const query='range=all&version='+version;
+ routes.push(['research report '+version,()=>load('app/api/impact/assessment-report/route.ts').GET(new Request('https://backend.test/api/impact/assessment-report?'+query))],['private stories '+version,()=>load('app/api/impact/stories/route.ts').GET(new Request('https://backend.test/api/impact/stories?'+query))]);
+ for(const kind of ['responses','stories','quotes'])routes.push(['research '+kind+' export '+version,()=>load('app/api/impact/assessment-export/route.ts').GET(new Request('https://backend.test/api/impact/assessment-export?'+query+'&kind='+kind))]);
+}
 const matrix=[];
 async function denied(label,email,expected){
   if(email===null)identityHeaders=new Headers();else signedIn(email);
@@ -80,6 +89,11 @@ for(const value of malformed){
 env.ANALYTICS_ADDITIONAL_ADMIN_EMAILS=JSON.stringify([' ADDITIONAL@EXAMPLE.TEST ','additional@example.test']);
 signedIn('additional@example.test');assert.equal(await analyticsAuthorization(),200,'Exact normalized additional account is authorized');
 env.ANALYTICS_ADDITIONAL_ADMIN_EMAILS='[]';assert.equal(await analyticsAuthorization(),403,'Removing a grant must take effect without a cached authorization');
+env.ANALYTICS_ADDITIONAL_ADMIN_EMAILS=JSON.stringify(['additional@example.test','third@example.test']);
+for(const email of ['additional@example.test','third@example.test']){signedIn(email);assert.equal(await analyticsAuthorization(),403,'An unexpected third grant fails closed');}
+signedIn('owner@example.test');assert.equal(await analyticsAuthorization(),200,'An unexpected optional grant never removes the original owner');
+env.ANALYTICS_ADDITIONAL_ADMIN_EMAILS=JSON.stringify(['owner@example.test','additional@example.test']);signedIn('additional@example.test');assert.equal(await analyticsAuthorization(),200,'Owner duplication is not a third account');
+const originalOwner=env.ANALYTICS_ADMIN_EMAIL;delete env.ANALYTICS_ADMIN_EMAIL;assert.equal(await analyticsAuthorization(),403,'An additional grant cannot replace the missing original-owner configuration');env.ANALYTICS_ADMIN_EMAIL=originalOwner;
 env.ANALYTICS_ADDITIONAL_ADMIN_EMAILS=JSON.stringify(['additional@example.test']);
 
 // No URL, body or ordinary role header can turn an unlisted identity into admin.
@@ -103,7 +117,8 @@ assert.deepEqual(db.prepare('SELECT id,session_id,event,created_at,page,from_pag
 identityHeaders=new Headers();
 const surveys=load('app/api/impact/surveys/route.ts'),{signVisit}=load('lib/analytics-capability.ts');
 const submission={id:crypto.randomUUID(),session_id:session,version:'impact-v1',source:'wingmatch',satisfaction:4,helpfulness:5,recommendation:8,understanding_before:2,understanding_after:4,testimonial:'PRIVATE FIXTURE: local authorization test only.',quote_permission:false,feedback_permission:true};
-assert.equal((await surveys.POST(new Request('https://backend.test/api/impact/surveys',{method:'POST',headers:{Origin:'https://altwing.org','Content-Type':'application/json','X-AltWing-Visit':await signVisit(session,env.ANALYTICS_INGEST_SECRET)},body:JSON.stringify(submission)}))).status,202);
+const anonymousSubmission=new Request('https://backend.test/api/impact/surveys',{method:'POST',headers:{Origin:'https://altwing.org','Content-Type':'application/json','X-AltWing-Visit':await signVisit(session,env.ANALYTICS_INGEST_SECRET)},body:JSON.stringify(submission)});
+assert.equal((await load('lib/analytics-access.ts').withAnalyticsAccess(anonymousSubmission,()=>surveys.POST(anonymousSubmission))).status,202,'Anonymous, explicitly consented feedback reaches the real save handler through the Worker boundary');
 const saved=db.prepare('SELECT * FROM impact_surveys').all();
 let ownerReport;
 for(const [label,email] of [['existing owner','OWNER@example.test'],['additional administrator','ADDITIONAL@example.test']]){
@@ -131,13 +146,48 @@ const {permittedQuotes}=load('src/features/analytics/impactExports.ts');assert.e
 const AccessPanel=load('src/features/analytics/AnalyticsAccessPanel.tsx').default;
 const login=renderToStaticMarkup(createElement(AccessPanel,{status:'login'}));
 const forbidden=renderToStaticMarkup(createElement(AccessPanel,{status:'forbidden'}));
-assert.ok(login.includes('/signin-with-chatgpt?return_to=%2F%23%2Fanalytics')&&login.includes('target="_top"'));
-assert.ok(forbidden.includes('/signout-with-chatgpt?return_to=%2F%23%2Fanalytics')&&forbidden.includes('Administrator access required.'));
+assert.ok(login.includes('/signin-with-chatgpt?return_to=%2Fadmin')&&login.includes('target="_top"'));
+assert.ok(forbidden.includes('/signout-with-chatgpt?return_to=%2Fadmin%2Flogin')&&forbidden.includes('Administrator access required.'));
 assert.ok(!login.includes('account that owns this site')&&!forbidden.includes('does not own the site'));
 const demo=renderToStaticMarkup(createElement(AccessPanel,{status:'login',preview:true}));assert.ok(demo.includes('disabled')&&!demo.includes('href='),'Offline preview cannot launch real login');
 for(const html of [login,forbidden,demo])assert.ok(!html.includes('@')&&!html.includes('ANALYTICS_ADMIN'));
 
+// Guard the actual Worker request boundary before any framework HTML/RSC/API
+// handler, using the same server allowlist as the endpoint-level checks above.
+const boundary=load('lib/analytics-access.ts'),boundaryMatrix=[];
+const privatePaths=['/admin','/admin/','/admin/reports','/admin?__rsc=fixture','/%61dmin','/admin%2Freports','/api/analytics/report','/api/impact/report','/api/impact/export?kind=feedback','/api/impact/assessment-report?version=impact-v3','/api/impact/stories','/api/impact/assessment-export?kind=stories','/api/impact/initialize','/api/impact/not-yet-created'];
+for(const [label,email]of [['anonymous',null],['unlisted','other@example.test'],['original administrator','owner@example.test'],['additional administrator','additional@example.test']]){
+ if(email===null)identityHeaders=new Headers();else signedIn(email);
+ for(const path of privatePaths){
+  const request=new Request('https://backend.test'+path,{headers:identityHeaders}),scope=boundary.analyticsAccessScope(request);let downstream=0;
+  const response=await boundary.withAnalyticsAccess(request,()=>{downstream++;return new Response('AUTHORIZED RESPONSE FIXTURE',{headers:{'Cache-Control':'public, max-age=600',ETag:'stale-fixture',Vary:'Accept-Encoding'}});});
+  const allowed=email==='owner@example.test'||email==='additional@example.test',expected=allowed?200:scope==='dashboard'?404:email===null?401:403;
+  assert.equal(response.status,expected,label+' '+path);assert.equal(downstream,allowed?1:0,'Unauthorized requests never reach server rendering or API handlers');
+  assert.equal(response.headers.get('Location'),null,'Private visits must not automatically redirect to login');assert.equal(response.headers.get('Cache-Control'),'private, no-store');assert.equal(response.headers.get('X-Robots-Tag'),'noindex, nofollow');assert.equal(response.headers.get('ETag'),null);assert.ok(response.headers.get('Vary').includes('Cookie'));
+  const text=await response.text();if(!allowed){assert.ok(!text.includes('AUTHORIZED RESPONSE FIXTURE')&&!text.includes('signin-with-chatgpt'));assert.ok(!text.includes('example.test'));}
+  boundaryMatrix.push({identity:label,path,status:response.status});
+ }
+}
+for(const path of ['/','/admin/login','/admin/login/','/api/analytics/session','/api/analytics/session/','/api/analytics/events','/api/impact/surveys','/api/impact/assessment-events']){
+ const request=new Request('https://backend.test'+path);let reached=0;
+ const response=await boundary.withAnalyticsAccess(request,()=>{reached++;return new Response('PUBLIC HANDLER',{headers:{'Cache-Control':'public, max-age=5'}});});assert.equal(response.status,200);assert.equal(reached,1,'Public pages, deliberate login and anonymous ingestion remain available');
+ if(path.startsWith('/admin/login'))assert.equal(response.headers.get('Cache-Control'),'private, no-store');else assert.equal(response.headers.get('Cache-Control'),'public, max-age=5');
+}
+const productionWorker=load('worker/index.ts').default;
+for(const [path,email,status]of [['/admin',null,404],['/admin','other@example.test',404],['/api/impact/stories',null,401],['/api/impact/stories','other@example.test',403],['/admin','owner@example.test',200],['/admin','additional@example.test',200],['/',null,200],['/api/impact/surveys',null,200]]){
+ const headers=email?new Headers({'oai-authenticated-user-id':'worker-fixture','oai-authenticated-user-email':email}):new Headers(),before=workerFrameworkCalls;
+ const response=await productionWorker.fetch(new Request('https://backend.test'+path,{headers}),env,{props:{}});assert.equal(response.status,status);assert.equal(workerFrameworkCalls-before,status===200?1:0,'The actual production Worker entry must enforce the guard before the framework');
+}
+const head=await boundary.withAnalyticsAccess(new Request('https://backend.test/admin',{method:'HEAD'}),()=>{throw Error('Unauthorized HEAD reached the framework');});assert.equal(head.status,404);assert.equal(await head.text(),'');
+const AdminPage=load('app/admin/page.tsx').default,LoginPage=load('app/admin/login/page.tsx').default;
+for(const email of [null,'other@example.test']){if(email===null)identityHeaders=new Headers();else signedIn(email);const before=queries;await assert.rejects(AdminPage(),error=>error.status===404,'The page independently rejects a bypassed Worker boundary');assert.equal(queries,before);const html=renderToStaticMarkup(await LoginPage());assert.ok(html.includes('Private administrator sign-in'));assert.ok(!html.includes('Impact Stories library')&&!html.includes('PRIVATE FIXTURE'));}
+for(const email of ['owner@example.test','additional@example.test']){signedIn(email);const page=await AdminPage();assert.equal(typeof page.type,'function');await assert.rejects(LoginPage(),error=>error.location==='/admin','Only already authorized accounts continue from the login page automatically');}
+identityHeaders=new Headers();
+const PublicAnalytics=load('src/features/analytics/AnalyticsPage.tsx').default,publicDenial=renderToStaticMarkup(createElement(PublicAnalytics));assert.ok(publicDenial.includes('Access denied'));assert.ok(!publicDenial.includes('signin-with-chatgpt')&&!publicDenial.includes('/admin')&&!publicDenial.includes('Continue to site analytics'));
+const publicNav=load('src/components/SiteShell.tsx'),footer=renderToStaticMarkup(createElement(publicNav.SiteFooter)),siteMap=renderToStaticMarkup(createElement(load('src/components/SiteMap.tsx').default));
+for(const html of [footer,siteMap])assert.ok(!html.includes('#/analytics')&&!html.includes('/admin')&&!html.includes('signin-with-chatgpt'),'Public navigation does not advertise the dashboard or login');
+assert.ok(!fs.readFileSync('src/features/analytics/AnalyticsPage.tsx','utf8').includes('location.replace'),'Legacy hash route cannot launch a redirect or load private dashboard code');assert.ok(fs.readFileSync('worker/index.ts','utf8').includes('return withAnalyticsAccess(request,'),'The request guard must remain wired into the production Worker');
 fs.mkdirSync('.sites-runtime/admin-access-validation',{recursive:true});
-fs.writeFileSync('.sites-runtime/admin-access-validation/results.json',JSON.stringify({checkedAt:new Date().toISOString(),isolatedInMemoryOnly:true,productionModified:false,malformedConfigurationCases:malformed.length,originalRowsPreserved:originalHistory.length,protectedResourceMatrix:matrix,privateFeedbackPreserved:true,additionalGrantRevocationVerified:true,actualAccessComponentRendered:true},null,2)+'\n');
-console.log(`PASS: ${matrix.length} protected-resource checks; both administrators share original history, feedback and exports; anonymous/unlisted denial before any database access; ${malformed.length} fail-closed configuration cases without owner lockout; exact matching, revocation, same-origin initialization, quote permissions and actual access-panel rendering. All fixtures stayed in memory.`);
+fs.writeFileSync('.sites-runtime/admin-access-validation/results.json',JSON.stringify({checkedAt:new Date().toISOString(),isolatedInMemoryOnly:true,productionModified:false,malformedConfigurationCases:malformed.length,originalRowsPreserved:originalHistory.length,protectedResourceMatrix:matrix,privateFeedbackPreserved:true,additionalGrantRevocationVerified:true,atMostTwoConfiguredAdministrators:true,workerBoundaryMatrix:boundaryMatrix,protectedDashboardHasServerPageGuard:true,actualWorkerEntryVerified:true,manualSignInOnlyForDeniedVisitors:true,publicNavigationHasNoAdminLinks:true,publicAnonymousFeedbackPreserved:true,actualAccessComponentRendered:true},null,2)+'\n');
+console.log(`PASS: ${matrix.length} endpoint and ${boundaryMatrix.length} Worker-boundary protected-resource checks; both administrators share original history, feedback and exports; anonymous/unlisted denial before any database access; ${malformed.length} fail-closed configuration cases without owner lockout; exact matching, revocation, same-origin initialization, quote permissions and actual access-panel rendering. All fixtures stayed in memory.`);
 db.close();

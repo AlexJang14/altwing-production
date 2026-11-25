@@ -1,15 +1,10 @@
 .preflight-shell {
   min-height: 100vh;
 
-  color: white;
+  color: var(--gh-text);
 
   background:
-    radial-gradient(
-      circle at 50% 15%,
-      rgba(91,141,239,.18),
-      transparent 35%
-    ),
-    #0d132b;
+    var(--gh-surface);
 }
 
 .preflight-nav {
@@ -22,14 +17,14 @@
   padding: 0 26px;
 
   border-bottom:
-    1px solid rgba(255,255,255,.06);
+    1px solid var(--gh-border);
 }
 
 .preflight-nav button {
   border: 0;
 
   color:
-    rgba(255,255,255,.55);
+    var(--gh-text-muted);
 
   background: transparent;
 
@@ -37,11 +32,11 @@
 }
 
 .preflight-nav strong {
-  font-size: 18px;
+  font-size: var(--gh-text-lead);
 }
 
 .preflight-nav strong span {
-  color: #5b8def;
+  color: var(--gh-text-muted);
 }
 
 .preflight-card {
@@ -85,7 +80,7 @@
 
   border:
     1px solid
-    rgba(91,141,239,.25);
+    var(--gh-border);
 
   animation:
     preflightOrbit
@@ -105,14 +100,14 @@
 
   border-radius: 50%;
 
-  background: #ffc857;
+  background: var(--gh-surface);
 }
 
 .preflight-kicker {
-  color: #5b8def;
+  color: var(--gh-text-muted);
 
-  font-size: 8px;
-  font-weight: 950;
+  font-size: var(--gh-text-xs);
+  font-weight: 600;
 
   letter-spacing: .2em;
 }
@@ -124,11 +119,7 @@
   max-width: 620px;
 
   font-size:
-    clamp(
-      34px,
-      7vw,
-      58px
-    );
+    var(--gh-text-title);
 
   line-height: 1;
 
@@ -136,7 +127,7 @@
 }
 
 .preflight-card h1 strong {
-  color: #ffc857;
+  color: var(--gh-text-muted);
 }
 
 .preflight-intro {
@@ -146,9 +137,9 @@
     18px auto 0;
 
   color:
-    rgba(255,255,255,.55);
+    var(--gh-text-muted);
 
-  font-size: 14px;
+  font-size: var(--gh-text-sm);
   line-height: 1.6;
 }
 
@@ -166,22 +157,22 @@
 .preflight-facts article {
   padding: 15px 8px;
 
-  border-radius: 13px;
+  border-radius: var(--gh-radius-card);
 
   border:
     1px solid
-    rgba(91,141,239,.12);
+    var(--gh-border);
 
   background:
-    rgba(255,255,255,.025);
+    var(--gh-surface);
 }
 
 .preflight-facts b {
   display: block;
 
-  color: #ffc857;
+  color: var(--gh-text-muted);
 
-  font-size: 9px;
+  font-size: var(--gh-text-xs);
 }
 
 .preflight-facts span {
@@ -190,9 +181,9 @@
   margin-top: 4px;
 
   color:
-    rgba(255,255,255,.4);
+    var(--gh-text-muted);
 
-  font-size: 8px;
+  font-size: var(--gh-text-xs);
 }
 
 .preflight-rule {
@@ -200,17 +191,17 @@
 
   padding: 16px;
 
-  border-radius: 14px;
+  border-radius: var(--gh-radius-card);
 
   background:
-    rgba(91,141,239,.07);
+    var(--gh-surface);
 }
 
 .preflight-rule span {
-  color: #5b8def;
+  color: var(--gh-text-muted);
 
-  font-size: 7px;
-  font-weight: 950;
+  font-size: var(--gh-text-xs);
+  font-weight: 600;
 
   letter-spacing: .15em;
 }
@@ -220,16 +211,16 @@
 
   margin-top: 5px;
 
-  font-size: 15px;
+  font-size: var(--gh-text-body);
 }
 
 .preflight-rule p {
   margin: 3px 0 0;
 
   color:
-    rgba(255,255,255,.43);
+    var(--gh-text-muted);
 
-  font-size: 9px;
+  font-size: var(--gh-text-xs);
 }
 
 .preflight-start {
@@ -241,13 +232,13 @@
 
   border: 0;
 
-  border-radius: 14px;
+  border-radius: var(--gh-radius-card);
 
-  color: #0d132b;
+  color: var(--gh-text);
 
-  background: #ffc857;
+  background: var(--gh-surface);
 
-  font-weight: 950;
+  font-weight: 600;
 
   cursor: pointer;
 }
@@ -258,7 +249,7 @@
   border: 0;
 
   color:
-    rgba(255,255,255,.4);
+    var(--gh-text-muted);
 
   background: transparent;
 

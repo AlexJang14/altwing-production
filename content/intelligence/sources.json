@@ -1,0 +1,5178 @@
+{
+  "generated_at": "2026-11-21T18:27:27Z",
+  "maximum_auto_change_fraction": 0.15,
+  "maximum_auto_changed_records": 40,
+  "maximum_requests_per_run": 180,
+  "paid_ai": {
+    "enabled": false,
+    "spending_limit_usd": 0
+  },
+  "schema_version": 1,
+  "sources": [
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "gtri.gatech.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "internship"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "weekly",
+      "id": "opportunity-gtri-2027",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://gtri.gatech.edu/stem/high-school-summer-internship",
+      "record_id": "opportunity:gtri-2027",
+      "required": false,
+      "url": "https://gtri.gatech.edu/stem/high-school-summer-internship"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "compression.stanford.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "research"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "weekly",
+      "id": "opportunity-stanford-shtem-2027",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://compression.stanford.edu/outreach/shtem-summer-internships-high-schoolers",
+      "record_id": "opportunity:stanford-shtem-2027",
+      "required": false,
+      "url": "https://compression.stanford.edu/outreach/shtem-summer-internships-high-schoolers"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "science.gmu.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "research"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "weekly",
+      "id": "opportunity-gmu-assip-2027",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://science.gmu.edu/assip",
+      "record_id": "opportunity:gmu-assip-2027",
+      "required": false,
+      "url": "https://science.gmu.edu/assip"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "csr.utexas.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "internship"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "weekly",
+      "id": "opportunity-ut-sees-watch",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://csr.utexas.edu/education-outreach/high-school-internships/sees/",
+      "record_id": "opportunity:ut-sees-watch",
+      "required": false,
+      "url": "https://csr.utexas.edu/education-outreach/high-school-internships/sees/"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "www.nasa.gov"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "summer_program"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "weekly",
+      "id": "opportunity-nasa-stem-gateway",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://www.nasa.gov/stem-content/nasa-stem-gateway/",
+      "record_id": "opportunity:nasa-stem-gateway",
+      "required": false,
+      "url": "https://www.nasa.gov/stem-content/nasa-stem-gateway/"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "ei.jhu.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "summer_program"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "weekly",
+      "id": "opportunity-jhu-engineering-innovation",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://ei.jhu.edu/programs/engineering-innovation-research-program/",
+      "record_id": "opportunity:jhu-engineering-innovation",
+      "required": false,
+      "url": "https://ei.jhu.edu/programs/engineering-innovation-research-program/"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "www.soinc.org"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "competition"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "weekly",
+      "id": "opportunity-science-olympiad-2027",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://www.soinc.org/events/2027-division-c-events",
+      "record_id": "opportunity:science-olympiad-2027",
+      "required": false,
+      "url": "https://www.soinc.org/events/2027-division-c-events"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "afrlscholars.usra.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "internship"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "weekly",
+      "id": "opportunity-afrl-scholars-2027",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://afrlscholars.usra.edu/",
+      "record_id": "opportunity:afrl-scholars-2027",
+      "required": false,
+      "url": "https://afrlscholars.usra.edu/"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "www.cmu.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "summer_program"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "weekly",
+      "id": "opportunity-cmu-sams-2027",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://www.cmu.edu/pre-college/academic-programs/sams.html",
+      "record_id": "opportunity:cmu-sams-2027",
+      "required": false,
+      "url": "https://www.cmu.edu/pre-college/academic-programs/sams.html"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "aimi.stanford.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "research"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "weekly",
+      "id": "opportunity-stanford-aimi-2027",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://aimi.stanford.edu/education/summer-research-internship",
+      "record_id": "opportunity:stanford-aimi-2027",
+      "required": false,
+      "url": "https://aimi.stanford.edu/education/summer-research-internship"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "www.stonybrook.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "research"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "weekly",
+      "id": "opportunity-stonybrook-simons-2027",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://www.stonybrook.edu/simons/",
+      "record_id": "opportunity:stonybrook-simons-2027",
+      "required": false,
+      "url": "https://www.stonybrook.edu/simons/"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "www.bu.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "research"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "weekly",
+      "id": "opportunity-bu-rise-2027",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://www.bu.edu/summer/high-school-programs/rise-internship-practicum/",
+      "record_id": "opportunity:bu-rise-2027",
+      "required": false,
+      "url": "https://www.bu.edu/summer/high-school-programs/rise-internship-practicum/"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "case.isye.gatech.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "summer_program"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "weekly",
+      "id": "opportunity-gatech-iexperience-2027",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://case.isye.gatech.edu/engagement-initiatives/iexperience",
+      "record_id": "opportunity:gatech-iexperience-2027",
+      "required": false,
+      "url": "https://case.isye.gatech.edu/engagement-initiatives/iexperience"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "www.nist.gov"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "internship"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "weekly",
+      "id": "opportunity-nist-ship-2027",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://www.nist.gov/ship",
+      "record_id": "opportunity:nist-ship-2027",
+      "required": false,
+      "url": "https://www.nist.gov/ship"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "www.navalsteminterns.us"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "internship"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "weekly",
+      "id": "opportunity-navy-seap-2027",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://www.navalsteminterns.us/internships/seap/",
+      "record_id": "opportunity:navy-seap-2027",
+      "required": false,
+      "url": "https://www.navalsteminterns.us/internships/seap/"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "www.lockheedmartin.com"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "internship"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "weekly",
+      "id": "opportunity-lockheed-high-school-2027",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://www.lockheedmartin.com/en-us/careers/candidates/students-early-careers/high-school.html",
+      "record_id": "opportunity:lockheed-high-school-2027",
+      "required": false,
+      "url": "https://www.lockheedmartin.com/en-us/careers/candidates/students-early-careers/high-school.html"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "wpafbstem.com"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "internship"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "weekly",
+      "id": "opportunity-wright-scholar-2027",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://wpafbstem.com/Wright_Scholar/Wright_scholar.html",
+      "record_id": "opportunity:wright-scholar-2027",
+      "required": false,
+      "url": "https://wpafbstem.com/Wright_Scholar/Wright_scholar.html"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "www.price.utah.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "research"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "weekly",
+      "id": "opportunity-utah-engineering-research-2027",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://www.price.utah.edu/k12/high-school-summer-research-internship",
+      "record_id": "opportunity:utah-engineering-research-2027",
+      "required": false,
+      "url": "https://www.price.utah.edu/k12/high-school-summer-research-internship"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "outreach.engineering.columbia.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "summer_program"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "weekly",
+      "id": "opportunity-columbia-shape-2027",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://outreach.engineering.columbia.edu/content/shape-summer-high-school-academic-program-engineers",
+      "record_id": "opportunity:columbia-shape-2027",
+      "required": false,
+      "url": "https://outreach.engineering.columbia.edu/content/shape-summer-high-school-academic-program-engineers"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "outreach.engineering.columbia.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "research"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "weekly",
+      "id": "opportunity-columbia-eng-2027",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://outreach.engineering.columbia.edu/eng",
+      "record_id": "opportunity:columbia-eng-2027",
+      "required": false,
+      "url": "https://outreach.engineering.columbia.edu/eng"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "pme.uchicago.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "research"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "weekly",
+      "id": "opportunity-uchicago-stem-lab-2027",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://pme.uchicago.edu/academics/stem-education-community-outreach/k-12-student-programs/after-school-stem-lab-internship",
+      "record_id": "opportunity:uchicago-stem-lab-2027",
+      "required": false,
+      "url": "https://pme.uchicago.edu/academics/stem-education-community-outreach/k-12-student-programs/after-school-stem-lab-internship"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "www.ornl.gov"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "internship"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "weekly",
+      "id": "opportunity-ornl-ngsi-2027",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://www.ornl.gov/next-generation-stem-internship/",
+      "record_id": "opportunity:ornl-ngsi-2027",
+      "required": false,
+      "url": "https://www.ornl.gov/next-generation-stem-internship/"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "tep.engr.ncsu.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "summer_program"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "weekly",
+      "id": "opportunity-ncstate-residential-2027",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://tep.engr.ncsu.edu/k-12-student-programs/rising-11-12-residential-camps/",
+      "record_id": "opportunity:ncstate-residential-2027",
+      "required": false,
+      "url": "https://tep.engr.ncsu.edu/k-12-student-programs/rising-11-12-residential-camps/"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "ne.ncsu.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "summer_program"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "weekly",
+      "id": "opportunity-ncstate-nuclear-2027",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://ne.ncsu.edu/pre-college-programs/",
+      "record_id": "opportunity:ncstate-nuclear-2027",
+      "required": false,
+      "url": "https://ne.ncsu.edu/pre-college-programs/"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "cockrell.utexas.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "summer_program"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "weekly",
+      "id": "opportunity-ut-mite-2027",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://cockrell.utexas.edu/connect/k-12-outreach/mite/",
+      "record_id": "opportunity:ut-mite-2027",
+      "required": false,
+      "url": "https://cockrell.utexas.edu/connect/k-12-outreach/mite/"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "tsaweb.org"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "competition"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "weekly",
+      "id": "opportunity-tsa-engineering-2027",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://tsaweb.org/competitions/high-school",
+      "record_id": "opportunity:tsa-engineering-2027",
+      "required": false,
+      "url": "https://tsaweb.org/competitions/high-school"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "www.cmu.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "summer_program"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "weekly",
+      "id": "opportunity-cmu-cee-2027",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://www.cmu.edu/pre-college/academic-programs/cee.html",
+      "record_id": "opportunity:cmu-cee-2027",
+      "required": false,
+      "url": "https://www.cmu.edu/pre-college/academic-programs/cee.html"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "scienceoutreach.princeton.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "research"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "weekly",
+      "id": "opportunity-princeton-llp-2027",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://scienceoutreach.princeton.edu/laboratory-learning-program",
+      "record_id": "opportunity:princeton-llp-2027",
+      "required": false,
+      "url": "https://scienceoutreach.princeton.edu/laboratory-learning-program"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "mites.mit.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "summer_program"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "weekly",
+      "id": "opportunity-mit-mites-summer",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://mites.mit.edu/discover-mites/faq-for-prospective-students/faqs-mites-semester-and-mites-summer/",
+      "record_id": "opportunity:mit-mites-summer",
+      "required": false,
+      "url": "https://mites.mit.edu/discover-mites/faq-for-prospective-students/faqs-mites-semester-and-mites-summer/"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "mites.mit.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "summer_program"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "weekly",
+      "id": "opportunity-mit-mites-semester",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://mites.mit.edu/discover-mites/faq-for-prospective-students/faqs-mites-semester-and-mites-summer/",
+      "record_id": "opportunity:mit-mites-semester",
+      "required": false,
+      "url": "https://mites.mit.edu/discover-mites/faq-for-prospective-students/faqs-mites-semester-and-mites-summer/"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "bwsi.mit.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "summer_program"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "weekly",
+      "id": "opportunity-mit-beaver-works",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://bwsi.mit.edu/faq/",
+      "record_id": "opportunity:mit-beaver-works",
+      "required": false,
+      "url": "https://bwsi.mit.edu/faq/"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "www.wpi.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "summer_program"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "weekly",
+      "id": "opportunity-wpi-frontiers",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://www.wpi.edu/academics/pre-collegiate/summer-programs/frontiers",
+      "record_id": "opportunity:wpi-frontiers",
+      "required": false,
+      "url": "https://www.wpi.edu/academics/pre-collegiate/summer-programs/frontiers"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "rose-hulman.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "summer_program"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "weekly",
+      "id": "opportunity-rose-hulman-catapult",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://rose-hulman.edu/admissions-and-aid/early-planning/operation-catapult/index.html",
+      "record_id": "opportunity:rose-hulman-catapult",
+      "required": false,
+      "url": "https://rose-hulman.edu/admissions-and-aid/early-planning/operation-catapult/index.html"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "engineering.purdue.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "summer_program"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "weekly",
+      "id": "opportunity-purdue-step",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://engineering.purdue.edu/Honors/SeminarforTopEngineeringProspects",
+      "record_id": "opportunity:purdue-step",
+      "required": false,
+      "url": "https://engineering.purdue.edu/Honors/SeminarforTopEngineeringProspects"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "cooper.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "summer_program"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "weekly",
+      "id": "opportunity-cooper-summer-stem",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://cooper.edu/engineering/stem/summer/frequently-asked-questions",
+      "record_id": "opportunity:cooper-summer-stem",
+      "required": false,
+      "url": "https://cooper.edu/engineering/stem/summer/frequently-asked-questions"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "soe.rutgers.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "summer_program"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "weekly",
+      "id": "opportunity-rutgers-gset",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://soe.rutgers.edu/gset",
+      "record_id": "opportunity:rutgers-gset",
+      "required": false,
+      "url": "https://soe.rutgers.edu/gset"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "wyse.grainger.illinois.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "summer_program"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "weekly",
+      "id": "opportunity-illinois-wyse-camps",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://wyse.grainger.illinois.edu/summer-programs/summer-camps",
+      "record_id": "opportunity:illinois-wyse-camps",
+      "required": false,
+      "url": "https://wyse.grainger.illinois.edu/summer-programs/summer-camps"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "www.firstinspires.org"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "competition"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "weekly",
+      "id": "opportunity-first-robotics",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://www.firstinspires.org/programs/frc/",
+      "record_id": "opportunity:first-robotics",
+      "required": false,
+      "url": "https://www.firstinspires.org/programs/frc/"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "www.societyforscience.org"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "competition"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "weekly",
+      "id": "opportunity-isef-fair-pathway",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://www.societyforscience.org/isef/faq/",
+      "record_id": "opportunity:isef-fair-pathway",
+      "required": false,
+      "url": "https://www.societyforscience.org/isef/faq/"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "education.sdsc.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "research"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "weekly",
+      "id": "opportunity-sdsc-rehs",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://education.sdsc.edu/studenttech/rehs/",
+      "record_id": "opportunity:sdsc-rehs",
+      "required": false,
+      "url": "https://education.sdsc.edu/studenttech/rehs/"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "universitycollege.tufts.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "summer_program"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "weekly",
+      "id": "opportunity-tufts-precollege-engineering",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://universitycollege.tufts.edu/pre-college/academics/engineering-computer-science-programs-high-school-students",
+      "record_id": "opportunity:tufts-precollege-engineering",
+      "required": false,
+      "url": "https://universitycollege.tufts.edu/pre-college/academics/engineering-computer-science-programs-high-school-students"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "soe.rutgers.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "summer_program"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "weekly",
+      "id": "opportunity-rutgers-rhex",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://soe.rutgers.edu/RHEX",
+      "record_id": "opportunity:rutgers-rhex",
+      "required": false,
+      "url": "https://soe.rutgers.edu/RHEX"
+    },
+    {
+      "adapter": "scorecard",
+      "allowed_hosts": [
+        "api.data.gov"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "official_api",
+      "coverage": [
+        "college",
+        "admissions"
+      ],
+      "credential_env": "COLLEGE_SCORECARD_API_KEY",
+      "disabled_reason": "Only selected official API samples verified. Configure the free Actions secret and verify a complete monthly collection before enabling.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "college-scorecard",
+      "min_interval_seconds": 2,
+      "policy_note": "Public official API/feed or limited non-expressive factual observation; robots, rate limits and source restrictions enforced. No content/image republication.",
+      "policy_reference": "https://collegescorecard.ed.gov/data/api-documentation/",
+      "required": true,
+      "url": "https://api.data.gov/ed/collegescorecard/v1/schools",
+      "verification_scope": "Selected official API facts only; full live pagination remains unverified."
+    },
+    {
+      "adapter": "rss",
+      "allowed_hosts": [
+        "www.nasa.gov"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "permitted_feed",
+      "coverage": [
+        "internship",
+        "research",
+        "summer_program",
+        "competition",
+        "mentorship"
+      ],
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": true,
+      "frequency": "weekly",
+      "id": "nasa-official-feed",
+      "min_interval_seconds": 2,
+      "policy_note": "Official feed linked by the NASA RSS directory and verified as RSS. The general and news-release feeds returned HTML in this environment; no bypass or HTML-as-RSS fallback is used. Titles/official URLs are review-only discoveries, never inferred eligibility.",
+      "policy_reference": "https://www.nasa.gov/rss-feeds/",
+      "required": true,
+      "url": "https://www.nasa.gov/aeronautics/feed/",
+      "verification_scope": "Official RSS title/link discovery only; no eligibility, deadline or automatic new-record publication."
+    },
+    {
+      "adapter": "html",
+      "allowed_hosts": [
+        "www.nasa.gov"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "approved_public_facts",
+      "coverage": [
+        "internship",
+        "research",
+        "competition",
+        "summer_program"
+      ],
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": true,
+      "field_rules": [
+        {
+          "field": "name",
+          "pattern": "\\b(NASA STEM Gateway)\\b",
+          "type": "text"
+        },
+        {
+          "field": "organization",
+          "pattern": "\\b(NASA)\\b",
+          "type": "text"
+        }
+      ],
+      "frequency": "weekly",
+      "id": "nasa-stem-gateway-public",
+      "min_interval_seconds": 2,
+      "policy_note": "Public official API/feed or limited non-expressive factual observation; robots, rate limits and source restrictions enforced. No content/image republication.",
+      "policy_reference": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "record_id": "opportunity:nasa-stem-gateway",
+      "required": true,
+      "url": "https://www.nasa.gov/stem-content/nasa-stem-gateway/",
+      "verification_scope": "Exact name and organization only; no current cycle or eligibility inference."
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "amspub.abet.org"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "major",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "abet-program-search",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://amspub.abet.org/aps/",
+      "required": false,
+      "url": "https://amspub.abet.org/aps/"
+    },
+    {
+      "adapter": "html",
+      "allowed_hosts": [
+        "www.bls.gov"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "approved_public_facts",
+      "coverage": [
+        "career_resource"
+      ],
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": true,
+      "frequency": "monthly",
+      "id": "bls-engineering",
+      "min_interval_seconds": 2,
+      "policy_note": "Public official API/feed or limited non-expressive factual observation; robots, rate limits and source restrictions enforced. No content/image republication.",
+      "policy_reference": "https://www.bls.gov/bls/linksite.htm",
+      "required": true,
+      "url": "https://www.bls.gov/ooh/architecture-and-engineering/",
+      "verification_scope": "Official page/link and change monitoring only; salaries and program accreditation are not extracted."
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "www.firstinspires.org"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "competition",
+        "mentorship"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "first-robotics",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://www.firstinspires.org/robotics/frc",
+      "required": false,
+      "url": "https://www.firstinspires.org/robotics/frc"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "www.societyforscience.org"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "competition",
+        "research"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "society-science-isef",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://www.societyforscience.org/isef/",
+      "required": false,
+      "url": "https://www.societyforscience.org/isef/"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "swe.org"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "scholarship"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "swe-scholarships",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://swe.org/scholarships/",
+      "required": false,
+      "url": "https://swe.org/scholarships/"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "www.nspe.org"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "scholarship",
+        "mentorship",
+        "career_resource"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "nspe-scholarships",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://www.nspe.org/resources/students/scholarships",
+      "required": false,
+      "url": "https://www.nspe.org/resources/students/scholarships"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "students.ieee.org"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "mentorship",
+        "scholarship",
+        "career_resource"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "ieee-students",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://students.ieee.org/",
+      "required": false,
+      "url": "https://students.ieee.org/"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "www.asme.org"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "mentorship",
+        "career_resource",
+        "competition"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "asme-students",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://www.asme.org/topics-resources/content/students",
+      "required": false,
+      "url": "https://www.asme.org/topics-resources/content/students"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "www.aiche.org"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "career_resource",
+        "scholarship"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "aiche-students",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://www.aiche.org/community/students",
+      "required": false,
+      "url": "https://www.aiche.org/community/students"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "www.training.nih.gov"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "research",
+        "internship"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "nih-high-school",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://www.training.nih.gov/research-training/pb/sip/hs-sip/",
+      "required": false,
+      "url": "https://www.training.nih.gov/research-training/pb/sip/hs-sip/"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "www.pnnl.gov"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "research",
+        "internship"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "pnnl-high-school",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://www.pnnl.gov/high-school-internships",
+      "required": false,
+      "url": "https://www.pnnl.gov/high-school-internships"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "admission.gatech.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "admissions",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "admissions-gatech",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://admission.gatech.edu/first-year/",
+      "record_id": "college:gatech",
+      "required": false,
+      "url": "https://admission.gatech.edu/first-year/"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "coe.gatech.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "major",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "major-gatech",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://coe.gatech.edu/academics/undergraduate-academics",
+      "record_id": "college:gatech",
+      "required": false,
+      "url": "https://coe.gatech.edu/academics/undergraduate-academics"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "admissions.umich.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "admissions",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "admissions-michigan",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://admissions.umich.edu/apply/first-year-applicants",
+      "record_id": "college:michigan",
+      "required": false,
+      "url": "https://admissions.umich.edu/apply/first-year-applicants"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "majors.engin.umich.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "major",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "major-michigan",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://majors.engin.umich.edu/",
+      "record_id": "college:michigan",
+      "required": false,
+      "url": "https://majors.engin.umich.edu/"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "mitadmissions.org"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "admissions",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "admissions-mit",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://mitadmissions.org/apply/firstyear/",
+      "record_id": "college:mit",
+      "required": false,
+      "url": "https://mitadmissions.org/apply/firstyear/"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "engineering.mit.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "major",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "major-mit",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://engineering.mit.edu/education/undergraduate/",
+      "record_id": "college:mit",
+      "required": false,
+      "url": "https://engineering.mit.edu/education/undergraduate/"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "admission.stanford.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "admissions",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "admissions-stanford",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://admission.stanford.edu/apply/first-year/",
+      "record_id": "college:stanford",
+      "required": false,
+      "url": "https://admission.stanford.edu/apply/first-year/"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "engineering.stanford.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "major",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "major-stanford",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://engineering.stanford.edu/students-academics/academics/undergraduate-degree-programs",
+      "record_id": "college:stanford",
+      "required": false,
+      "url": "https://engineering.stanford.edu/students-academics/academics/undergraduate-degree-programs"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "admissions.purdue.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "admissions",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "admissions-purdue",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://admissions.purdue.edu/apply/",
+      "record_id": "college:purdue",
+      "required": false,
+      "url": "https://admissions.purdue.edu/apply/"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "engineering.purdue.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "major",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "major-purdue",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://engineering.purdue.edu/Engr/Academics/Undergraduate",
+      "record_id": "college:purdue",
+      "required": false,
+      "url": "https://engineering.purdue.edu/Engr/Academics/Undergraduate"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "www.admissions.illinois.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "admissions",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "admissions-uiuc",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://www.admissions.illinois.edu/apply/freshman",
+      "record_id": "college:uiuc",
+      "required": false,
+      "url": "https://www.admissions.illinois.edu/apply/freshman"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "grainger.illinois.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "major",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "major-uiuc",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://grainger.illinois.edu/academics/undergraduate/majors-and-minors",
+      "record_id": "college:uiuc",
+      "required": false,
+      "url": "https://grainger.illinois.edu/academics/undergraduate/majors-and-minors"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "admissions.tamu.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "admissions",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "admissions-tamu",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://admissions.tamu.edu/apply/freshman",
+      "record_id": "college:tamu",
+      "required": false,
+      "url": "https://admissions.tamu.edu/apply/freshman"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "engineering.tamu.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "major",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "major-tamu",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://engineering.tamu.edu/academics/degrees/index.html",
+      "record_id": "college:tamu",
+      "required": false,
+      "url": "https://engineering.tamu.edu/academics/degrees/index.html"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "erau.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "admissions",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "admissions-erau",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://erau.edu/admissions/undergraduate",
+      "record_id": "college:erau",
+      "required": false,
+      "url": "https://erau.edu/admissions/undergraduate"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "erau.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "major",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "major-erau",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://erau.edu/degrees/engineering",
+      "record_id": "college:erau",
+      "required": false,
+      "url": "https://erau.edu/degrees/engineering"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "www.admissions.caltech.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "admissions",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "admissions-caltech",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://www.admissions.caltech.edu/apply",
+      "record_id": "college:caltech",
+      "required": false,
+      "url": "https://www.admissions.caltech.edu/apply"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "www.eas.caltech.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "major",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "major-caltech",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://www.eas.caltech.edu/academics/undergraduate-studies",
+      "record_id": "college:caltech",
+      "required": false,
+      "url": "https://www.eas.caltech.edu/academics/undergraduate-studies"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "admissions.utexas.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "admissions",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "admissions-utaustin",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://admissions.utexas.edu/apply/freshman/",
+      "record_id": "college:utaustin",
+      "required": false,
+      "url": "https://admissions.utexas.edu/apply/freshman/"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "cockrell.utexas.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "major",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "major-utaustin",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://cockrell.utexas.edu/academics/undergraduate-education/undergraduate-programs",
+      "record_id": "college:utaustin",
+      "required": false,
+      "url": "https://cockrell.utexas.edu/academics/undergraduate-education/undergraduate-programs"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "www.ucf.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "admissions",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "admissions-ucf",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://www.ucf.edu/admissions/undergraduate/apply/",
+      "record_id": "college:ucf",
+      "required": false,
+      "url": "https://www.ucf.edu/admissions/undergraduate/apply/"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "www.cecs.ucf.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "major",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "major-ucf",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://www.cecs.ucf.edu/academics/undergraduate-programs/",
+      "record_id": "college:ucf",
+      "required": false,
+      "url": "https://www.cecs.ucf.edu/academics/undergraduate-programs/"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "www.colorado.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "admissions",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "admissions-cuboulder",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://www.colorado.edu/admissions/first-year",
+      "record_id": "college:cuboulder",
+      "required": false,
+      "url": "https://www.colorado.edu/admissions/first-year"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "www.colorado.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "major",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "major-cuboulder",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://www.colorado.edu/engineering/academics/undergraduate-programs",
+      "record_id": "college:cuboulder",
+      "required": false,
+      "url": "https://www.colorado.edu/engineering/academics/undergraduate-programs"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "www.calpoly.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "admissions",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "admissions-calpoly",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://www.calpoly.edu/admissions/first-year-student",
+      "record_id": "college:calpoly",
+      "required": false,
+      "url": "https://www.calpoly.edu/admissions/first-year-student"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "ceng.calpoly.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "major",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "major-calpoly",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://ceng.calpoly.edu/undergraduate-programs/",
+      "record_id": "college:calpoly",
+      "required": false,
+      "url": "https://ceng.calpoly.edu/undergraduate-programs/"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "admissions.umd.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "admissions",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "admissions-maryland",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://admissions.umd.edu/apply/freshman-applicants",
+      "record_id": "college:maryland",
+      "required": false,
+      "url": "https://admissions.umd.edu/apply/freshman-applicants"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "eng.umd.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "major",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "major-maryland",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://eng.umd.edu/academics/undergraduate",
+      "record_id": "college:maryland",
+      "required": false,
+      "url": "https://eng.umd.edu/academics/undergraduate"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "www.vt.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "admissions",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "admissions-vatech",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://www.vt.edu/admissions/undergraduate/apply.html",
+      "record_id": "college:vatech",
+      "required": false,
+      "url": "https://www.vt.edu/admissions/undergraduate/apply.html"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "eng.vt.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "major",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "major-vatech",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://eng.vt.edu/academics/undergraduate-students/explore-engineering.html",
+      "record_id": "college:vatech",
+      "required": false,
+      "url": "https://eng.vt.edu/academics/undergraduate-students/explore-engineering.html"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "admissions.psu.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "admissions",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "admissions-pennstate",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://admissions.psu.edu/info/future/firstyear/",
+      "record_id": "college:pennstate",
+      "required": false,
+      "url": "https://admissions.psu.edu/info/future/firstyear/"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "www.engr.psu.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "major",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "major-pennstate",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://www.engr.psu.edu/academics/undergraduate/majors.aspx",
+      "record_id": "college:pennstate",
+      "required": false,
+      "url": "https://www.engr.psu.edu/academics/undergraduate/majors.aspx"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "undergrad.osu.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "admissions",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "admissions-ohio-state",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://undergrad.osu.edu/apply/freshmen-columbus",
+      "record_id": "college:ohio-state",
+      "required": false,
+      "url": "https://undergrad.osu.edu/apply/freshmen-columbus"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "engineering.osu.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "major",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "major-ohio-state",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://engineering.osu.edu/academics/undergraduate",
+      "record_id": "college:ohio-state",
+      "required": false,
+      "url": "https://engineering.osu.edu/academics/undergraduate"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "admissions.tc.umn.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "admissions",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "admissions-minnesota",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://admissions.tc.umn.edu/admissions/freshman-admission",
+      "record_id": "college:minnesota",
+      "required": false,
+      "url": "https://admissions.tc.umn.edu/admissions/freshman-admission"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "cse.umn.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "major",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "major-minnesota",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://cse.umn.edu/college/majors",
+      "record_id": "college:minnesota",
+      "required": false,
+      "url": "https://cse.umn.edu/college/majors"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "admission.usc.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "admissions",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "admissions-usc",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://admission.usc.edu/prospective-students/how-to-apply/first-year-students/",
+      "record_id": "college:usc",
+      "required": false,
+      "url": "https://admission.usc.edu/prospective-students/how-to-apply/first-year-students/"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "viterbiadmission.usc.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "major",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "major-usc",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://viterbiadmission.usc.edu/undergraduate-programs/",
+      "record_id": "college:usc",
+      "required": false,
+      "url": "https://viterbiadmission.usc.edu/undergraduate-programs/"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "admissions.ufl.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "admissions",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "admissions-florida",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://admissions.ufl.edu/apply/freshman",
+      "record_id": "college:florida",
+      "required": false,
+      "url": "https://admissions.ufl.edu/apply/freshman"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "www.eng.ufl.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "major",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "major-florida",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://www.eng.ufl.edu/academics/undergraduate/",
+      "record_id": "college:florida",
+      "required": false,
+      "url": "https://www.eng.ufl.edu/academics/undergraduate/"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "www.auburn.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "admissions",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "admissions-auburn",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://www.auburn.edu/admissions/prospective-students/freshmen/index.php",
+      "record_id": "college:auburn",
+      "required": false,
+      "url": "https://www.auburn.edu/admissions/prospective-students/freshmen/index.php"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "eng.auburn.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "major",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "major-auburn",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://eng.auburn.edu/programs/undergraduate/",
+      "record_id": "college:auburn",
+      "required": false,
+      "url": "https://eng.auburn.edu/programs/undergraduate/"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "admissions.ua.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "admissions",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "admissions-alabama",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://admissions.ua.edu/apply/",
+      "record_id": "college:alabama",
+      "required": false,
+      "url": "https://admissions.ua.edu/apply/"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "eng.ua.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "major",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "major-alabama",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://eng.ua.edu/academics/undergraduate/",
+      "record_id": "college:alabama",
+      "required": false,
+      "url": "https://eng.ua.edu/academics/undergraduate/"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "admissions.ncsu.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "admissions",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "admissions-ncstate",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://admissions.ncsu.edu/apply/first-year/",
+      "record_id": "college:ncstate",
+      "required": false,
+      "url": "https://admissions.ncsu.edu/apply/first-year/"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "engr.ncsu.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "major",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "major-ncstate",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://engr.ncsu.edu/academics/undergrad/majors/",
+      "record_id": "college:ncstate",
+      "required": false,
+      "url": "https://engr.ncsu.edu/academics/undergrad/majors/"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "www.iastate.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "admissions",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "admissions-iowastate",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://www.iastate.edu/admission-and-aid/admissions/first-year-students",
+      "record_id": "college:iowastate",
+      "required": false,
+      "url": "https://www.iastate.edu/admission-and-aid/admissions/first-year-students"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "www.engineering.iastate.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "major",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "major-iowastate",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://www.engineering.iastate.edu/academics/undergraduate-programs/",
+      "record_id": "college:iowastate",
+      "required": false,
+      "url": "https://www.engineering.iastate.edu/academics/undergraduate-programs/"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "admission.asu.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "admissions",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "admissions-asu",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://admission.asu.edu/apply/first-year",
+      "record_id": "college:asu",
+      "required": false,
+      "url": "https://admission.asu.edu/apply/first-year"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "engineering.asu.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "major",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "major-asu",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://engineering.asu.edu/degrees/undergraduate/",
+      "record_id": "college:asu",
+      "required": false,
+      "url": "https://engineering.asu.edu/degrees/undergraduate/"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "www.arizona.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "admissions",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "admissions-arizona",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://www.arizona.edu/admissions/first-year",
+      "record_id": "college:arizona",
+      "required": false,
+      "url": "https://www.arizona.edu/admissions/first-year"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "engineering.arizona.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "major",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "major-arizona",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://engineering.arizona.edu/majors",
+      "record_id": "college:arizona",
+      "required": false,
+      "url": "https://engineering.arizona.edu/majors"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "admissions.rpi.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "admissions",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "admissions-rpi",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://admissions.rpi.edu/undergraduate/apply",
+      "record_id": "college:rpi",
+      "required": false,
+      "url": "https://admissions.rpi.edu/undergraduate/apply"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "eng.rpi.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "major",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "major-rpi",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://eng.rpi.edu/academics/undergraduate",
+      "record_id": "college:rpi",
+      "required": false,
+      "url": "https://eng.rpi.edu/academics/undergraduate"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "futurestudents.mst.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "admissions",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "admissions-mst",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://futurestudents.mst.edu/admissions/freshmen/",
+      "record_id": "college:mst",
+      "required": false,
+      "url": "https://futurestudents.mst.edu/admissions/freshmen/"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "futurestudents.mst.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "major",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "major-mst",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://futurestudents.mst.edu/academic-programs/",
+      "record_id": "college:mst",
+      "required": false,
+      "url": "https://futurestudents.mst.edu/academic-programs/"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "admissions.cornell.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "admissions",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "admissions-cornell",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://admissions.cornell.edu/how-to-apply/first-year-applicants",
+      "record_id": "college:cornell",
+      "required": false,
+      "url": "https://admissions.cornell.edu/how-to-apply/first-year-applicants"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "www.engineering.cornell.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "major",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "major-cornell",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://www.engineering.cornell.edu/majors-minors",
+      "record_id": "college:cornell",
+      "required": false,
+      "url": "https://www.engineering.cornell.edu/majors-minors"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "admission.princeton.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "admissions",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "admissions-princeton",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://admission.princeton.edu/apply",
+      "record_id": "college:princeton",
+      "required": false,
+      "url": "https://admission.princeton.edu/apply"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "engineering.princeton.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "major",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "major-princeton",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://engineering.princeton.edu/undergraduate-studies",
+      "record_id": "college:princeton",
+      "required": false,
+      "url": "https://engineering.princeton.edu/undergraduate-studies"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "www.cmu.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "admissions",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "admissions-cmu",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://www.cmu.edu/admission/admission/undergraduate-admission/how-to-apply",
+      "record_id": "college:cmu",
+      "required": false,
+      "url": "https://www.cmu.edu/admission/admission/undergraduate-admission/how-to-apply"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "engineering.cmu.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "major",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "major-cmu",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://engineering.cmu.edu/education/undergraduate-programs/index.html",
+      "record_id": "college:cmu",
+      "required": false,
+      "url": "https://engineering.cmu.edu/education/undergraduate-programs/index.html"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "admissions.duke.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "admissions",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "admissions-duke",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://admissions.duke.edu/apply/",
+      "record_id": "college:duke",
+      "required": false,
+      "url": "https://admissions.duke.edu/apply/"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "pratt.duke.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "major",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "major-duke",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://pratt.duke.edu/academics/undergrad/majors-minors/",
+      "record_id": "college:duke",
+      "required": false,
+      "url": "https://pratt.duke.edu/academics/undergrad/majors-minors/"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "admissions.msu.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "admissions",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "admissions-michigan-state",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://admissions.msu.edu/apply/first-year",
+      "record_id": "college:michigan-state",
+      "required": false,
+      "url": "https://admissions.msu.edu/apply/first-year"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "engineering.msu.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "major",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "major-michigan-state",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://engineering.msu.edu/academics/undergraduate",
+      "record_id": "college:michigan-state",
+      "required": false,
+      "url": "https://engineering.msu.edu/academics/undergraduate"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "www.mtu.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "admissions",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "admissions-michigan-tech",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://www.mtu.edu/admissions/apply/",
+      "record_id": "college:michigan-tech",
+      "required": false,
+      "url": "https://www.mtu.edu/admissions/apply/"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "www.mtu.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "major",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "major-michigan-tech",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://www.mtu.edu/engineering/undergraduate/",
+      "record_id": "college:michigan-tech",
+      "required": false,
+      "url": "https://www.mtu.edu/engineering/undergraduate/"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "admissions.berkeley.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "admissions",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "admissions-berkeley-2026",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://admissions.berkeley.edu/apply-to-berkeley/freshmen/",
+      "record_id": "college:berkeley-2026",
+      "required": false,
+      "url": "https://admissions.berkeley.edu/apply-to-berkeley/freshmen/"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "engineering.berkeley.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "major",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "major-berkeley-2026",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://engineering.berkeley.edu/academics/majors-and-minors/",
+      "record_id": "college:berkeley-2026",
+      "required": false,
+      "url": "https://engineering.berkeley.edu/academics/majors-and-minors/"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "admission.ucla.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "admissions",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "admissions-ucla-2026",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://admission.ucla.edu/apply/freshman",
+      "record_id": "college:ucla-2026",
+      "required": false,
+      "url": "https://admission.ucla.edu/apply/freshman"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "www.seasoasa.ucla.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "major",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "major-ucla-2026",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://www.seasoasa.ucla.edu/undergraduate-programs/",
+      "record_id": "college:ucla-2026",
+      "required": false,
+      "url": "https://www.seasoasa.ucla.edu/undergraduate-programs/"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "admissions.ucsd.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "admissions",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "admissions-ucsd-2026",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://admissions.ucsd.edu/first-year/",
+      "record_id": "college:ucsd-2026",
+      "required": false,
+      "url": "https://admissions.ucsd.edu/first-year/"
+    },
+    {
+      "adapter": "manual",
+      "allowed_hosts": [
+        "jacobsschool.ucsd.edu"
+      ],
+      "allowed_paths": [
+        "/"
+      ],
+      "collection_policy": "manual_review_required",
+      "coverage": [
+        "major",
+        "college"
+      ],
+      "disabled_reason": "Unreviewed access policy/parser; no automated requests or publication authorized.",
+      "disciplines": [
+        "aerospace",
+        "biomedical",
+        "chemical",
+        "civil",
+        "computer",
+        "electrical",
+        "environmental",
+        "industrial",
+        "materials",
+        "mechanical",
+        "nuclear",
+        "petroleum",
+        "robotics",
+        "software"
+      ],
+      "enabled": false,
+      "frequency": "monthly",
+      "id": "major-ucsd-2026",
+      "min_interval_seconds": 2,
+      "policy_note": "Official public link; automated collection remains disabled until terms and permitted method are documented.",
+      "policy_reference": "https://jacobsschool.ucsd.edu/academics/undergraduate-majors",
+      "record_id": "college:ucsd-2026",
+      "required": false,
+      "url": "https://jacobsschool.ucsd.edu/academics/undergraduate-majors"
+    }
+  ]
+}

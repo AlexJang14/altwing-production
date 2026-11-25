@@ -1,0 +1,2348 @@
+{
+  "at": "2026-11-24T06:17:44Z",
+  "evidenceSourceIds": "Existing registered manual sources; remain disabled for automated collection",
+  "http_receipts": [
+    {
+      "byte_count": 84662,
+      "content_sha256": "68b6cbea175938e588546cdb7c83eb6a9b9eff4186a0843650c920075bc33dc3",
+      "content_type": "text/html; charset=utf-8",
+      "final_url": "https://gtri.gatech.edu/stem/high-school-summer-internship",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:53Z",
+      "record_ids": [
+        "gtri-2027"
+      ],
+      "status": 200,
+      "url": "https://gtri.gatech.edu/stem/high-school-summer-internship"
+    },
+    {
+      "byte_count": 63805,
+      "content_sha256": "cb4a17677da30da11cae9c2df0e334959ede7995418c8cf67bccef1e6eee55f4",
+      "content_type": "text/html; charset=utf-8",
+      "final_url": "https://compression.stanford.edu/outreach/shtem-summer-internships-high-schoolers",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:53Z",
+      "record_ids": [
+        "stanford-shtem-2027"
+      ],
+      "status": 200,
+      "url": "https://compression.stanford.edu/outreach/shtem-summer-internships-high-schoolers"
+    },
+    {
+      "byte_count": 147501,
+      "content_sha256": "e6fc491676e15427955a386a3974022ec4a001e079fa33a3fab565fc6339f6ce",
+      "content_type": "text/html; charset=UTF-8",
+      "final_url": "https://science.gmu.edu/assip",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:53Z",
+      "record_ids": [
+        "gmu-assip-2027"
+      ],
+      "status": 200,
+      "url": "https://science.gmu.edu/assip"
+    },
+    {
+      "byte_count": 313821,
+      "content_sha256": "2074009d585bf0155d46bfd1310bc08c7999d49fcc47f5778731c2cb42aafe18",
+      "content_type": "text/html; charset=UTF-8",
+      "final_url": "https://csr.utexas.edu/education-outreach/high-school-internships/sees/",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:53Z",
+      "record_ids": [
+        "ut-sees-watch"
+      ],
+      "status": 200,
+      "url": "https://csr.utexas.edu/education-outreach/high-school-internships/sees/"
+    },
+    {
+      "byte_count": 310543,
+      "content_sha256": "9c5730122a04bf6070afcffb320743b3b4b1d710a75372056d5e305b850e1910",
+      "content_type": "text/html; charset=UTF-8",
+      "final_url": "https://csr.utexas.edu/education-outreach/high-school-internships/sees/eligibility/",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:53Z",
+      "record_ids": [
+        "ut-sees-watch"
+      ],
+      "status": 200,
+      "url": "https://csr.utexas.edu/education-outreach/high-school-internships/sees/eligibility/"
+    },
+    {
+      "byte_count": 322924,
+      "content_sha256": "4d514e536e163de637b28d96a1108efea0b6f1f39afa19621065da4d3b4a6618",
+      "content_type": "text/html; charset=UTF-8",
+      "final_url": "https://csr.utexas.edu/education-outreach/high-school-internships/sees/faqs/",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:53Z",
+      "record_ids": [
+        "ut-sees-watch"
+      ],
+      "status": 200,
+      "url": "https://csr.utexas.edu/education-outreach/high-school-internships/sees/faqs/"
+    },
+    {
+      "byte_count": 265413,
+      "content_sha256": "cb5295579cd9b70a6ca45fa4754ea0733eeb3890ba8e18aa2e3dd5bb8d9e40e0",
+      "content_type": "text/html; charset=UTF-8",
+      "final_url": "https://www.nasa.gov/stem-content/nasa-stem-gateway/",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:53Z",
+      "record_ids": [
+        "nasa-stem-gateway"
+      ],
+      "status": 200,
+      "url": "https://www.nasa.gov/stem-content/nasa-stem-gateway/"
+    },
+    {
+      "error": "HTTP Error 404: Not Found",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:53Z",
+      "record_ids": [
+        "jhu-engineering-innovation"
+      ],
+      "status": "UNAVAILABLE",
+      "url": "https://ei.jhu.edu/programs/engineering-innovation-research-program/"
+    },
+    {
+      "byte_count": 33206,
+      "content_sha256": "cbc8fabe76098d7b86c7abacdfd62b73551947ead8cdbb205054f6793e52bfec",
+      "content_type": "text/html; charset=UTF-8",
+      "final_url": "https://www.soinc.org/events/2027-division-c-events",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:53Z",
+      "record_ids": [
+        "science-olympiad-2027"
+      ],
+      "status": 200,
+      "url": "https://www.soinc.org/events/2027-division-c-events"
+    },
+    {
+      "byte_count": 546,
+      "content_sha256": "7482f5e41be2d683bac3009c5dd2c12cb04e02229c083ee4c441c3f354f339c5",
+      "content_type": "text/html",
+      "final_url": "https://www.soinc.org/2023-rules-c",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:53Z",
+      "record_ids": [
+        "science-olympiad-2027"
+      ],
+      "status": 202,
+      "url": "https://www.soinc.org/2023-rules-c"
+    },
+    {
+      "byte_count": 23911,
+      "content_sha256": "f3c80d33bf51fdfa44346fde8c615f292ea85a04f9c7c0143f2a346a63ff355b",
+      "content_type": "text/html;charset=UTF-8",
+      "final_url": "https://afrlscholars.usra.edu/",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:53Z",
+      "record_ids": [
+        "afrl-scholars-2027"
+      ],
+      "status": 200,
+      "url": "https://afrlscholars.usra.edu/"
+    },
+    {
+      "byte_count": 24989,
+      "content_sha256": "f40b2f5b6b04acdf14f21acae3cceb8c969dd3e45b3f8a518a083e86caf960a4",
+      "content_type": "text/html;charset=UTF-8",
+      "final_url": "https://afrlscholars.usra.edu/scholarsprogram/eligibility/",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:53Z",
+      "record_ids": [
+        "afrl-scholars-2027"
+      ],
+      "status": 200,
+      "url": "https://afrlscholars.usra.edu/scholarsprogram/eligibility/"
+    },
+    {
+      "byte_count": 102449,
+      "content_sha256": "3748ccd837f1c84bf6500b8c8abfea929d2f074f9d39b4438bff7547b608d3d3",
+      "content_type": "text/html",
+      "final_url": "https://www.cmu.edu/pre-college/academic-programs/sams.html",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:53Z",
+      "record_ids": [
+        "cmu-sams-2027"
+      ],
+      "status": 200,
+      "url": "https://www.cmu.edu/pre-college/academic-programs/sams.html"
+    },
+    {
+      "byte_count": 91391,
+      "content_sha256": "f7edb87cfcdc51ec8e01810188f8fb9af4781ecb277d8272ce4527bfed925489",
+      "content_type": "text/html",
+      "final_url": "https://www.cmu.edu/pre-college/admission/index.html",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:53Z",
+      "record_ids": [
+        "cmu-sams-2027",
+        "cmu-cee-2027"
+      ],
+      "status": 200,
+      "url": "https://www.cmu.edu/pre-college/admission/index.html"
+    },
+    {
+      "byte_count": 97688,
+      "content_sha256": "6c14e7f9bd2c05cb71d019c0c9dd63ae156fb231f239f1e137cf73cd59a97c42",
+      "content_type": "text/html; charset=utf-8",
+      "final_url": "https://aimi.stanford.edu/education/summer-research-internship",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:53Z",
+      "record_ids": [
+        "stanford-aimi-2027"
+      ],
+      "status": 200,
+      "url": "https://aimi.stanford.edu/education/summer-research-internship"
+    },
+    {
+      "byte_count": 29830,
+      "content_sha256": "4fcf49306fcf3d0d94a8bb8ce5f6b532cf02dd8b6fb799d869e10c84c3b452d8",
+      "content_type": "text/html; charset=UTF-8",
+      "final_url": "https://www.stonybrook.edu/simons/",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:53Z",
+      "record_ids": [
+        "stonybrook-simons-2027"
+      ],
+      "status": 200,
+      "url": "https://www.stonybrook.edu/simons/"
+    },
+    {
+      "byte_count": 33515,
+      "content_sha256": "ca5cf4adbbde2da0656017b2ff6cb8bc12988263d2d91e071a9ae469553d124a",
+      "content_type": "text/html; charset=UTF-8",
+      "final_url": "https://www.stonybrook.edu/simons/apply/",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:53Z",
+      "record_ids": [
+        "stonybrook-simons-2027"
+      ],
+      "status": 200,
+      "url": "https://www.stonybrook.edu/simons/apply/"
+    },
+    {
+      "byte_count": 34841,
+      "content_sha256": "358e9e77c35a50341108881377be632782bc7d655fc07b69b878533a5d92cec6",
+      "content_type": "text/html; charset=UTF-8",
+      "final_url": "https://www.stonybrook.edu/simons/apply/forms.html",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:53Z",
+      "record_ids": [
+        "stonybrook-simons-2027"
+      ],
+      "status": 200,
+      "url": "https://www.stonybrook.edu/simons/apply/forms.html"
+    },
+    {
+      "byte_count": 67161,
+      "content_sha256": "05494c002287cbf9651e56e5e66150555f9947037fb5a1e7bf8bfbdab8f0b499",
+      "content_type": "text/html; charset=UTF-8",
+      "final_url": "https://www.stonybrook.edu/simons/about/faqs.html",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:53Z",
+      "record_ids": [
+        "stonybrook-simons-2027"
+      ],
+      "status": 200,
+      "url": "https://www.stonybrook.edu/simons/about/faqs.html"
+    },
+    {
+      "byte_count": 121103,
+      "content_sha256": "bbcfddc4248e03011a3d07e80f2e777b6df8c1b72b1a2f028f6f1aedf1d4d37f",
+      "content_type": "text/html; charset=UTF-8",
+      "final_url": "https://www.bu.edu/summer/high-school-programs/rise-internship-practicum/",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:53Z",
+      "record_ids": [
+        "bu-rise-2027"
+      ],
+      "status": 200,
+      "url": "https://www.bu.edu/summer/high-school-programs/rise-internship-practicum/"
+    },
+    {
+      "byte_count": 136234,
+      "content_sha256": "0f8c9e652f6253a15b96ff19e6cbf2fbe1b7b19961df33cce625d24652ddcf2a",
+      "content_type": "text/html; charset=UTF-8",
+      "final_url": "https://www.bu.edu/summer/high-school-programs/rise-internship-practicum/faq/",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:53Z",
+      "record_ids": [
+        "bu-rise-2027"
+      ],
+      "status": 200,
+      "url": "https://www.bu.edu/summer/high-school-programs/rise-internship-practicum/faq/"
+    },
+    {
+      "byte_count": 123784,
+      "content_sha256": "31a847b1029c51c1d7230d529822bd3a1604c8b00802129bfc01cf94ac57de33",
+      "content_type": "text/html; charset=UTF-8",
+      "final_url": "https://www.bu.edu/summer/high-school-programs/rise-internship-practicum/how-to-apply/",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:53Z",
+      "record_ids": [
+        "bu-rise-2027"
+      ],
+      "status": 200,
+      "url": "https://www.bu.edu/summer/high-school-programs/rise-internship-practicum/how-to-apply/"
+    },
+    {
+      "byte_count": 45785,
+      "content_sha256": "6c423b2dc6af67ed62e29b92c28087a44b2142edd4015574164a14bfb7a48224",
+      "content_type": "text/html; charset=utf-8",
+      "final_url": "https://case.isye.gatech.edu/engagement-initiatives/iexperience",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:54Z",
+      "record_ids": [
+        "gatech-iexperience-2027"
+      ],
+      "status": 200,
+      "url": "https://case.isye.gatech.edu/engagement-initiatives/iexperience"
+    },
+    {
+      "byte_count": 87668,
+      "content_sha256": "406121b67ac80e506191fc665a57ffb8ad6851368bba7fa97afaa0b7c38bd845",
+      "content_type": "text/html; charset=UTF-8",
+      "final_url": "https://www.nist.gov/ship",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:54Z",
+      "record_ids": [
+        "nist-ship-2027"
+      ],
+      "status": 200,
+      "url": "https://www.nist.gov/ship"
+    },
+    {
+      "byte_count": 74150,
+      "content_sha256": "1d767d1042694326a2ee637af078c363aef1ed08bca7e32d39d1538ad24e0fc9",
+      "content_type": "text/html; charset=UTF-8",
+      "final_url": "https://www.onr.navy.mil/education-outreach/k-12-programs/seap",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:54Z",
+      "record_ids": [
+        "navy-seap-2027"
+      ],
+      "status": 200,
+      "url": "https://www.onr.navy.mil/education-outreach/k-12-programs/seap"
+    },
+    {
+      "byte_count": 19699,
+      "content_sha256": "58e9362e9312a2c0859490fbdc1e17e4ad5c73e1d7e4a3943b2d40292bc6683c",
+      "content_type": "text/html",
+      "final_url": "https://www.navalsteminterns.us/internships/seap/",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:54Z",
+      "record_ids": [
+        "navy-seap-2027"
+      ],
+      "status": 200,
+      "url": "https://www.navalsteminterns.us/internships/seap/"
+    },
+    {
+      "byte_count": 32353,
+      "content_sha256": "ab1d8849190ed55be5670758f13d609075305fef0ce940d87683ab21318c9693",
+      "content_type": "text/html",
+      "final_url": "https://www.navalsteminterns.us/internships/seap/faqs/",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:54Z",
+      "record_ids": [
+        "navy-seap-2027"
+      ],
+      "status": 200,
+      "url": "https://www.navalsteminterns.us/internships/seap/faqs/"
+    },
+    {
+      "error": "HTTP Error 403: Forbidden",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:54Z",
+      "record_ids": [
+        "lockheed-high-school-2027"
+      ],
+      "status": "UNAVAILABLE",
+      "url": "https://www.lockheedmartin.com/en-us/careers/candidates/students-early-careers/high-school.html"
+    },
+    {
+      "byte_count": 19980,
+      "content_sha256": "9c971811f198f1d3101b045fcd38297177cf95110e7a8834fb31ca6e271444af",
+      "content_type": "text/html",
+      "final_url": "https://wpafbstem.com/Wright_Scholar/Wright_scholar.html",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:54Z",
+      "record_ids": [
+        "wright-scholar-2027"
+      ],
+      "status": 200,
+      "url": "https://wpafbstem.com/Wright_Scholar/Wright_scholar.html"
+    },
+    {
+      "byte_count": 155330,
+      "content_sha256": "9d4748e4bb7158ba679c65550858bdc9a64efcf48d84092f3e2de38e5f52792d",
+      "content_type": "text/html; charset=UTF-8",
+      "final_url": "https://www.price.utah.edu/k12/high-school-summer-research-internship",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:54Z",
+      "record_ids": [
+        "utah-engineering-research-2027"
+      ],
+      "status": 200,
+      "url": "https://www.price.utah.edu/k12/high-school-summer-research-internship"
+    },
+    {
+      "byte_count": 67100,
+      "content_sha256": "a9c47a6e6c949d6a1ef3690076da27cda2aac763a82b66d445dda356a635419a",
+      "content_type": "text/html; charset=UTF-8",
+      "final_url": "https://outreach.engineering.columbia.edu/content/shape-summer-high-school-academic-program-engineers",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:54Z",
+      "record_ids": [
+        "columbia-shape-2027"
+      ],
+      "status": 200,
+      "url": "https://outreach.engineering.columbia.edu/content/shape-summer-high-school-academic-program-engineers"
+    },
+    {
+      "byte_count": 66844,
+      "content_sha256": "cd7a362a7b3390840f79d88a15ee0256556525fec0c0e3a21fe4f33a7457f243",
+      "content_type": "text/html; charset=UTF-8",
+      "final_url": "https://outreach.engineering.columbia.edu/shape/apply",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:54Z",
+      "record_ids": [
+        "columbia-shape-2027"
+      ],
+      "status": 200,
+      "url": "https://outreach.engineering.columbia.edu/shape/apply"
+    },
+    {
+      "byte_count": 75666,
+      "content_sha256": "302975e48e8e28bd0d8ea1e5434b256b9106629f8891b2b1dd27f7d584e58627",
+      "content_type": "text/html; charset=UTF-8",
+      "final_url": "https://outreach.engineering.columbia.edu/shape/tuition-and-fees",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:54Z",
+      "record_ids": [
+        "columbia-shape-2027"
+      ],
+      "status": 200,
+      "url": "https://outreach.engineering.columbia.edu/shape/tuition-and-fees"
+    },
+    {
+      "byte_count": 89927,
+      "content_sha256": "8c128349bae6fec9bc954a01ae83c946787c528616683ba7b06c1bb943cce838",
+      "content_type": "text/html; charset=UTF-8",
+      "final_url": "https://outreach.engineering.columbia.edu/eng",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:54Z",
+      "record_ids": [
+        "columbia-eng-2027"
+      ],
+      "status": 200,
+      "url": "https://outreach.engineering.columbia.edu/eng"
+    },
+    {
+      "byte_count": 376911,
+      "content_sha256": "e92c98738f88e7fc3bf18ba28ca8f7e14c91ac666caabc5514cc0d305f121f17",
+      "content_type": "text/html; charset=utf-8",
+      "final_url": "https://pme.uchicago.edu/academics/stem-education-community-outreach/k-12-student-programs/after-school-stem-lab-internship",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:54Z",
+      "record_ids": [
+        "uchicago-stem-lab-2027"
+      ],
+      "status": 200,
+      "url": "https://pme.uchicago.edu/academics/stem-education-community-outreach/k-12-student-programs/after-school-stem-lab-internship"
+    },
+    {
+      "byte_count": 443602,
+      "content_sha256": "46dfd748c4ee354e568cacbefa56d9925e5a32fabe937ce44adf8aa9e9376279",
+      "content_type": "text/html; charset=UTF-8",
+      "final_url": "https://www.ornl.gov/next-generation-stem-internship/",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:54Z",
+      "record_ids": [
+        "ornl-ngsi-2027"
+      ],
+      "status": 200,
+      "url": "https://www.ornl.gov/next-generation-stem-internship/"
+    },
+    {
+      "byte_count": 147117,
+      "content_sha256": "e0bf9fb4b30b5aa24ba5f22d4acd31e688756c7ee8e6486015e6c0f2171c40e4",
+      "content_type": "text/html; charset=UTF-8",
+      "final_url": "https://tep.engr.ncsu.edu/k-12-student-programs/rising-11-12-residential-camps/",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:54Z",
+      "record_ids": [
+        "ncstate-residential-2027"
+      ],
+      "status": 200,
+      "url": "https://tep.engr.ncsu.edu/k-12-student-programs/rising-11-12-residential-camps/"
+    },
+    {
+      "byte_count": 113657,
+      "content_sha256": "6a1a37e38e0b3848dbcb1fb8d8d343a7d98a747c9ef35d93328d9754f5435889",
+      "content_type": "text/html; charset=UTF-8",
+      "final_url": "https://ne.ncsu.edu/pre-college-programs/",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:55Z",
+      "record_ids": [
+        "ncstate-nuclear-2027"
+      ],
+      "status": 200,
+      "url": "https://ne.ncsu.edu/pre-college-programs/"
+    },
+    {
+      "byte_count": 49251,
+      "content_sha256": "29304f1974ab245671acf7b7ca6cf68c7e11ced014ca7f441f761225ebab1036",
+      "content_type": "text/html; charset=UTF-8",
+      "final_url": "https://stemstarts.utexas.edu/program/my-introduction-to-engineering-session-1/",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:55Z",
+      "record_ids": [
+        "ut-mite-2027"
+      ],
+      "status": 200,
+      "url": "https://stemstarts.utexas.edu/program/my-introduction-to-engineering-session-1/"
+    },
+    {
+      "byte_count": 176986,
+      "content_sha256": "71cf07ac2c3df8d78512e946d94c5d23ed340edba20b928f953f7be1dd963d31",
+      "content_type": "text/html; charset=UTF-8",
+      "final_url": "https://cockrell.utexas.edu/connect/k-12-outreach/mite/",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:55Z",
+      "record_ids": [
+        "ut-mite-2027"
+      ],
+      "status": 200,
+      "url": "https://cockrell.utexas.edu/connect/k-12-outreach/mite/"
+    },
+    {
+      "byte_count": 26829,
+      "content_sha256": "733a4d2cad1a6c10811c4473e2830e699b3e1f12e8187926feb540e59c738c13",
+      "content_type": "text/html; charset=utf-8",
+      "final_url": "https://tsaweb.org/competitions/high-school",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:55Z",
+      "record_ids": [
+        "tsa-engineering-2027"
+      ],
+      "status": 200,
+      "url": "https://tsaweb.org/competitions/high-school"
+    },
+    {
+      "byte_count": 42698,
+      "content_sha256": "3d7447bdcab70a9876dc3749a58c1701163f798181bf4ad4c4062a7dff294206",
+      "content_type": "text/html; charset=utf-8",
+      "final_url": "https://tsaweb.org/membership/membership-faq",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:55Z",
+      "record_ids": [
+        "tsa-engineering-2027"
+      ],
+      "status": 200,
+      "url": "https://tsaweb.org/membership/membership-faq"
+    },
+    {
+      "byte_count": 22404,
+      "content_sha256": "9ca2937893c39d60612c5fe5d7eeaf37e7e15b2fb1ed2f07d42603571d69c371",
+      "content_type": "text/html; charset=utf-8",
+      "final_url": "https://tsaweb.org/competitions/themes-and-problems",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:55Z",
+      "record_ids": [
+        "tsa-engineering-2027"
+      ],
+      "status": 200,
+      "url": "https://tsaweb.org/competitions/themes-and-problems"
+    },
+    {
+      "byte_count": 80644,
+      "content_sha256": "34772c805378d1cb17a4b9035907f506ffc1728261b6effd2ce411aa1ae01bab",
+      "content_type": "text/html",
+      "final_url": "https://www.cmu.edu/pre-college/academic-programs/cee.html",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:55Z",
+      "record_ids": [
+        "cmu-cee-2027"
+      ],
+      "status": 200,
+      "url": "https://www.cmu.edu/pre-college/academic-programs/cee.html"
+    },
+    {
+      "byte_count": 89362,
+      "content_sha256": "81beb0597860707eff4afcf3181ea5f5d2d6c2a1129fc41f31635c5f331ed5d7",
+      "content_type": "text/html",
+      "final_url": "https://www.cmu.edu/pre-college/cost-financial-aid/index.html",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:55Z",
+      "record_ids": [
+        "cmu-cee-2027"
+      ],
+      "status": 200,
+      "url": "https://www.cmu.edu/pre-college/cost-financial-aid/index.html"
+    },
+    {
+      "byte_count": 49970,
+      "content_sha256": "b86d5da8839f83182aa51d70feedfccdda0e066717b8ebe940b14735c2269950",
+      "content_type": "text/html; charset=UTF-8",
+      "final_url": "https://scienceoutreach.princeton.edu/laboratory-learning-program",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:55Z",
+      "record_ids": [
+        "princeton-llp-2027"
+      ],
+      "status": 200,
+      "url": "https://scienceoutreach.princeton.edu/laboratory-learning-program"
+    },
+    {
+      "byte_count": 171423,
+      "content_sha256": "5929c24b1762fe2fa658097d5ec294d65c3e5b742121f48c428baf636a6b6ae0",
+      "content_type": "text/html; charset=UTF-8",
+      "final_url": "https://mites.mit.edu/discover-mites/faq-for-prospective-students/faqs-mites-semester-and-mites-summer/",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:55Z",
+      "record_ids": [
+        "mit-mites-summer",
+        "mit-mites-semester"
+      ],
+      "status": 200,
+      "url": "https://mites.mit.edu/discover-mites/faq-for-prospective-students/faqs-mites-semester-and-mites-summer/"
+    },
+    {
+      "byte_count": 261578,
+      "content_sha256": "75057379642dda825a41bed3b98b7fc8d498eee16bacba88a50a3eaa9f9b87af",
+      "content_type": "text/html; charset=UTF-8",
+      "final_url": "https://bwsi.mit.edu/faq/",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:55Z",
+      "record_ids": [
+        "mit-beaver-works"
+      ],
+      "status": 200,
+      "url": "https://bwsi.mit.edu/faq/"
+    },
+    {
+      "byte_count": 308883,
+      "content_sha256": "9e3ab006602923bb3c2b59f9ac657def557471bc6d0e51c152404efeded0814d",
+      "content_type": "text/html; charset=UTF-8",
+      "final_url": "https://www.wpi.edu/academics/pre-collegiate/summer-programs/frontiers",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:55Z",
+      "record_ids": [
+        "wpi-frontiers"
+      ],
+      "status": 200,
+      "url": "https://www.wpi.edu/academics/pre-collegiate/summer-programs/frontiers"
+    },
+    {
+      "byte_count": 193202,
+      "content_sha256": "2cb6bf765748444d7805299d80ab20d19a4aa6326c4fc4202522d22a1d00a689",
+      "content_type": "text/html; charset=UTF-8",
+      "final_url": "https://www.wpi.edu/academics/pre-collegiate/about/policies",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:55Z",
+      "record_ids": [
+        "wpi-frontiers"
+      ],
+      "status": 200,
+      "url": "https://www.wpi.edu/academics/pre-collegiate/about/policies"
+    },
+    {
+      "byte_count": 44573,
+      "content_sha256": "d9fd4cf020a990bca390a2a85f370281547d468eab5136f47680914b2a03deff",
+      "content_type": "text/html",
+      "final_url": "https://rose-hulman.edu/admissions-and-aid/early-planning/operation-catapult/index.html",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:55Z",
+      "record_ids": [
+        "rose-hulman-catapult"
+      ],
+      "status": 200,
+      "url": "https://rose-hulman.edu/admissions-and-aid/early-planning/operation-catapult/index.html"
+    },
+    {
+      "byte_count": 36541,
+      "content_sha256": "68e001a475e664a009ee1cc5798124fe6d3fd775ddd31ac30fe0de7cf93d2c5c",
+      "content_type": "text/html",
+      "final_url": "https://rose-hulman.edu/admissions-and-aid/early-planning/operation-catapult/FAQs.html",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:55Z",
+      "record_ids": [
+        "rose-hulman-catapult"
+      ],
+      "status": 200,
+      "url": "https://rose-hulman.edu/admissions-and-aid/early-planning/operation-catapult/FAQs.html"
+    },
+    {
+      "byte_count": 49058,
+      "content_sha256": "742e1edd40a86a96ad90e5816a6c1ac1aae036612226b5303ad20288fd5e3103",
+      "content_type": "text/html; charset=utf-8",
+      "final_url": "https://engineering.purdue.edu/Honors/SeminarforTopEngineeringProspects",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:55Z",
+      "record_ids": [
+        "purdue-step"
+      ],
+      "status": 200,
+      "url": "https://engineering.purdue.edu/Honors/SeminarforTopEngineeringProspects"
+    },
+    {
+      "byte_count": 134272,
+      "content_sha256": "213c57423c0817176855e36c31d58205c4b53f6bb976adef868f9ef399c2eac0",
+      "content_type": "text/html; charset=utf-8",
+      "final_url": "https://cooper.edu/engineering/stem/summer",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:56Z",
+      "record_ids": [
+        "cooper-summer-stem"
+      ],
+      "status": 200,
+      "url": "https://cooper.edu/engineering/stem/summer"
+    },
+    {
+      "byte_count": 136929,
+      "content_sha256": "bf7102ce0adffe8fa08a3d89ca06d140673ec7f41c3be8119665f30a9d30b6ab",
+      "content_type": "text/html; charset=utf-8",
+      "final_url": "https://cooper.edu/engineering/stem/summer/frequently-asked-questions",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:56Z",
+      "record_ids": [
+        "cooper-summer-stem"
+      ],
+      "status": 200,
+      "url": "https://cooper.edu/engineering/stem/summer/frequently-asked-questions"
+    },
+    {
+      "byte_count": 123074,
+      "content_sha256": "207dff61ff95af6458f596cf5c72041be761cd98a71c567ff9ef854a713e6c04",
+      "content_type": "text/html; charset=UTF-8",
+      "final_url": "https://soe.rutgers.edu/gset",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:56Z",
+      "record_ids": [
+        "rutgers-gset"
+      ],
+      "status": 200,
+      "url": "https://soe.rutgers.edu/gset"
+    },
+    {
+      "byte_count": 35234,
+      "content_sha256": "aa168a45223e95d877f0ae3ed8962cdb0a1903e8e0735aff7e3c632f020223ce",
+      "content_type": "text/html",
+      "final_url": "https://wyse.grainger.illinois.edu/summer-programs/summer-camps",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:56Z",
+      "record_ids": [
+        "illinois-wyse-camps"
+      ],
+      "status": 200,
+      "url": "https://wyse.grainger.illinois.edu/summer-programs/summer-camps"
+    },
+    {
+      "byte_count": 60428,
+      "content_sha256": "6c78dd159fd9329e9e3703ae1dac0ba9382a6faf78e3f5f5172f2b2f57ac8db5",
+      "content_type": "text/html",
+      "final_url": "https://wyse.grainger.illinois.edu/summer-programs/summer-camps/camp-faqs",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:56Z",
+      "record_ids": [
+        "illinois-wyse-camps"
+      ],
+      "status": 200,
+      "url": "https://wyse.grainger.illinois.edu/summer-programs/summer-camps/camp-faqs"
+    },
+    {
+      "byte_count": 161082,
+      "content_sha256": "bd706a94c0c18e7d418bbff80f79e0b6923dc84a08fb0215f5892718897213f6",
+      "content_type": "text/html; charset=UTF-8",
+      "final_url": "https://www.firstinspires.org/programs/frc/",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:56Z",
+      "record_ids": [
+        "first-robotics"
+      ],
+      "status": 200,
+      "url": "https://www.firstinspires.org/programs/frc/"
+    },
+    {
+      "byte_count": 283268,
+      "content_sha256": "f0359b679eae249911c107d38ee7b6943e3545efc894d8a6078e0b7500528557",
+      "content_type": "text/html; charset=UTF-8",
+      "final_url": "https://www.firstinspires.org/programs/cost-and-registration",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:56Z",
+      "record_ids": [
+        "first-robotics"
+      ],
+      "status": 200,
+      "url": "https://www.firstinspires.org/programs/cost-and-registration"
+    },
+    {
+      "byte_count": 168445,
+      "content_sha256": "b9afc1ec8b97f30f71b988999e233bc48c1613898564b465dff92cb06caee1af",
+      "content_type": "text/html; charset=UTF-8",
+      "final_url": "https://www.societyforscience.org/isef/faq/",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:56Z",
+      "record_ids": [
+        "isef-fair-pathway"
+      ],
+      "status": 200,
+      "url": "https://www.societyforscience.org/isef/faq/"
+    },
+    {
+      "byte_count": 178532,
+      "content_sha256": "d7afaf59d1ca6f5e6cd469ce81a85dcbbb8c837e7bf661dd22fcf1b6fb3ce173",
+      "content_type": "text/html; charset=UTF-8",
+      "final_url": "https://www.societyforscience.org/isef/international-rules/",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:56Z",
+      "record_ids": [
+        "isef-fair-pathway"
+      ],
+      "status": 200,
+      "url": "https://www.societyforscience.org/isef/international-rules/"
+    },
+    {
+      "byte_count": 176559,
+      "content_sha256": "60220ac48ea09e6fb5792516885e5027338c412c43e5341b55a6ebc6679bf0d3",
+      "content_type": "text/html; charset=UTF-8",
+      "final_url": "https://www.societyforscience.org/isef/international-rules/rules-and-guidelines/",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:56Z",
+      "record_ids": [
+        "isef-fair-pathway"
+      ],
+      "status": 200,
+      "url": "https://www.societyforscience.org/isef/international-rules/rules-and-guidelines/"
+    },
+    {
+      "byte_count": 130519,
+      "content_sha256": "295a0f71dfdeb9371e204f0a05034b25047c00d1577c73fab31f6a2652854407",
+      "content_type": "text/html; charset=UTF-8",
+      "final_url": "https://education.sdsc.edu/studenttech/rehs/",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:56Z",
+      "record_ids": [
+        "sdsc-rehs"
+      ],
+      "status": 200,
+      "url": "https://education.sdsc.edu/studenttech/rehs/"
+    },
+    {
+      "byte_count": 142131,
+      "content_sha256": "8376f2d7c3a3c105f570948ce1ab395f87f4dc1cbcb2c3db87455a5476758eb1",
+      "content_type": "text/html; charset=UTF-8",
+      "final_url": "https://universitycollege.tufts.edu/pre-college/academics/engineering-computer-science-programs-high-school-students",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:56Z",
+      "record_ids": [
+        "tufts-precollege-engineering"
+      ],
+      "status": 200,
+      "url": "https://universitycollege.tufts.edu/pre-college/academics/engineering-computer-science-programs-high-school-students"
+    },
+    {
+      "byte_count": 171355,
+      "content_sha256": "01b9a031f5d3bcc13546e7cd3030e85107ad73cb7cde2f1dd1c0314be653e1c5",
+      "content_type": "text/html; charset=UTF-8",
+      "final_url": "https://universitycollege.tufts.edu/pre-college/browse/engineering-design-lab",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:56Z",
+      "record_ids": [
+        "tufts-precollege-engineering"
+      ],
+      "status": 200,
+      "url": "https://universitycollege.tufts.edu/pre-college/browse/engineering-design-lab"
+    },
+    {
+      "byte_count": 137520,
+      "content_sha256": "b9b4a68cb7cb5bae78f4b8e52cb96db22868add8d2ff90f99b841949dfe8d3a3",
+      "content_type": "text/html; charset=UTF-8",
+      "final_url": "https://soe.rutgers.edu/academics/pre-college-engineering-programs",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:57Z",
+      "record_ids": [
+        "rutgers-rhex"
+      ],
+      "status": 200,
+      "url": "https://soe.rutgers.edu/academics/pre-college-engineering-programs"
+    },
+    {
+      "byte_count": 148063,
+      "content_sha256": "24836b3ff1780f9c64a39fb82ebac5f29f244ed9b881f782ea60831a2cee5fae",
+      "content_type": "text/html; charset=UTF-8",
+      "final_url": "https://soe.rutgers.edu/RHEX",
+      "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+      "observed_at": "2026-11-24T06:09:57Z",
+      "record_ids": [
+        "rutgers-rhex"
+      ],
+      "status": 200,
+      "url": "https://soe.rutgers.edu/RHEX"
+    }
+  ],
+  "limitation": "A current review of specified fields is not complete eligibility clearance; an HTTP check alone never advances a factual verification date.",
+  "reader_receipts": [
+    {
+      "content_sha256": "88b1c603ebd593920bbf72cb629e28f1066c3ccc764f2c4ec6492622df1d290d",
+      "method": "Official-source web reader text; SHA-256 of returned reader text, not an HTTP body; cached crawler reported today",
+      "observed_at": "2026-11-24T06:14:27Z",
+      "record_ids": [
+        "jhu-engineering-innovation"
+      ],
+      "review_summary": "Official programs comparison lists Engineering Innovation Research Program as summer research, commuter/residential, three credits. Former dedicated URL is HTTP404; 2027-specific research dates, eligibility and costs not confirmed on this directory.",
+      "status": "READER_ACCESS",
+      "url": "https://ei.jhu.edu/programs/"
+    }
+  ],
+  "records": [
+    {
+      "display_changes": {
+        "lastVerified": "2026-11-24"
+      },
+      "id": "afrl-scholars-2027",
+      "note": "Official home page explicitly reports Summer 2027 applications open through January 11, 2027. Stipend-paid high-school opportunities. Eligibility page requires U.S. citizenship, at least16 by application deadline, and at least18 for California; 3.0 GPA is encouraged, not mandatory.",
+      "previous_review": "2026-11-15T00:00:00Z",
+      "sources": [
+        {
+          "content_sha256": "f3c80d33bf51fdfa44346fde8c615f292ea85a04f9c7c0143f2a346a63ff355b",
+          "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+          "observed_at": "2026-11-24T06:09:53Z",
+          "url": "https://afrlscholars.usra.edu/"
+        },
+        {
+          "content_sha256": "f40b2f5b6b04acdf14f21acae3cceb8c969dd3e45b3f8a518a083e86caf960a4",
+          "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+          "observed_at": "2026-11-24T06:09:53Z",
+          "url": "https://afrlscholars.usra.edu/scholarsprogram/eligibility/"
+        }
+      ],
+      "status": "PASS — bounded official-source review; remaining unknowns retained",
+      "substantive_display_correction": false,
+      "underlying_record_verification": "partially_verified",
+      "verified_fields": [
+        "age_min",
+        "application_cycle",
+        "application_url",
+        "citizenship",
+        "name",
+        "organization",
+        "program_information",
+        "source_status",
+        "source_url"
+      ]
+    },
+    {
+      "display_changes": {
+        "eligibility": "The current FAQ says entering senior year in Fall 2027, U.S. citizen or legal permanent resident. The application page retains an older Fall 2026 sentence; confirm the final 2027 requirements.",
+        "lastVerified": "2026-11-24",
+        "timing": "Applications are now announced for Dec. 15, 2026. The application page lists Feb. 3, 2027, 11:59 p.m. Eastern as the deadline; some eligibility text still describes 2026. Confirm final program details."
+      },
+      "id": "bu-rise-2027",
+      "note": "Home and FAQ now direct applicants to December15 for next-summer details/applications. How-to-apply states February3,2027 at11:59PM Eastern, but still has a Fall2026 eligibility sentence. FAQ explicitly says entering senior year Fall2027, U.S. citizen/permanent resident. 2027 fees and practicum options remain pending.",
+      "previous_review": "2026-11-15T00:00:00Z",
+      "sources": [
+        {
+          "content_sha256": "bbcfddc4248e03011a3d07e80f2e777b6df8c1b72b1a2f028f6f1aedf1d4d37f",
+          "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+          "observed_at": "2026-11-24T06:09:53Z",
+          "url": "https://www.bu.edu/summer/high-school-programs/rise-internship-practicum/"
+        },
+        {
+          "content_sha256": "0f8c9e652f6253a15b96ff19e6cbf2fbe1b7b19961df33cce625d24652ddcf2a",
+          "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+          "observed_at": "2026-11-24T06:09:53Z",
+          "url": "https://www.bu.edu/summer/high-school-programs/rise-internship-practicum/faq/"
+        },
+        {
+          "content_sha256": "31a847b1029c51c1d7230d529822bd3a1604c8b00802129bfc01cf94ac57de33",
+          "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+          "observed_at": "2026-11-24T06:09:53Z",
+          "url": "https://www.bu.edu/summer/high-school-programs/rise-internship-practicum/how-to-apply/"
+        }
+      ],
+      "status": "PASS — bounded official-source review; remaining unknowns retained",
+      "substantive_display_correction": true,
+      "underlying_record_verification": "partially_verified",
+      "verified_fields": [
+        "application_cycle",
+        "application_url",
+        "deadline",
+        "deadline_timezone",
+        "name",
+        "opening_date",
+        "organization",
+        "program_information",
+        "source_url"
+      ]
+    },
+    {
+      "display_changes": {
+        "grades": [
+          "10",
+          "11"
+        ],
+        "lastVerified": "2026-11-24"
+      },
+      "id": "cmu-cee-2027",
+      "note": "Official program/admission pages describe 2027, openingDecember1,2026, basic deadlineMarch1,2027 and scholarshipFebruary1 at11:59PM Eastern. Age16 byJune26; current grades10–11 plus academic prerequisites. Official cost table assigns CEE $9,975 residential/$7,481 commuter plus$75 application, with restricted need-based scholarships.",
+      "previous_review": "2026-11-15T00:00:00Z",
+      "sources": [
+        {
+          "content_sha256": "f7edb87cfcdc51ec8e01810188f8fb9af4781ecb277d8272ce4527bfed925489",
+          "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+          "observed_at": "2026-11-24T06:09:53Z",
+          "url": "https://www.cmu.edu/pre-college/admission/index.html"
+        },
+        {
+          "content_sha256": "34772c805378d1cb17a4b9035907f506ffc1728261b6effd2ce411aa1ae01bab",
+          "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+          "observed_at": "2026-11-24T06:09:55Z",
+          "url": "https://www.cmu.edu/pre-college/academic-programs/cee.html"
+        },
+        {
+          "content_sha256": "81beb0597860707eff4afcf3181ea5f5d2d6c2a1129fc41f31635c5f331ed5d7",
+          "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+          "observed_at": "2026-11-24T06:09:55Z",
+          "url": "https://www.cmu.edu/pre-college/cost-financial-aid/index.html"
+        }
+      ],
+      "status": "PASS — bounded official-source review; remaining unknowns retained",
+      "substantive_display_correction": false,
+      "underlying_record_verification": "partially_verified",
+      "verified_fields": [
+        "application_cycle",
+        "application_url",
+        "deadline",
+        "deadline_timezone",
+        "grades",
+        "name",
+        "opening_date",
+        "organization",
+        "program_information",
+        "source_url"
+      ]
+    },
+    {
+      "display_changes": {
+        "grades": [
+          "11"
+        ],
+        "lastVerified": "2026-11-24",
+        "timing": "Applications open Dec. 1, 2026; SAMS deadline Feb. 1, 2027. Virtual preparation June 21–22; residential range June 26–Aug. 7, 2027. A separate Opening Day line still says 2026; confirm the final schedule."
+      },
+      "id": "cmu-sams-2027",
+      "note": "Admission page confirms December 1, 2026 opening and February 1, 2027 SAMS deadline. SAMS requires grade11 at application, age16 by June26, citizenship/permanent residence and financial documentation. Fully funded, travel extra. Virtual preparation June21–22; residential range June26–August7, while one Opening Day line incorrectly says2026.",
+      "previous_review": "2026-11-15T00:00:00Z",
+      "sources": [
+        {
+          "content_sha256": "3748ccd837f1c84bf6500b8c8abfea929d2f074f9d39b4438bff7547b608d3d3",
+          "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+          "observed_at": "2026-11-24T06:09:53Z",
+          "url": "https://www.cmu.edu/pre-college/academic-programs/sams.html"
+        },
+        {
+          "content_sha256": "f7edb87cfcdc51ec8e01810188f8fb9af4781ecb277d8272ce4527bfed925489",
+          "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+          "observed_at": "2026-11-24T06:09:53Z",
+          "url": "https://www.cmu.edu/pre-college/admission/index.html"
+        }
+      ],
+      "status": "PASS — bounded official-source review; remaining unknowns retained",
+      "substantive_display_correction": true,
+      "underlying_record_verification": "partially_verified",
+      "verified_fields": [
+        "age_min",
+        "application_cycle",
+        "application_url",
+        "deadline",
+        "grades",
+        "opening_date",
+        "program_information",
+        "source_url"
+      ]
+    },
+    {
+      "display_changes": {
+        "grades": [
+          "11"
+        ],
+        "lastVerified": "2026-11-24",
+        "status": "OPEN",
+        "timing": "The official page now accepts Summer 2027 applications. L4L/PENCIL initial deadline Jan. 15, 2027; six-week research. Confirm the selected track and its exact schedule."
+      },
+      "id": "columbia-eng-2027",
+      "note": "Official page now explicitly accepts Summer2027 applications. Six-week research, current grade11/rising NYC seniors with legal NYC work authorization and required L4L/PENCIL enrollment. L4L initial deadline January15,2027; separate CS3 Harlem conditions. Posted stipend$17/hour for25hours/week; no universal track deadline inferred.",
+      "previous_review": "2026-11-15T00:00:00Z",
+      "sources": [
+        {
+          "content_sha256": "8c128349bae6fec9bc954a01ae83c946787c528616683ba7b06c1bb943cce838",
+          "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+          "observed_at": "2026-11-24T06:09:54Z",
+          "url": "https://outreach.engineering.columbia.edu/eng"
+        }
+      ],
+      "status": "PASS — bounded official-source review; remaining unknowns retained",
+      "substantive_display_correction": true,
+      "underlying_record_verification": "partially_verified",
+      "verified_fields": [
+        "application_cycle",
+        "application_url",
+        "grades",
+        "name",
+        "organization",
+        "program_information",
+        "source_status",
+        "source_url",
+        "stipend"
+      ]
+    },
+    {
+      "display_changes": {
+        "cost": "Summer 2027 tuition has not been published; the tuition table still describes 2026. $50 application fee waived before the Dec. 16 priority deadline; domestic need-based scholarships have separate conditions.",
+        "lastVerified": "2026-11-24",
+        "status": "OPEN",
+        "timing": "Summer 2027 applications are open; opened Nov. 16, 2026. Priority Dec. 16; final application Mar. 5, 2027 and supporting materials Mar. 12. Sessions July 5–23 and July 26–Aug. 13."
+      },
+      "id": "columbia-shape-2027",
+      "note": "Official program and application pages explicitly report Summer2027 applications open November16,2026. Priority December16; final application March5,2027 and supporting materials March12. Sessions July5–23/July26–August13. Current grades9–12 commuter; residential16+ with further conditions. Tuition page remains Summer2026; 2027 prices pending.",
+      "previous_review": "2026-11-15T00:00:00Z",
+      "sources": [
+        {
+          "content_sha256": "a9c47a6e6c949d6a1ef3690076da27cda2aac763a82b66d445dda356a635419a",
+          "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+          "observed_at": "2026-11-24T06:09:54Z",
+          "url": "https://outreach.engineering.columbia.edu/content/shape-summer-high-school-academic-program-engineers"
+        },
+        {
+          "content_sha256": "cd7a362a7b3390840f79d88a15ee0256556525fec0c0e3a21fe4f33a7457f243",
+          "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+          "observed_at": "2026-11-24T06:09:54Z",
+          "url": "https://outreach.engineering.columbia.edu/shape/apply"
+        },
+        {
+          "content_sha256": "302975e48e8e28bd0d8ea1e5434b256b9106629f8891b2b1dd27f7d584e58627",
+          "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+          "observed_at": "2026-11-24T06:09:54Z",
+          "url": "https://outreach.engineering.columbia.edu/shape/tuition-and-fees"
+        }
+      ],
+      "status": "PASS — bounded official-source review; remaining unknowns retained",
+      "substantive_display_correction": true,
+      "underlying_record_verification": "partially_verified",
+      "verified_fields": [
+        "application_cycle",
+        "application_url",
+        "cost",
+        "deadline",
+        "format",
+        "name",
+        "opening_date",
+        "organization",
+        "program_information",
+        "source_status",
+        "source_url"
+      ]
+    },
+    {
+      "display_changes": {
+        "lastVerified": "2026-11-24"
+      },
+      "id": "cooper-summer-stem",
+      "note": "Official2027 pages confirm December11,2026 application launch and in-person3/6-week options for completed grades9–11, excluding graduates. Main page saysJuly6 start while FAQ saysJuly5; 2027 price undetermined, older course prices are2026. Preserve conflicting-date notice and no firm summer deadline.",
+      "previous_review": "2026-11-15T00:00:00Z",
+      "sources": [
+        {
+          "content_sha256": "213c57423c0817176855e36c31d58205c4b53f6bb976adef868f9ef399c2eac0",
+          "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+          "observed_at": "2026-11-24T06:09:56Z",
+          "url": "https://cooper.edu/engineering/stem/summer"
+        },
+        {
+          "content_sha256": "bf7102ce0adffe8fa08a3d89ca06d140673ec7f41c3be8119665f30a9d30b6ab",
+          "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+          "observed_at": "2026-11-24T06:09:56Z",
+          "url": "https://cooper.edu/engineering/stem/summer/frequently-asked-questions"
+        }
+      ],
+      "status": "PASS — bounded official-source review; remaining unknowns retained",
+      "substantive_display_correction": false,
+      "underlying_record_verification": "partially_verified",
+      "verified_fields": [
+        "application_cycle",
+        "application_url",
+        "format",
+        "opening_date",
+        "program_information",
+        "source_url"
+      ]
+    },
+    {
+      "display_changes": {
+        "grades": [
+          "9",
+          "10",
+          "11",
+          "12"
+        ],
+        "lastVerified": "2026-11-24"
+      },
+      "id": "first-robotics",
+      "note": "Official FIRST page confirms high-school ages14–18/grades9–12 and BIOCORE challenge release January9,2027. Team entry, adult mentors and local enrollment apply. Team/registration/equipment/travel cost is distinct from each student contribution; no fabricated individual price or deadline.",
+      "previous_review": "2026-11-15T00:00:00Z",
+      "sources": [
+        {
+          "content_sha256": "bd706a94c0c18e7d418bbff80f79e0b6923dc84a08fb0215f5892718897213f6",
+          "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+          "observed_at": "2026-11-24T06:09:56Z",
+          "url": "https://www.firstinspires.org/programs/frc/"
+        },
+        {
+          "content_sha256": "f0359b679eae249911c107d38ee7b6943e3545efc894d8a6078e0b7500528557",
+          "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+          "observed_at": "2026-11-24T06:09:56Z",
+          "url": "https://www.firstinspires.org/programs/cost-and-registration"
+        }
+      ],
+      "status": "PASS — bounded official-source review; remaining unknowns retained",
+      "substantive_display_correction": false,
+      "underlying_record_verification": "partially_verified",
+      "verified_fields": [
+        "age_max",
+        "age_min",
+        "application_cycle",
+        "application_url",
+        "grades",
+        "name",
+        "organization",
+        "program_information",
+        "source_url"
+      ]
+    },
+    {
+      "display_changes": {
+        "lastVerified": "2026-11-24"
+      },
+      "id": "gatech-iexperience-2027",
+      "note": "Official page announces a one-week Summer2027 industrial/systems-engineering experience at Georgia Tech, with dates, final eligibility and application process still forthcoming. No current application opening, deadline, price or aid is established.",
+      "previous_review": "2026-11-15T00:00:00Z",
+      "sources": [
+        {
+          "content_sha256": "6c423b2dc6af67ed62e29b92c28087a44b2142edd4015574164a14bfb7a48224",
+          "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+          "observed_at": "2026-11-24T06:09:54Z",
+          "url": "https://case.isye.gatech.edu/engagement-initiatives/iexperience"
+        }
+      ],
+      "status": "PASS — bounded official-source review; remaining unknowns retained",
+      "substantive_display_correction": false,
+      "underlying_record_verification": "partially_verified",
+      "verified_fields": [
+        "application_cycle",
+        "application_url",
+        "name",
+        "organization",
+        "program_information",
+        "source_status",
+        "source_url"
+      ]
+    },
+    {
+      "display_changes": {
+        "lastVerified": "2026-11-24"
+      },
+      "id": "gmu-assip-2027",
+      "note": "Explicit 2027 application window December 7, 2026–February 12, 2027. Final 2027 tuition, mentors and program dates remain pending; detailed age cutoffs on the same page still refer to 2026. Current page describes $25 application and tuition with need waivers; do not roll older eligibility forward.",
+      "previous_review": "2026-11-15T00:00:00Z",
+      "sources": [
+        {
+          "content_sha256": "e6fc491676e15427955a386a3974022ec4a001e079fa33a3fab565fc6339f6ce",
+          "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+          "observed_at": "2026-11-24T06:09:53Z",
+          "url": "https://science.gmu.edu/assip"
+        }
+      ],
+      "status": "PASS — bounded official-source review; remaining unknowns retained",
+      "substantive_display_correction": false,
+      "underlying_record_verification": "partially_verified",
+      "verified_fields": [
+        "application_cycle",
+        "application_url",
+        "deadline",
+        "name",
+        "opening_date",
+        "organization",
+        "program_information",
+        "source_url"
+      ]
+    },
+    {
+      "display_changes": {
+        "lastVerified": "2026-11-24"
+      },
+      "id": "gtri-2027",
+      "note": "Paid five-week in-person Georgia internship. Georgia school/residency, graduating classes 2027–2029 and U.S.-person requirements apply. Posted age cutoff and work dates are approximate; planned pre-application launch is December 11, 2026. Final dates require the forthcoming application.",
+      "previous_review": "2026-11-15T00:00:00Z",
+      "sources": [
+        {
+          "content_sha256": "68b6cbea175938e588546cdb7c83eb6a9b9eff4186a0843650c920075bc33dc3",
+          "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+          "observed_at": "2026-11-24T06:09:53Z",
+          "url": "https://gtri.gatech.edu/stem/high-school-summer-internship"
+        }
+      ],
+      "status": "PASS — bounded official-source review; remaining unknowns retained",
+      "substantive_display_correction": false,
+      "underlying_record_verification": "partially_verified",
+      "verified_fields": [
+        "application_cycle",
+        "application_url",
+        "citizenship",
+        "format",
+        "name",
+        "organization",
+        "program_information",
+        "residency",
+        "source_url"
+      ]
+    },
+    {
+      "display_changes": {
+        "lastVerified": "2026-11-24",
+        "timing": "2027 applications are not yet available; the official listing plans January or February 2027. The displayed 2026 camps have concluded. Exact 2027 dates and deadlines remain unconfirmed."
+      },
+      "id": "illinois-wyse-camps",
+      "note": "Official listing now explicitly says2027 applications unavailable, planned January orFebruary2027;2026 camps concluded. Eligibility is camp-specific and uses fall-after-camp grade with no exceptions. FAQ prices remain2026;2027 costs/scholarships unconfirmed. Do not describe2026 camps as still full/open.",
+      "previous_review": "2026-11-15T00:00:00Z",
+      "sources": [
+        {
+          "content_sha256": "aa168a45223e95d877f0ae3ed8962cdb0a1903e8e0735aff7e3c632f020223ce",
+          "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+          "observed_at": "2026-11-24T06:09:56Z",
+          "url": "https://wyse.grainger.illinois.edu/summer-programs/summer-camps"
+        },
+        {
+          "content_sha256": "6c78dd159fd9329e9e3703ae1dac0ba9382a6faf78e3f5f5172f2b2f57ac8db5",
+          "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+          "observed_at": "2026-11-24T06:09:56Z",
+          "url": "https://wyse.grainger.illinois.edu/summer-programs/summer-camps/camp-faqs"
+        }
+      ],
+      "status": "PASS — bounded official-source review; remaining unknowns retained",
+      "substantive_display_correction": true,
+      "underlying_record_verification": "partially_verified",
+      "verified_fields": [
+        "application_url",
+        "name",
+        "organization",
+        "program_information",
+        "source_status",
+        "source_url"
+      ]
+    },
+    {
+      "display_changes": {
+        "lastVerified": "2026-11-24"
+      },
+      "id": "isef-fair-pathway",
+      "note": "Official FAQ confirms grades9–12 must qualify at a Society-affiliated fair rather than apply directly. Official rules hub now lists2027 rules. Local timelines, safety/approval, costs and full age rules depend on fair/current rules; no national direct-application deadline inferred.",
+      "previous_review": "2026-11-15T00:00:00Z",
+      "sources": [
+        {
+          "content_sha256": "b9afc1ec8b97f30f71b988999e233bc48c1613898564b465dff92cb06caee1af",
+          "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+          "observed_at": "2026-11-24T06:09:56Z",
+          "url": "https://www.societyforscience.org/isef/faq/"
+        },
+        {
+          "content_sha256": "d7afaf59d1ca6f5e6cd469ce81a85dcbbb8c837e7bf661dd22fcf1b6fb3ce173",
+          "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+          "observed_at": "2026-11-24T06:09:56Z",
+          "url": "https://www.societyforscience.org/isef/international-rules/"
+        },
+        {
+          "content_sha256": "60220ac48ea09e6fb5792516885e5027338c412c43e5341b55a6ebc6679bf0d3",
+          "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+          "observed_at": "2026-11-24T06:09:56Z",
+          "url": "https://www.societyforscience.org/isef/international-rules/rules-and-guidelines/"
+        }
+      ],
+      "status": "PASS — bounded official-source review; remaining unknowns retained",
+      "substantive_display_correction": false,
+      "underlying_record_verification": "partially_verified",
+      "verified_fields": [
+        "application_url",
+        "name",
+        "organization",
+        "program_information",
+        "source_url"
+      ]
+    },
+    {
+      "display_changes": {
+        "cost": "Research-specific 2027 tuition, fees and aid are not confirmed on the working directory.",
+        "costBand": "UNKNOWN",
+        "eligibility": "Check the current research-program requirements with Johns Hopkins; the working program directory does not confirm 2027 age, grade or visa rules.",
+        "format": "IN PERSON",
+        "lastVerified": "2026-11-24",
+        "needsGradeCheck": true,
+        "officialUrl": "https://ei.jhu.edu/programs/",
+        "status": "WATCH",
+        "timing": "The former research page is unavailable. The official programs directory lists summer research, but a complete 2027 research schedule and application are not confirmed."
+      },
+      "id": "jhu-engineering-innovation",
+      "note": "The former research-program URL returns HTTP404. Official programs directory still lists summer research with commuter/residential options and three credits. Research-specific 2027 application dates, eligibility, fees and aid could not be confirmed there; use the working directory and retain WATCH.",
+      "previous_review": "2026-11-15T00:00:00Z",
+      "sources": [
+        {
+          "content_sha256": "88b1c603ebd593920bbf72cb629e28f1066c3ccc764f2c4ec6492622df1d290d",
+          "method": "Official-source web reader text; SHA-256 of returned reader text, not an HTTP body; cached crawler reported today",
+          "observed_at": "2026-11-24T06:14:27Z",
+          "url": "https://ei.jhu.edu/programs/"
+        }
+      ],
+      "status": "PASS — bounded official-source review; remaining unknowns retained",
+      "substantive_display_correction": true,
+      "underlying_record_verification": "partially_verified",
+      "verified_fields": [
+        "application_url",
+        "cost",
+        "format",
+        "name",
+        "organization",
+        "program_information",
+        "source_url"
+      ]
+    },
+    {
+      "current_verified_at": "2026-11-15T00:00:00Z",
+      "display_changes": {
+        "cost": "Compensation and current requirements must be verified in an individual official job posting.",
+        "eligibility": "Current eligibility is unverified because official pages blocked the recheck. Prior local-school, age and graduation restrictions may differ by role; verify the specific official posting.",
+        "needsGradeCheck": true,
+        "status": "WATCH",
+        "timing": "Current source recheck was blocked by HTTP 403. Previously reviewed 2027 dates cannot be reconfirmed; use a current official job posting before planning or applying."
+      },
+      "id": "lockheed-high-school-2027",
+      "note": "Current re-verification BLOCKED: official high-school URL and attempted official career/STEM alternatives returned HTTP403. Preserve prior November15 review and historical record; do not reconfirm its 2027 dates or eligibility, infer closure, or label it freshly verified. Require a current individual official posting before reliance.",
+      "prior_verified_at": "2026-11-15T00:00:00Z",
+      "status": "BLOCKED",
+      "substantive_display_correction": true
+    },
+    {
+      "display_changes": {
+        "grades": [
+          "10",
+          "11"
+        ],
+        "lastVerified": "2026-11-24"
+      },
+      "id": "mit-beaver-works",
+      "note": "Official FAQ describes July5–August1,2027 summer schedule, grades10–11, U.S. residence/school and location requirements, free prerequisite study and $3,000 summer fee at stated income/assets threshold with qualifying waivers. Delivery is course-specific, in-person housing not provided; FAQ contains older inconsistent in-person statements, so confirm course.",
+      "previous_review": "2026-11-15T00:00:00Z",
+      "sources": [
+        {
+          "content_sha256": "75057379642dda825a41bed3b98b7fc8d498eee16bacba88a50a3eaa9f9b87af",
+          "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+          "observed_at": "2026-11-24T06:09:55Z",
+          "url": "https://bwsi.mit.edu/faq/"
+        }
+      ],
+      "status": "PASS — bounded official-source review; remaining unknowns retained",
+      "substantive_display_correction": false,
+      "underlying_record_verification": "partially_verified",
+      "verified_fields": [
+        "application_cycle",
+        "application_url",
+        "grades",
+        "name",
+        "organization",
+        "program_information",
+        "source_url"
+      ]
+    },
+    {
+      "display_changes": {
+        "grades": [
+          "11"
+        ],
+        "lastVerified": "2026-11-24"
+      },
+      "id": "mit-mites-semester",
+      "note": "Same official FAQ still labels2027 dates TBD. Six-month online Semester program, current11th graders, U.S. citizen/permanent resident. Program-related costs covered; any residential conference is conditional. Keep next-cycle dates unconfirmed.",
+      "previous_review": "2026-11-15T00:00:00Z",
+      "sources": [
+        {
+          "content_sha256": "5929c24b1762fe2fa658097d5ec294d65c3e5b742121f48c428baf636a6b6ae0",
+          "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+          "observed_at": "2026-11-24T06:09:55Z",
+          "url": "https://mites.mit.edu/discover-mites/faq-for-prospective-students/faqs-mites-semester-and-mites-summer/"
+        }
+      ],
+      "status": "PASS — bounded official-source review; remaining unknowns retained",
+      "substantive_display_correction": false,
+      "underlying_record_verification": "partially_verified",
+      "verified_fields": [
+        "application_url",
+        "format",
+        "grades",
+        "name",
+        "organization",
+        "program_information",
+        "source_status",
+        "source_url"
+      ]
+    },
+    {
+      "display_changes": {
+        "grades": [
+          "11"
+        ],
+        "lastVerified": "2026-11-24"
+      },
+      "id": "mit-mites-summer",
+      "note": "Official FAQ still labels2027 dates TBD. Six-week in-person residential Summer program for current11th graders, citizen/permanent resident; program, food and housing covered, travel extra. Do not relabel the listed2026 dates as2027 or infer that the next application is open.",
+      "previous_review": "2026-11-15T00:00:00Z",
+      "sources": [
+        {
+          "content_sha256": "5929c24b1762fe2fa658097d5ec294d65c3e5b742121f48c428baf636a6b6ae0",
+          "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+          "observed_at": "2026-11-24T06:09:55Z",
+          "url": "https://mites.mit.edu/discover-mites/faq-for-prospective-students/faqs-mites-semester-and-mites-summer/"
+        }
+      ],
+      "status": "PASS — bounded official-source review; remaining unknowns retained",
+      "substantive_display_correction": false,
+      "underlying_record_verification": "partially_verified",
+      "verified_fields": [
+        "application_url",
+        "format",
+        "grades",
+        "name",
+        "organization",
+        "program_information",
+        "source_status",
+        "source_url"
+      ]
+    },
+    {
+      "display_changes": {
+        "lastVerified": "2026-11-24",
+        "organization": "NASA",
+        "title": "NASA STEM Gateway"
+      },
+      "id": "nasa-stem-gateway",
+      "note": "Official NASA directory confirms a portal for STEM internships, challenges, research and education experiences including grades 9–12. Individual listings determine eligibility, costs and deadlines. Portal accessibility does not prove any particular internship is accepting applications.",
+      "previous_review": "2026-11-24T02:10:10Z",
+      "sources": [
+        {
+          "content_sha256": "cb5295579cd9b70a6ca45fa4754ea0733eeb3890ba8e18aa2e3dd5bb8d9e40e0",
+          "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+          "observed_at": "2026-11-24T06:09:53Z",
+          "url": "https://www.nasa.gov/stem-content/nasa-stem-gateway/"
+        }
+      ],
+      "status": "PASS — bounded official-source review; remaining unknowns retained",
+      "substantive_display_correction": false,
+      "underlying_record_verification": "partially_verified",
+      "verified_fields": [
+        "application_url",
+        "name",
+        "organization",
+        "program_information",
+        "source_url"
+      ]
+    },
+    {
+      "display_changes": {
+        "lastVerified": "2026-11-24"
+      },
+      "id": "navy-seap-2027",
+      "note": "ONR confirms Summer2027 applications open through November30. Official administrator shows enrollment from September15,2026; eight-week internships with $4,000 new/$4,500 returning stipends. Normally completed grade9, age16 and U.S. citizen; labs may have explicit exceptions. Graduating seniors eligible; check lab and travel/housing requirements.",
+      "previous_review": "2026-11-15T00:00:00Z",
+      "sources": [
+        {
+          "content_sha256": "1d767d1042694326a2ee637af078c363aef1ed08bca7e32d39d1538ad24e0fc9",
+          "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+          "observed_at": "2026-11-24T06:09:54Z",
+          "url": "https://www.onr.navy.mil/education-outreach/k-12-programs/seap"
+        },
+        {
+          "content_sha256": "58e9362e9312a2c0859490fbdc1e17e4ad5c73e1d7e4a3943b2d40292bc6683c",
+          "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+          "observed_at": "2026-11-24T06:09:54Z",
+          "url": "https://www.navalsteminterns.us/internships/seap/"
+        },
+        {
+          "content_sha256": "ab1d8849190ed55be5670758f13d609075305fef0ce940d87683ab21318c9693",
+          "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+          "observed_at": "2026-11-24T06:09:54Z",
+          "url": "https://www.navalsteminterns.us/internships/seap/faqs/"
+        }
+      ],
+      "status": "PASS — bounded official-source review; remaining unknowns retained",
+      "substantive_display_correction": false,
+      "underlying_record_verification": "partially_verified",
+      "verified_fields": [
+        "application_cycle",
+        "application_url",
+        "name",
+        "organization",
+        "program_information",
+        "source_status",
+        "source_url",
+        "stipend"
+      ]
+    },
+    {
+      "display_changes": {
+        "cost": "$3,000 including residential room, on-campus meals and industrial trips; no individual tuition scholarship",
+        "lastVerified": "2026-11-24"
+      },
+      "id": "ncstate-nuclear-2027",
+      "note": "Official page lists 2027 residential sessions June14–25/July12–23, adjacent check-in/out days, $3,000 inclusive charge and no individual tuition scholarship. Annual application opening February2/deadlineApril30 are recurring statements, not separately dated2027 confirmations; retain that distinction.",
+      "previous_review": "2026-11-15T00:00:00Z",
+      "sources": [
+        {
+          "content_sha256": "6a1a37e38e0b3848dbcb1fb8d8d343a7d98a747c9ef35d93328d9754f5435889",
+          "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+          "observed_at": "2026-11-24T06:09:55Z",
+          "url": "https://ne.ncsu.edu/pre-college-programs/"
+        }
+      ],
+      "status": "PASS — bounded official-source review; remaining unknowns retained",
+      "substantive_display_correction": true,
+      "underlying_record_verification": "partially_verified",
+      "verified_fields": [
+        "application_cycle",
+        "application_url",
+        "cost",
+        "name",
+        "organization",
+        "program_information",
+        "source_url"
+      ]
+    },
+    {
+      "display_changes": {
+        "lastVerified": "2026-11-24"
+      },
+      "id": "ncstate-residential-2027",
+      "note": "Official residential page says to watch for 2027 offerings; detailed schedules remain2026. Program is for rising grades11–12, but final 2027 workshops, dates and fees remain unconfirmed. Preserve the lead without advertising old prices or dates as current.",
+      "previous_review": "2026-11-15T00:00:00Z",
+      "sources": [
+        {
+          "content_sha256": "e0bf9fb4b30b5aa24ba5f22d4acd31e688756c7ee8e6486015e6c0f2171c40e4",
+          "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+          "observed_at": "2026-11-24T06:09:54Z",
+          "url": "https://tep.engr.ncsu.edu/k-12-student-programs/rising-11-12-residential-camps/"
+        }
+      ],
+      "status": "PASS — bounded official-source review; remaining unknowns retained",
+      "substantive_display_correction": false,
+      "underlying_record_verification": "partially_verified",
+      "verified_fields": [
+        "application_url",
+        "name",
+        "organization",
+        "program_information",
+        "source_status",
+        "source_url"
+      ]
+    },
+    {
+      "display_changes": {
+        "cost": "Unpaid; no participation charge stated; housing and transportation are the student’s responsibility.",
+        "grades": [
+          "11",
+          "12"
+        ],
+        "lastVerified": "2026-11-24"
+      },
+      "id": "nist-ship-2027",
+      "note": "Official page says 2027 vacancies open and June21–August6 program. Seven-week unpaid educational internship; U.S. citizen, current high-school junior/senior, unweighted GPA3.0, full attendance and local commuting requirements. Housing/transport are not supplied. Follow the individual official vacancy for its exact closing date.",
+      "previous_review": "2026-11-15T00:00:00Z",
+      "sources": [
+        {
+          "content_sha256": "406121b67ac80e506191fc665a57ffb8ad6851368bba7fa97afaa0b7c38bd845",
+          "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+          "observed_at": "2026-11-24T06:09:54Z",
+          "url": "https://www.nist.gov/ship"
+        }
+      ],
+      "status": "PASS — bounded official-source review; remaining unknowns retained",
+      "substantive_display_correction": true,
+      "underlying_record_verification": "partially_verified",
+      "verified_fields": [
+        "application_cycle",
+        "application_url",
+        "citizenship",
+        "cost",
+        "format",
+        "grades",
+        "name",
+        "organization",
+        "program_information",
+        "source_status",
+        "source_url"
+      ]
+    },
+    {
+      "display_changes": {
+        "lastVerified": "2026-11-24"
+      },
+      "id": "ornl-ngsi-2027",
+      "note": "Official Summer2027 announcement is open through February26 with all recommendations required; June7–July23 appointments. Citizenship/permanent residence and enrollment in ten named Tennessee counties apply. Grade/cohort conditions expressly refer to2027–28 or specified recent graduates; do not replace these with a generic all-juniors rule.",
+      "previous_review": "2026-11-15T00:00:00Z",
+      "sources": [
+        {
+          "content_sha256": "46dfd748c4ee354e568cacbefa56d9925e5a32fabe937ce44adf8aa9e9376279",
+          "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+          "observed_at": "2026-11-24T06:09:54Z",
+          "url": "https://www.ornl.gov/next-generation-stem-internship/"
+        }
+      ],
+      "status": "PASS — bounded official-source review; remaining unknowns retained",
+      "substantive_display_correction": false,
+      "underlying_record_verification": "partially_verified",
+      "verified_fields": [
+        "application_cycle",
+        "application_url",
+        "name",
+        "organization",
+        "program_information",
+        "source_status",
+        "source_url"
+      ]
+    },
+    {
+      "display_changes": {
+        "eligibility": "Local New Jersey high-school attendance and residence, U.S. citizenship, age 16+ by June 15, 2027; graduates must meet the stated under-18 rule. Additional project rules apply.",
+        "lastVerified": "2026-11-24",
+        "timing": "The official page now gives a 2027 application notice for Feb. 15–Mar. 17, alongside older 2026 dates and a February information update notice. Confirm the 2027 window before applying."
+      },
+      "id": "princeton-llp-2027",
+      "note": "Official page now includes a2027 application notice February15–March17, but numerous older paragraphs still give2026 dates and it says further2027 information comes in February. Local New Jersey school/residence, U.S. citizenship, age16 byJune15,2027, project conditions; free, no housing/transport. Treat window as published but mixed-cycle, requiring confirmation.",
+      "previous_review": "2026-11-15T00:00:00Z",
+      "sources": [
+        {
+          "content_sha256": "b86d5da8839f83182aa51d70feedfccdda0e066717b8ebe940b14735c2269950",
+          "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+          "observed_at": "2026-11-24T06:09:55Z",
+          "url": "https://scienceoutreach.princeton.edu/laboratory-learning-program"
+        }
+      ],
+      "status": "PASS — bounded official-source review; remaining unknowns retained",
+      "substantive_display_correction": true,
+      "underlying_record_verification": "partially_verified",
+      "verified_fields": [
+        "age_min",
+        "application_cycle",
+        "application_url",
+        "citizenship",
+        "program_information",
+        "source_url"
+      ]
+    },
+    {
+      "display_changes": {
+        "cost": "$2,500; need-based scholarship information after acceptance; travel extra",
+        "grades": [
+          "11"
+        ],
+        "lastVerified": "2026-11-24"
+      },
+      "id": "purdue-step",
+      "note": "Official2027 program describes rising seniors, registration in January2027, four one-week July/August sessions and $2,500 fee. Math/science preparation is recommended; travel extra. No exact registration day or closing deadline published on this page.",
+      "previous_review": "2026-11-15T00:00:00Z",
+      "sources": [
+        {
+          "content_sha256": "742e1edd40a86a96ad90e5816a6c1ac1aae036612226b5303ad20288fd5e3103",
+          "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+          "observed_at": "2026-11-24T06:09:55Z",
+          "url": "https://engineering.purdue.edu/Honors/SeminarforTopEngineeringProspects"
+        }
+      ],
+      "status": "PASS — bounded official-source review; remaining unknowns retained",
+      "substantive_display_correction": true,
+      "underlying_record_verification": "partially_verified",
+      "verified_fields": [
+        "application_cycle",
+        "application_url",
+        "cost",
+        "grades",
+        "name",
+        "organization",
+        "program_information",
+        "source_url"
+      ]
+    },
+    {
+      "display_changes": {
+        "grades": [
+          "10",
+          "11"
+        ],
+        "lastVerified": "2026-11-24"
+      },
+      "id": "rose-hulman-catapult",
+      "note": "Official2027 page confirms December1,2026 opening, April19,2027 deadline, June7–17/June21–July1/July12–22 sessions and $2,750 fee. Eleven-day residential program for students completing grades10–11. Check separate travel and spending needs.",
+      "previous_review": "2026-11-15T00:00:00Z",
+      "sources": [
+        {
+          "content_sha256": "d9fd4cf020a990bca390a2a85f370281547d468eab5136f47680914b2a03deff",
+          "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+          "observed_at": "2026-11-24T06:09:55Z",
+          "url": "https://rose-hulman.edu/admissions-and-aid/early-planning/operation-catapult/index.html"
+        },
+        {
+          "content_sha256": "68e001a475e664a009ee1cc5798124fe6d3fd775ddd31ac30fe0de7cf93d2c5c",
+          "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+          "observed_at": "2026-11-24T06:09:55Z",
+          "url": "https://rose-hulman.edu/admissions-and-aid/early-planning/operation-catapult/FAQs.html"
+        }
+      ],
+      "status": "PASS — bounded official-source review; remaining unknowns retained",
+      "substantive_display_correction": false,
+      "underlying_record_verification": "partially_verified",
+      "verified_fields": [
+        "application_cycle",
+        "application_url",
+        "deadline",
+        "grades",
+        "name",
+        "opening_date",
+        "organization",
+        "program_information",
+        "source_url"
+      ]
+    },
+    {
+      "display_changes": {
+        "eligibility": "New Jersey high-school juniors apply through school nomination. The public page permits one nominee per 325 junior-class students; confirm the linked 2027 instructions before applying.",
+        "grades": [
+          "11"
+        ],
+        "lastVerified": "2026-11-24",
+        "timing": "The official page now links 2027 application instructions. Approximately four-week residential program after junior year; confirm exact dates and nomination deadlines in those instructions."
+      },
+      "id": "rutgers-gset",
+      "note": "Official page now links a2027 application/instructions document, replacing the prior2026-link observation. New Jersey school nomination, after-junior-year residential program, no tuition; refundable$65 key deposit. Linked document requires JavaScript in the available reader; exact2027 dates/nomination deadline not independently inspected.",
+      "previous_review": "2026-11-15T00:00:00Z",
+      "sources": [
+        {
+          "content_sha256": "207dff61ff95af6458f596cf5c72041be761cd98a71c567ff9ef854a713e6c04",
+          "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+          "observed_at": "2026-11-24T06:09:56Z",
+          "url": "https://soe.rutgers.edu/gset"
+        }
+      ],
+      "status": "PASS — bounded official-source review; remaining unknowns retained",
+      "substantive_display_correction": true,
+      "underlying_record_verification": "partially_verified",
+      "verified_fields": [
+        "application_cycle",
+        "application_url",
+        "grades",
+        "name",
+        "organization",
+        "program_information",
+        "source_url"
+      ]
+    },
+    {
+      "display_changes": {
+        "lastVerified": "2026-11-24"
+      },
+      "id": "rutgers-rhex",
+      "note": "Dedicated official page still saysRHEx2026, June28–July3, $2,500 room/meals. Its junior/senior eligibility differs from general index seniors-only. Preserve lead, historical facts and explicit conflict; do not infer2027 open dates, costs or eligibility.",
+      "previous_review": "2026-11-15T00:00:00Z",
+      "sources": [
+        {
+          "content_sha256": "b9b4a68cb7cb5bae78f4b8e52cb96db22868add8d2ff90f99b841949dfe8d3a3",
+          "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+          "observed_at": "2026-11-24T06:09:57Z",
+          "url": "https://soe.rutgers.edu/academics/pre-college-engineering-programs"
+        },
+        {
+          "content_sha256": "24836b3ff1780f9c64a39fb82ebac5f29f244ed9b881f782ea60831a2cee5fae",
+          "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+          "observed_at": "2026-11-24T06:09:57Z",
+          "url": "https://soe.rutgers.edu/RHEX"
+        }
+      ],
+      "status": "PASS — bounded official-source review; remaining unknowns retained",
+      "substantive_display_correction": false,
+      "underlying_record_verification": "partially_verified",
+      "verified_fields": [
+        "application_url",
+        "name",
+        "organization",
+        "program_information",
+        "source_status",
+        "source_url"
+      ]
+    },
+    {
+      "display_changes": {
+        "lastVerified": "2026-11-24"
+      },
+      "id": "science-olympiad-2027",
+      "note": "Official 2027 Division C event slate is published. The older rules URL returned HTTP202 rather than usable rules. Event participation is through the high-school competition pathway; state/team rules determine registration dates and costs. No single national student deadline inferred.",
+      "previous_review": "2026-11-15T00:00:00Z",
+      "sources": [
+        {
+          "content_sha256": "cbc8fabe76098d7b86c7abacdfd62b73551947ead8cdbb205054f6793e52bfec",
+          "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+          "observed_at": "2026-11-24T06:09:53Z",
+          "url": "https://www.soinc.org/events/2027-division-c-events"
+        }
+      ],
+      "status": "PASS — bounded official-source review; remaining unknowns retained",
+      "substantive_display_correction": false,
+      "underlying_record_verification": "partially_verified",
+      "verified_fields": [
+        "application_url",
+        "name",
+        "organization",
+        "program_information",
+        "source_url"
+      ]
+    },
+    {
+      "display_changes": {
+        "lastVerified": "2026-11-24",
+        "timing": "The official page still describes the completed 2026 cycle: applications Feb. 15–Mar. 15 and research June 8–July 31, 2026. No 2027 opening or deadline is confirmed."
+      },
+      "id": "sdsc-rehs",
+      "note": "Official page remains2026, with February15–March15 application dates and June8–July31 activities. Southern California grades10–12, GPA3.0, volunteer research, $2,000 registration and free application describe that cycle. No2027 opening, eligibility cutoff or fee reconfirmed.",
+      "previous_review": "2026-11-15T00:00:00Z",
+      "sources": [
+        {
+          "content_sha256": "295a0f71dfdeb9371e204f0a05034b25047c00d1577c73fab31f6a2652854407",
+          "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+          "observed_at": "2026-11-24T06:09:56Z",
+          "url": "https://education.sdsc.edu/studenttech/rehs/"
+        }
+      ],
+      "status": "PASS — bounded official-source review; remaining unknowns retained",
+      "substantive_display_correction": true,
+      "underlying_record_verification": "partially_verified",
+      "verified_fields": [
+        "application_url",
+        "name",
+        "organization",
+        "program_information",
+        "source_status",
+        "source_url"
+      ]
+    },
+    {
+      "display_changes": {
+        "lastVerified": "2026-11-24"
+      },
+      "id": "stanford-aimi-2027",
+      "note": "2027 virtual research sessions June14–25 or July12–23; applications opened November10. Aid deadline January15, standard February1, recommendation February8 at11:59PM Pacific. Entering grades9–12 in Fall2027, older than14 at session start, independent programming ability; tuition$3,000 plus$50 application, eligible U.S. residents may request aid.",
+      "previous_review": "2026-11-15T00:00:00Z",
+      "sources": [
+        {
+          "content_sha256": "6c14e7f9bd2c05cb71d019c0c9dd63ae156fb231f239f1e137cf73cd59a97c42",
+          "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+          "observed_at": "2026-11-24T06:09:53Z",
+          "url": "https://aimi.stanford.edu/education/summer-research-internship"
+        }
+      ],
+      "status": "PASS — bounded official-source review; remaining unknowns retained",
+      "substantive_display_correction": false,
+      "underlying_record_verification": "partially_verified",
+      "verified_fields": [
+        "application_cycle",
+        "application_url",
+        "deadline",
+        "deadline_timezone",
+        "format",
+        "name",
+        "opening_date",
+        "organization",
+        "program_information",
+        "source_url"
+      ]
+    },
+    {
+      "display_changes": {
+        "grades": [
+          "11",
+          "12"
+        ],
+        "lastVerified": "2026-11-24"
+      },
+      "id": "stanford-shtem-2027",
+      "note": "Summer 2027 in-person research is expected June 21–August 6. Current grades 11–12, age at least 14 by June 20, U.S. citizen/permanent resident. Expected application window December 7–February 21; $95 application plus $2,500 tuition subject to change, aid available; no housing.",
+      "previous_review": "2026-11-15T00:00:00Z",
+      "sources": [
+        {
+          "content_sha256": "cb4a17677da30da11cae9c2df0e334959ede7995418c8cf67bccef1e6eee55f4",
+          "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+          "observed_at": "2026-11-24T06:09:53Z",
+          "url": "https://compression.stanford.edu/outreach/shtem-summer-internships-high-schoolers"
+        }
+      ],
+      "status": "PASS — bounded official-source review; remaining unknowns retained",
+      "substantive_display_correction": false,
+      "underlying_record_verification": "partially_verified",
+      "verified_fields": [
+        "age_min",
+        "application_cycle",
+        "application_url",
+        "citizenship",
+        "format",
+        "grades",
+        "name",
+        "organization",
+        "program_information",
+        "source_url"
+      ]
+    },
+    {
+      "display_changes": {
+        "cost": "No program fee; $75 application fee with need-based waiver. On-campus housing is estimated at $2,700; meals, commuting and housing arrangements are additional responsibilities.",
+        "costBand": "FEES",
+        "grades": [
+          "11"
+        ],
+        "lastVerified": "2026-11-24",
+        "timing": "The 2027 form notice says available Nov. 15, 2026; confirm the live form. Nomination Jan. 29, application Feb. 5 at 11:59 p.m. Eastern, recommendations Feb. 12. Program June 28–Aug. 6, 2027."
+      },
+      "id": "stonybrook-simons-2027",
+      "note": "2027 forms notice says available November15. Grade11, citizen/permanent resident, age16 byJune28, school nomination. Nomination January29, application February5 at11:59PM Eastern, recommendations February12. Research June28–August6. No program tuition, $75 application with need waiver; housing approximately$2,700 and meals extra. Notice alone is not a tested application submission.",
+      "previous_review": "2026-11-15T00:00:00Z",
+      "sources": [
+        {
+          "content_sha256": "4fcf49306fcf3d0d94a8bb8ce5f6b532cf02dd8b6fb799d869e10c84c3b452d8",
+          "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+          "observed_at": "2026-11-24T06:09:53Z",
+          "url": "https://www.stonybrook.edu/simons/"
+        },
+        {
+          "content_sha256": "ca5cf4adbbde2da0656017b2ff6cb8bc12988263d2d91e071a9ae469553d124a",
+          "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+          "observed_at": "2026-11-24T06:09:53Z",
+          "url": "https://www.stonybrook.edu/simons/apply/"
+        },
+        {
+          "content_sha256": "358e9e77c35a50341108881377be632782bc7d655fc07b69b878533a5d92cec6",
+          "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+          "observed_at": "2026-11-24T06:09:53Z",
+          "url": "https://www.stonybrook.edu/simons/apply/forms.html"
+        },
+        {
+          "content_sha256": "05494c002287cbf9651e56e5e66150555f9947037fb5a1e7bf8bfbdab8f0b499",
+          "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+          "observed_at": "2026-11-24T06:09:53Z",
+          "url": "https://www.stonybrook.edu/simons/about/faqs.html"
+        }
+      ],
+      "status": "PASS — bounded official-source review; remaining unknowns retained",
+      "substantive_display_correction": true,
+      "underlying_record_verification": "partially_verified",
+      "verified_fields": [
+        "age_min",
+        "application_cycle",
+        "application_url",
+        "citizenship",
+        "cost",
+        "grades",
+        "name",
+        "organization",
+        "program_information",
+        "source_url"
+      ]
+    },
+    {
+      "display_changes": {
+        "lastVerified": "2026-11-24"
+      },
+      "id": "tsa-engineering-2027",
+      "note": "Official high-school event page describes the 2027/2028 national-event guide. Membership FAQ says affiliation can occur during school year but state deadlines may differ. School-affiliated TSA membership, event-specific eligibility and state/conference costs remain applicable; no single national individual deadline inferred.",
+      "previous_review": "2026-11-15T00:00:00Z",
+      "sources": [
+        {
+          "content_sha256": "733a4d2cad1a6c10811c4473e2830e699b3e1f12e8187926feb540e59c738c13",
+          "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+          "observed_at": "2026-11-24T06:09:55Z",
+          "url": "https://tsaweb.org/competitions/high-school"
+        },
+        {
+          "content_sha256": "3d7447bdcab70a9876dc3749a58c1701163f798181bf4ad4c4062a7dff294206",
+          "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+          "observed_at": "2026-11-24T06:09:55Z",
+          "url": "https://tsaweb.org/membership/membership-faq"
+        },
+        {
+          "content_sha256": "9ca2937893c39d60612c5fe5d7eeaf37e7e15b2fb1ed2f07d42603571d69c371",
+          "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+          "observed_at": "2026-11-24T06:09:55Z",
+          "url": "https://tsaweb.org/competitions/themes-and-problems"
+        }
+      ],
+      "status": "PASS — bounded official-source review; remaining unknowns retained",
+      "substantive_display_correction": false,
+      "underlying_record_verification": "partially_verified",
+      "verified_fields": [
+        "application_url",
+        "name",
+        "organization",
+        "program_information",
+        "source_url"
+      ]
+    },
+    {
+      "display_changes": {
+        "cost": "Program and commuter/residential prices differ. Engineering Design Lab lists $5,950 residential for 2027; confirm its current commuter price and scholarship terms. This is not a uniform price for all Tufts programs.",
+        "lastVerified": "2026-11-24"
+      },
+      "id": "tufts-precollege-engineering",
+      "note": "Official directory and Engineering Design Lab confirm December14,2026 opening,2027 sessionsJuly11–23/July25–August6, entering grades10–12 or2027 graduates, and residential price$5,950. Eligibility, age and commuter prices vary by course; a directory entry is not a single uniform program or deadline.",
+      "previous_review": "2026-11-15T00:00:00Z",
+      "sources": [
+        {
+          "content_sha256": "8376f2d7c3a3c105f570948ce1ab395f87f4dc1cbcb2c3db87455a5476758eb1",
+          "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+          "observed_at": "2026-11-24T06:09:56Z",
+          "url": "https://universitycollege.tufts.edu/pre-college/academics/engineering-computer-science-programs-high-school-students"
+        },
+        {
+          "content_sha256": "01b9a031f5d3bcc13546e7cd3030e85107ad73cb7cde2f1dd1c0314be653e1c5",
+          "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+          "observed_at": "2026-11-24T06:09:56Z",
+          "url": "https://universitycollege.tufts.edu/pre-college/browse/engineering-design-lab"
+        }
+      ],
+      "status": "PASS — bounded official-source review; remaining unknowns retained",
+      "substantive_display_correction": true,
+      "underlying_record_verification": "partially_verified",
+      "verified_fields": [
+        "application_cycle",
+        "application_url",
+        "cost",
+        "name",
+        "opening_date",
+        "organization",
+        "program_information",
+        "source_url"
+      ]
+    },
+    {
+      "display_changes": {
+        "lastVerified": "2026-11-24"
+      },
+      "id": "uchicago-stem-lab-2027",
+      "note": "Official page describes paid six-week research for Chicago high-school students aged16+ by first day. It still gives inconsistent Summer2027 opening statements: early2027 with February interviews versus March. Keep WATCH and require organizer confirmation; no pay amount or firm deadline invented.",
+      "previous_review": "2026-11-15T00:00:00Z",
+      "sources": [
+        {
+          "content_sha256": "e92c98738f88e7fc3bf18ba28ca8f7e14c91ac666caabc5514cc0d305f121f17",
+          "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+          "observed_at": "2026-11-24T06:09:54Z",
+          "url": "https://pme.uchicago.edu/academics/stem-education-community-outreach/k-12-student-programs/after-school-stem-lab-internship"
+        }
+      ],
+      "status": "PASS — bounded official-source review; remaining unknowns retained",
+      "substantive_display_correction": false,
+      "underlying_record_verification": "partially_verified",
+      "verified_fields": [
+        "application_cycle",
+        "application_url",
+        "name",
+        "organization",
+        "program_information",
+        "source_status",
+        "source_url"
+      ]
+    },
+    {
+      "display_changes": {
+        "cost": "$500 residential fee",
+        "grades": [
+          "11"
+        ],
+        "lastVerified": "2026-11-24"
+      },
+      "id": "ut-mite-2027",
+      "note": "Two official UT pages agree on current juniors/rising seniors residing in the U.S.; sessionsJune13–17/July25–29,2027, fee$500. Applications open December2026, final February28,2027 at11:59PM Central. No exact December day has been published.",
+      "previous_review": "2026-11-15T00:00:00Z",
+      "sources": [
+        {
+          "content_sha256": "29304f1974ab245671acf7b7ca6cf68c7e11ced014ca7f441f761225ebab1036",
+          "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+          "observed_at": "2026-11-24T06:09:55Z",
+          "url": "https://stemstarts.utexas.edu/program/my-introduction-to-engineering-session-1/"
+        },
+        {
+          "content_sha256": "71cf07ac2c3df8d78512e946d94c5d23ed340edba20b928f953f7be1dd963d31",
+          "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+          "observed_at": "2026-11-24T06:09:55Z",
+          "url": "https://cockrell.utexas.edu/connect/k-12-outreach/mite/"
+        }
+      ],
+      "status": "PASS — bounded official-source review; remaining unknowns retained",
+      "substantive_display_correction": true,
+      "underlying_record_verification": "partially_verified",
+      "verified_fields": [
+        "application_cycle",
+        "application_url",
+        "cost",
+        "deadline",
+        "deadline_timezone",
+        "grades",
+        "name",
+        "organization",
+        "program_information",
+        "source_url"
+      ]
+    },
+    {
+      "display_changes": {
+        "lastVerified": "2026-11-24"
+      },
+      "id": "ut-sees-watch",
+      "note": "Main, eligibility and FAQ pages still describe the closed 2026 cycle. February 22, 2026 deadline and July 2026 activities are historical. Future continuation depends on funding; no 2027 opening, costs or eligibility confirmed. Retain the opportunity as a watch item.",
+      "previous_review": "2026-11-15T00:00:00Z",
+      "sources": [
+        {
+          "content_sha256": "2074009d585bf0155d46bfd1310bc08c7999d49fcc47f5778731c2cb42aafe18",
+          "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+          "observed_at": "2026-11-24T06:09:53Z",
+          "url": "https://csr.utexas.edu/education-outreach/high-school-internships/sees/"
+        },
+        {
+          "content_sha256": "9c5730122a04bf6070afcffb320743b3b4b1d710a75372056d5e305b850e1910",
+          "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+          "observed_at": "2026-11-24T06:09:53Z",
+          "url": "https://csr.utexas.edu/education-outreach/high-school-internships/sees/eligibility/"
+        },
+        {
+          "content_sha256": "4d514e536e163de637b28d96a1108efea0b6f1f39afa19621065da4d3b4a6618",
+          "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+          "observed_at": "2026-11-24T06:09:53Z",
+          "url": "https://csr.utexas.edu/education-outreach/high-school-internships/sees/faqs/"
+        }
+      ],
+      "status": "PASS — bounded official-source review; remaining unknowns retained",
+      "substantive_display_correction": false,
+      "underlying_record_verification": "partially_verified",
+      "verified_fields": [
+        "application_url",
+        "name",
+        "organization",
+        "program_information",
+        "source_status",
+        "source_url"
+      ]
+    },
+    {
+      "display_changes": {
+        "cost": "No participation fee; unpaid; housing is not provided.",
+        "lastVerified": "2026-11-24"
+      },
+      "id": "utah-engineering-research-2027",
+      "note": "Official page gives November30 registration and June7–August10 research without an explicit cycle year; eligibility mentions rising seniors graduating2028. No participation charge, unpaid, no housing. Keep cycle/deadline unknown until the organizer confirms the year; do not derive a year solely from graduation cohort.",
+      "previous_review": "2026-11-15T00:00:00Z",
+      "sources": [
+        {
+          "content_sha256": "9d4748e4bb7158ba679c65550858bdc9a64efcf48d84092f3e2de38e5f52792d",
+          "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+          "observed_at": "2026-11-24T06:09:54Z",
+          "url": "https://www.price.utah.edu/k12/high-school-summer-research-internship"
+        }
+      ],
+      "status": "PASS — bounded official-source review; remaining unknowns retained",
+      "substantive_display_correction": false,
+      "underlying_record_verification": "partially_verified",
+      "verified_fields": [
+        "application_url",
+        "cost",
+        "format",
+        "program_information",
+        "source_url"
+      ]
+    },
+    {
+      "display_changes": {
+        "lastVerified": "2026-11-24",
+        "timing": "Applications open Dec. 1, 2026; deadline Apr. 30, 2027. Frontiers I: July 5–16, 2027; Frontiers II: July 18–30, 2027."
+      },
+      "id": "wpi-frontiers",
+      "note": "Official page now gives December1,2026 opening, April30,2027 deadline, July5–16 orJuly18–30 sessions, rising grades10–12, $4,995 each including room/meals/activities, application free. Policy defines grade as fall-after-camp and describes international language evidence and limited aid.",
+      "previous_review": "2026-11-15T00:00:00Z",
+      "sources": [
+        {
+          "content_sha256": "9e3ab006602923bb3c2b59f9ac657def557471bc6d0e51c152404efeded0814d",
+          "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+          "observed_at": "2026-11-24T06:09:55Z",
+          "url": "https://www.wpi.edu/academics/pre-collegiate/summer-programs/frontiers"
+        },
+        {
+          "content_sha256": "2cb6bf765748444d7805299d80ab20d19a4aa6326c4fc4202522d22a1d00a689",
+          "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+          "observed_at": "2026-11-24T06:09:55Z",
+          "url": "https://www.wpi.edu/academics/pre-collegiate/about/policies"
+        }
+      ],
+      "status": "PASS — bounded official-source review; remaining unknowns retained",
+      "substantive_display_correction": true,
+      "underlying_record_verification": "partially_verified",
+      "verified_fields": [
+        "application_cycle",
+        "application_url",
+        "cost",
+        "deadline",
+        "name",
+        "opening_date",
+        "organization",
+        "program_information",
+        "source_url"
+      ]
+    },
+    {
+      "display_changes": {
+        "grades": [
+          "11",
+          "12"
+        ],
+        "lastVerified": "2026-11-24"
+      },
+      "id": "wright-scholar-2027",
+      "note": "Official page gives November1,2026–January10,2027 5PM Eastern application window and June7–July30 research. Current junior/senior, age16 byJune1, U.S. citizenship, GPA3.5 or stated home-school alternative. Students arrange housing, food and transport. Age date and actual internship start are distinct.",
+      "previous_review": "2026-11-15T00:00:00Z",
+      "sources": [
+        {
+          "content_sha256": "9c971811f198f1d3101b045fcd38297177cf95110e7a8834fb31ca6e271444af",
+          "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
+          "observed_at": "2026-11-24T06:09:54Z",
+          "url": "https://wpafbstem.com/Wright_Scholar/Wright_scholar.html"
+        }
+      ],
+      "status": "PASS — bounded official-source review; remaining unknowns retained",
+      "substantive_display_correction": false,
+      "underlying_record_verification": "partially_verified",
+      "verified_fields": [
+        "age_min",
+        "application_cycle",
+        "application_url",
+        "citizenship",
+        "deadline",
+        "deadline_timezone",
+        "grades",
+        "name",
+        "opening_date",
+        "organization",
+        "program_information",
+        "source_url"
+      ]
+    }
+  ],
+  "verification_only_refresh_not_labeled_content_change": true
+}

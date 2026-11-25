@@ -1,3 +1,4 @@
+import {preferredScrollBehavior} from '../../design/golden-horizon/motion';
 import {
   useEffect,
   useState,
@@ -299,8 +300,7 @@ export default function PostWingGuide({
     ) {
 
       target.scrollIntoView({
-        behavior:
-          "smooth",
+        behavior: preferredScrollBehavior(),
 
         block:
           "center",
@@ -354,7 +354,7 @@ export default function PostWingGuide({
 
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: preferredScrollBehavior(),
     });
   }
 

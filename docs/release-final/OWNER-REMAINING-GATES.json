@@ -1,0 +1,14 @@
+{
+  "receivedAtUTC": "2026-11-20T01:27:54.593196+00:00",
+  "manualTestsExecuted": 0,
+  "manualPass": 0,
+  "manualFail": 0,
+  "mobileKeyboardScreenReaderSurveyProjectA4Letter": "UNVERIFIED",
+  "latestGuidePreviouslyInspectable": false,
+  "databaseRecoveryFacility": "UNKNOWN",
+  "databaseBackupOrBookmark": "UNKNOWN",
+  "lastSuccessfulRestore": "UNKNOWN",
+  "ownerSqlConsoleAccess": "UNKNOWN",
+  "productionSqlPreflightExecuted": false,
+  "productionRecommendation": "NO-GO"
+}

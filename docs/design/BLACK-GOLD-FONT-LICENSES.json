@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Manrope",
+    "file": "src/assets/black-gold/fonts/manrope-latin.woff2",
+    "sourceCss": "https://fonts.googleapis.com/css2?family=Manrope:wght@400..800&display=swap",
+    "fontSource": "https://fonts.gstatic.com/s/manrope/v23/xn7gYHE41ni1AdIRggexSg.woff2",
+    "sourceLicense": "https://raw.githubusercontent.com/google/fonts/main/ofl/manrope/OFL.txt",
+    "license": "SIL Open Font License 1.1",
+    "fontSha256": "8c2def024c1bf31aacf3624ae3c4d701269b4ec3dc765c04830839f0d36b2d9e",
+    "licenseSha256": "58172e0c0fac2cda8a37b348164bb55e44b0e69051e557e92b1d3f6910141f7b",
+    "bytes": 24532,
+    "subset": "Upstream Latin subset"
+  },
+  {
+    "name": "Space Grotesk",
+    "file": "src/assets/black-gold/fonts/spacegrotesk-latin.woff2",
+    "sourceCss": "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400..700&display=swap",
+    "fontSource": "https://fonts.gstatic.com/s/spacegrotesk/v22/V8mDoQDjQSkFtoMM3T6r8E7mPbF4Cw.woff2",
+    "sourceLicense": "https://raw.githubusercontent.com/google/fonts/main/ofl/spacegrotesk/OFL.txt",
+    "license": "SIL Open Font License 1.1",
+    "fontSha256": "0640890476fc1198ab4de571fb658de443c4d85b66466ec09534a8737ab1ce9d",
+    "licenseSha256": "564ce565c371c5e5bbf286006565a7c9aa55a9f56e7ca58d56e05d649dd61a72",
+    "bytes": 22288,
+    "subset": "Upstream Latin subset"
+  }
+]

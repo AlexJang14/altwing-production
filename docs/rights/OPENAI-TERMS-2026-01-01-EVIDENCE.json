@@ -1,0 +1,37 @@
+{
+  "reviewDate": "2026-11-18",
+  "sourceType": "Official OpenAI policy page, read-only retrieval",
+  "page": {
+    "requestedUrl": "https://openai.com/policies/terms-of-use/",
+    "finalUrl": "https://openai.com/policies/terms-of-use/",
+    "httpStatus": 200,
+    "contentType": "text/html; charset=utf-8",
+    "bytes": 398658,
+    "sha256": "773400b48a2504caa9e1b9a1e3e6e41daf7cffcebb3381d84e3ee0a6e59d445b",
+    "fetchedAtUTC": "2026-11-18T05:19:24.878985+00:00"
+  },
+  "displayedPublishedDate": "2026-01-01",
+  "displayedEffectiveDate": "2026-01-01",
+  "effectiveDateVerified": true,
+  "relevantSections": [
+    "Content / Your content",
+    "Ownership of content",
+    "Similarity of content"
+  ],
+  "findings": {
+    "OpenAiToUserOutputAssignment": "As between OpenAI and the user, to the extent permitted by law; OpenAI assigns its rights, if any",
+    "inputResponsibility": "User must have rights/licenses/permissions needed to provide Input",
+    "uniqueness": "Output may not be unique; other users may receive similar output",
+    "exclusions": "No assignment of other users output or Third Party Output"
+  },
+  "limits": {
+    "accountLegalPartyVerified": false,
+    "regionalBusinessApplicabilityVerified": false,
+    "historicalAcceptanceVerified": false,
+    "exclusiveCopyrightClaimed": false,
+    "referenceImageRightsInferred": false,
+    "founderPermissionFromAccountHolderProvided": false
+  },
+  "snapshotStorage": "Full fetched HTML/text retained in task-private temporary review workspace, not public source; hash records retrieved bytes, not historical account acceptance",
+  "productionChanged": false
+}

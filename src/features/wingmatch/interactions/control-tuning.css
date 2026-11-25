@@ -4,18 +4,13 @@
   padding: 24px;
 
   border: 1px solid
-    rgba(255, 255, 255, 0.09);
-  border-radius: 20px;
+    var(--gh-border);
+  border-radius: var(--gh-radius-card);
 
   background:
-    radial-gradient(
-      circle at 82% 6%,
-      rgba(91, 141, 239, 0.12),
-      transparent 29%
-    ),
-    rgba(255, 255, 255, 0.035);
+    var(--gh-surface);
 
-  color: white;
+  color: var(--gh-text);
 }
 
 .control-tuning__header {
@@ -26,10 +21,10 @@
 }
 
 .control-tuning__header span {
-  color: #5b8def;
+  color: var(--gh-text-muted);
 
-  font-size: 8px;
-  font-weight: 850;
+  font-size: var(--gh-text-xs);
+  font-weight: 600;
   letter-spacing: 0.15em;
 }
 
@@ -45,39 +40,39 @@
 
   border-radius: 999px;
 
-  font-size: 7px;
-  font-weight: 850;
+  font-size: var(--gh-text-xs);
+  font-weight: 600;
   letter-spacing: 0.11em;
 }
 
 .control-state--slow {
   border: 1px solid
-    rgba(91, 141, 239, 0.28);
+    var(--gh-border);
 
   background:
-    rgba(91, 141, 239, 0.08);
+    var(--gh-surface);
 
-  color: #87aaff;
+  color: var(--gh-text-muted);
 }
 
 .control-state--balanced {
   border: 1px solid
-    rgba(111, 223, 170, 0.28);
+    var(--gh-border);
 
   background:
-    rgba(111, 223, 170, 0.08);
+    var(--gh-surface);
 
-  color: #79ddb0;
+  color: var(--gh-text-muted);
 }
 
 .control-state--oscillating {
   border: 1px solid
-    rgba(255, 200, 87, 0.3);
+    var(--gh-border);
 
   background:
-    rgba(255, 200, 87, 0.08);
+    var(--gh-surface);
 
-  color: #ffc857;
+  color: var(--gh-text-muted);
 }
 
 .control-waveform {
@@ -89,17 +84,17 @@
   overflow: hidden;
 
   border: 1px solid
-    rgba(255, 255, 255, 0.07);
-  border-radius: 13px;
+    var(--gh-border);
+  border-radius: var(--gh-radius-card);
 
-  background: #0a1027;
+  background: var(--gh-surface);
 }
 
 .control-waveform__label {
-  color: rgba(255, 255, 255, 0.35);
+  color: var(--gh-text-muted);
 
-  font-size: 7px;
-  font-weight: 850;
+  font-size: var(--gh-text-xs);
+  font-weight: 600;
   letter-spacing: 0.13em;
 }
 
@@ -146,10 +141,10 @@
   display: flex;
   gap: 14px;
 
-  color: rgba(255, 255, 255, 0.35);
+  color: var(--gh-text-muted);
 
-  font-size: 7px;
-  font-weight: 800;
+  font-size: var(--gh-text-xs);
+  font-weight: 600;
   letter-spacing: 0.09em;
 }
 
@@ -168,11 +163,11 @@
 
 .control-dot--target {
   background:
-    rgba(255, 255, 255, 0.45);
+    var(--gh-surface);
 }
 
 .control-dot--vehicle {
-  background: #5b8def;
+  background: var(--gh-surface);
 }
 
 .control-slider-block {
@@ -193,24 +188,24 @@
 }
 
 .control-slider-heading span {
-  color: rgba(255, 255, 255, 0.48);
+  color: var(--gh-text-muted);
 
-  font-size: 8px;
-  font-weight: 850;
+  font-size: var(--gh-text-xs);
+  font-weight: 600;
   letter-spacing: 0.1em;
 }
 
 .control-slider-heading strong {
-  font-size: 24px;
+  font-size: var(--gh-text-card);
 
   font-variant-numeric:
     tabular-nums;
 }
 
 .control-slider-heading small {
-  color: rgba(255, 255, 255, 0.32);
+  color: var(--gh-text-muted);
 
-  font-size: 8px;
+  font-size: var(--gh-text-xs);
 }
 
 .control-slider {
@@ -218,7 +213,7 @@
 
   margin: 17px 0 0;
 
-  accent-color: #5b8def;
+  accent-color: var(--gh-interactive);
 
   cursor: grab;
 }
@@ -233,9 +228,9 @@
   display: flex;
   justify-content: space-between;
 
-  color: rgba(255, 255, 255, 0.38);
+  color: var(--gh-text-muted);
 
-  font-size: 8px;
+  font-size: var(--gh-text-xs);
 }
 
 .control-slider-labels > span {
@@ -249,10 +244,10 @@
 }
 
 .control-slider-labels small {
-  color: rgba(255, 255, 255, 0.24);
+  color: var(--gh-text-muted);
 
-  font-size: 6px;
-  font-weight: 800;
+  font-size: var(--gh-text-xs);
+  font-weight: 600;
   letter-spacing: 0.08em;
 }
 
@@ -269,20 +264,20 @@
   padding: 11px;
 
   border: 1px solid
-    rgba(255, 255, 255, 0.07);
-  border-radius: 10px;
+    var(--gh-border);
+  border-radius: var(--gh-radius-card);
 
   background:
-    rgba(255, 255, 255, 0.025);
+    var(--gh-surface);
 }
 
 .control-metric span {
   display: block;
 
-  color: rgba(255, 255, 255, 0.32);
+  color: var(--gh-text-muted);
 
-  font-size: 6px;
-  font-weight: 850;
+  font-size: var(--gh-text-xs);
+  font-weight: 600;
   letter-spacing: 0.11em;
 }
 
@@ -291,7 +286,7 @@
 
   margin-top: 6px;
 
-  font-size: 15px;
+  font-size: var(--gh-text-body);
 
   font-variant-numeric:
     tabular-nums;
@@ -301,22 +296,22 @@
   margin-top: 13px;
   padding: 12px 13px;
 
-  border-left: 2px solid #5b8def;
+  border-left: 2px solid var(--gh-border);
 
   background:
-    rgba(91, 141, 239, 0.045);
+    var(--gh-surface);
 }
 
 .control-tradeoff strong {
-  font-size: 11px;
+  font-size: var(--gh-text-xs);
 }
 
 .control-tradeoff p {
   margin: 4px 0 0;
 
-  color: rgba(255, 255, 255, 0.43);
+  color: var(--gh-text-muted);
 
-  font-size: 9px;
+  font-size: var(--gh-text-xs);
   line-height: 1.45;
 }
 
@@ -328,10 +323,10 @@
 
   border-radius: 999px;
 
-  background: #ff6b6b;
-  color: white;
+  background: var(--gh-surface-soft);
+  color: var(--gh-text);
 
-  font-weight: 800;
+  font-weight: 600;
 
   cursor: pointer;
 

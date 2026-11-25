@@ -1,0 +1,19 @@
+{
+  "schemaSql": null,
+  "aggregateRowCounts": null,
+  "pendingObjectCollisionCount": null,
+  "recommendedFieldDuplicateGroups": null,
+  "appliedMigrationState": null,
+  "sqlExecutedAtUTC": null,
+  "executorRole": null,
+  "recoveryFacility": null,
+  "recoveryPointReference": null,
+  "recoveryPointTimeUTC": null,
+  "retentionUntilUTC": null,
+  "restoreOperatorRole": null,
+  "restoreProcedureReference": null,
+  "restoreCapabilityTestReference": null,
+  "status": "UNVERIFIED",
+  "privateRecordsOrSecretsMustNotBeIncluded": true,
+  "note": "Null fields are missing evidence, not zero/PASS. Refresh live preflight and recovery references immediately before an approved migration."
+}

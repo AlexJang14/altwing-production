@@ -12,17 +12,12 @@
 
   border:
     1px solid
-    rgba(91,141,239,.11);
+    var(--gh-border);
 
-  border-radius: 21px;
+  border-radius: var(--gh-radius-card);
 
   background:
-    radial-gradient(
-      circle at 100% 0%,
-      rgba(91,141,239,.08),
-      transparent 32%
-    ),
-    rgba(255,255,255,.018);
+    var(--gh-surface);
 }
 
 
@@ -37,10 +32,10 @@
 
 
 .opportunity-radar-heading span {
-  color: #5b8def;
+  color: var(--gh-text-muted);
 
-  font-size: 7px;
-  font-weight: 950;
+  font-size: var(--gh-text-xs);
+  font-weight: 600;
 
   letter-spacing: .14em;
 }
@@ -58,18 +53,18 @@
   max-width: 610px;
 
   color:
-    rgba(255,255,255,.38);
+    var(--gh-text-muted);
 
-  font-size: 8px;
+  font-size: var(--gh-text-xs);
 
   line-height: 1.5;
 }
 
 
 .opportunity-radar-heading > strong {
-  color: #ffc857;
+  color: var(--gh-text-muted);
 
-  font-size: 9px;
+  font-size: var(--gh-text-xs);
 }
 
 
@@ -90,17 +85,17 @@
 
   border:
     1px solid
-    rgba(255,255,255,.07);
+    var(--gh-border-control);
 
   border-radius: 999px;
 
   color:
-    rgba(255,255,255,.35);
+    var(--gh-text-muted);
 
   background:
     transparent;
 
-  font-size: 6px;
+  font-size: var(--gh-text-xs);
 
   cursor: pointer;
 }
@@ -108,13 +103,13 @@
 
 .opportunity-filters
 button.active {
-  color: white;
+  color: var(--gh-interactive);
 
   border-color:
-    rgba(91,141,239,.35);
+    var(--gh-interactive);
 
   background:
-    rgba(91,141,239,.09);
+    var(--gh-selected);
 }
 
 
@@ -141,12 +136,12 @@ button.active {
 
   border:
     1px solid
-    rgba(255,255,255,.055);
+    var(--gh-border);
 
-  border-radius: 15px;
+  border-radius: var(--gh-radius-card);
 
   background:
-    rgba(255,255,255,.022);
+    var(--gh-surface);
 }
 
 
@@ -161,10 +156,10 @@ button.active {
 
 
 .opportunity-card-top > span {
-  color: #5b8def;
+  color: var(--gh-text-muted);
 
-  font-size: 6px;
-  font-weight: 950;
+  font-size: var(--gh-text-xs);
+  font-weight: 600;
 
   letter-spacing: .1em;
 }
@@ -176,12 +171,12 @@ button.active {
 
   border-radius: 999px;
 
-  color: #ffc857;
+  color: var(--gh-text-muted);
 
   background:
-    rgba(255,200,87,.06);
+    var(--gh-surface);
 
-  font-size: 5px;
+  font-size: var(--gh-text-xs);
 }
 
 
@@ -189,7 +184,7 @@ button.active {
   margin:
     10px 0 0;
 
-  font-size: 15px;
+  font-size: var(--gh-text-body);
 
   line-height: 1.25;
 }
@@ -202,9 +197,9 @@ article > small {
   margin-top: 3px;
 
   color:
-    rgba(255,255,255,.28);
+    var(--gh-text-muted);
 
-  font-size: 6px;
+  font-size: var(--gh-text-xs);
 }
 
 
@@ -214,9 +209,9 @@ article > p {
     10px 0 0;
 
   color:
-    rgba(255,255,255,.42);
+    var(--gh-text-muted);
 
-  font-size: 8px;
+  font-size: var(--gh-text-xs);
 
   line-height: 1.5;
 }
@@ -237,16 +232,16 @@ article > p {
   border-radius: 9px;
 
   background:
-    rgba(255,255,255,.022);
+    var(--gh-surface);
 }
 
 
 .opportunity-meta span {
   display: block;
 
-  color: #5b8def;
+  color: var(--gh-text-muted);
 
-  font-size: 5px;
+  font-size: var(--gh-text-xs);
 
   letter-spacing: .1em;
 }
@@ -258,9 +253,9 @@ article > p {
   margin-top: 4px;
 
   color:
-    rgba(255,255,255,.56);
+    var(--gh-text-muted);
 
-  font-size: 7px;
+  font-size: var(--gh-text-xs);
 
   line-height: 1.45;
 }
@@ -280,23 +275,23 @@ article > p {
 
   border-top:
     1px solid
-    rgba(255,255,255,.045);
+    var(--gh-border);
 }
 
 
 .opportunity-grid footer span {
-  color: #ffc857;
+  color: var(--gh-text-muted);
 
-  font-size: 6px;
-  font-weight: 950;
+  font-size: var(--gh-text-xs);
+  font-weight: 600;
 }
 
 
 .opportunity-grid footer small {
   color:
-    rgba(255,255,255,.22);
+    var(--gh-text-muted);
 
-  font-size: 5px;
+  font-size: var(--gh-text-xs);
 
   text-align: right;
 }
@@ -353,11 +348,11 @@ article > p {
 
 
 .opportunity-state-select > span {
-  color: #7ca5ff;
+  color: var(--gh-interactive);
 
-  font-size: 8px;
+  font-size: var(--gh-text-xs);
 
-  font-weight: 950;
+  font-weight: 600;
 
   letter-spacing: .1em;
 }
@@ -373,18 +368,18 @@ article > p {
 
   border:
     1px solid
-    rgba(91,141,239,.2);
+    var(--gh-border-control);
 
   border-radius: 9px;
 
   outline: none;
 
-  color: white;
+  color: var(--gh-text);
 
   background:
-    #101934;
+    var(--gh-surface-soft);
 
-  font-size: 11px;
+  font-size: var(--gh-text-xs);
 }
 
 
@@ -395,21 +390,21 @@ article > p {
 
   border:
     1px dashed
-    rgba(91,141,239,.16);
+    var(--gh-border);
 
-  border-radius: 14px;
+  border-radius: var(--gh-radius-card);
 
   text-align: center;
 
   background:
-    rgba(91,141,239,.025);
+    var(--gh-surface);
 }
 
 
 .opportunity-empty strong {
   display: block;
 
-  font-size: 15px;
+  font-size: var(--gh-text-body);
 }
 
 
@@ -420,20 +415,20 @@ article > p {
     8px auto;
 
   color:
-    rgba(255,255,255,.6);
+    var(--gh-text-muted);
 
-  font-size: 11px;
+  font-size: var(--gh-text-xs);
 
   line-height: 1.55;
 }
 
 
 .opportunity-empty span {
-  color: #ffc857;
+  color: var(--gh-text-muted);
 
-  font-size: 9px;
+  font-size: var(--gh-text-xs);
 
-  font-weight: 900;
+  font-weight: 600;
 }
 
 
@@ -441,17 +436,17 @@ article > p {
 
 .opportunity-radar-heading span {
   font-size:
-    9px !important;
+    var(--gh-text-xs) !important;
 }
 
 
 .opportunity-radar-heading p {
   color:
-    rgba(255,255,255,.64)
+    var(--gh-text-muted)
     !important;
 
   font-size:
-    12px !important;
+    var(--gh-text-xs) !important;
 
   line-height:
     1.6 !important;
@@ -460,41 +455,41 @@ article > p {
 
 .opportunity-filters button {
   font-size:
-    8px !important;
+    var(--gh-text-xs) !important;
 }
 
 
 .opportunity-card-top > span {
   font-size:
-    8px !important;
+    var(--gh-text-xs) !important;
 }
 
 
 .opportunity-card-top b {
   font-size:
-    7px !important;
+    var(--gh-text-xs) !important;
 }
 
 
 .opportunity-grid
 article > small {
   color:
-    rgba(255,255,255,.48)
+    var(--gh-text-muted)
     !important;
 
   font-size:
-    9px !important;
+    var(--gh-text-xs) !important;
 }
 
 
 .opportunity-grid
 article > p {
   color:
-    rgba(255,255,255,.64)
+    var(--gh-text-muted)
     !important;
 
   font-size:
-    11px !important;
+    var(--gh-text-xs) !important;
 
   line-height:
     1.55 !important;
@@ -503,17 +498,17 @@ article > p {
 
 .opportunity-meta span {
   font-size:
-    7px !important;
+    var(--gh-text-xs) !important;
 }
 
 
 .opportunity-meta strong {
   color:
-    rgba(255,255,255,.68)
+    var(--gh-text-muted)
     !important;
 
   font-size:
-    10px !important;
+    var(--gh-text-xs) !important;
 
   line-height:
     1.5 !important;
@@ -522,17 +517,17 @@ article > p {
 
 .opportunity-grid footer span {
   font-size:
-    8px !important;
+    var(--gh-text-xs) !important;
 }
 
 
 .opportunity-grid footer small {
   color:
-    rgba(255,255,255,.42)
+    var(--gh-text-muted)
     !important;
 
   font-size:
-    7px !important;
+    var(--gh-text-xs) !important;
 
   line-height:
     1.4;

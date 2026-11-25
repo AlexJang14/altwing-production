@@ -1,0 +1,148 @@
+{
+  "reviewDate": "2026-11-17",
+  "reviewTimezone": "America/New_York",
+  "decision": "HOLD — mandatory rights/manual/migration preflight evidence missing; no production approval requested",
+  "featureDevelopmentFrozen": true,
+  "designApproval": {
+    "status": "PASS — recorded",
+    "source": "Current owner instruction",
+    "scope": "Current functionality and private administrator architecture approved from a design perspective",
+    "manualTestsImplied": false,
+    "copyrightClearanceImplied": false,
+    "productionApproval": false
+  },
+  "productionChanged": false,
+  "commitCreated": false,
+  "pushPerformed": false,
+  "deploymentAttempted": false,
+  "migrationApplied": false,
+  "runtimeOrAudienceChanged": false,
+  "frozenReviewedSource": {
+    "treeSha256": "b8c21d4d590c4537e3f4e8594738572dba541e00a0dc71d4421068464df4b543",
+    "files": 375,
+    "allFilesMatchedBeforeDocumentationConsolidation": true,
+    "consolidationChanges": "Documentation and prepared read-only SQL only; no product change"
+  },
+  "automatedChecks": {
+    "passed": 25,
+    "total": 25,
+    "checkedAtUTC": "2026-11-18T03:42:20.253Z",
+    "activeAdvisoryExceptions": 0,
+    "unexpectedFailures": 0,
+    "privateEndpointCases": 150,
+    "requestBoundaryCases": 56,
+    "actualWorkerEntryVerified": true,
+    "earlierFailure": "First full run caught react-refresh metadata handling for new server pages; same existing framework metadata allowance applied to pages, then suite rerun. Evidence retained."
+  },
+  "completedReviews": {
+    "privateSecurity": "PASS — existing evidence; actual identities/gateway remain live checks",
+    "v2v3Usability": "PASS — implementation, rendered markup and isolated controller/handler regression",
+    "researchComparison": "PASS — bounded public-source scope for archived v2; v3 editorial changes documented",
+    "thirdPartyNotices": "PASS — emitted-package notice evidence retained; not universal rights clearance",
+    "founderAuthorization": "RECORDED_SCOPE_LIMITED",
+    "opportunities": "PASS —42 reviewed,30 VERIFIED retained-fact and12 PARTIAL with qualifications",
+    "formerAdvisories": "PASS — both retired; zero active exceptions"
+  },
+  "mandatoryPreApproval": {
+    "mascotRights": {
+      "status": "UNVERIFIED",
+      "dependentGate": "FAIL",
+      "required": "Clarify actual reference-image inputs and rights basis for independently protected third-party material. Dated account-holder usage/modification/publication/hosting/distribution permission has been received within rights held; do not request it again.",
+      "creationEvidenceReceived": true,
+      "creationContext": "CORROBORATED_WITH_LIMITS",
+      "officialTermsEffectiveDateVerified": "2026-01-01",
+      "liveRepositoryPngByteIdentity": "PASS",
+      "reviewRecord": "docs/rights/MASCOT-PROVENANCE-2026-11-18.md",
+      "accountHolderGrantProvided": true,
+      "referenceImageRightsEstablished": false,
+      "grantRecord": "docs/rights/mascot-permission.json",
+      "grantRecordSha256": "fcd6ee74dde4a95a304e4365c6b2a9b861ff86b1fed340735fb4604eb88eb2e8"
+    },
+    "manualAcceptance": {
+      "status": "UNVERIFIED",
+      "preDeploymentCases": 31,
+      "postDeploymentCases": 7,
+      "recordedPassCount": 0,
+      "allTemplateCases": "UNVERIFIED",
+      "required": "Current CSV/JSON plus actual browser/device/PDF evidence; review reusable unchanged-case evidence rather than repeating documented work"
+    },
+    "migrationSafety": {
+      "status": "UNVERIFIED",
+      "required": "Supported recoverable DB backup/recovery point and restore route; authorized schema/row-count/name-collision/duplicate-index SELECT results; refresh before migration",
+      "supportedBackupCapabilityConfirmed": false,
+      "privateDataExported": false
+    }
+  },
+  "operatorPrepared": {
+    "sourceSynced": "GitHub main443f965; local work preserved",
+    "backendBaseline": {
+      "savedVersion": 11,
+      "versionId": "appgprj_6ade62e44e9081919499f0bdeb1a7261~appgver_a0757dc69edc819191ce14daf7b2c385",
+      "deploymentId": "appgdep_6af9f19bb0a081918a0d035e6a276554",
+      "status": "succeeded",
+      "runtimeRevision": 5,
+      "archiveAvailable": true
+    },
+    "migrationFile": "drizzle/0002_research_assessment.sql",
+    "migrationSha256": "d32a63b5fbe73e76c7492d66a4380e8feb3c8267c570e1c677bb6ee800afda3d",
+    "schemaObjects": {
+      "tables": 4,
+      "indexes": 6,
+      "triggers": 3
+    },
+    "existingDbOverview": {
+      "binding": "DB",
+      "userTableNames": 8,
+      "pendingResearchTablesPresent": false,
+      "rowCountsVerified": false,
+      "backupVerified": false
+    },
+    "migrationApplication": "Existing Sites publication applies migrations before Worker upload; no separate manual replay",
+    "releaseOrder": "Approved Sites backend and actual access gate, then GitHub main/existing Actions, then full live verification",
+    "rollback": "Normal Git revert/Actions plus version11 if needed; preserve DB/tables/new responses/current reviewed secrets/both grants"
+  },
+  "privateLoginAfterDeployment": "https://altwing-engineering-pathways.theanna.chatgpt.site/admin/login",
+  "privateDashboardAfterDeployment": "https://altwing-engineering-pathways.theanna.chatgpt.site/admin",
+  "newPrivateRoutesLive": false,
+  "productionOnly": {
+    "allCandidateChecks": "UNVERIFIED",
+    "currentOwnerObservedCloudflarePageView": "PASS — prior existing production receipt only",
+    "bothRealAdministrators": "UNVERIFIED",
+    "anonymousAndUnlistedDenialAndGateway": "UNVERIFIED",
+    "genuineCoreSurveyStorageAndPrivateRetrieval": "UNVERIFIED",
+    "liveHistoryPreparation": "UNVERIFIED",
+    "csvPdfAccuracyAndPrivacy": "UNVERIFIED",
+    "cloudflareBeaconAndVisits": "UNVERIFIED",
+    "genuineBehaviorOutcomes": "UNVERIFIED",
+    "publicFeaturesAndProgress": "UNVERIFIED"
+  },
+  "preserved": [
+    "Historical analytics/feedback and questionnaire versions",
+    "Both existing server-only administrator grants and signing configuration",
+    "DB binding and immutable applied migrations",
+    "Student browser storage/progress and all public features",
+    "altwing.org, Cloudflare DNS/proxy/analytics configuration, Site ownership and audience",
+    "Proprietary license status and third-party notices"
+  ],
+  "notAdditionalGates": [
+    "No blanket contributor assignments without a concrete outside-rights issue",
+    "No paid access to restricted instruments absent a concrete copying concern",
+    "No repeat of completed source audits for unchanged material",
+    "No pre-deployment fabrication of genuine feedback/Visits/new real-account tests"
+  ],
+  "approvalRequested": false,
+  "canonicalRecord": "docs/FINAL-PRODUCTION-RELEASE.md",
+  "runbook": "docs/release-readiness/DEPLOYMENT-RUNBOOK.md",
+  "postDeploymentPlan": "docs/release-readiness/POST-DEPLOYMENT-VERIFICATION.md",
+  "mascotEvidenceUpdateDate": "2026-11-18",
+  "mascotPermissionUpdateDate": "2026-11-18",
+  "isolatedVisualDesignWork": {
+    "ownerRequestDate": "2026-11-18",
+    "branch": "design/black-gold-homepage",
+    "scope": "Homepage preview first; full-platform visual changes await visual-direction approval",
+    "preservedOriginalCandidate": true,
+    "productionUnchanged": true,
+    "productionApproval": false,
+    "reviewDocument": "docs/design/BLACK-GOLD-HOMEPAGE-REVIEW.md"
+  }
+}

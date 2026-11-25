@@ -1,0 +1,61 @@
+{
+  "retiredAtUTC": "2026-11-16T01:23:11.011052+00:00",
+  "reviewDate": "2026-11-15",
+  "reviewTimezone": "America/New_York",
+  "baselineProductionCommit": "443f965f2c5f45b2199c24b0b5db800eb5fee60b",
+  "advisories": {
+    "guidance-freshness": {
+      "reason": "42 existing program records were last verified on 2026-10-25. Recheck official sources; dates have not been changed for this ownership migration.",
+      "files": {
+        "scripts/check-guidance-freshness.mjs": "ef7c74b8f6087c269d8466a20fc06ceef5a7afddb7039e8a075d721a63b567f7",
+        "src/features/guidance/opportunityCatalog.ts": "aa2888b8a3541b8e0993d145eebc250f81edcd822bbdd3e2132635ea6426b226",
+        "src/features/guidance/additionalOpportunities.ts": "e98a8864ff2d355f9028e2a5979ecab98594b4078a55947c81121f206dd515d7"
+      },
+      "requiredOutput": [
+        "Guidance opportunities: 42 source-check date records.",
+        "Newest verification: 2026-10-25",
+        "42 opportunity record(s) are older than 14 days."
+      ]
+    },
+    "legacy-source-audit": {
+      "reason": "Historical audit expects Deep Space Packs and VERIFIED ACCOUNTS REQUIRED text absent from the current production baseline. Functional progression/pack tests remain required.",
+      "files": {
+        "scripts/final-altwing-qa.py": "f93af70f17620e98ec6cc8a342ed503f0c3cfe8df2303b598dc2997466fc40a2",
+        "src/features/wingmatch/engine/wingmatchV5.ts": "7876b75617104e5018149594e7fc05c233511d4b764bbda25808b512396c2502",
+        "src/features/wingmatch/result/WingMascot.tsx": "f56b72450ad2206b5525f296153c02313e0f2b15f5efcd630079e93c01b7698f",
+        "src/features/wingmatch/result/WingMatchResult.tsx": "0af4e20998635a739f5ae1c4bdead1e6464e69b3ff81f5dd3149f4decfa6ca34",
+        "src/features/wingmatch/opportunities/OpportunityRadar.tsx": "1ef00ff4935c1d2b04934e1326060057e1d5700d8935e736e594388beb5b7fac",
+        "src/features/wingmatch/build/BuildWing.tsx": "1152cb98e7d54be49e76a927c527eafc043ed2a6638953d0e971a6929793b6a6",
+        "src/features/wingmatch/build/ProjectPortfolio.tsx": "0409db963466e4d1ffeecc24d751b2bc357f72c8e5e601020412b81049df9df0",
+        "src/features/progression/MyUniversePanel.tsx": "4b68d5bbaf349d1c445108c877b8e0d65898ed4af18f5eaebb0f51787c77cb9f"
+      },
+      "requiredOutput": [
+        "\u2717 Cosmic Pack Vault: expected marker missing",
+        "\u2717 Honest leaderboard lock: expected marker missing",
+        "FINAL QA FAILED:"
+      ]
+    }
+  },
+  "resolutions": {
+    "guidance-freshness": {
+      "status": "PASS targeted check",
+      "change": "All42 actual records reviewed against official sources, factual/status/grade/cost corrections applied, uncertainty retained, client-date checks tied to record/evidence hashes.",
+      "evidence": "docs/release-readiness/OPPORTUNITY-VERIFICATION.json",
+      "command": "npm run guidance:freshness"
+    },
+    "legacy-source-audit": {
+      "status": "PASS targeted check",
+      "change": "Retained seven historical checks; replaced obsolete decorative-label expectations with actual route composition, reward transactions/persistence and real component rendering. No leaderboard added or security claim invented.",
+      "evidence": "docs/release-readiness/LEGACY-AUDIT-INVESTIGATION.md",
+      "command": "python3 scripts/final-altwing-qa.py"
+    }
+  },
+  "finalValidation": {
+    "checkedAtUTC": "2026-11-16T01:28:28.349Z",
+    "checksPassed": 25,
+    "checksTotal": 25,
+    "activeAdvisories": 0,
+    "unexpectedFailures": 0,
+    "productionChanged": false
+  }
+}

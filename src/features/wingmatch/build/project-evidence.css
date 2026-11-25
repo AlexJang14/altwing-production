@@ -16,21 +16,21 @@
 
   border:
     1px solid
-    rgba(91,141,239,.12);
+    var(--gh-border);
 
-  border-radius: 20px;
+  border-radius: var(--gh-radius-card);
 
   background:
-    rgba(255,255,255,.024);
+    var(--gh-surface);
 }
 
 
 .build-project-context-heading span,
 .build-version-history > span {
-  color: #5b8def;
+  color: var(--gh-text-muted);
 
-  font-size: 9px;
-  font-weight: 950;
+  font-size: var(--gh-text-xs);
+  font-weight: 600;
 
   letter-spacing: .13em;
 }
@@ -41,9 +41,9 @@
   margin:
     6px 0 0;
 
-  color: white;
+  color: var(--gh-text);
 
-  font-size: 25px;
+  font-size: var(--gh-text-card);
 }
 
 
@@ -54,9 +54,9 @@
     7px 0 0;
 
   color:
-    rgba(255,255,255,.61);
+    var(--gh-text-muted);
 
-  font-size: 12px;
+  font-size: var(--gh-text-xs);
 
   line-height: 1.6;
 }
@@ -96,10 +96,10 @@ label.context-wide {
 
 .build-project-context-grid
 label > span {
-  color: #83a7ff;
+  color: var(--gh-text-muted);
 
-  font-size: 9px;
-  font-weight: 900;
+  font-size: var(--gh-text-xs);
+  font-weight: 600;
 
   letter-spacing: .08em;
 }
@@ -114,20 +114,20 @@ label > span {
 
   border:
     1px solid
-    rgba(255,255,255,.09);
+    var(--gh-border-control);
 
-  border-radius: 11px;
+  border-radius: var(--gh-radius-card);
 
   outline: none;
 
-  color: white;
+  color: var(--gh-text);
 
   background:
-    rgba(255,255,255,.035);
+    var(--gh-surface-soft);
 
   font: inherit;
 
-  font-size: 12px;
+  font-size: var(--gh-text-xs);
 
   line-height: 1.5;
 }
@@ -155,11 +155,10 @@ input:focus,
 .build-project-context-grid
 textarea:focus {
   border-color:
-    rgba(91,141,239,.5);
+    var(--gh-interactive);
 
   box-shadow:
-    0 0 0 3px
-    rgba(91,141,239,.07);
+    none;
 }
 
 
@@ -185,12 +184,12 @@ button {
 
   border-radius: 9px;
 
-  color: #081022;
+  color: var(--gh-text);
 
-  background: #ffc857;
+  background: var(--gh-surface-soft);
 
-  font-size: 9px;
-  font-weight: 950;
+  font-size: var(--gh-text-xs);
+  font-weight: 600;
 
   cursor: pointer;
 }
@@ -198,10 +197,10 @@ button {
 
 .build-project-context-actions
 span {
-  color: #ffc857;
+  color: var(--gh-text-muted);
 
-  font-size: 9px;
-  font-weight: 900;
+  font-size: var(--gh-text-xs);
+  font-weight: 600;
 }
 
 
@@ -212,14 +211,14 @@ span {
 
   border:
     1px solid
-    rgba(255,255,255,.06);
+    var(--gh-border);
 
-  border-radius: 15px;
+  border-radius: var(--gh-radius-card);
 
   text-align: left;
 
   background:
-    rgba(255,255,255,.022);
+    var(--gh-surface);
 }
 
 
@@ -249,25 +248,25 @@ article {
   border-radius: 9px;
 
   background:
-    rgba(255,255,255,.025);
+    var(--gh-surface);
 }
 
 
 .build-version-history-list
 strong {
   color:
-    rgba(255,255,255,.76);
+    var(--gh-text-muted);
 
-  font-size: 11px;
+  font-size: var(--gh-text-xs);
 }
 
 
 .build-version-history-list
 span {
   color:
-    rgba(255,255,255,.4);
+    var(--gh-text-muted);
 
-  font-size: 9px;
+  font-size: var(--gh-text-xs);
 }
 
 
@@ -275,9 +274,9 @@ span {
   margin-top: 12px;
 
   color:
-    rgba(255,255,255,.4);
+    var(--gh-text-muted);
 
-  font-size: 10px;
+  font-size: var(--gh-text-xs);
 }
 
 

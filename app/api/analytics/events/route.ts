@@ -15,9 +15,13 @@ async function ingest(request:Request){
   if(request.headers.get('DNT')==='1'||request.headers.get('Sec-GPC')==='1')return json({accepted:true,recorded:false},202);
   try{
     const db=analyticsDb(),now=Math.floor(Date.now()/1000),p=event.properties;
+    // D1 serializes writes. Keep the semantic guard inside this INSERT so
+    // racing/reloaded clients cannot both record a field exploration. Existing
+    // historical duplicates remain untouched; no historical UNIQUE index is needed.
     const inserted=await db.prepare(`INSERT OR IGNORE INTO analytics_events (id,session_id,event,created_at,page,from_page,to_page,placement,project,major,wing,seconds,origin)
-      SELECT ?,?,?,?,?,?,?,?,?,?,?,?,? WHERE (SELECT COUNT(*) FROM analytics_events WHERE session_id=? AND created_at>=?)<60 AND (SELECT COUNT(*) FROM analytics_events WHERE session_id=? AND created_at>=?)<500`)
-      .bind(event.id,event.sessionId,event.event,now,p.page,p.from_page??null,p.to_page??null,p.placement??null,p.project??null,p.major??null,p.wing??null,p.previous_page_seconds??null,request.headers.get('Origin'),event.sessionId,now-60,event.sessionId,now-86400).run();
+      SELECT ?,?,?,?,?,?,?,?,?,?,?,?,? WHERE (SELECT COUNT(*) FROM analytics_events WHERE session_id=? AND created_at>=?)<60 AND (SELECT COUNT(*) FROM analytics_events WHERE session_id=? AND created_at>=?)<500
+      AND (? <> 'Recommended Field Explored' OR NOT EXISTS (SELECT 1 FROM analytics_events WHERE session_id=? AND major=? AND event='Recommended Field Explored'))`)
+      .bind(event.id,event.sessionId,event.event,now,p.page,p.from_page??null,p.to_page??null,p.placement??null,p.project??null,p.major??null,p.wing??null,p.previous_page_seconds??null,request.headers.get('Origin'),event.sessionId,now-60,event.sessionId,now-86400,event.event,event.sessionId,p.major??null).run();
     if(event.id.startsWith('0')){
       const history=await db.prepare('SELECT backfill_done FROM impact_meta WHERE id=1').all<{backfill_done:number}>();
       if(!history.results.length||history.results[0].backfill_done===1)await db.prepare('DELETE FROM analytics_events WHERE created_at < ?').bind(now-90*86400).run();

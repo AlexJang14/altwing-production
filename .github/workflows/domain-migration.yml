@@ -1,6 +1,10 @@
 name: Validate custom-domain migration
 on:
   workflow_call:
+    inputs:
+      ref:
+        type: string
+        default: ""
   workflow_dispatch:
 permissions:
   contents: read
@@ -9,6 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.ref || github.sha }}
       - uses: actions/setup-node@v4
         with:
           node-version: '22'

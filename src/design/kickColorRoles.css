@@ -1,0 +1,24 @@
+/* Imported only by the Color Lab. Control matches the previous homepage exactly.
+   Gold = value/achievement. Kick = curiosity/interaction/exploration.
+   No base colors, layout, content, imagery, rarity or scientific colors change. */
+.aw-theme-black-gold[data-aw-kick]:not([data-aw-kick="control"]){
+ --aw-role-achievement:var(--aw-color-gold);
+ --aw-role-exploration:var(--aw-kick-color);
+ --aw-role-on-exploration:var(--aw-color-obsidian);
+ --aw-focus-ring:2px solid var(--aw-role-exploration);
+}
+.aw-theme-black-gold[data-aw-kick]:not([data-aw-kick="control"]) .aw-gold-home .aw-gold-button:not(.aw-gold-button-outline){background:var(--aw-role-exploration);border-color:var(--aw-role-exploration);color:var(--aw-role-on-exploration)}
+.aw-theme-black-gold[data-aw-kick]:not([data-aw-kick="control"]) .aw-gold-home .aw-gold-button:not(.aw-gold-button-outline):hover{background:var(--aw-role-exploration);border-color:var(--aw-role-exploration)}
+.aw-theme-black-gold[data-aw-kick]:not([data-aw-kick="control"]) .aw-gold-project-tabs button[aria-pressed=true]{color:var(--aw-role-exploration);border-color:var(--aw-role-exploration);background:var(--aw-kick-selected-surface)}
+.aw-theme-black-gold[data-aw-kick]:not([data-aw-kick="control"]) .aw-gold-project-tabs button:hover{border-color:var(--aw-role-exploration)}
+.aw-theme-black-gold[data-aw-kick]:not([data-aw-kick="control"]) .aw-gold-eyebrow>span{background:var(--aw-role-exploration)}
+.aw-theme-black-gold[data-aw-kick]:not([data-aw-kick="control"]) .aw-gold-orbital{stroke:var(--aw-role-exploration);opacity:var(--aw-kick-orbit-opacity)}
+.aw-theme-black-gold[data-aw-kick]:not([data-aw-kick="control"]) .aw-gold-orbit-dot{fill:var(--aw-role-exploration)}
+.aw-theme-black-gold[data-aw-kick]:not([data-aw-kick="control"]) :is(.aw-gold-link,.aw-gold-path-cta,.aw-gold-project-index>a,.aw-gold-opportunity-links>a,.aw-gold-opportunity-links>button)>svg{color:var(--aw-role-exploration)}
+.aw-theme-black-gold[data-aw-kick]:not([data-aw-kick="control"]) .aw-main-nav>a:is(:hover,[aria-current=page]),
+.aw-theme-black-gold[data-aw-kick]:not([data-aw-kick="control"]) .aw-footer nav a:hover,
+.aw-theme-black-gold[data-aw-kick]:not([data-aw-kick="control"]) .aw-gold-home .aw-gold-link:hover{color:var(--aw-role-exploration)}
+.aw-theme-black-gold[data-aw-kick]:not([data-aw-kick="control"]) .aw-gold-home .aw-gold-button-outline:hover{background:var(--aw-kick-selected-surface);border-color:var(--aw-role-exploration);color:var(--aw-color-pearl)}
+.aw-theme-black-gold:is([data-aw-kick-level="4"],[data-aw-kick-level="5"]):not([data-aw-kick="control"]) .aw-gold-hero-copy>.aw-gold-eyebrow{color:var(--aw-role-exploration)}
+.aw-theme-black-gold[data-aw-kick-level="5"]:not([data-aw-kick="control"]) .aw-gold-home .aw-gold-eyebrow{color:var(--aw-role-exploration)}
+.aw-theme-black-gold[data-aw-kick-level="5"]:not([data-aw-kick="control"]) .aw-gold-home .aw-gold-button-outline{border-color:var(--aw-role-exploration)}

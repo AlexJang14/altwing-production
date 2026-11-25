@@ -25,7 +25,9 @@ export type OpportunityCategory =
   | "INTERNSHIP"
   | "SUMMER PROGRAM"
   | "RESEARCH"
-  | "COMPETITION";
+  | "COMPETITION"
+  | "SCHOLARSHIP"
+  | "MENTORSHIP";
 
 export interface StudentProfile {
   grade: "" | "9" | "10" | "11" | "12";

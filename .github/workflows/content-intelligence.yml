@@ -1,0 +1,188 @@
+name: AltWing public content intelligence
+
+on:
+  pull_request:
+    paths:
+      - 'content/intelligence/**'
+      - 'scripts/content*'
+      - 'scripts/content_intelligence/**'
+      - 'scripts/check-content*'
+      - 'src/content/**'
+      - 'src/components/ContentFreshness.tsx'
+      - 'src/features/guidance/**'
+      - '.github/workflows/**'
+      - 'package.json'
+      - 'package-lock.json'
+  schedule:
+    - cron: '17 6 * * 1'
+      timezone: America/New_York
+    - cron: '37 5 * * *'
+      timezone: America/New_York
+    # Initial launch activates verified daily/weekly updates only.
+    # Optional monthly collection remains available through workflow_dispatch;
+    # no monthly cron until the disabled Scorecard collector is verified.
+  workflow_dispatch:
+    inputs:
+      mode:
+        type: choice
+        options: [daily, weekly, monthly, all]
+        default: weekly
+      dry_run:
+        description: Keep true until production publishing is explicitly approved
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+concurrency:
+  group: altwing-content-intelligence
+  cancel-in-progress: false
+
+jobs:
+  validation:
+    if: github.event_name == 'pull_request' || github.event_name == 'workflow_dispatch' || vars.ALTWING_CONTENT_AUTOMATION_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+      - run: npm run test:content
+      - run: npm run test:content:ui
+      - run: npm run test:content:workflows
+      - run: npm run content:validate
+      - run: npm run typecheck
+
+  collect:
+    needs: validation
+    if: github.event_name != 'pull_request' && (github.event_name == 'workflow_dispatch' || vars.ALTWING_CONTENT_AUTOMATION_ENABLED == 'true')
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    outputs:
+      complete: ${{ steps.collect.outputs.complete }}
+      eligible: ${{ steps.collect.outputs.eligible }}
+      stale: ${{ steps.collect.outputs.stale }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test public-only validation and failure handling
+        run: python3 -B -m unittest discover -s scripts/content_intelligence -p 'test_*.py' -v
+      - name: Collect official public sources; never app databases
+        id: collect
+        env:
+          COLLEGE_SCORECARD_API_KEY: ${{ secrets.COLLEGE_SCORECARD_API_KEY }}
+          MANUAL_MODE: ${{ inputs.mode }}
+          SCHEDULE: ${{ github.event.schedule }}
+        run: |
+          MODE="${MANUAL_MODE:-weekly}"
+          if [ "$SCHEDULE" = '37 5 * * *' ]; then MODE=daily; fi
+          if [ "$SCHEDULE" = '47 7 1 * *' ]; then MODE=monthly; fi
+          set +e
+          python3 -B scripts/content-intelligence.py run --mode "$MODE"
+          RESULT=$?
+          set -e
+          if [ "$RESULT" -ne 0 ] && [ "$RESULT" -ne 2 ]; then exit "$RESULT"; fi
+          python3 -B - <<'PY'
+          import json,os
+          from pathlib import Path
+          d=json.loads(Path('.sites-runtime/content-intelligence/run/report.json').read_text())
+          with open(os.environ['GITHUB_OUTPUT'],'a') as f:
+              f.write('complete='+str(d['scope_complete']).lower()+'\n')
+              f.write('eligible='+str(d['publication_eligible']).lower()+'\n')
+              f.write('stale='+str(len(d['stale_machine_record_ids']))+'\n')
+          with open(os.environ['GITHUB_STEP_SUMMARY'],'a') as f:
+              f.write(Path('.sites-runtime/content-intelligence/run/report.md').read_text())
+          PY
+      - name: Preserve candidate, exact review queue, source health and report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: public-content-review
+          path: .sites-runtime/content-intelligence/run/
+          retention-days: 30
+
+  publish:
+    needs: collect
+    if: vars.ALTWING_CONTENT_PUBLISH_ENABLED == 'true' && github.ref == format('refs/heads/{0}', github.event.repository.default_branch) && (github.event_name == 'schedule' || inputs.dry_run == false)
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    outputs:
+      sha: ${{ steps.commit.outputs.sha }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+      - uses: actions/download-artifact@v4
+        with:
+          name: public-content-review
+          path: .sites-runtime/content-intelligence/run/
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Atomically apply eligible facts or health/review metadata only
+        env:
+          ELIGIBLE: ${{ needs.collect.outputs.eligible }}
+        run: |
+          if [ "$ELIGIBLE" = true ]; then
+            python3 -B scripts/content-intelligence.py publish --run .sites-runtime/content-intelligence/run
+          else
+            python3 -B scripts/content-intelligence.py publish --run .sites-runtime/content-intelligence/run --health-only
+          fi
+          python3 -B scripts/content-intelligence.py validate
+      - name: Commit public content only; normal fast-forward push
+        id: commit
+        env:
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: |
+          git config user.name 'AltWing content automation'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add content/intelligence/published.json content/intelligence/health.json content/intelligence/review-queue.json content/intelligence/history/
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Update verified public content snapshot and source health'
+          git push origin "HEAD:$DEFAULT_BRANCH"
+          printf 'sha=%s\n' "$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+  # GITHUB_TOKEN pushes do not trigger the normal push workflow. Call the SAME
+  # Pages workflow explicitly, checking out and validating the exact new SHA.
+  pages:
+    needs: publish
+    if: needs.publish.outputs.sha != ''
+    uses: ./.github/workflows/pages.yml
+    with:
+      ref: ${{ needs.publish.outputs.sha }}
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+
+  collection-status:
+    needs: collect
+    if: always() && needs.collect.result == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mark incomplete collection as a failed run, retaining artifacts
+        env:
+          COMPLETE: ${{ needs.collect.outputs.complete }}
+          STALE: ${{ needs.collect.outputs.stale }}
+        run: |
+          if [ "${STALE:-0}" -gt 0 ]; then
+            echo '::error::Previously verified public records are stale; inspect the review report.'
+            exit 1
+          fi
+          if [ "$COMPLETE" != true ]; then
+            echo '::error::Official-source collection was incomplete. Facts were retained; inspect the public-content-review artifact and source health.'
+            exit 1
+          fi

@@ -1,0 +1,29 @@
+import {assessmentQuestions,type AssessmentAnswers,type AssessmentReport,type ImpactStory,type AssessmentVersion} from '../../src/features/analytics/assessmentModel';
+import {assessmentMethodNotes} from '../../src/features/analytics/assessmentMethodology';
+type Fixture={id:string;source:'wingmatch'|'project';offered:string|null;submitted:string|null;answers?:AssessmentAnswers;story?:string;quote?:boolean;field?:boolean;project?:boolean;projectDone?:boolean;lab?:boolean;proof?:boolean};
+const fixtures:Fixture[]=[
+  {id:'demo-a',source:'wingmatch',offered:'2026-11-12',submitted:'2026-11-13',answers:{opportunity:'never',reasoning:'often',discovery:'quite_a_bit',motivation:'somewhat_more',readiness:'very'},story:'DEMO RECORD — this text only demonstrates private story layout.',quote:false,field:true,project:true,projectDone:true,lab:true,proof:true},
+  {id:'demo-b',source:'wingmatch',offered:'2026-11-13',submitted:'2026-11-13',answers:{opportunity:'once',reasoning:'rarely',discovery:'a_little',motivation:'same',readiness:'slightly'},story:'DEMO RECORD — this text only demonstrates separately permitted story layout.',quote:true,field:true,project:true},
+  {id:'demo-c',source:'wingmatch',offered:null,submitted:'2026-11-14',answers:{opportunity:'not_sure',reasoning:'not_applicable',discovery:'not_at_all',motivation:'somewhat_less',readiness:'not_clear'}},
+  {id:'demo-d',source:'wingmatch',offered:'2026-11-14',submitted:null},
+  {id:'demo-e',source:'project',offered:'2026-11-13',submitted:'2026-11-14',answers:{opportunity:'two_three',reasoning:'sometimes',discovery:'moderate',motivation:'much_more',readiness:'completely'}},
+];
+export function demoReport(from:string,to:string,source:AssessmentReport['source'],version:AssessmentVersion):{report:AssessmentReport;stories:ImpactStory[]}{
+ // Independent synthetic fixture sets for each selected version; never production history.
+ const questions=assessmentQuestions(version);
+ const inWindow=(value:string|null)=>value!==null&&value>=from&&value<=to,sourceMatches=(f:Fixture)=>source==='all'||f.source===source;
+ const responses=fixtures.filter(f=>sourceMatches(f)&&inWindow(f.submitted)),offers=fixtures.filter(f=>sourceMatches(f)&&inWindow(f.offered));
+ const count=(key:keyof Fixture)=>offers.filter(f=>Boolean(f[key])).length,rate=(n:number,d:number)=>d?n/d*100:null;
+ const dimensions=questions.map(q=>{const excluded=responses.filter(f=>f.answers?.[q.id]===(q.id==='opportunity'?'not_sure':'not_applicable')).length,applicable=responses.length-excluded;return {id:q.id,title:q.title,question:q.question,responses:responses.length,applicable,excluded,choices:q.options.map(([value,label])=>{const count=responses.filter(f=>f.answers?.[q.id]===value).length;return {value,label,count,percent:['not_sure','not_applicable'].includes(value)?null:rate(count,applicable)};}),...(q.id==='opportunity'?{firstTime:{count:responses.filter(f=>f.answers?.opportunity==='never').length,known:applicable,notSure:excluded,percent:rate(responses.filter(f=>f.answers?.opportunity==='never').length,applicable)}}:{})};});
+ const months=[...new Set(responses.map(f=>f.submitted!.slice(0,7)))];
+ const trends=months.flatMap(month=>questions.flatMap(q=>q.options.map(([value])=>({month,dimension:q.id,value,count:responses.filter(f=>f.submitted!.startsWith(month)&&f.answers?.[q.id]===value).length,responses:responses.filter(f=>f.submitted!.startsWith(month)).length}))));
+ const starts=offers.filter(f=>f.submitted),completion={starts:starts.length,responses:starts.filter(f=>f.submitted).length,rate:rate(starts.filter(f=>f.submitted).length,starts.length)};
+ const completionTrends=[...new Set(starts.map(f=>f.offered!.slice(0,7)))].map(month=>{const group=starts.filter(f=>f.offered!.startsWith(month));return {month,starts:group.length,responses:group.length,rate:100};});
+ const cohortTrends=[...new Set(offers.map(f=>f.offered!.slice(0,7)))].map(month=>{const group=offers.filter(f=>f.offered!.startsWith(month)),submitted=group.filter(f=>f.submitted).length;return {month,offers:group.length,responses:submitted,rate:rate(submitted,group.length)};});
+ const stories:ImpactStory[]=responses.filter(f=>f.story).map(f=>({id:version+':'+f.id,version,source:f.source,submittedAt:f.submitted+'T12:00:00Z',text:f.story!,quotePermission:!!f.quote}));
+ const versions:AssessmentReport['versions']=['wingmatch','project'].map(s=>({version,source:s,responses:fixtures.filter(f=>f.source===s&&inWindow(f.submitted)).length}));if(from<='2026-11-12'&&to>='2026-11-12')versions.push({version:'impact-v1',source:'wingmatch',responses:1});
+ const globalDay=inWindow('2026-11-13');
+ return {stories,report:{demo:true,generatedAt:'2026-11-15T12:00:00.000Z',range:{from,to,allTime:from==='2026-11-12'&&to==='2026-11-14'},source,version,responses:responses.length,stories:stories.length,unlinkedResponses:responses.filter(f=>!f.offered).length,dimensions,trends,cohortTrends,completion,completionTrends,versions,
+ cohort:{offers:offers.length,started:offers.filter(f=>f.submitted).length,responses:offers.filter(f=>f.submitted).length,responseRate:rate(offers.filter(f=>f.submitted).length,offers.length),fieldExplored:count('field'),projectStarted:count('project'),projectCompleted:count('projectDone'),projectPaired:count('projectDone'),projectCompletionRate:rate(count('projectDone'),count('project')),labStarted:count('lab'),proofSaved:count('proof'),labPaired:count('proof'),proofRate:rate(count('proof'),count('lab'))},
+ behavior:{field_explorations:globalDay?2:0,project_starts:globalDay?2:0,project_completions:globalDay?1:0,project_conversions:globalDay?1:0,lab_starts:globalDay?1:0,proofs_saved:globalDay?1:0,lab_conversions:globalDay?1:0},behaviorAvailableSince:'2026-11-13',permittedStories:stories.filter(s=>s.quotePermission),methodology:['DEMO FIXTURES — these records illustrate the interface and must never be used as real impact evidence.',...assessmentMethodNotes(version)]}};
+}

@@ -1,0 +1,229 @@
+{
+  "reviewDate": "2026-11-15",
+  "reviewTimezone": "America/New_York",
+  "baselineProductionCommit": "443f965f2c5f45b2199c24b0b5db800eb5fee60b",
+  "productionChanged": false,
+  "definitions": {
+    "PASS": "Specific checked requirement is satisfied, within its stated scope.",
+    "FAIL": "Required release condition is known to be unmet; not an accusation of infringement.",
+    "UNVERIFIED": "Evidence or execution is missing; no clearance/pass inferred."
+  },
+  "baselineFiles": 306,
+  "candidateBaselineFilesPresent": 305,
+  "inheritedCsvSha256": "601746ef07c292ea477e278292024f2a735750ae0d101af3ee95a3b5c57a8390",
+  "filesByCase": {
+    "R02": 198,
+    "R04;R02": 81,
+    "R09;R02": 2,
+    "R01": 1,
+    "R07": 4,
+    "R08": 2,
+    "R11": 1,
+    "R03;R02": 16,
+    "R10;R02": 1
+  },
+  "assetRecords": [
+    {
+      "path": "public/brand/altwing-penguin.png",
+      "gitBlob": "7ffe9eb481faede47c5faf71e752feffb6b430e2",
+      "sha256": "ba5278a01945231847b44295d56e0617bf8a7b922c5bd26c00e685fcab76b975",
+      "status": "Active; AI-assisted provenance corroborated; live/repository/V2 byte identity verified; dated account-holder grant received within rights held; reference-input rights UNVERIFIED; branding retained",
+      "provenanceRecord": "docs/rights/mascot-provenance.json",
+      "provenanceRecordSha256": "32d84677923843fdea3ef1d2ce2bbce8246cca1a985ff81708e44bed2c8defc2",
+      "creationContext": "ChatGPT conversation screenshot reviewed; profile label/title observed; chronology supplied by founder",
+      "rightsCleared": false,
+      "exclusiveCopyrightClaimed": false,
+      "permissionRecord": "docs/rights/mascot-permission.json",
+      "permissionRecordSha256": "fcd6ee74dde4a95a304e4365c6b2a9b861ff86b1fed340735fb4604eb88eb2e8",
+      "releasePolicyDecision": "APPROVED initial-release retention exception; underlying reference rights UNVERIFIED",
+      "releasePolicyDecisionReference": "docs/rights/MASCOT-RELEASE-EXCEPTION-2026-11-24.json"
+    },
+    {
+      "path": "src/assets/hero.png",
+      "gitBlob": "02251f4b956c55af2d76fd0788124d7eee2b45eb",
+      "sha256": "881ffbcaafc212e49addad08846a5b82761355fa20624253af3477ba33262c5c",
+      "status": "Unused; removed with explicit owner instruction; original rights unresolved"
+    },
+    {
+      "path": "public/favicon.svg",
+      "gitBlob": "6893eb13237060adc0c968a690149a49faa2d7d3",
+      "sha256": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66",
+      "status": "Active; exact upstream create-vite template match; MIT notice retained"
+    },
+    {
+      "path": "public/icons.svg",
+      "gitBlob": "e9522193d9f796a9748e9ad8c952a5df73c87db9",
+      "sha256": "b45fa506195cfcdef406ba9f0c77b36ddc1a7c224040926ec70abc2fdea7b93a",
+      "status": "Unused at runtime; public file copied by Vite; exact upstream template match; MIT notice retained"
+    },
+    {
+      "path": "src/assets/react.svg",
+      "gitBlob": "6c87de9bb3358469122cc991d5cf578927246184",
+      "sha256": "35ef61ed53b323ae94a16a8ec659b3d0af3880698791133f23b084085ab1c2e5",
+      "status": "Unused; exact upstream template match; MIT notice retained"
+    },
+    {
+      "path": "src/assets/vite.svg",
+      "gitBlob": "5101b674df391399da71c767aa5c976426c9dc7a",
+      "sha256": "5be21acd42eb7b896e517f4e0f0f11eb5c5d9e54fbbcebe9453f033008fcca6f",
+      "status": "Unused; exact upstream template match; MIT notice retained"
+    }
+  ],
+  "requiredEvidence": [
+    {
+      "id": "E-MASCOT-CREATION",
+      "case": "R01",
+      "status": "UNVERIFIED",
+      "documentPresent": true,
+      "required": "Original logo/image and creation/generator/account/date/input source history.",
+      "blocking": false,
+      "evidenceReference": "docs/rights/MASCOT-PROVENANCE-2026-11-18.md",
+      "evidenceSha256": "2d01c8ba86fe02abf8a8d71794a40263d1128cbb8e290e45617de0e0543ab970",
+      "evidenceType": "Sanitized review/transcription of a creation screenshot attached in the private development conversation; not the original screenshot binary",
+      "receivedScope": "Creation conversation/tool/account context now corroborated; live and repository asset hashes match",
+      "remainingLimit": "Original generated download/SVG and full reference-input history not available; exact derivation is not claimed",
+      "blockingDecision": "Creation provenance narrowed by supplied evidence; exact derivation still unverified. Initial unchanged-mascot release now has an explicitly approved policy exception; this does not verify underlying rights."
+    },
+    {
+      "id": "E-MASCOT-PERMISSION",
+      "case": "R01",
+      "status": "PASS",
+      "documentPresent": true,
+      "required": "Account-holder permission covering AltWing use/reproduction/modification/adaptation/publication/hosting/display/distribution, within rights actually held",
+      "blocking": true,
+      "termsEvidenceReference": "docs/rights/OPENAI-TERMS-2026-01-01-EVIDENCE.json",
+      "termsEvidenceSha256": "4fcf163b39a0eb79207341f5016cf58babdcf4a990205f7241d39accca7f7c08",
+      "verifiedTermsScope": "Official page states Effective January1,2026; OpenAI-to-user output assignment is conditional and not a downstream founder grant or third-party permission.",
+      "accountHolderGrantProvided": true,
+      "referenceImagePermissionsEstablished": false,
+      "evidenceReference": "docs/rights/MASCOT-PERMISSION-2026-11-18.md",
+      "evidenceSha256": "bd5d6246d7af95322f7e2a1cbc80587932187db9870ac541aad4375c9093ce8f",
+      "verificationLimit": "Written confirmation received via founder; not independent identity authentication. Grant expressly excludes third-party material."
+    },
+    {
+      "id": "E-MASCOT-REFERENCE-INPUTS",
+      "case": "R01",
+      "status": "UNVERIFIED",
+      "documentPresent": false,
+      "blocking": false,
+      "required": "Clarify actual reference-image inputs and rights basis for any independently protected third-party material; none is presumed unlicensed or cleared.",
+      "note": "Reference images used; sources/permissions remain unknown. Owner explicitly accepts the disclosed uncertainty for the initial release. The exception supplies no third-party rights; do not reopen without genuinely new risk evidence.",
+      "releasePolicyDecision": "APPROVED exception by explicit owner decision on November24",
+      "releasePolicyDecisionReference": "docs/rights/MASCOT-RELEASE-EXCEPTION-2026-11-24.json",
+      "rightsClearanceRequired": true,
+      "releaseExceptionApproved": true
+    }
+  ],
+  "questionnaireReview": "questionnaire-review.json",
+  "questionnaireBoundedPublicReviewStatus": "PASS",
+  "universalOriginalityStatus": "UNVERIFIED",
+  "ownershipClearanceGate": "FAIL",
+  "details": "Account-holder usage/modification/publication/hosting/distribution permission received within rights actually held. Remaining specific reference-input rights uncertainty is carried forward; no exclusive copyright/third-party clearance claimed. No asset or production change.",
+  "founderAuthorization": {
+    "status": "RECORDED_SCOPE_LIMITED",
+    "evidenceReference": "docs/release-readiness/FOUNDER-AUTHORIZATION.md",
+    "evidenceSha256": "bfc8834e94041b108338a0cf725f384b8fc61ff60141f0b7c1483f5c26232927",
+    "source": "Statement explicitly supplied by the founder in this development conversation",
+    "useAuthorized": "Only materials for which the founder holds the necessary rights",
+    "productionApproval": false,
+    "independentOwnershipVerified": false,
+    "thirdPartyOrIndependentPermissionImplied": false
+  },
+  "contributionClasses": [
+    {
+      "category": "Founder original contributions",
+      "basis": "Self-reported initiation, direction, instructions, choices and iterative feedback",
+      "status": "REPORTED_AND_SCOPE_AUTHORIZED",
+      "limit": "Not a claim that every file is exclusively human-authored or that ideas alone are protectable."
+    },
+    {
+      "category": "AI-generated/AI-assisted project materials",
+      "basis": "Founder reports project-directed ChatGPT/Codex development; questionnaire generation already documented",
+      "status": "ORIGIN_REPORTED_AND_SCOPE_AUTHORIZED",
+      "limit": "Not independently verified for all underlying inputs, uniqueness or protectability; use only within rights actually held."
+    },
+    {
+      "category": "Third-party dependencies and identified licensed assets",
+      "basis": "Specific upstream licenses/notices and matching versions/blobs",
+      "status": "VERIFIED_WITHIN_IDENTIFIED_LICENSE_SCOPE",
+      "limit": "Keep third-party notices; no global open-source grant for AltWing and no endorsement claim."
+    },
+    {
+      "category": "Independently authored contributions",
+      "basis": "A Git name alone does not identify a separate legal rightsholder. Specific excluded contributions require their own license/permission when identified.",
+      "status": "NOT_ESTABLISHED_BY_COMMIT_NAMES; SPECIFIC_EXCEPTIONS_UNVERIFIED",
+      "limit": "Founder authorization does not cover rights they do not hold. Mascot account-holder permission is received within rights held; actual reference-input rights remain unresolved."
+    }
+  ],
+  "conditionalEvidence": [
+    {
+      "id": "E-INHERITED-AUTHORSHIP",
+      "case": "R02\u2013R04",
+      "status": "UNVERIFIED",
+      "documentPresent": false,
+      "required": "Contributor/source map linked to baseline paths/blobs, distinguishing humans, templates and AI assistance.",
+      "blocking": false,
+      "trigger": "Only a specifically identified outside contribution/copy not covered by founder rights; blanket assignments from every Git name are not required."
+    },
+    {
+      "id": "E-INHERITED-GRANTS",
+      "case": "R02\u2013R04",
+      "status": "UNVERIFIED",
+      "documentPresent": false,
+      "required": "Genuine licenses, assignments or permissions from applicable rightsholders; exact scope/restrictions, not repository-access proof.",
+      "blocking": false,
+      "trigger": "Only a specifically identified outside contribution/copy not covered by founder rights; blanket assignments from every Git name are not required."
+    },
+    {
+      "id": "E-CONTENT-SOURCES",
+      "case": "R03/R04",
+      "status": "UNVERIFIED",
+      "documentPresent": false,
+      "required": "Origin/license map for expressive mission/quiz/college prose, inline art and copied/adapted passages.",
+      "blocking": false,
+      "trigger": "Only a specifically identified outside contribution/copy not covered by founder rights; blanket assignments from every Git name are not required."
+    }
+  ],
+  "remainingRightsBlockers": [
+    "R01: actual reference-image input/rights clarification remains unverified; account-holder grant has now been supplied and is not requested again.",
+    "Any specifically identified independent/third-party material outside existing licenses/founder authority; no new such contribution is inferred from this screenshot or Git names."
+  ],
+  "candidateHashRefresh": {
+    "atUTC": "2026-11-18T06:16:33.331618+00:00",
+    "scope": "Isolated homepage candidate source hashes refreshed after the Pages/Worker image-import compatibility correction; baseline blobs and rights classifications retained."
+  },
+  "mascotProvenanceUpdate": {
+    "reviewDate": "2026-11-18",
+    "reviewDocument": "docs/rights/MASCOT-PROVENANCE-2026-11-18.md",
+    "reviewDocumentSha256": "2d01c8ba86fe02abf8a8d71794a40263d1128cbb8e290e45617de0e0543ab970",
+    "machineReadableRecord": "docs/rights/mascot-provenance.json",
+    "machineReadableRecordSha256": "32d84677923843fdea3ef1d2ce2bbce8246cca1a985ff81708e44bed2c8defc2",
+    "creationScreenshotReceived": true,
+    "screenshotPublished": false,
+    "liveAssetByteIdentity": "PASS",
+    "creationContext": "CORROBORATED_WITH_LIMITS",
+    "termsEffectiveDateVerified": "2026-01-01",
+    "legalAccountHolderOrGrantAuthenticated": false,
+    "referenceInputRights": "UNVERIFIED",
+    "assetChanged": false,
+    "productionChanged": false
+  },
+  "mascotPermissionReceived": {
+    "date": "2026-11-18",
+    "record": "docs/rights/mascot-permission.json",
+    "recordSha256": "fcd6ee74dde4a95a304e4365c6b2a9b861ff86b1fed340735fb4604eb88eb2e8",
+    "privateOriginalRepublished": false,
+    "scope": "Received grant within rights held; input rights not inferred"
+  },
+  "designCandidate": {
+    "branch": "design/black-gold-homepage",
+    "scope": "Homepage visual direction only; not approved for platform rollout or production",
+    "newVisualAssetRecord": "docs/design/BLACK-GOLD-ASSET-PROVENANCE.json",
+    "newFontLicenseRecord": "docs/design/BLACK-GOLD-FONT-LICENSES.json",
+    "productionApproval": false
+  },
+  "releasePolicyDecisionUpdatedAtUTC": "2026-11-24T06:18:47Z",
+  "ownershipClearanceGateMeaning": "Underlying rights evidence remains unresolved; an approved release-policy exception never changes copyright clearance.",
+  "initialReleasePolicyGate": "PASS_WITH_APPROVED_EXCEPTION",
+  "initialReleasePolicyGateMeaning": "Explicit November24 decision accepts disclosed mascot reference-image uncertainty for unchanged initial-release use; not a third-party permission."
+}

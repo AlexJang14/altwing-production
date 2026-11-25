@@ -1,5 +1,6 @@
+import {preferredScrollBehavior} from '../../design/golden-horizon/motion';
 import { trackEvent } from '../analytics/analytics';
-import ImpactSurvey,{RatingQuestion} from '../analytics/ImpactSurvey';
+import ImpactSurvey from '../analytics/ImpactSurvey';
 import { useEffect, useMemo, useState, type CSSProperties } from "react";
 import posthog, { isPostHogConfigured } from "../../posthog";
 import PackReadyBanner from "../home/PackReadyBanner";
@@ -100,13 +101,14 @@ export default function EngineeringMatch({
     const validResult=raw?.result && Array.isArray(raw.result.rankings) && raw.result.rankings.length>0 && raw.result.rankings.every(r=>r && Object.hasOwn(ENGINEERING_MAJOR_MAP,r.majorId))?raw.result:null;
     return {started:raw?.started===true,questionIndex:Number.isInteger(raw?.questionIndex)?Math.max(0,Math.min(7,raw!.questionIndex!)):0,answers,result:validResult,beforeUnderstanding:Number.isInteger(raw?.beforeUnderstanding)&&raw!.beforeUnderstanding!>=1&&raw!.beforeUnderstanding!<=5?raw!.beforeUnderstanding!:null};
   });
-  const [beforeUnderstanding,setBeforeUnderstanding]=useState<number|null>(initialDraft.beforeUnderstanding);
+  const [beforeUnderstanding]=useState<number|null>(initialDraft.beforeUnderstanding);
   const [started, setStarted] = useState(initialDraft.started);
   const [questionIndex, setQuestionIndex] = useState(initialDraft.questionIndex);
   const [answers, setAnswers] = useState<Record<string, string>>(initialDraft.answers);
   const [hoveredOptionId, setHoveredOptionId] = useState<string | null>(null);
   const [result, setResult] = useState<EngineeringMatchResult | null>(initialDraft.result);
   const [guideOpen, setGuideOpen] = useState(false);
+  const [assessmentResultKey,setAssessmentResultKey]=useState<string|null>(null);
 
   useEffect(() => { writeLocal("altwing-match-draft-v1", JSON.stringify({version:1,started,questionIndex,answers,result,beforeUnderstanding})); }, [started,questionIndex,answers,result,beforeUnderstanding]);
   const question = ENGINEERING_MATCH_QUESTIONS[questionIndex];
@@ -133,13 +135,14 @@ export default function EngineeringMatch({
     if (questionIndex < ENGINEERING_MATCH_QUESTIONS.length - 1) {
       setHoveredOptionId(null);
       setQuestionIndex((current) => current + 1);
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      window.scrollTo({ top: 0, behavior: preferredScrollBehavior() });
       return;
     }
 
     const nextResult = calculateResult(answers);
     setResult(nextResult);
-    setGuideOpen(true);
+    setGuideOpen(false);
+    setAssessmentResultKey(nextResult.completedAt);
     saveEngineeringMatch(nextResult);
     trackEvent('WingMatch Completed');
 
@@ -161,7 +164,7 @@ export default function EngineeringMatch({
       });
     }
 
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: preferredScrollBehavior() });
   }
 
 
@@ -187,7 +190,6 @@ export default function EngineeringMatch({
               <article><b>02</b><strong>No right answer</strong><span>Choose the move you genuinely want to make first.</span></article>
               <article><b>03</b><strong>One connected shift</strong><span>Each incident reveals another way you approach engineering problems.</span></article>
             </div>
-            <RatingQuestion label="Optional before rating: how well do you understand your engineering interests now? (1–5)" value={beforeUnderstanding} onChange={setBeforeUnderstanding} optional/>
             <button type="button" className="guidance-primary-button scenario-begin-button" onClick={() => {setStarted(true);trackEvent('WingMatch Started');}}>Launch WingMatch</button>
           </div>
 
@@ -245,7 +247,7 @@ export default function EngineeringMatch({
           </section>
         )}
 
-        <ImpactSurvey key={result.completedAt} before={beforeUnderstanding}/>
+        <ImpactSurvey key={result.completedAt} contextKey={result.completedAt} autoOpen={assessmentResultKey===result.completedAt}/>
         <section className="match-result-grid">
           {topThree.map((item, index) => {
             const major = ENGINEERING_MAJOR_MAP[item.majorId];
@@ -320,7 +322,7 @@ export default function EngineeringMatch({
         </div>
       </section>
 
-      <section className="scenario-match-shell">
+      <section className="scenario-match-shell" key={question.id}>
         <div className="scenario-match-copy">
           <div className="match-question-copy">
             <span>{question.eyebrow}</span>
@@ -371,7 +373,7 @@ export default function EngineeringMatch({
           onClick={() => {
             setHoveredOptionId(null);
             setQuestionIndex((current) => Math.max(0, current - 1));
-            window.scrollTo({ top: 0, behavior: "smooth" });
+            window.scrollTo({ top: 0, behavior: preferredScrollBehavior() });
           }}
         >
           ← Previous

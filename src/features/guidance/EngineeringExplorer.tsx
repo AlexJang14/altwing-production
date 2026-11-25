@@ -1,3 +1,4 @@
+import {preferredScrollBehavior} from '../../design/golden-horizon/motion';
 import { useMemo, useState, type CSSProperties } from "react";
 import { ENGINEERING_MAJORS } from "./engineeringMajors";
 import { readEngineeringMatch } from "./guidanceStorage";
@@ -47,7 +48,7 @@ export default function EngineeringExplorer({
         <p>
           Discover engineering disciplines and experience how engineers solve problems through interactive missions and hands-on labs.
         </p>
-        <button type="button" className="aw-button aw-first-cta" onClick={() => document.getElementById('engineering-fields')?.scrollIntoView({behavior:'smooth',block:'start'})}>Explore Engineering Fields</button>
+        <button type="button" className="aw-button aw-first-cta" onClick={() => document.getElementById('engineering-fields')?.scrollIntoView({behavior: preferredScrollBehavior(),block:'start'})}>Explore Engineering Fields</button>
         <label className="engineering-search">
           <span>⌕</span>
           <input

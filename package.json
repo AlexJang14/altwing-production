@@ -2,6 +2,7 @@
   "name": "altwing",
   "version": "0.1.0",
   "private": true,
+  "license": "UNLICENSED",
   "engines": {
     "node": ">=22.13.0"
   },
@@ -18,7 +19,11 @@
     "data:scorecard-probe": "node scripts/scorecard-api.mjs --probe",
     "data:scorecard-api": "node scripts/scorecard-api.mjs",
     "test:analytics": "node scripts/check-analytics.mjs",
+    "test:atomic-ingestion": "node scripts/check-atomic-ingestion.mjs",
     "test:admin-access": "node scripts/check-admin-access.mjs",
+    "test:research-assessment": "node scripts/check-research-assessment.mjs",
+    "test:rights": "node scripts/check-rights.mjs",
+    "notices:generate": "node scripts/generate-third-party-notices.mjs",
     "test:impact": "node scripts/check-impact.mjs",
     "test:cloudflare": "node scripts/check-cloudflare.mjs",
     "build:impact-preview": "vite build --config vite.impact-preview.config.ts",
@@ -36,7 +41,17 @@
     "verify:release": "node scripts/check-release.mjs",
     "test:release": "node scripts/check-release-policy.mjs",
     "security:source": "node scripts/check-source-security.mjs",
-    "check:domain": "node scripts/check-domain-live.mjs"
+    "check:domain": "node scripts/check-domain-live.mjs",
+    "build:gold-preview": "vite build --config vite.gold-preview.config.ts && node scripts/package-gold-preview.mjs",
+    "build:color-lab": "vite build --config vite.color-lab-frame.config.ts && vite build --config vite.color-lab.config.ts",
+    "test:color-lab": "node scripts/check-color-lab.mjs",
+    "build:golden-preview": "vite build --config vite.golden-horizon-frame.config.ts && vite build --config vite.golden-horizon.config.ts",
+    "test:golden-horizon": "node scripts/check-golden-horizon.mjs",
+    "content:dry-run": "python3 -B scripts/content-intelligence.py run",
+    "content:validate": "python3 -B scripts/content-intelligence.py validate",
+    "test:content": "python3 -B -m unittest discover -s scripts/content_intelligence -p \"test_*.py\" -v",
+    "test:content:ui": "node scripts/check-content-ui.mjs",
+    "test:content:workflows": "node scripts/check-content-workflows.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",

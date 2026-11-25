@@ -1,0 +1,248 @@
+{
+  "candidate": "ALTWING-GH-LIVE-INTELLIGENCE-LAUNCH",
+  "preparedAtUTC": "2026-11-24T06:18:47Z",
+  "clientDate": "2026-11-24",
+  "clientTimezone": "America/New_York",
+  "decision": "HOLD \u2014 exact applicable manual acceptance remains unperformed; conditional owner launch authorization does not waive required cases",
+  "frozenBaseline": "ALTWING-GH-RC1-2026-11-19",
+  "baselinePreserved": true,
+  "productChanges": [
+    "Integrate approved polished Golden Horizon source and its survey/motion corrections",
+    "Connect field-specific real official evidence to College Explorer and Opportunities through versioned public JSON",
+    "Disable all 126 unreviewed source entries and the unconfigured full Scorecard collector",
+    "Preserve the approved narrow additive assessment migration and atomic ingestion deduplication unchanged",
+    "Ensure archived records cannot retain an OPEN badge; include public content in acceptance fingerprints"
+  ],
+  "existingTablesPreserved": 8,
+  "newTablesRetained": 4,
+  "newAggregationTriggersRetained": 3,
+  "newIndexes": 5,
+  "historicalRowsRewritten": false,
+  "databaseRecoverability": "UNVERIFIED",
+  "recoveryRiskAcknowledgedByOwner": "2026-11-21",
+  "supportRequest": "PAUSED by owner",
+  "schemaInspection": "8 original tables present; 4 pending new tables absent",
+  "migrationLedgerDirectRead": "UNVERIFIED \u2014 not exposed by current connection",
+  "hostingMigrationRule": "Sites manages its migration ledger. Stop if runtime state conflicts with reviewed pending migration; do not rewrite applied history.",
+  "focusedChecks": [
+    {
+      "name": "atomic-ingestion",
+      "status": "PASS",
+      "command": [
+        "node",
+        "scripts/check-atomic-ingestion.mjs"
+      ],
+      "checkedAtUTC": "2026-11-21T07:44:09.462937+00:00"
+    },
+    {
+      "name": "analytics",
+      "status": "PASS",
+      "command": [
+        "node",
+        "scripts/check-analytics.mjs"
+      ],
+      "checkedAtUTC": "2026-11-21T07:40:38.607239+00:00"
+    },
+    {
+      "name": "impact",
+      "status": "PASS",
+      "command": [
+        "node",
+        "scripts/check-impact.mjs"
+      ],
+      "checkedAtUTC": "2026-11-21T07:41:40.100220+00:00"
+    },
+    {
+      "name": "research-assessment",
+      "status": "PASS",
+      "command": [
+        "node",
+        "scripts/check-research-assessment.mjs"
+      ],
+      "checkedAtUTC": "2026-11-21T07:41:40.687229+00:00"
+    },
+    {
+      "name": "admin-access",
+      "status": "PASS",
+      "command": [
+        "node",
+        "scripts/check-admin-access.mjs"
+      ],
+      "checkedAtUTC": "2026-11-21T07:41:40.611612+00:00"
+    },
+    {
+      "name": "typecheck",
+      "status": "PASS",
+      "command": [
+        "node",
+        "node_modules/typescript/bin/tsc",
+        "--noEmit"
+      ],
+      "checkedAtUTC": "2026-11-21T07:40:49.363027+00:00"
+    },
+    {
+      "name": "backend-build",
+      "status": "PASS",
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "checkedAtUTC": "2026-11-21T07:42:10.924587+00:00"
+    },
+    {
+      "name": "pages-build",
+      "status": "PASS",
+      "command": [
+        "npm",
+        "run",
+        "build:pages"
+      ],
+      "checkedAtUTC": "2026-11-21T07:42:11.924421+00:00"
+    },
+    {
+      "name": "source-security",
+      "status": "PASS",
+      "command": [
+        "node",
+        "scripts/check-source-security.mjs"
+      ],
+      "checkedAtUTC": "2026-11-21T07:44:54.812512+00:00"
+    },
+    {
+      "name": "release-policy",
+      "status": "PASS",
+      "command": [
+        "node",
+        "scripts/check-release-policy.mjs"
+      ],
+      "checkedAtUTC": "2026-11-21T07:45:39.786885+00:00"
+    }
+  ],
+  "previousEvidence": "Reuse valid unchanged-case evidence, separately from new checks. Original independent 449/995 hashes certify frozen RC1 only; baseline unique-index failure is historical evidence.",
+  "manualAcceptance": {
+    "PASS": 0,
+    "FAIL": 0,
+    "UNVERIFIED": 38,
+    "preDeployment": 31,
+    "postDeployment": 7,
+    "browserController": "BLOCKED \u2014 absent",
+    "evidenceReference": "/workspace/altwing-golden-horizon-final-acceptance/evidence/USER-REPORTED-ACCEPTANCE.json",
+    "note": "Historical user-reported browser smoke is retained separately; it establishes no exact case PASS on this final integrated candidate."
+  },
+  "mascotRights": {
+    "grant": "Recorded within rights held; no repeat request",
+    "referenceInputs": "UNVERIFIED \u2014 exception is not permission or clearance",
+    "replacementAuthorized": false,
+    "mascotChanged": false,
+    "releasePolicyDecision": "APPROVED initial-release retention exception",
+    "exceptionReference": "docs/rights/MASCOT-RELEASE-EXCEPTION-2026-11-24.json",
+    "doNotRequestGrantOrDecisionAgainUnlessNewRiskEvidence": true
+  },
+  "historicalReporting": {
+    "liveMetadata": "impact_meta empty on supported read-only inspection",
+    "setupPrepared": true,
+    "productionSetupExecuted": false,
+    "requires": "Real authorized administrator selects existing Prepare / continue historical reporting action",
+    "isolatedSetupChecks": "PASS \u2014 bounded/resumable, both auth boundaries, repeated calls do not duplicate; actual handler tests"
+  },
+  "productionChanged": false,
+  "databaseMigrationApplied": false,
+  "productionSqlExecuted": false,
+  "productionDataWrites": false,
+  "committedOrPushed": false,
+  "finalDeploymentApprovalRequested": false,
+  "polishedCandidatePreserved": true,
+  "liveIntelligenceCandidatePreserved": true,
+  "publicContentRecords": 733,
+  "publicContentDatabaseMigration": false,
+  "publicContentSources": {
+    "registered": 130,
+    "enabledVerified": 3,
+    "unreviewedDisabled": 126,
+    "scorecardDisabledPendingFullKeyedVerification": 1
+  },
+  "scheduledProductionPublishing": "NOT ACTIVATED \u2014 awaiting final explicit deployment approval",
+  "allExistingFeaturesRetained": true,
+  "formalReleaseValidation": {
+    "status": "PASS",
+    "checks": 26,
+    "failures": 0,
+    "advisories": 0,
+    "evidence": "/workspace/altwing-final-integrated/source/.sites-runtime/migration-validation/results.json"
+  },
+  "contentValidation": {
+    "pipelineTests": 55,
+    "uiLogicChecks": 9,
+    "weeklyEndToEnd": "PASS \u2014 actual official sources, local validated apply and isolated recovery checks",
+    "dailyChecks": "PASS \u2014 3 supported public sources; no fact verification dates advanced",
+    "monthlyCollegeRefresh": "BLOCKED \u2014 full key-configured refresh unverified; collector disabled",
+    "recordsRetained": 733,
+    "selectedVerifiedRecords": 43,
+    "allOtherRecordsNotRelabeledVerified": true,
+    "partiallyReverifiedOpportunities": 41,
+    "blockedCurrentOpportunityRecheck": 1,
+    "all733RecordsRetained": true,
+    "fullyVerifiedRecordsClaimed": 0,
+    "blockedSource": "Lockheed official source HTTP403; prior review date retained, WATCH and source-unavailable label applied",
+    "selectedVerifiedRecordsMeaning": "41 partially reviewed opportunities plus2 existing field-specific college samples; no complete clearance or current statistics for all733 inferred"
+  },
+  "runtimeValidation": {
+    "desktopDomWorkflows": {
+      "PASS": 45,
+      "FAIL": 0
+    },
+    "mobileWidthDomWorkflows": {
+      "PASS": 45,
+      "FAIL": 0
+    },
+    "sceneRenders": {
+      "scenes": 61,
+      "PASS": 63,
+      "FAIL": 0
+    },
+    "surveyActualHandlerAndDomChecks": {
+      "PASS": 9,
+      "FAIL": 0
+    },
+    "realSelectedContentDomChecks": {
+      "PASS": 18,
+      "FAIL": 0
+    },
+    "realBrowserVisualAccessibilityPdf": "UNVERIFIED"
+  },
+  "featuresOutsideApprovedScopeAdded": false,
+  "schemaInspectionObservationClientDate": "2026-11-24",
+  "currentProductionSchemaInspection": "PASS bounded eight-table inventory on Nov24; columns/indexes/triggers/ledger UNVERIFIED because supported tool exposes table names only",
+  "hostingMetadata": {
+    "latestSavedVersion": 11,
+    "connectionRole": "owner",
+    "audience": "public \u2014 preserved",
+    "databaseQueried": false,
+    "evidence": "/workspace/altwing-final-integrated/evidence/HOSTING-METADATA.json"
+  },
+  "optionalScorecardBlocksInitialLaunch": false,
+  "designAndFeatureDirectionApproved": true,
+  "launchAutomationCadences": [
+    "daily",
+    "weekly"
+  ],
+  "optionalMonthlyAutomation": "Unscheduled at initial launch; collector disabled and key not a launch prerequisite",
+  "ownerLaunchAuthorization": "Proceed only after mandatory stated conditions are satisfied; no need to repeat approvals already given",
+  "freshnessIncident": {
+    "productionCommit": "443f965f2c5f45b2199c24b0b5db800eb5fee60b",
+    "oldProductionOpportunityDates": "2026-10-25",
+    "failedRun": 45298655246,
+    "noDatesAdvancedByLinkOnlyCheck": true
+  },
+  "currentBrowserExecution": "BLOCKED \u2014 managed Sites environment has no supported desktop controller tool in this chat; no improvised controller used",
+  "focusedChecksOnLaunchCandidate": [
+    "55 content pipeline cases PASS",
+    "9 content UI checks PASS",
+    "Workflow gate/SHA/cadence checks PASS",
+    "11 current reconciliation/preservation checks PASS",
+    "Actual-handler atomic ingestion and13 interruption prefixes PASS",
+    "Production backend and custom-domain frontend builds PASS"
+  ],
+  "sourcePreservation": "All261 protected runtime/backend/migration/design/dependency/mascot files byte-identical to approved integrated candidate; data and release-decision records only"
+}

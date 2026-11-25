@@ -1,5 +1,5 @@
 import {execFileSync} from 'node:child_process';
-import {readFileSync} from 'node:fs';
+import {readFileSync,existsSync} from 'node:fs';
 const patterns=[
  ['private key',/-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----/],
  ['GitHub credential',/\b(?:gh[pousr]_[A-Za-z0-9]{30,}|github_pat_[A-Za-z0-9_]{50,})\b/],
@@ -15,6 +15,7 @@ function inspect(name,buffer){
 }
 const paths=execFileSync('git',['ls-files','--cached','--others','--exclude-standard','-z']).toString().split('\0').filter(Boolean);
 for(const file of paths){
+ if(!existsSync(file))continue; // Tracked deletions are not part of the proposed source tree.
  if(/(?:^|\/)\.env(?:\.|$)/.test(file)&&!file.endsWith('.env.example')){findings.push({file,rule:'environment file must not be committed'});continue;}
  inspect(file,readFileSync(file));
 }

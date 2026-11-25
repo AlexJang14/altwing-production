@@ -5,7 +5,9 @@ const commands=[
  ['source-security','npm',['run','security:source']],
  ['submission','npm',['run','test:submission']],
  ['analytics','npm',['run','test:analytics']],
+ ['atomic-ingestion','npm',['run','test:atomic-ingestion']],
  ['administrator-access','npm',['run','test:admin-access']],
+ ['research-assessment','npm',['run','test:research-assessment']],
  ['educational-impact','npm',['run','test:impact']],
  ['cloudflare-privacy','npm',['run','test:cloudflare']],
  ['impact-preview-build','npm',['run','build:impact-preview']],
@@ -24,6 +26,7 @@ const commands=[
  ['preview-pages-build','npm',['run','build:pages:preview']],
  ['progress-bridge-build','npm',['run','build:progress-bridge']],
  ['pages-assets','npm',['run','test:pages']],
+ ['copyright-attribution','npm',['run','test:rights']],
  ['progress-bridge','npm',['run','test:progress-bridge']],
 ];
 const results=[];

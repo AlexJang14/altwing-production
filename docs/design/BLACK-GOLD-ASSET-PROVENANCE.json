@@ -1,0 +1,28 @@
+{
+  "createdFor": "AltWing isolated Black & Gold homepage visual direction",
+  "date": "2026-11-18",
+  "decorativeHorizon": {
+    "generator": "OpenAI image-generation tool in this user-directed development session",
+    "originalPath": "/workspace/generated_images/exec-1631fcfd-0dd0-4e16-a956-234131255cbb.png",
+    "webAsset": "src/assets/black-gold/orbital-horizon.webp",
+    "brief": "Original fictional rocky planetary horizon in the right half of deep obsidian space; thin warm antique-gold/champagne rim, sparse stars and empty left-side negative space. Restrained cinematic scientific realism. No penguin, spaceship, logo, text, UI, NASA image or external reference.",
+    "externalReferenceInputs": "None",
+    "processing": "WebP quality84 format optimization only; original generated PNG retained outside application bundle",
+    "sourceModelVersion": "Not returned; not invented",
+    "rightsBasis": "Documented original user-directed AI-assisted project output; applicable OpenAI output terms, not an exclusive-copyright or uniqueness guarantee",
+    "termsReference": "https://openai.com/policies/terms-of-use/",
+    "factualSpaceMissionClaim": false,
+    "originalSha256": "c654f78069e378af0105d1cb8918acce204cbf4602c52910666bb6c53ee2e0f6",
+    "webAssetSha256": "2b1f4627af6a7228f3b650e3cedc5682850d6d032ded0eda7c59f193c07b598a"
+  },
+  "mascot": {
+    "asset": "public/brand/altwing-penguin.png",
+    "sha256": "ba5278a01945231847b44295d56e0617bf8a7b922c5bd26c00e685fcab76b975",
+    "treatment": "Original unchanged PNG with surrounding CSS/SVG gold orbit accents; no pixel recoloring or character replacement",
+    "permissionRecord": "docs/rights/mascot-permission.json",
+    "remainingReferenceInputUncertainty": "Preserved; account-holder grant is limited to rights held"
+  },
+  "fonts": "See BLACK-GOLD-FONT-LICENSES.json; Manrope and Space Grotesk under SIL OFL1.1",
+  "icons": "Small original geometric SVG line icons authored for this preview; no third-party icon artwork copied",
+  "productionChanged": false
+}

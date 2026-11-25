@@ -1,3 +1,5 @@
+> Historical migration-preparation record. Its deployment/DNS/readiness table describes that earlier point in time, not current production status. The current final release gates and resolved advisory evidence are in [the release-readiness checklist](../release-readiness/DEPLOYMENT-CHECKLIST.md). No DNS or deployment change is authorized by this document.
+
 # AltWing custom-domain migration
 
 **Historical plan, superseded:** The domain was registered through Cloudflare and deployment is moving to AlexJang14's dedicated repository. Use [the current production guide](../PRODUCTION.md). Do not apply the Porkbun/old-owner cutover steps below to the new deployment. The following is retained as the earlier preparation record.

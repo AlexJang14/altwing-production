@@ -1,6 +1,6 @@
 import { useEffect, type RefObject } from 'react';
 
-export function useDialogFocus(ref: RefObject<HTMLElement | null>, onClose: () => void) {
+export function useDialogFocus(ref: RefObject<HTMLElement | null>, onClose: () => void, deferRestore=false) {
   useEffect(() => {
     const before = document.activeElement instanceof HTMLElement ? document.activeElement : null;
     const dialog = ref.current;
@@ -17,6 +17,6 @@ export function useDialogFocus(ref: RefObject<HTMLElement | null>, onClose: () =
       else if(!event.shiftKey && document.activeElement === last) {event.preventDefault();first.focus();}
     }
     document.addEventListener('keydown',handle);
-    return () => {document.removeEventListener('keydown',handle);before?.focus();};
-  }, [ref,onClose]);
+    return () => {document.removeEventListener('keydown',handle);const restore=()=>{if(before?.isConnected)before.focus();};if(deferRestore)queueMicrotask(restore);else restore();};
+  }, [ref,onClose,deferRestore]);
 }

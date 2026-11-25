@@ -1,0 +1,74 @@
+{
+  "reviewDate": "2026-11-18",
+  "asset": "public/brand/altwing-penguin.png",
+  "assetSha256": "ba5278a01945231847b44295d56e0617bf8a7b922c5bd26c00e685fcab76b975",
+  "gitBlob": "7ffe9eb481faede47c5faf71e752feffb6b430e2",
+  "liveRetrieval": {
+    "requestedUrl": "https://altwing.org/brand/altwing-penguin.png",
+    "finalUrl": "https://altwing.org/brand/altwing-penguin.png",
+    "httpStatus": 200,
+    "contentType": "image/png",
+    "bytes": 1257413,
+    "sha256": "ba5278a01945231847b44295d56e0617bf8a7b922c5bd26c00e685fcab76b975",
+    "fetchedAtUTC": "2026-11-18T05:19:24.249270+00:00"
+  },
+  "liveWorkingProductionBranchEarlierV2BytesIdentical": true,
+  "creationEvidence": {
+    "source": "Screenshot attached by founder in current development conversation",
+    "conversationTitleObserved": "로고 디자인 요청",
+    "profileDisplayNameObserved": "theanna",
+    "serviceUiObserved": "ChatGPT",
+    "generationToolIdentifiedByFounder": "OpenAI ChatGPT image generation",
+    "visibleLogo": "AltWing rocket penguin/wordmark with cyber flipper detail",
+    "visualRelationshipToAsset": "Strong visual correspondence; not a byte/pixel-identity proof of original generation",
+    "sourceScreenshotBinaryAvailableLocally": false,
+    "sourceScreenshotSha256": null,
+    "fullScreenshotPublished": false,
+    "legalAccountHolderAuthenticated": false,
+    "historicalImageModelVerified": false,
+    "datesVisibleInScreenshot": false
+  },
+  "chronology": [
+    {
+      "date": "2026-07-31",
+      "event": "Early AI-assisted logo design",
+      "basis": "Founder report"
+    },
+    {
+      "date": "2026-08-07",
+      "event": "Cyber-inspired logo refinement",
+      "basis": "Founder date; related refinement prompt visually observed without date"
+    },
+    {
+      "date": "2026-08-16",
+      "event": "Further logo iterations",
+      "basis": "Founder report"
+    },
+    {
+      "date": "2026-08-29",
+      "event": "Transparent extraction from embedded PNG in AltWing_logo.svg",
+      "basis": "Founder and earlier development-record account; original source files unavailable"
+    },
+    {
+      "date": "2026-08-30",
+      "event": "Matching asset committed to AlexJang14/altwing-v2",
+      "basis": "Existing verified commit/blob record; not proof of copyright ownership",
+      "commit": "83e6c29ca66e33035a4050694d81418d67cce1f2"
+    }
+  ],
+  "reviewDocument": "docs/rights/MASCOT-PROVENANCE-2026-11-18.md",
+  "reviewDocumentSha256": "2d01c8ba86fe02abf8a8d71794a40263d1128cbb8e290e45617de0e0543ab970",
+  "officialTermsEvidence": "docs/rights/OPENAI-TERMS-2026-01-01-EVIDENCE.json",
+  "officialTermsEvidenceSha256": "4fcf163b39a0eb79207341f5016cf58babdcf4a990205f7241d39accca7f7c08",
+  "provenanceStatus": "PARTIALLY_DOCUMENTED_AND_VISUALLY_CORROBORATED",
+  "exactGeneratedFileToExtractedPngDerivation": "UNVERIFIED — no original download/SVG in this update",
+  "accountHolderPermission": "RECEIVED_WITHIN_RIGHTS_HELD — see mascot-permission.json; not independent signature authentication",
+  "referenceImageInputsAndRights": "UNVERIFIED — no complete input history; no specific infringement identified",
+  "exclusiveCopyrightClaimed": false,
+  "thirdPartyPermissionsInferred": false,
+  "rightsCleared": false,
+  "assetModified": false,
+  "brandingPreserved": true,
+  "productionChanged": false,
+  "accountHolderPermissionRecord": "docs/rights/mascot-permission.json"
+}

@@ -1,15 +1,10 @@
 .universe-page {
   min-height: 100vh;
 
-  color: white;
+  color: var(--gh-text);
 
   background:
-    radial-gradient(
-      circle at 50% 0%,
-      rgba(91,141,239,.12),
-      transparent 28%
-    ),
-    #0d132b;
+    var(--gh-bg);
 }
 
 .universe-page-nav {
@@ -26,7 +21,7 @@
 
   border-bottom:
     1px solid
-    rgba(255,255,255,.06);
+    var(--gh-border);
 }
 
 .universe-page-nav button {
@@ -35,7 +30,7 @@
   border: 0;
 
   color:
-    rgba(255,255,255,.55);
+    var(--gh-text-muted);
 
   background: transparent;
 
@@ -45,15 +40,15 @@
 .universe-page-nav button:last-child {
   justify-self: end;
 
-  color: #ffc857;
+  color: var(--gh-text-muted);
 }
 
 .universe-page-nav strong {
-  font-size: 18px;
+  font-size: var(--gh-text-lead);
 }
 
 .universe-page-nav strong span {
-  color: #5b8def;
+  color: var(--gh-text-muted);
 }
 
 .universe-page-hero {
@@ -68,10 +63,10 @@
 }
 
 .universe-page-hero > span {
-  color: #5b8def;
+  color: var(--gh-text-muted);
 
-  font-size: 8px;
-  font-weight: 950;
+  font-size: var(--gh-text-xs);
+  font-weight: 600;
 
   letter-spacing: .18em;
 }
@@ -81,11 +76,7 @@
     9px 0 12px;
 
   font-size:
-    clamp(
-      38px,
-      7vw,
-      68px
-    );
+    var(--gh-text-title);
 
   line-height: .96;
 
@@ -96,7 +87,7 @@
   max-width: 540px;
 
   color:
-    rgba(255,255,255,.48);
+    var(--gh-text-muted);
 
   line-height: 1.55;
 }

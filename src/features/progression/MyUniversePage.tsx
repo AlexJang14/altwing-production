@@ -1,3 +1,4 @@
+import {preferredScrollBehavior} from '../../design/golden-horizon/motion';
 import posthog, {
   isPostHogConfigured,
 } from "../../posthog";
@@ -67,7 +68,7 @@ function MyUniversePage({
         </p>
       </section>
 
-      <nav className="aw-universe-shortcuts" aria-label="My Universe shortcuts">{[{label:'Packs & planets',id:'universe-rewards'},{label:'My project records',id:'universe-projects'},{label:'Saved colleges & programs',id:'universe-saved'}].map(item=><button key={item.id} type="button" onClick={()=>document.getElementById(item.id)?.scrollIntoView({behavior:'smooth',block:'start'})}>{item.label} ↓</button>)}</nav>
+      <nav className="aw-universe-shortcuts" aria-label="My Universe shortcuts">{[{label:'Packs & planets',id:'universe-rewards'},{label:'My project records',id:'universe-projects'},{label:'Saved colleges & programs',id:'universe-saved'}].map(item=><button key={item.id} type="button" onClick={()=>document.getElementById(item.id)?.scrollIntoView({behavior: preferredScrollBehavior(),block:'start'})}>{item.label} ↓</button>)}</nav>
       <div className="universe-page-content">
         <PlanetShelf />
         <MyUniversePanel />

@@ -42,20 +42,15 @@ button[data-option] small,
 [class*="choice-grid"] > button small {
 
   color:
-    rgba(
-      170,
-      195,
-      255,
-      .92
-    ) !important;
+    var(--gh-interactive) !important;
 
   opacity: 1 !important;
 
   font-size:
-    13px !important;
+    var(--gh-text-sm) !important;
 
   font-weight:
-    850 !important;
+    600 !important;
 
   line-height:
     1.35 !important;
@@ -79,7 +74,7 @@ button[data-option] strong,
     18px !important;
 
   color:
-    #ffffff !important;
+    var(--gh-text) !important;
 
   opacity: 1 !important;
 
@@ -87,7 +82,7 @@ button[data-option] strong,
     28px !important;
 
   font-weight:
-    800 !important;
+    600 !important;
 
   line-height:
     1.18 !important;
@@ -114,17 +109,12 @@ button[data-option] p,
     96% !important;
 
   color:
-    rgba(
-      242,
-      246,
-      255,
-      .88
-    ) !important;
+    var(--gh-text) !important;
 
   opacity: 1 !important;
 
   font-size:
-    18px !important;
+    var(--gh-text-lead) !important;
 
   font-weight:
     500 !important;
@@ -149,15 +139,15 @@ button[data-option] b,
     22px !important;
 
   color:
-    #ffc857 !important;
+    var(--gh-text-muted) !important;
 
   opacity: 1 !important;
 
   font-size:
-    13px !important;
+    var(--gh-text-sm) !important;
 
   font-weight:
-    900 !important;
+    600 !important;
 
   line-height:
     1.3 !important;
@@ -176,7 +166,7 @@ button[data-option] b,
 [class*="question"] > h2 {
 
   color:
-    #ffffff !important;
+    var(--gh-text) !important;
 
   opacity: 1 !important;
 
@@ -227,7 +217,7 @@ button[data-option] small {
   [class*="choice-grid"] > button strong {
 
     font-size:
-      23px !important;
+      var(--gh-text-card) !important;
   }
 
 
@@ -236,7 +226,7 @@ button[data-option] small {
   [class*="choice-grid"] > button p {
 
     font-size:
-      16px !important;
+      var(--gh-text-body) !important;
   }
 
 }

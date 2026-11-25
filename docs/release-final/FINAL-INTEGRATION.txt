@@ -1,0 +1,97 @@
+ALTWING GOLDEN HORIZON + LIVE INTELLIGENCE — FINAL INTEGRATION, NOT DEPLOYED
+
+The complete approved polished product and the content pipeline are combined
+in release/golden-horizon-integrated. Earlier RC1, additive, functional, polished
+and Live Intelligence candidates remain intact. No Git commit, push, deployment,
+DNS/domain change, production initialization or SQL operation is authorized yet.
+
+PRESERVATION AND CONTENT
+All missions, labs, projects, rewards, storage keys, assessment versions, private
+APIs and both administrator grants remain implemented. Backend, binding and
+pending additive SQL bytes match the approved polished candidate. Public content
+uses versioned JSON; it introduces no database migration. All 733 original IDs
+remain. Existing verified API observations for two colleges are incorporated
+field by field, with their real observation dates and historical-cohort limits;
+this is not a claim that the full Scorecard dataset was refreshed. The actual
+weekly official-source update is applied locally through the normal validated
+publisher. Only three records have field-specific current verification; others
+retain their original/unknown status. No imported record is marked new.
+
+AUTOMATION
+Three verified sources are enabled: official NASA aeronautics RSS discovery,
+NASA STEM Gateway name/organization facts, and BLS page/link change monitoring.
+All 126 unreviewed sources are explicitly disabled. Full Scorecard collection
+is also disabled pending the free API key and a complete live validation. The
+existing collection code, manual monthly mode and tests are retained.
+The monthly cron is not armed for initial launch; its API key is optional. A disabled
+required monthly source reports a failure/coverage gap; BLS page reachability
+must not be called a successful college statistics update. No new eligibility,
+current admissions rules, accreditation, salary or deadline is invented.
+Only verified daily/weekly schedules plus manual execution are prepared for
+initial activation; the explicit exact-SHA Pages handoff remains unchanged. Scheduled collection and publishing stay behind the two existing
+activation variables and must not be enabled before explicit final approval.
+
+REMAINING OWNER ACTIONS
+1. Mascot R01: the November18 account-holder grant is already recorded. Inputs
+   used reference images whose original source/permissions remain unknown. The
+   current penguin is unchanged. Supply actual reference permissions/qualified
+   output review, or explicitly decide whether to retain it as a documented
+   release-policy exception accepting that uncertainty. An exception is NOT
+   verified clearance or a third-party license. No replacement is authorized.
+2. Use the final actual application and the existing 38-case acceptance tool.
+   Record actual outcomes for the 31 pre-deployment cases; missing observations
+   remain UNVERIFIED. Keep the seven L01-L07 production-only checks deferred.
+   Complete the remaining mobile/keyboard/screen-reader and A4/Letter inspection
+   on real supported browsers/devices; DOM width tests are not visual evidence.
+   Existing two-account read-only checks use each person's own login, not shared
+   credentials. Export the acceptance JSON for reconciliation.
+OPTIONAL LATER WORK — NOT AN INITIAL-LAUNCH BLOCKER
+For future monthly college refresh, configure the free data.gov
+   key securely (COLLEGE_SCORECARD_API_KEY; never in chat/public source) and
+   verify a complete collection before enabling that known source. No paid
+   service or new backend is needed. Public sample quota was insufficient for
+   the complete collection; it was not bypassed or relabeled complete.
+
+DATABASE RISK AND COORDINATED RELEASE
+Production database recovery remains UNVERIFIED. The owner already acknowledged
+this on November21; do not request the same generic acknowledgement again.
+Successful isolated SQLite migration/preservation/concurrency/failure-prefix
+checks are retained separately. They are not production D1 recovery evidence.
+The original eight tables, four additive tables, five new-table indexes and three
+aggregation triggers remain unchanged from the approved narrow migration.
+No historical UNIQUE index or row cleanup is introduced. Code rollback does not
+restore data; partial migration must STOP before retry. See the existing
+MIGRATION-SAFETY-AND-ROLLBACK.txt for exact state handling; no routine Support
+ticket is required. An unexpected live state may require supported provider
+reconciliation, not destructive repair or invented ledger entries.
+
+The owner approved the integrated design and feature direction on November23.
+This is not deployment/migration/automation activation approval.
+After applicable pre-deployment acceptance and the mascot decision are resolved, request ONE
+approval naming this exact candidate and scope. Then, as one coordinated launch:
+refresh main and supported migration state; publish the complete backend with
+unchanged bindings/secrets/audience; verify its result; commit/push the complete
+frontend and content through the existing GitHub Actions Pages workflow; verify
+its exact SHA on altwing.org. This dependency ordering is not phased release or
+reduced functionality. Do not advance to the frontend if backend publication or
+migration state is uncertain. Historical reporting uses the supported bounded,
+resumable administrator action after publication. No synthetic production rows.
+
+Private administrator login AFTER approved backend publication:
+https://altwing-engineering-pathways.theanna.chatgpt.site/admin/login
+Both existing administrators use their own ChatGPT accounts. Unauthorized and
+anonymous report/story/export requests remain denied server-side. No public
+navigation link or hidden-URL-only restriction is introduced.
+
+Post-deployment L01-L07 verify exact assets/routes/progress, Cloudflare beacon and
+Visits (separate from page views), genuine voluntary feedback storage/retrieval,
+mission/project ingestion and deduplication, independent real administrators and
+unauthorized denial, accurate exports/print and version/cohort reporting, bounded
+historical preparation, opt-outs/DNT/GPC and privacy. No user counts, feedback,
+real account success or recovery result is fabricated. They cannot be certified
+for the pending release before deployment.
+
+Rollback uses the preserved backend version11 and an approved normal Git revert
+with the existing Pages workflow. Retain additive tables and all old/new records;
+no down-migration, DROP, force-push or DNS change. Content snapshots can be restored
+from their validated history without touching the application database.

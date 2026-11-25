@@ -1,12 +1,12 @@
 ## Production source and deployment
 
-Current production source belongs to [AlexJang14/altwing-production](https://github.com/AlexJang14/altwing-production). Follow [the production guide](docs/PRODUCTION.md) for automatic GitHub Actions deployment, Cloudflare DNS, backend configuration, progress preservation and rollback. The intended canonical address is https://altwing.org/; the independent GitHub address is https://alexjang14.github.io/altwing-production/. The old junjang06 deployment remains separate.
+Production repository: [AlexJang14/altwing-production](https://github.com/AlexJang14/altwing-production). Follow [the production guide](docs/PRODUCTION.md) for automatic GitHub Actions deployment, Cloudflare DNS, backend configuration, progress preservation and rollback. The intended canonical address is https://altwing.org/; the independent GitHub address is https://alexjang14.github.io/altwing-production/. The old junjang06 deployment remains separate.
 
 Push updates to `main` to run tests and deploy the frontend. `npm run build:pages` creates `pages-dist/` for the custom-domain root; `npm run build:pages:preview` creates `pages-preview/` for the new owner's GitHub path. Actions chooses the configured Pages base automatically. The Worker build from `npm run build` serves the existing authenticated backend and is not the Pages frontend artifact.
 
 Student progress is browser-local and needs export/import between origins. Owner analytics sign-in stays on the existing backend and database; backend source is included, but its deployment remains a separate Sites operation. The new repository and DNS setup do not redirect or disable the old owner's Pages project.
 
-The older release notes below describe historical releases. Use [the production guide](docs/PRODUCTION.md) for current deployment commands and analytics configuration. The two reviewed pre-existing content/audit warnings remain visible; new failures block release.
+The older release notes below describe historical releases. Use [the production guide](docs/PRODUCTION.md) for current deployment commands and analytics configuration. The final readiness review is local-only. The42 opportunity records have now received official-source checks, and obsolete legacy label expectations have been replaced by current reward behavior tests. Both old advisories are archived in deployment/retired-advisories.json; every current failure blocks the automated check. Rights and manual browser/PDF gates remain separate in docs/release-readiness/DEPLOYMENT-CHECKLIST.md. No production update is approved.
 
 ## October 25 UX redesign
 
@@ -16,7 +16,7 @@ The shared shell keeps the same penguin home logo and fixed navigation on every 
 
 Canonical routes: `#/match`, `#/explore`, `#/major?major=civil`, `#/projects?project=solar`, `#/colleges`, `#/programs`, `#/universe`, `#/sitemap`, `#/privacy`, `#/aerospace`, and `#/aerospace-build?wing=propulsion`. Legacy counselor links resolve to the appropriate guide or directory.
 
-WingMatch opens a four-step tutorial immediately after completion; it can be skipped and replayed. Three distinct project workspaces support previewing any stage while preserving the evidence requirements for completion. A saved completed project awards one pack, with duplicate saves deduplicated by source ID. Pack reveals use a body-level dialog and self-contained SVG illustrations; collected worlds persist in browser storage and display before undiscovered objects.
+In the proposed assessment update, a fresh WingMatch result opens a brief celebration followed by the voluntary five-question assessment; closing never blocks results or rewards. The existing quick tutorial remains manually replayable. Three distinct project workspaces support previewing any stage while preserving the evidence requirements for completion. A saved completed project awards one pack, with duplicate saves deduplicated by source ID. Pack reveals use a body-level dialog and self-contained SVG illustrations; collected worlds persist in browser storage and display before undiscovered objects.
 
 UI research and rationale: `docs/UX-RESEARCH.md`. Existing student data keys are retained.
 
@@ -28,7 +28,7 @@ AltWing helps students explore engineering and take a practical next step with a
 
 ## Run locally
 
-Use Node 22.12+ or 24 (Node 20.19+ is also supported by the build tool).
+Use Node22.13+ or the tested Node24, as required by this application.
 
 ```sh
 npm ci
@@ -49,15 +49,16 @@ The submission test covers opportunity grade, budget and location exclusions, du
 
 ## Deploy
 
-Publish the **contents of dist/** at the root of a static HTTPS website. No backend is required. Routes use the URL hash, so direct links and refresh do not require a server rewrite rule. The deploy archive contains the static files ready to publish; the source archive is for development. Do not submit a localhost or file:// URL.
+This historical submission was static. Current production uses `pages-dist/` from `npm run build:pages` for GitHub Pages and a separate existing Worker backend for private analytics/feedback. Do not publish Worker `dist/` as the Pages site. Production publication requires the owner’s explicit approval and existing Actions workflow. Hash routes still support direct links and refresh.
 
 For a local production preview:
 
 ```sh
-npm run preview -- --host 127.0.0.1
+npm run build:pages:preview
+ALTWING_PAGES_TARGET=preview npm exec -- vite preview --config vite.pages.config.ts --host 127.0.0.1 --port 4173 --strictPort
 ```
 
-Analytics is optional. Without configuration, the site works and the analytics SDK is not loaded. To configure a separate source build, use the variable names in .env.example and rebuild. Never put secret server keys in VITE variables. The supplied static build has no analytics configuration.
+Analytics is optional. Without configuration, the site works and the analytics SDK is not loaded. To configure a separate source build, use the variable names in .env.example and rebuild. Never put secret server keys in VITE variables. Current production analytics use the existing backend and consent-gated Cloudflare beacon; preview builds disable production telemetry and real feedback submission.
 
 ## Implemented in this release
 
@@ -82,11 +83,11 @@ Analytics is optional. Without configuration, the site works and the analytics S
 
 The primary WingMatch is the eight-incident engineering storm-response experience across 14 engineering directions. It is not the earlier Mars-only assessment. The six aerospace labs remain a separate deeper exploration route.
 
-Opportunity Match is a rule-based beta over 42 source-linked catalog records, not an autonomous AI search service or confirmation of eligibility. Program dates and requirements must be checked at their official sources. Source-check dates are inherited catalog metadata; this release did not independently reverify every listing.
+Opportunity Match is a rule-based beta over 42 source-linked catalog records, not an autonomous AI search service or confirmation of eligibility. Program dates and requirements must be checked at their official sources. The final-readiness source review covers all42 records:30 retained-fact checks are verified and12 have explicitly qualified unresolved fields/conflicts. Date checks are tied to reviewed record hashes and official-source evidence; unpublished next-cycle details are not invented. See docs/release-readiness/OPPORTUNITY-VERIFICATION.json.
 
 The three starter projects are simplified models with explicit assumptions, not validated physical designs. New project records require a prediction, two distinct tested inputs, comparison, revision reasoning, and reflection; they are not an independently assessed credential. No educator pilot or learning-impact study has been performed for these additions.
 
-Progress is browser-local. The new project workspace restores inputs, test history, notes, step and support level. Aerospace labs restore written notes and submitted evidence; their individual simulation controls reset after leaving. Exports are student-selected downloads. Cloud accounts, cross-device sync, audio/image evidence, full bilingual UI, live human mentoring and a trained AI tutor remain future work.
+No competitive student leaderboard is currently offered. Career/college recommendation rankings are not student scores or verified-student standings. Progress is browser-local. The new project workspace restores inputs, test history, notes, step and support level. Aerospace labs restore written notes and submitted evidence; their individual simulation controls reset after leaving. Exports are student-selected downloads. Cloud accounts, cross-device sync, audio/image evidence, full bilingual UI, live human mentoring and a trained AI tutor remain future work.
 
 ## Suggested short demonstration
 

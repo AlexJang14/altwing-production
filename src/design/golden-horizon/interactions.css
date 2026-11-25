@@ -1,0 +1,100 @@
+/* Golden Horizon interaction polish. Palette, imagery and data colors unchanged. */
+:root .aw-app-body>main{animation:gh-page-enter var(--gh-motion-normal) var(--gh-ease) backwards}
+:root :is(button,.aw-button,.release-button,.release-secondary){touch-action:manipulation;-webkit-tap-highlight-color:transparent;transition:background-color var(--gh-motion-fast) var(--gh-ease),color var(--gh-motion-fast) var(--gh-ease),border-color var(--gh-motion-fast) var(--gh-ease),transform var(--gh-motion-fast) var(--gh-ease)}
+:root :is(button,.aw-button,.release-button,.release-secondary):not(:disabled):active{transform:translateY(1px) scale(.985);transition-duration:var(--gh-motion-press)}
+:root :is(.aw-header a,.aw-mobile-nav a,.counselor-tabs button,.aw-reward-tabs button){transition:color var(--gh-motion-fast) var(--gh-ease),background-color var(--gh-motion-fast) var(--gh-ease),border-color var(--gh-motion-fast) var(--gh-ease),transform var(--gh-motion-fast) var(--gh-ease)}
+:root :is(.engineering-major-card,.college-card,.college-result-card,.opportunity-card,.guidance-idea-card,.aw-wing-card,.project-catalog>article){transition:border-color var(--gh-motion-normal) var(--gh-ease),transform var(--gh-motion-normal) var(--gh-ease)}
+:root .aw-gold-paths>a{transition:background-color var(--gh-motion-normal) var(--gh-ease),transform var(--gh-motion-normal) var(--gh-ease)}
+@media(hover:hover) and (pointer:fine){
+ :root :is(.engineering-major-card,.college-card,.college-result-card,.opportunity-card,.guidance-idea-card,.aw-wing-card,.project-catalog>article,.aw-gold-paths>a):hover{transform:translateY(-3px)}
+}
+:root :is(.match-progress>i,.be-progress span,.project-stage-progress>i,.aw-loading-track i){transition:width var(--gh-motion-normal) var(--gh-ease),background-color var(--gh-motion-fast) var(--gh-ease)}
+:root .scenario-match-shell{animation:gh-scene-enter var(--gh-motion-normal) var(--gh-ease) backwards}
+:root .scenario-options>button{transition:background-color var(--gh-motion-fast) var(--gh-ease),border-color var(--gh-motion-fast) var(--gh-ease),transform var(--gh-motion-fast) var(--gh-ease)}
+:root .scenario-options>button.is-selected{border-color:var(--gh-interactive)}
+:root .scenario-options>button.is-selected .scenario-option-index{color:var(--gh-interactive)}
+
+/* A connected, compact reflection; generous writing room remains optional. */
+:root .assessment-overlay{padding:24px;animation:gh-overlay-in var(--gh-motion-fast) var(--gh-ease) backwards}
+:root .assessment-dialog{width:100%;max-width:940px;grid-template-columns:minmax(180px,24%) minmax(0,1fr);grid-template-rows:minmax(0,1fr);min-height:0;box-sizing:border-box;overflow:clip;max-height:min(820px,92dvh);animation:gh-dialog-in var(--gh-motion-enter) var(--gh-ease) backwards}
+:root .assessment-art{padding:24px;min-height:0}
+:root .assessment-art img{width:140%;margin-left:-20%;animation:assessment-float 7s ease-in-out infinite}
+:root .assessment-art>p{font-size:1.4rem;line-height:1.3}
+:root .assessment-art>span{letter-spacing:.13em;line-height:1.6}
+:root .assessment-content{padding:32px 36px 24px;min-height:0;min-width:0;scrollbar-gutter:stable;overscroll-behavior:contain}
+:root .assessment-eyebrow{margin:4px 44px 18px 0!important;letter-spacing:.14em}
+:root .assessment-panel{animation:gh-question-forward var(--gh-motion-question) var(--gh-ease) backwards}
+:root .assessment-panel[data-direction=backward]{animation-name:gh-question-backward}
+:root .assessment-panel h2{font:550 clamp(1.35rem,2.35vw,1.8rem)/1.3 var(--gh-font-display);letter-spacing:-.025em;margin:10px 0 20px;color:var(--gh-text)}
+:root .assessment-story-mode .assessment-panel h2,:root .assessment-receipt h2{font-size:clamp(1.9rem,3.5vw,2.5rem);line-height:1.12;letter-spacing:-.035em}
+:root .assessment-context{margin:6px 0 12px!important;line-height:1.5}
+:root .assessment-content p{line-height:1.65}
+:root .assessment-options{gap:8px}
+:root .assessment-options label{padding:11px 14px;min-height:46px;font-size:var(--gh-text-body);line-height:1.45;transition:background-color var(--gh-motion-fast) var(--gh-ease),border-color var(--gh-motion-fast) var(--gh-ease),transform var(--gh-motion-fast) var(--gh-ease)}
+:root .assessment-options label:active{transform:scale(.99)}
+:root .assessment-options .is-selected i{background:var(--gh-interactive);box-shadow:inset 0 0 0 4px var(--gh-selected)}
+:root .assessment-progress{margin-bottom:18px}
+:root .assessment-progress span{background:var(--gh-border-control);transform-origin:center;transition:background-color var(--gh-motion-normal) var(--gh-ease),transform var(--gh-motion-normal) var(--gh-ease)}
+:root .assessment-progress .is-active{background:var(--gh-interactive);transform:scaleY(1.35)}
+:root .assessment-actions{margin:18px 0 8px;gap:16px}
+:root :is(.assessment-primary,.assessment-invite-button){min-height:46px;padding:12px 18px;font-weight:650}
+:root .assessment-back{min-height:44px;font-size:var(--gh-text-sm)}
+:root .assessment-story-mode .assessment-story-question{font-size:var(--gh-text-body);line-height:1.65}
+:root .assessment-story-mode .assessment-story{min-height:190px;line-height:1.7;padding:14px}
+:root .assessment-prompts{margin:14px 0;padding:10px 0}
+:root .assessment-prompts summary{min-height:30px;line-height:1.8}
+:root .assessment-story-label{margin:16px 0 8px}
+:root .assessment-share-notice{padding:12px 14px;margin-top:16px!important;line-height:1.65!important}
+:root .assessment-privacy{margin-top:20px!important;padding-top:14px;line-height:1.65}
+:root .assessment-privacy a{text-decoration:underline;text-underline-offset:.2em;text-decoration-thickness:.08em}
+:root .assessment-demo{margin-bottom:16px;letter-spacing:.08em;font-size:var(--gh-text-xs);color:var(--gh-text);line-height:1.6}
+:root .assessment-preview-note{font-size:var(--gh-text-xs)!important;margin-top:8px!important;color:var(--gh-text-muted)}
+:root .assessment-submission-status{min-height:1.5em;display:flex;gap:10px;align-items:center;font-size:var(--gh-text-sm);line-height:1.5;color:var(--gh-text);margin-top:16px}
+:root .assessment-submission-status:empty{min-height:0;margin:0}
+:root .assessment-spinner{width:15px;height:15px;flex:none;border:2px solid var(--gh-border-control);border-top-color:var(--gh-interactive);border-radius:50%;animation:gh-submitting .8s linear infinite}
+:root .assessment-error{border-color:var(--gh-error);color:var(--gh-error)!important;font-size:var(--gh-text-sm);line-height:1.65;border-radius:0 var(--gh-radius-small) var(--gh-radius-small) 0;background:var(--gh-surface-soft);margin:14px 0 0}
+:root .assessment-error:focus-visible{outline:var(--gh-focus);outline-offset:3px}
+:root .assessment-receipt-mark{display:inline-grid;place-items:center;width:42px;height:42px;margin:6px 0 12px;border:1px solid var(--gh-gold);color:var(--gh-gold);border-radius:50%;font-size:1.2rem}
+:root .assessment-overlay.is-closing{animation:gh-overlay-out var(--gh-motion-exit) var(--gh-ease) both}
+:root .assessment-overlay.is-closing .assessment-dialog{animation:gh-dialog-out var(--gh-motion-exit) var(--gh-ease) both}
+:root .assessment-overlay.is-closing .assessment-panel{animation:none}
+
+/* Reward motion is richer, localized and never gates progress calculation. */
+:root .pack-opening-content{animation:gh-reward-enter var(--gh-motion-reward) var(--gh-ease-reward) backwards}
+:root .pack-reveal-card{transition:transform var(--gh-motion-reward) var(--gh-ease-reward),border-color var(--gh-motion-normal) var(--gh-ease)}
+:root .pack-reveal-card.revealed{animation:gh-card-reveal var(--gh-motion-reward) var(--gh-ease-reward) both}
+:root .pack-summary{animation:gh-page-enter var(--gh-motion-enter) var(--gh-ease) backwards}
+
+@keyframes gh-page-enter{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+@keyframes gh-scene-enter{from{opacity:.35;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+@keyframes gh-overlay-in{from{opacity:0}to{opacity:1}}
+@keyframes gh-overlay-out{from{opacity:1}to{opacity:0}}
+@keyframes gh-dialog-in{from{opacity:0;transform:translateY(12px) scale(.985)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes gh-dialog-out{from{opacity:1;transform:translateY(0) scale(1)}to{opacity:0;transform:translateY(8px) scale(.99)}}
+@keyframes gh-question-forward{from{opacity:0;transform:translateX(10px)}to{opacity:1;transform:translateX(0)}}
+@keyframes gh-question-backward{from{opacity:0;transform:translateX(-10px)}to{opacity:1;transform:translateX(0)}}
+@keyframes gh-submitting{to{transform:rotate(360deg)}}
+@keyframes gh-reward-enter{from{opacity:0;transform:translateY(16px) scale(.965)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes gh-card-reveal{0%{opacity:.5;transform:translateY(12px) scale(.95)}65%{opacity:1;transform:translateY(-6px) scale(1.015)}100%{opacity:1;transform:translateY(-3px) scale(1)}}
+
+@media(max-width:760px){
+ :root .assessment-overlay{padding:10px;align-items:center}
+ :root .assessment-dialog{display:block;width:100%;height:auto;max-width:560px;max-height:calc(100dvh - 20px);border:1px solid var(--gh-border-control);border-radius:var(--gh-radius-dialog)}
+ :root .assessment-art{display:none}
+ :root .assessment-content{height:auto;max-height:calc(100dvh - 22px);padding:24px 20px 20px;box-sizing:border-box;overflow-y:auto}
+ :root .assessment-panel h2{font-size:1.4rem;line-height:1.3}
+ :root .assessment-story-mode .assessment-panel h2,:root .assessment-receipt h2{font-size:2rem}
+ :root .assessment-options label{min-height:48px;padding:12px 14px;font-size:1rem}
+ :root .assessment-story{font-size:1rem}
+ :root .assessment-story-mode .assessment-story{min-height:165px}
+ :root .assessment-actions{gap:12px;flex-wrap:wrap}
+ :root .assessment-actions .assessment-primary{margin-left:auto;min-height:48px}
+ :root .assessment-close{top:12px;right:12px}
+ :root .assessment-story-label{gap:4px}
+}
+@media(max-width:360px){:root .assessment-content{padding:24px 16px 18px}:root .assessment-actions{gap:8px}:root .assessment-primary{padding:12px 14px;gap:12px}}
+@media(prefers-reduced-motion:reduce){
+ :root :is(.aw-app-body>main,.scenario-match-shell,.assessment-overlay,.assessment-dialog,.assessment-panel,.assessment-art img,.assessment-spinner,.pack-opening-content,.pack-reveal-card,.pack-summary){animation:none!important;transition:none!important}
+ :root :is(.engineering-major-card,.college-card,.college-result-card,.opportunity-card,.guidance-idea-card,.aw-wing-card,.project-catalog>article,.aw-gold-paths>a,button,.aw-button,.release-button,.release-secondary,.assessment-options label):is(:hover,:active){transform:none!important}
+}
+@media print{:root :is(.aw-app-body>main,.assessment-panel,.pack-opening-content,.pack-reveal-card,.pack-summary){animation:none!important;transition:none!important;transform:none!important}}

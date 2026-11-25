@@ -1,7 +1,10 @@
+import ContentFreshness from '../../components/ContentFreshness';
+import '../../content/intelligence.css';
+import {preferredScrollBehavior} from '../../design/golden-horizon/motion';
 import { useEffect, useMemo, useState, type CSSProperties } from "react";
 import { ENGINEERING_MAJORS, ENGINEERING_MAJOR_MAP } from "./engineeringMajors";
 import { rankColleges, academicInputIssues, readAcademicScores, type CollegeSort, type GuidanceCollege } from "./collegeCatalog";
-import { rankOpportunities, verificationLabel } from "./opportunityCatalog";
+import { rankOpportunities } from "./opportunityCatalog";
 import { GUIDANCE_IDEAS } from "./ideaCatalog";
 import { CAREER_SNAPSHOTS } from "./careerCatalog";
 import PackReadyBanner from "../home/PackReadyBanner";
@@ -120,8 +123,9 @@ export default function CounselorHub({
   const [collegeLimit, setCollegeLimit] = useState(24);
   const [collegeSort,setCollegeSort] = useState<CollegeSort>("SCORE_FIT");
   const [opportunityQuery, setOpportunityQuery] = useState("");
+  const [includeArchived,setIncludeArchived]=useState(false);
   const [collegeFilter, setCollegeFilter] = useState<"ALL" | "HOME" | "IN_RANGE" | "MAPPED" | "DIRECTORY">("ALL");
-  const [opportunityFilter, setOpportunityFilter] = useState<"ALL" | "INTERNSHIP" | "SUMMER PROGRAM" | "RESEARCH" | "COMPETITION">("ALL");
+  const [opportunityFilter, setOpportunityFilter] = useState<"ALL" | "INTERNSHIP" | "SUMMER PROGRAM" | "RESEARCH" | "COMPETITION" | "SCHOLARSHIP" | "MENTORSHIP">("ALL");
 
   const inputIssues = academicInputIssues(profile);
   const academicScores = readAcademicScores(profile);
@@ -132,7 +136,7 @@ export default function CounselorHub({
   const collegeResults = useMemo(() => rankColleges(majorId, profile, collegeSort), [majorId, profile, collegeSort]);
   const comparableCollegeCount = collegeResults.filter(item=>item.academicFit.value !== null).length;
   const completeTestCount = scoreInputs.length === 2 ? collegeResults.filter(item=>item.academicFit.tests.length === 2).length : 0;
-  const opportunityResults = useMemo(() => rankOpportunities(majorId, profile), [majorId, profile]);
+  const opportunityResults = useMemo(() => rankOpportunities(majorId, profile,includeArchived), [majorId, profile,includeArchived]);
   const ideas = useMemo(() => GUIDANCE_IDEAS.filter((idea) => idea.majorId === majorId), [majorId]);
   const researchIdeas = useMemo(() => ideas.filter((idea) => idea.type === "RESEARCH"), [ideas]);
   const activityIdeas = useMemo(() => ideas.filter((idea) => idea.type === "EXTRACURRICULAR"), [ideas]);
@@ -184,7 +188,7 @@ export default function CounselorHub({
     setMajorId(nextId);
     onNavigate(nextId, tab);
     saveSelectedMajor(nextId);
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: preferredScrollBehavior() });
   }
 
   function toggleSaved(type: keyof SavedGuidance, id: string) {
@@ -206,7 +210,7 @@ export default function CounselorHub({
           {directory && <h2 className="aw-first-subtitle">Every student deserves a next step.</h2>}
           {tab !== 'PLAN' && <strong className="aw-field-label">Exploring: {major.name}</strong>}
           <p>{directory ? 'Discover opportunities that fit your interests and goals. Explore scholarships, research, internships, and new ways to create your own path.' : major.description}</p>
-          {directory && <button type="button" className="aw-button aw-first-cta" onClick={() => tab === 'OPPORTUNITIES' ? document.querySelector('.counselor-results-section')?.scrollIntoView({behavior:'smooth',block:'start'}) : setTab('OPPORTUNITIES')}>Explore Opportunities</button>}
+          {directory && <button type="button" className="aw-button aw-first-cta" onClick={() => tab === 'OPPORTUNITIES' ? document.querySelector('.counselor-results-section')?.scrollIntoView({behavior: preferredScrollBehavior(),block:'start'}) : setTab('OPPORTUNITIES')}>Explore Opportunities</button>}
         </div>
         <div className="counselor-hero-actions">
           <select aria-label="Engineering direction" value={majorId} onChange={(event) => chooseMajor(event.target.value as EngineeringMajorId)}>
@@ -436,7 +440,7 @@ export default function CounselorHub({
             <section className="counselor-results-section">
               <div className="results-heading">
                 <div><span>COLLEGE EXPLORER</span><h2>Universities to explore for {major.shortName}.</h2></div>
-                <p>Curated major links are supplemented by the College Scorecard May 2025 snapshot. Directory records report engineering graduates; they do not confirm this exact major is offered today. Historical tuition is not current net cost. Academic ranges are institution-level context, not admission chances.</p>
+                <p>Curated major links are supplemented by versioned College Scorecard records. Each record shows its own source and data context. Directory records report engineering graduates; they do not confirm this exact major is offered today. Historical tuition is not current net cost. Academic ranges are institution-level context, not admission chances.</p>
               </div>
 
               <section className="college-score-order" aria-label="University ordering">
@@ -493,7 +497,7 @@ export default function CounselorHub({
                       </div>
                       <div className="academic-context-chip">{academicContext}</div><p className="college-score-explanation">{academicFit.comparisons.length ? `Score comparison: ${academicFit.explanation}` : hasAcademicInput ? academicFit.explanation : "Add optional scores to compare the published academic profile."}</p>
                       <ul className="result-reasons">{reasons.slice(0, 3).map((reason) => <li key={reason}>{reason}</li>)}</ul>
-                      <div className="source-note">Source context: {college.source} · {college.sourceYear}{college.sourceUrl && <> · <a href={college.sourceUrl} target="_blank" rel="noreferrer">Dataset provenance ↗</a></>}</div>
+                      <ContentFreshness kind="college" id={college.id}/><div className="source-note">Source context: {college.source} · {college.sourceYear}{college.sourceUrl && <> · <a href={college.sourceUrl} target="_blank" rel="noreferrer">Dataset provenance ↗</a></>}</div>
                       <div className="external-actions">
                         <a href={college.engineeringUrl} target="_blank" rel="noreferrer">{college.majorCoverage ? "University website ↗" : "Engineering programs ↗"}</a>
                         <a href={college.admissionsUrl} target="_blank" rel="noreferrer">{college.majorCoverage ? "Check current admissions ↗" : "Admissions ↗"}</a>
@@ -515,7 +519,7 @@ export default function CounselorHub({
 
               <label className="program-search"><span>Search programs, organizations, or locations</span><input value={opportunityQuery} onChange={e=>setOpportunityQuery(e.target.value)} placeholder="MIT, robotics, California…" /></label>
               <div className="result-filter-row opportunity-filter-row">
-                {(["ALL", "INTERNSHIP", "SUMMER PROGRAM", "RESEARCH", "COMPETITION"] as const).map((item) => (
+                {(["ALL", "INTERNSHIP", "SUMMER PROGRAM", "RESEARCH", "COMPETITION", "SCHOLARSHIP", "MENTORSHIP"] as const).map((item) => (
                   <button type="button" key={item} className={opportunityFilter === item ? "is-active" : ""} onClick={() => setOpportunityFilter(item)}>
                     {item === "ALL" ? "All" : item === "SUMMER PROGRAM" ? "Summer" : item.charAt(0) + item.slice(1).toLowerCase()}
                   </button>
@@ -546,7 +550,7 @@ export default function CounselorHub({
                 </div>
               </section>
 
-              <div className="opportunity-results-grid">
+              <label className="content-archive-filter"><input type="checkbox" checked={includeArchived} onChange={e=>setIncludeArchived(e.target.checked)}/>Include archived application cycles</label><div className="opportunity-results-grid">
                 {filteredOpportunityResults.map(({ opportunity, reasons }) => {
                   const isSaved = saved.opportunityIds.includes(opportunity.id);
                   return (
@@ -568,7 +572,7 @@ export default function CounselorHub({
                       </div>
                       <div className="eligibility-box"><span>ELIGIBILITY</span><p>{opportunity.eligibility}</p></div>
                       <ul className="result-reasons">{reasons.map((reason) => <li key={reason}>{reason}</li>)}</ul>
-                      <p className="release-eligibility-note">{profile.grade && !opportunity.needsGradeCheck ? `Grade ${profile.grade} is included in the catalog. ` : "Grade eligibility needs checking. "}Full eligibility is not confirmed. Travel and housing may add costs.</p><div className="verified-row"><span>{verificationLabel(opportunity)} · {opportunity.lastVerified}</span><a href={opportunity.officialUrl} target="_blank" rel="noreferrer">Official source ↗</a></div>
+                      <ContentFreshness kind="opportunity" id={opportunity.id}/><p className="release-eligibility-note">{profile.grade && !opportunity.needsGradeCheck ? `Grade ${profile.grade} is included in the catalog. ` : "Grade eligibility needs checking. "}Full eligibility is not confirmed. Travel and housing may add costs.</p>
                     </article>
                   );
                 })}

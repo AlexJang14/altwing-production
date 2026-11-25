@@ -1,0 +1,19 @@
+{
+  "receivedAtUTC": "2026-11-20T01:27:54.593196+00:00",
+  "source": "Owner supplied final historical review in this conversation",
+  "asset": "public/brand/altwing-penguin.png",
+  "assetSha256": "ba5278a01945231847b44295d56e0617bf8a7b922c5bd26c00e685fcab76b975",
+  "gitBlob": "7ffe9eb481faede47c5faf71e752feffb6b430e2",
+  "referenceImagesUsed": true,
+  "originalReferenceSources": "UNKNOWN",
+  "referenceCreatorsLicensesPermissions": "UNKNOWN",
+  "independentlyProtectedThirdPartyContentPresent": "UNKNOWN",
+  "subsequentIterations": "Some referenced earlier AltWing drafts and AI outputs; complete chain not independently reconstructed",
+  "immediateSource": "Reported historical extraction from uploaded AltWing_logo.svg containing embedded PNG",
+  "textOnlyMascotGenerationClaim": false,
+  "accountHolderGrant": "PASS \u2014 November18 grant already received, within rights held; no duplicate grant requested",
+  "exclusiveCopyrightClaimed": false,
+  "underlyingReferenceRightsVerified": false,
+  "remainingGate": "OPEN / UNVERIFIED \u2014 source/permission evidence required for actual reference inputs; no universal clearance inferred",
+  "brandingChanged": false
+}

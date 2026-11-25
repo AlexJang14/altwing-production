@@ -1,0 +1,502 @@
+{
+  "scope": "Records 1–14 only; recommendations for existing fields, no catalog edits or production changes.",
+  "checkedAtUTC": "2026-11-16T01:10:23Z",
+  "displayDate": "2026-11-15",
+  "displayTimezone": "America/New_York",
+  "datePolicy": "Precise UTC inspection time retained; lastVerified recommendations use the requested user-facing date in America/New_York (Nov15 while UTC is Nov16). Parent may normalize all catalog dates consistently before applying.",
+  "statusDefinitions": {
+    "VERIFIED": "Official facts needed for the proposed wording inspected. Does not certify every individual listing or future form, and preserves explicitly unknown details.",
+    "PARTIAL": "Official program information inspected but missing/mixed-cycle or form-access details remain; recommended text discloses them and does not invent data.",
+    "UNVERIFIED": "No adequate official-source inspection; do not advance lastVerified."
+  },
+  "records": [
+    {
+      "id": "gtri-2027",
+      "status": "VERIFIED",
+      "cycle": "2027 pre-application announcement",
+      "sources": [
+        {
+          "url": "https://gtri.gatech.edu/stem/high-school-summer-internship",
+          "evidence": "Pre-application planned Dec 11, 2026. Five-week paid, in-person Georgia internship. Graduation classes 2027–2029; Georgia residency/school and citizenship or U.S.-person conditions. Approximate work window June 14–July 23 and age-16 deadline Apr 4; page says final dates belong in pre-application."
+        }
+      ],
+      "mismatches": [
+        "Existing summary omits that all listed dates are approximate and housing is not supplied. No change to the Dec11 launch assertion."
+      ],
+      "unconfirmed": [
+        "Final pre-application dates and lab assignment."
+      ],
+      "recommendedUpdates": {
+        "status": "UPCOMING",
+        "timing": "Pre-application launch planned Dec. 11, 2026. Currently posted dates are approximate; final dates will be in the pre-application.",
+        "eligibility": "Georgia residents attending a Georgia high school; graduating classes 2027–2029; citizenship or U.S.-person requirements. Posted age-16 deadline is Apr. 4, 2027, subject to the page’s approximate-date notice.",
+        "cost": "Paid internship; housing is not provided and reliable local transportation is required.",
+        "format": "IN PERSON",
+        "costBand": "FREE_PAID",
+        "lastVerified": "2026-11-15"
+      },
+      "checkedAtUTC": "2026-11-16T01:10:23Z",
+      "lastSourceCheckDisplayDate": "2026-11-15",
+      "displayTimezone": "America/New_York",
+      "retrievalMethod": "Public official-source text inspection through web tool; search/crawl text where explicitly noted; no authenticated submission or browser interaction."
+    },
+    {
+      "id": "stanford-shtem-2027",
+      "status": "VERIFIED",
+      "cycle": "2027 announced; application not yet open",
+      "sources": [
+        {
+          "url": "https://compression.stanford.edu/outreach/shtem-summer-internships-high-schoolers",
+          "evidence": "Expected Dec7 opening and Feb21 closing; seven weeks June21–Aug6 in person. Current juniors/seniors in 2026–27, at least14 by June20, U.S. citizen/permanent resident. Posted $95 application and $2,500 tuition are subject to change. Students arrange housing/commute; assistance can be requested."
+        }
+      ],
+      "mismatches": [
+        "Age threshold was missing from existing eligibility. Existing expected dates and fees agree with official page."
+      ],
+      "unconfirmed": [
+        "Finalized application availability and fee amounts may change."
+      ],
+      "recommendedUpdates": {
+        "status": "UPCOMING",
+        "timing": "Applications expected Dec. 7, 2026–Feb. 21, 2027; seven-week program June 21–Aug. 6, 2027. Confirm final dates on the official page.",
+        "eligibility": "Current grade 11 or 12 in 2026–27; at least 14 by June 20, 2027; U.S. citizen or permanent resident.",
+        "cost": "Posted $95 nonrefundable application fee + $2,500 tuition, both subject to change; financial assistance may be requested. Housing and commuting are not provided.",
+        "costBand": "FEES",
+        "format": "IN PERSON",
+        "grades": [
+          "11",
+          "12"
+        ],
+        "lastVerified": "2026-11-15"
+      },
+      "checkedAtUTC": "2026-11-16T01:10:23Z",
+      "lastSourceCheckDisplayDate": "2026-11-15",
+      "displayTimezone": "America/New_York",
+      "retrievalMethod": "Public official-source text inspection through web tool; search/crawl text where explicitly noted; no authenticated submission or browser interaction."
+    },
+    {
+      "id": "gmu-assip-2027",
+      "status": "PARTIAL",
+      "cycle": "2027 application dates; remaining page mixes 2026 information",
+      "sources": [
+        {
+          "url": "https://science.gmu.edu/assip",
+          "evidence": "2027 application Dec7–Feb12. Page says final2027 dates, tuition and mentors will be updated during November. It describes remote, in-person and hybrid placements; 2026 age15/16 lab rules; $25 application and $1,299 three-credit tuition with need waivers."
+        }
+      ],
+      "mismatches": [
+        "IN PERSON is too narrow for a program with remote/hybrid placements. Existing broad eligibility omits that age guidance currently shown is for2026. Do not represent the older tuition as confirmed2027 pricing."
+      ],
+      "unconfirmed": [
+        "Final 2027 tuition, age dates, mentor/project availability and exact program dates. No 2027 citizenship condition was established."
+      ],
+      "recommendedUpdates": {
+        "status": "UPCOMING",
+        "timing": "2027 application opens Dec. 7, 2026 and closes Feb. 12, 2027; final program dates and mentors are still being updated.",
+        "eligibility": "High-school and undergraduate students; age and participation requirements depend on the lab and mentor. The inspected age dates describe 2026; confirm 2027 rules before applying.",
+        "cost": "Current page lists a $25 application fee and tuition for three credits, with need-based waivers; final 2027 tuition is not yet confirmed.",
+        "costBand": "FEES",
+        "format": "VARIES",
+        "lastVerified": "2026-11-15"
+      },
+      "checkedAtUTC": "2026-11-16T01:10:23Z",
+      "lastSourceCheckDisplayDate": "2026-11-15",
+      "displayTimezone": "America/New_York",
+      "retrievalMethod": "Public official-source text inspection through web tool; search/crawl text where explicitly noted; no authenticated submission or browser interaction."
+    },
+    {
+      "id": "ut-sees-watch",
+      "status": "PARTIAL",
+      "cycle": "2026 only on inspected pages; 2027 not announced",
+      "sources": [
+        {
+          "url": "https://csr.utexas.edu/education-outreach/high-school-internships/sees/",
+          "evidence": "Still advertises Feb22,2026 deadline, July5–18 on-site period, virtual projects and July20–21 symposium. Continuation/expansion depends on future funding. No2027 application date inspected."
+        },
+        {
+          "url": "https://csr.utexas.edu/education-outreach/high-school-internships/sees/eligibility/",
+          "evidence": "2026 eligibility: current sophomores/juniors, no previous SEES participation, U.S. citizen, age16 by July5,2026."
+        },
+        {
+          "url": "https://csr.utexas.edu/education-outreach/high-school-internships/sees/faqs/",
+          "evidence": "FAQ expressly labelled2026; on-site and virtual timelines differ."
+        }
+      ],
+      "mismatches": [
+        "Existing WATCH remains appropriate. Add funding-contingent continuation; do not imply2027 is guaranteed."
+      ],
+      "unconfirmed": [
+        "2027 operation/funding, application, age/grade/citizenship requirements, cost, scholarship and travel support."
+      ],
+      "recommendedUpdates": {
+        "status": "WATCH",
+        "timing": "Inspected pages still describe the completed 2026 cycle. No 2027 application is announced there; continuation depends on future funding.",
+        "eligibility": "The 2026 cycle required current sophomores/juniors, U.S. citizenship and age 16 by July 5, 2026. Those are historical rules; 2027 eligibility is not confirmed.",
+        "cost": "The 2026 cycle included scholarships and fee-based on-site places; 2027 costs and travel assistance are not yet confirmed.",
+        "costBand": "UNKNOWN",
+        "format": "HYBRID",
+        "lastVerified": "2026-11-15"
+      },
+      "checkedAtUTC": "2026-11-16T01:10:23Z",
+      "lastSourceCheckDisplayDate": "2026-11-15",
+      "displayTimezone": "America/New_York",
+      "retrievalMethod": "Public official-source text inspection through web tool; search/crawl text where explicitly noted; no authenticated submission or browser interaction."
+    },
+    {
+      "id": "nasa-stem-gateway",
+      "status": "VERIFIED",
+      "cycle": "Evergreen official opportunity portal, not one application cycle",
+      "sources": [
+        {
+          "url": "https://www.nasa.gov/stem-content/nasa-stem-gateway/",
+          "evidence": "NASA describes its current opportunity portal for internships, challenges, research, educator and pre-college/college experiences. Its grade-level classification includes9–12 and other audiences, with link to stemgateway.nasa.gov."
+        }
+      ],
+      "mismatches": [
+        "Clarify OPEN refers to an accessible directory, not guaranteed eligibility/open enrollment in each listed program."
+      ],
+      "unconfirmed": [
+        "Every individual listing has its own deadlines, citizenship/age/grade rules, costs and location. These were not exhaustively audited."
+      ],
+      "recommendedUpdates": {
+        "status": "OPEN",
+        "timing": "NASA’s opportunity directory is available; individual applications and deadlines vary by listing.",
+        "eligibility": "Portal includes grades 9–12. Check each listing’s grade, age, citizenship and location rules; the portal itself is not an eligibility guarantee.",
+        "cost": "Varies by individual listing; check the organizer’s details.",
+        "costBand": "UNKNOWN",
+        "format": "VARIES",
+        "description": "NASA’s official directory of internships, challenges, research and pre-college STEM experiences. It is a portal, not a single program.",
+        "lastVerified": "2026-11-15"
+      },
+      "checkedAtUTC": "2026-11-16T01:10:23Z",
+      "lastSourceCheckDisplayDate": "2026-11-15",
+      "displayTimezone": "America/New_York",
+      "retrievalMethod": "Public official-source text inspection through web tool; search/crawl text where explicitly noted; no authenticated submission or browser interaction."
+    },
+    {
+      "id": "jhu-engineering-innovation",
+      "status": "PARTIAL",
+      "cycle": "Mixed page: 2026 session schedule plus2027 residential-age notice",
+      "sources": [
+        {
+          "url": "https://ei.jhu.edu/programs/engineering-innovation-research-program/",
+          "evidence": "Official indexed page describes six-week research, hybrid commuter/residential and online synchronous formats; current sophomores/juniors with math/science prerequisites; tuition varies and no research-program financial aid. Schedule still shows June22–July31,2026; residential-age note mentions2027."
+        }
+      ],
+      "accessFailures": [
+        "Direct web open returned Internal Error twice. Official-domain indexed full text was inspected through public search; its crawl was about two weeks old. No authenticated page or form was accessed."
+      ],
+      "mismatches": [
+        "Existing WATCH is appropriate. Broad 2027 wording must disclose the page’s mixed-cycle state, rather than imply a finalized new research timetable."
+      ],
+      "unconfirmed": [
+        "Complete2027 research schedule, deadline, exact tuition and current application availability; do not reuse other JHU programs’ dates."
+      ],
+      "recommendedUpdates": {
+        "status": "WATCH",
+        "timing": "The inspected research page mixes a 2026 session schedule with a 2027 residential-age notice. Confirm the full 2027 research timetable and application before applying.",
+        "eligibility": "Current high-school sophomores/juniors with listed math/science preparation; residential age and visa rules also apply. Confirm the applicable 2027 requirements.",
+        "cost": "Tuition and fees vary by format. The research page says this program has no financial aid; confirm current charges.",
+        "costBand": "FEES",
+        "format": "HYBRID",
+        "lastVerified": "2026-11-15"
+      },
+      "checkedAtUTC": "2026-11-16T01:10:23Z",
+      "lastSourceCheckDisplayDate": "2026-11-15",
+      "displayTimezone": "America/New_York",
+      "retrievalMethod": "Public official-source text inspection through web tool; search/crawl text where explicitly noted; no authenticated submission or browser interaction."
+    },
+    {
+      "id": "science-olympiad-2027",
+      "status": "VERIFIED",
+      "cycle": "2027 published Division C event slate",
+      "sources": [
+        {
+          "url": "https://www.soinc.org/events/2027-division-c-events",
+          "evidence": "2027 official slate includes Boomilever, Electric Vehicle, Mission Possible, Wright Stuff, Engineering CAD, Circuit Lab, Hovercraft and Thermodynamics. Links to state organizations and team-start guidance."
+        },
+        {
+          "url": "https://www.soinc.org/2023-rules-c",
+          "evidence": "Official Division C identification says grades9–12; used only as the grade-band definition, not a2027 fee/date source."
+        }
+      ],
+      "mismatches": [
+        "Existing2027 event names match. Regional dates and school/state fees cannot be represented as a single national enrollment deadline/cost."
+      ],
+      "unconfirmed": [
+        "Local tournament availability, team registration and applicable fees."
+      ],
+      "recommendedUpdates": {
+        "status": "OPEN",
+        "timing": "The 2027 Division C event slate is published. Team registration and tournament dates are set by state/local organizers.",
+        "eligibility": "Division C is the high-school grade 9–12 division, usually entered through a registered school team. Check team and tournament rules.",
+        "cost": "Check the school/team and state organizer for registration, materials and travel costs.",
+        "costBand": "UNKNOWN",
+        "format": "IN PERSON",
+        "lastVerified": "2026-11-15"
+      },
+      "checkedAtUTC": "2026-11-16T01:10:23Z",
+      "lastSourceCheckDisplayDate": "2026-11-15",
+      "displayTimezone": "America/New_York",
+      "retrievalMethod": "Public official-source text inspection through web tool; search/crawl text where explicitly noted; no authenticated submission or browser interaction."
+    },
+    {
+      "id": "afrl-scholars-2027",
+      "status": "VERIFIED",
+      "cycle": "Summer2027 applications explicitly open",
+      "sources": [
+        {
+          "url": "https://afrlscholars.usra.edu/",
+          "evidence": "Summer2027 full-time applications open until Jan11,2027. Program includes upper-level high-school students and stipend-paid STEM internships."
+        },
+        {
+          "url": "https://afrlscholars.usra.edu/scholarsprogram/eligibility/",
+          "evidence": "U.S. citizen by deadline, age16+ with government ID; California placements require18+. Summer work40h/week and own transport. GPA3.0 encouraged, but lower GPA does not automatically disqualify."
+        }
+      ],
+      "mismatches": [
+        "Existing OPEN and deadline agree. Add California18+ exception; do not turn encouraged GPA into a mandatory cutoff."
+      ],
+      "unconfirmed": [
+        "Site-specific research topics, internship dates, clearance and stipend amounts."
+      ],
+      "recommendedUpdates": {
+        "status": "OPEN",
+        "timing": "Summer 2027 full-time internship applications are open through Jan. 11, 2027; specific placement dates vary.",
+        "eligibility": "Upper-level high-school students; U.S. citizenship and age 16+ by the deadline. California locations require age 18+. Site-specific requirements apply; a 3.0 GPA is encouraged rather than mandatory.",
+        "cost": "Stipend-paid internship; participants arrange transportation to their worksite.",
+        "costBand": "FREE_PAID",
+        "format": "IN PERSON",
+        "lastVerified": "2026-11-15"
+      },
+      "checkedAtUTC": "2026-11-16T01:10:23Z",
+      "lastSourceCheckDisplayDate": "2026-11-15",
+      "displayTimezone": "America/New_York",
+      "retrievalMethod": "Public official-source text inspection through web tool; search/crawl text where explicitly noted; no authenticated submission or browser interaction."
+    },
+    {
+      "id": "cmu-sams-2027",
+      "status": "VERIFIED",
+      "cycle": "2027 dates and upcoming application opening announced",
+      "sources": [
+        {
+          "url": "https://www.cmu.edu/pre-college/academic-programs/sams.html",
+          "evidence": "Six-week residential June26–Aug7,2027, with required virtual June21–22 preparation. Grade11 at application,16 byJune26, U.S. citizen/PR. Tuition covered except travel; financial documents required. One isolated Opening Day line incorrectly says2026."
+        },
+        {
+          "url": "https://www.cmu.edu/pre-college/admission/index.html",
+          "evidence": "Summer2027 application opens Dec1,2026; fully funded SAMS deadline Feb1,2027. Do not confuse with March1 standard-program deadline."
+        }
+      ],
+      "mismatches": [
+        "Add confirmed Dec1 application opening and required virtual preparation. Travel remains student expense despite funded tuition. Ignore isolated2026 typo because explicit2027 range and age rules agree."
+      ],
+      "unconfirmed": [
+        "Final application portal content until Dec1 opening."
+      ],
+      "recommendedUpdates": {
+        "status": "UPCOMING",
+        "timing": "Applications open Dec. 1, 2026; SAMS deadline Feb. 1, 2027. Required virtual preparation June 21–22; residential program June 26–Aug. 7, 2027.",
+        "eligibility": "Grade 11 at application; at least 16 by June 26, 2027; U.S. citizen or permanent resident. Required financial documentation and full attendance apply.",
+        "cost": "Fully funded program; participants pay travel to and from Pittsburgh.",
+        "costBand": "FREE_PAID",
+        "format": "HYBRID",
+        "grades": [
+          "11"
+        ],
+        "lastVerified": "2026-11-15"
+      },
+      "checkedAtUTC": "2026-11-16T01:10:23Z",
+      "lastSourceCheckDisplayDate": "2026-11-15",
+      "displayTimezone": "America/New_York",
+      "retrievalMethod": "Public official-source text inspection through web tool; search/crawl text where explicitly noted; no authenticated submission or browser interaction."
+    },
+    {
+      "id": "stanford-aimi-2027",
+      "status": "VERIFIED",
+      "cycle": "2027 applications explicitly open since Nov10",
+      "sources": [
+        {
+          "url": "https://aimi.stanford.edu/education/summer-research-internship",
+          "evidence": "Fully virtual two-week sessions June14–25 or July12–23,2027; entering grades9–12, older than14, strong programming. U.S./international eligible; aid limited to eligible U.S. residents. Tuition$3,000/application$50. OpensNov10; aidJan15, standardFeb1, recommendationsFeb8."
+        }
+      ],
+      "mismatches": [
+        "UPCOMING is wrong after Nov10: use OPEN. Format is ONLINE, not VARIES; location should say online. UNKNOWN cost must become FEES. Existing grade list includes graduating current12th graders despite entering-grade rule."
+      ],
+      "unconfirmed": [
+        "Admissions decision timing differs within source (overview end-April, FAQ end-March); omit decisions."
+      ],
+      "gradeMappingNote": "For the existing profile field interpreted as current high-school grade in2026–27, entering grades9–12 inFall2027 normally maps to current grades8–11. Current grades9–11 fit the existing9–12 type; current12 should not be auto-matched. Eligibility text retains the organizer’s entering-grade rule; do not add grade8 support as a new feature.",
+      "recommendedUpdates": {
+        "status": "OPEN",
+        "location": "Online (Stanford-mentored)",
+        "format": "ONLINE",
+        "timing": "Applications open. Financial aid deadline Jan. 15, standard deadline Feb. 1, recommendations Feb. 8, 2027, at 11:59 p.m. PT. Sessions: June 14–25 or July 12–23.",
+        "eligibility": "U.S. or international students entering grades 9–12 in Fall 2027, older than 14 by their session start, with strong independent programming skills and availability 9 a.m.–1 p.m. PDT weekdays.",
+        "cost": "$3,000 tuition + $50 application fee. Need-based aid and fee waiver are available to eligible U.S. residents through a separate Jan. 15 application.",
+        "costBand": "FEES",
+        "grades": [
+          "9",
+          "10",
+          "11"
+        ],
+        "lastVerified": "2026-11-15"
+      },
+      "checkedAtUTC": "2026-11-16T01:10:23Z",
+      "lastSourceCheckDisplayDate": "2026-11-15",
+      "displayTimezone": "America/New_York",
+      "retrievalMethod": "Public official-source text inspection through web tool; search/crawl text where explicitly noted; no authenticated submission or browser interaction."
+    },
+    {
+      "id": "stonybrook-simons-2027",
+      "status": "PARTIAL",
+      "cycle": "2027 program and deadlines published; form availability not observed",
+      "sources": [
+        {
+          "url": "https://www.stonybrook.edu/simons/",
+          "evidence": "2027 research June28–Aug6; school-nominated juniors, faculty groups and poster presentation."
+        },
+        {
+          "url": "https://www.stonybrook.edu/simons/apply/",
+          "evidence": "Grade11, U.S. citizen/PR,16 byJune28; six-week commitment; own housing/meals; school nomination."
+        },
+        {
+          "url": "https://www.stonybrook.edu/simons/apply/forms.html",
+          "evidence": "Page still says application available Nov15. Nomination deadline Jan29; student deadline Feb5; recommendations Feb12. Maximum3 nominees per school; no actual form link was confirmed in text view."
+        },
+        {
+          "url": "https://www.stonybrook.edu/simons/about/faqs.html",
+          "evidence": "No program fee; application fee required, amount not inspected. Residential housing estimated$2,700 plus meal plan/personal expenses. Commuters pay dining/transport."
+        }
+      ],
+      "mismatches": [
+        "Existing eligibility omits citizenship and minimum age. Cost can now distinguish no program fee from housing/application costs. Do not claim form is open merely because announced Nov15 date has arrived."
+      ],
+      "unconfirmed": [
+        "Actual application-form availability and exact application fee."
+      ],
+      "recommendedUpdates": {
+        "status": "WATCH",
+        "timing": "Program June 28–Aug. 6, 2027. Organizer says the form will be available Nov. 15; confirm availability. Nomination deadline Jan. 29, student deadline Feb. 5, recommendations Feb. 12.",
+        "eligibility": "Current grade 11; U.S. citizen or permanent resident; at least 16 by June 28, 2027; school nomination required (up to three nominees per school).",
+        "cost": "No program fee; an application fee applies. Students cover housing/meals or commuting; on-campus housing is estimated at $2,700 plus a meal plan.",
+        "costBand": "UNKNOWN",
+        "format": "IN PERSON",
+        "grades": [
+          "11"
+        ],
+        "lastVerified": "2026-11-15"
+      },
+      "checkedAtUTC": "2026-11-16T01:10:23Z",
+      "lastSourceCheckDisplayDate": "2026-11-15",
+      "displayTimezone": "America/New_York",
+      "retrievalMethod": "Public official-source text inspection through web tool; search/crawl text where explicitly noted; no authenticated submission or browser interaction."
+    },
+    {
+      "id": "bu-rise-2027",
+      "status": "VERIFIED",
+      "cycle": "2027 dates/deadline published; application opens Dec17",
+      "sources": [
+        {
+          "url": "https://www.bu.edu/summer/high-school-programs/rise-internship-practicum/",
+          "evidence": "Check back Dec17 for application; six weeks.2027 residential June27–Aug6, commuter June28–Aug6, explicitly pending approval."
+        },
+        {
+          "url": "https://www.bu.edu/summer/high-school-programs/rise-internship-practicum/faq/",
+          "evidence": "Entering senior year inFall2027; U.S. citizens or legal permanent residents only."
+        },
+        {
+          "url": "https://www.bu.edu/summer/high-school-programs/rise-internship-practicum/how-to-apply/",
+          "evidence": "2027 deadline Feb3 at11:59pmET, including supplemental/aid materials; tests optional. Older admissions sentence incorrectly retainsFall2026."
+        }
+      ],
+      "mismatches": [
+        "Add pending-approval qualifier to2027 session dates. Keep current grade11 because FAQ says entering senior yearFall2027. Do not copy old2026 admissions sentence."
+      ],
+      "unconfirmed": [
+        "Final2027 tuition and detailed practicum subject offerings; charges not published in inspected pages."
+      ],
+      "recommendedUpdates": {
+        "status": "UPCOMING",
+        "timing": "Applications open Dec. 17, 2026; deadline Feb. 3, 2027, 11:59 p.m. ET. Residential June 27–Aug. 6 and commuter June 28–Aug. 6 dates are pending approval.",
+        "eligibility": "Students entering senior year in Fall 2027; U.S. citizen or legal permanent resident. Summer 2027 tests are optional; check final admissions requirements.",
+        "cost": "Tuition-based program; confirm final 2027 charges. Financial-aid materials must be submitted with the application by Feb. 3.",
+        "costBand": "FEES",
+        "format": "IN PERSON",
+        "grades": [
+          "11"
+        ],
+        "lastVerified": "2026-11-15"
+      },
+      "checkedAtUTC": "2026-11-16T01:10:23Z",
+      "lastSourceCheckDisplayDate": "2026-11-15",
+      "displayTimezone": "America/New_York",
+      "retrievalMethod": "Public official-source text inspection through web tool; search/crawl text where explicitly noted; no authenticated submission or browser interaction."
+    },
+    {
+      "id": "gatech-iexperience-2027",
+      "status": "PARTIAL",
+      "cycle": "2027 one-week program announced without logistics",
+      "sources": [
+        {
+          "url": "https://case.isye.gatech.edu/engagement-initiatives/iexperience",
+          "evidence": "Summer2027 one-week Georgia Tech program for high-school STEM students. Dates, eligibility and application details forthcoming. Hands-on logistics, analytics, AI, design and systems activities described."
+        }
+      ],
+      "mismatches": [
+        "Existing WATCH and unannounced timing are accurate. No evidence to promote status, invent cost or add application deadline."
+      ],
+      "unconfirmed": [
+        "Dates, exact grade/age/residency rules, application deadline, cost/financial aid."
+      ],
+      "recommendedUpdates": {
+        "status": "WATCH",
+        "timing": "Summer 2027 one-week program at Georgia Tech; dates, eligibility and application details are not yet announced on the inspected page.",
+        "eligibility": "For high-school students interested in STEM/industrial and systems engineering; final 2027 participation requirements are not yet posted.",
+        "cost": "2027 cost and aid details are not yet posted.",
+        "costBand": "UNKNOWN",
+        "format": "IN PERSON",
+        "lastVerified": "2026-11-15"
+      },
+      "checkedAtUTC": "2026-11-16T01:10:23Z",
+      "lastSourceCheckDisplayDate": "2026-11-15",
+      "displayTimezone": "America/New_York",
+      "retrievalMethod": "Public official-source text inspection through web tool; search/crawl text where explicitly noted; no authenticated submission or browser interaction."
+    },
+    {
+      "id": "nist-ship-2027",
+      "status": "VERIFIED",
+      "cycle": "2027 vacancy announcements explicitly open",
+      "sources": [
+        {
+          "url": "https://www.nist.gov/ship",
+          "evidence": "2027 vacancy announcements OPEN with Boulder/Gaithersburg links. Program June21–Aug6. Seven-week unpaid; U.S. citizen, current junior/senior, unweightedGPA3.0, home within50miles and own housing/transport. Older paragraph still predicts mid-October opening."
+        }
+      ],
+      "mismatches": [
+        "WATCH is outdated: current headline says OPEN. Program dates no longerTBD. Drop outdated mid-October expectation and do not invent a precise January deadline from generic annual guidance."
+      ],
+      "unconfirmed": [
+        "Exact vacancy-specific closing dates; linked USAJOBS announcements not independently inspected in this pass."
+      ],
+      "recommendedUpdates": {
+        "status": "OPEN",
+        "timing": "2027 SHIP vacancy announcements are open; program June 21–Aug. 6, 2027. Check the linked official vacancy for its exact application deadline.",
+        "eligibility": "U.S. citizen; current high-school junior/senior; unweighted GPA at least 3.0; permanent residence within 50 miles of Boulder or Gaithersburg; full seven-week commitment.",
+        "cost": "Unpaid educational internship; students provide their own housing and transportation.",
+        "costBand": "FREE_PAID",
+        "format": "IN PERSON",
+        "grades": [
+          "11",
+          "12"
+        ],
+        "lastVerified": "2026-11-15"
+      },
+      "checkedAtUTC": "2026-11-16T01:10:23Z",
+      "lastSourceCheckDisplayDate": "2026-11-15",
+      "displayTimezone": "America/New_York",
+      "retrievalMethod": "Public official-source text inspection through web tool; search/crawl text where explicitly noted; no authenticated submission or browser interaction."
+    }
+  ]
+}

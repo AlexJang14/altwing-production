@@ -1,48 +1,30 @@
-# Independent administrator access
+# AltWing administrator access
 
-## Review status
+Only the two existing authorized administrator accounts may read analytics, impact reports, student feedback, Impact Stories, historical reporting and exports. Student pages and anonymous feedback remain public. The administrator list stays server-only; ChatGPT sign-in by itself never grants reporting access.
 
-This update is prepared locally from production commit `da9007a46ebf35d535c9ff09984f7e56f9ff46b2`. Production configuration and deployment require final approval. This file documents the intended release, not confirmation that the additional account is active.
+The reviewed, undeployed private-entry update is documented in [PRIVATE-ANALYTICS.md](PRIVATE-ANALYTICS.md). It preserves the existing owner, additional administrator, database and runtime secrets. No credentials or personal administrator emails belong in this repository, browser bundles, logs or exported reports.
 
-The existing backend, Sites ownership, audience, D1 binding `DB`, schema, retained data and browser progress remain unchanged. No database migration, identity provider, paid service or new Site is required.
+## Current production versus approval candidate
 
-## Server configuration
+Current production (backend saved version11, runtime revision5) still uses the existing `/#/analytics` bookmark. No production setting or deployment has changed.
 
-- Preserve `ANALYTICS_ADMIN_EMAIL` exactly as currently configured in Sites. This remains the existing owner's server-side secret.
-- Add `ANALYTICS_ADDITIONAL_ADMIN_EMAILS` as a **secret** runtime value in the same Sites project after approval. Its value is a JSON array of exact, approved ChatGPT sign-in email addresses. Do not put real values in GitHub, frontend environment variables, `.openai/hosting.json`, screenshots, previews, logs or documentation.
-- Configure additional grants through the existing Sites environment-variable tool, updating only this new key. Keep the signing secret and allowed origins untouched. Apply runtime changes using the normal saved-version backend deployment.
-- Administrator values are provided privately by the owner. Source and tests use reserved example identities only. The public build contains neither the allowlist nor its values.
+After this update is explicitly approved and deployed:
 
-`analyticsAuthorization()` checks the authenticated identity supplied by the existing ChatGPT sign-in integration. It first preserves the existing owner grant, then compares the authenticated email with the additional allowlist. Matching is exact after trimming and case normalization; there is no domain, wildcard, substring, URL, form or role-header grant.
+- Dashboard: `https://altwing-engineering-pathways.theanna.chatgpt.site/admin`
+- Deliberate login: `https://altwing-engineering-pathways.theanna.chatgpt.site/admin/login`
 
-The optional setting must be valid JSON containing at most 100 email strings and at most 8192 characters. Empty/missing, malformed, non-array, mixed-type, wildcard or invalid entries deny additional grants. A malformed optional setting cannot lock out the existing owner. Changing/removing a grant takes effect on subsequent requests after the runtime revision is deployed; no per-user permission cache is used.
+Bookmark the private login. Each administrator uses their own **Sign in with ChatGPT** account in a normal top-level tab. An unauthorized dashboard request receives generic404 rather than automatic login. The login page offers explicit sign-in/account switching; it never authorizes an unlisted account. Old hash bookmarks show Access Denied; students see no dashboard link.
 
-## Scope and boundaries
+## Server-only grants and checks
 
-Both authorized accounts may read the original navigation report, educational impact report and private feedback, export numeric/private-feedback CSV, and run/resume historical reporting preparation. They see the same stored data. Quotation permission, anonymous student feedback, retention, date ranges and metric definitions do not change.
+`ANALYTICS_ADMIN_EMAIL` retains the original owner. `ANALYTICS_ADDITIONAL_ADMIN_EMAILS` is the existing JSON-array secret for the one additional account. Exact normalized matching, verified Site identity and both ID/email are required. Duplicate entries/owner references do not add accounts. An unexpected third distinct grant fails closed for additional accounts; valid original-owner access survives bad optional configuration. Do not edit these production values for this update.
 
-Private API routes check authorization before querying the database or running retention/import writes. Anonymous requests receive 401; authenticated unlisted accounts receive 403. Responses remain private/no-store, and private data has no cross-origin read permission. The student website remains public. Normal anonymous survey ingestion still uses its existing explicit permission and signed session capability.
+The Worker gates protected rendering before the framework; /admin rechecks on the server; every private API also rechecks before any DB read, cleanup or preparation. Private responses are non-cacheable and non-indexable. Public ingest endpoints retain consent, signed-visit, origin and validation controls.
 
-Dashboard administration grants no Sites ownership, source-editor role, deployment capability or access to the server's runtime secrets. Do not use a Sign in with ChatGPT bypass token as an administrator login.
+## Validation and operations
 
-## Review preview and tests
+Run `npm run test:admin-access`, `npm run test:research-assessment` and `npm run verify:release`. These use synthetic identities and isolated data, not actual administrator sessions. The full suite includes existing progression, analytics privacy and production builds. Technical passes are separate from real-account/browser verification and final release approval.
 
-`npm run build:impact-preview` creates an offline HTML preview with an **Access states** tab showing the actual access-panel component. Select existing administrator, additional administrator, signed out or unlisted account. These are clearly marked demo states, never real authentication, and login buttons are disabled. All dashboard data is marked demo; tracking and production API calls are disabled.
+After approval, deploy the backend first with unchanged Site audience/bindings/secrets, then the matching Pages frontend. Independently verify both real accounts, generic404/401/403 denial, reports/history/exports and genuine anonymous feedback receipt. Historical preparation, if still needed, is an authenticated, resumable write and must not be invoked during this no-production-change phase.
 
-`npm run test:admin-access` executes real API handlers and SQL against isolated in-memory SQLite. It checks both administrator identities across navigation, impact/private feedback, both CSV export kinds and history initialization; denied identities before database access; malformed settings without owner lockout; exact identity matching; grant revocation; CSRF origin checks; preserved raw/survey records; and the rendered real access component. No real identities or production test records are used.
-
-`npm run verify:release` includes this required check plus the existing tests and all production builds. The two explicitly reviewed content/audit advisories remain unchanged; unexpected failures block release. Static-build validation checks that server administrator/signing configuration is absent from every Pages bundle.
-
-## Approval and rollout
-
-1. Review the source diff, offline access-state preview, authorization matrix and test results. Approve before any commit/push or production environment change.
-2. Sync production again. Commit the reviewed source using a GitHub-provided noreply author address, and securely add only the additional-admin runtime secret. Deploy the matching saved version to the existing backend; retain saved version **10** as rollback. Do not print secret values or include them in tool summaries.
-3. Push the reviewed frontend wording/preview/test changes to the existing production GitHub repository and let its current Actions workflow validate and deploy.
-4. Independently sign in with each account at https://altwing-engineering-pathways.theanna.chatgpt.site/#/analytics. Verify both accounts see the same reports, private feedback and exports. If reporting is still unprepared, either authorized account can select **Prepare / continue historical reporting** until ready.
-5. Verify signed-out and an unrelated signed-in account cannot read reports, feedback, exports or initialization. Recheck privacy controls and existing student features. Do not enter invented feedback or completions in production.
-
-Actual two-account browser sign-in cannot be verified from mocks or builds. Report it as pending until each account is exercised on the approved live release. Use the existing top-level ChatGPT sign-in/sign-out links; credentials are never shared.
-
-## Rollback and revocation
-
-For an access-only rollback, remove the new additional-admin setting or deploy it as an empty JSON array while preserving the existing owner secret. Redeploy the existing saved release to apply the configuration. For a code rollback, restore backend saved version **10** and revert the frontend commit through normal Git history/Actions. No database reversal is required. Existing analytics, survey rows, quote permissions and historical-import state remain in the original database. Obtain approval before a later production rollback or access change.
+Rollback retains backend version11, runtime revision5, both grants and all records. Use approved ordinary Git revert/Actions and backend restoration. Do not remove the additional grant, fall back to an owner-only historical release, change Site ownership or reverse/drop the database.

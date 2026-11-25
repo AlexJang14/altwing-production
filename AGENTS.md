@@ -36,3 +36,61 @@ AltWing is a live production website. These owner instructions apply to every fu
 - For documentation-only changes, review the file/diff and formatting. Do not run unrelated application tests or trigger a deployment without approval.
 
 If access or preview tools are unavailable, explain the specific blocker and finish independent preparation. Do not bypass the approval requirement or make unverified production changes.
+
+## Golden Horizon RC1 release freeze
+
+The owner approved the platform visual direction on November 19, 2026 and froze design and feature development. The current consolidated release record is `docs/release-final/STATUS.json`, with scope and evidence in `docs/release-final/README.txt`.
+
+- Preserve the reviewed product candidate; do not add features or redesign pages.
+- Resolve only genuine release blockers. Reuse valid unchanged-source evidence and never mark unperformed manual tests passed.
+- Keep unknown reference-image rights, manual acceptance, recovery and production SQL preflight open until evidence resolves them. The mascot account-holder grant is already recorded; do not request it again or infer third-party permission.
+- No final production approval has been given. Hold the one consolidated deployment request until mandatory gates pass, then obtain explicit approval before committing/pushing to production or publishing.
+- A necessary product fix requires a separately reviewed candidate and focused regression checks. Documentation/evidence updates are allowed without changing the frozen product.
+
+## November 21 approved narrow additive revision
+
+The owner authorized a separate complete candidate retaining the four new
+tables and aggregation triggers, removing the pending historical field UNIQUE
+index and adding atomic ingestion deduplication. Preserve the original RC1.
+The owner acknowledges production DB recoverability remains UNVERIFIED and
+paused the Support request. Do not require a full SQL console or demonstrated
+restore merely as a Sites publishing mandate; retain supported migration-state
+checks and the stop-on-partial-failure procedure in docs/release-final.
+Current STATUS.json supersedes earlier gate wording without falsifying evidence.
+Mascot reference rights and actual manual acceptance remain unresolved. No final
+deployment approval, production write, commit/push or publication is authorized.
+
+## November 23 final acceptance direction
+
+The owner approved the integrated Golden Horizon + Live Intelligence design and
+feature direction, not deployment. Freeze product development. Record actual
+results in the existing 31 pre-deployment cases; keep seven live-only cases
+separate. Reuse documented observations only when their exact criteria match.
+The optional College Scorecard key is not an initial-launch prerequisite; keep
+its unverified collector disabled. Initial activation is verified daily/weekly
+only and is part of the ONE later explicit deployment approval, followed by real
+GitHub Actions executions and live freshness checks. No schedule activation now.
+Keeping the existing penguin does not itself accept the reference-rights risk.
+Obtain an explicit release-policy decision; an exception never supplies third-
+party permission or changes underlying rights from UNVERIFIED. Do not request
+the recorded November18 account-holder grant again. Preserve the acknowledged
+production recovery limitation and stop-on-partial-migration safeguards.
+Current reported acceptance progress and owner decisions are recorded under
+/workspace/altwing-final-integrated/evidence. No final deployment approval yet.
+
+## November 24 conditional launch instruction
+
+The owner has explicitly approved the initial-release policy exception for the
+unchanged penguin. See docs/rights/MASCOT-RELEASE-EXCEPTION-2026-11-24.json.
+Underlying reference-image rights remain UNVERIFIED; this is not third-party
+permission or copyright clearance. Do not request the existing grant or this
+decision again unless genuinely new evidence changes the risk.
+
+The owner now authorizes the one complete integrated launch once the stated
+mandatory release conditions are met. This supersedes older pending-approval
+wording; it does not waive unperformed manual acceptance, permit blind migration
+retries, or authorize publication of an older build. The isolated launch copy is
+/workspace/altwing-production-launch/source. Preserve all earlier candidates.
+Reconcile official facts only within actually inspected evidence. Unavailable
+sources retain their prior factual review date and explicit qualifications.
+Keep all 126 unreviewed collectors and the optional Scorecard collector disabled.

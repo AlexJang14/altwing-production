@@ -15,6 +15,13 @@
       "when": 1794719038385,
       "tag": "0001_impact_measurement",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1794771679831,
+      "tag": "0002_research_assessment",
+      "breakpoints": true
     }
   ]
 }

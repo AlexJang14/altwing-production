@@ -1,0 +1,85 @@
+NARROW ADDITIVE REVISION — ONE COMPLETE RELEASE, NOT YET AUTHORIZED TO DEPLOY
+
+CURRENT CHANGE
+0002 retains four new tables, five new indexes on those empty tables and three
+aggregation triggers. It contains 12 CREATE statements and no historical data
+conversion, cleanup, ALTER or DROP. 0000 and 0001 remain immutable. The proposed
+analytics_recommended_field_once index is removed BEFORE FIRST APPLICATION.
+The event handler checks field duplicates inside its single INSERT statement;
+SQLite/D1 write serialization prevents check/insert races. Existing duplicate
+rows remain intact. The earlier analytics_mission_once index remains unchanged.
+
+VERIFIED LOCAL EVIDENCE
+Ten focused checks/builds pass, including 8 populated historical tables and
+all original definitions preserved, duplicates retained, actual handler writes
+against old/new schemas, 8 concurrent SQLite connections producing one record,
+13 statement-boundary interruption states, exact known-definition comparisons,
+and rejection of a conflicting table definition. Actual impact/assessment/admin
+handlers, v1/v2/v3 preservation, cohorts/exports/consent/retention and resumable
+historical initialization pass with isolated synthetic records. These checks do
+not prove real D1 concurrency, production backup, live schema ledger or browser
+acceptance. Prior RC1's forced UNIQUE-index failure is retained as dated evidence;
+its exact failure mode is removed, while partial publication remains possible.
+
+SUPPORTED PRODUCTION PRECHECK AT THE LATER APPROVED RELEASE
+Refresh production main/source and the supported Sites table inventory. Current
+inventory is the original eight tables; no pending new table is present. Version11
+and its archive metadata remain available as the previous code version. Direct
+migration-ledger SQL is not exposed and is UNVERIFIED. Sites owns that ledger.
+Do not silently replace an already applied 0002 or change its applied journal.
+If Sites reports it applied, or any unexpected object/definition exists, STOP
+and reconcile through supported hosting diagnostics before publishing again.
+No standalone SQL access or database operation is authorized by this document.
+
+ONE COORDINATED RELEASE AFTER FINAL EXPLICIT APPROVAL
+1. Confirm exact candidate/source identity, remaining rights/manual gates and
+   accepted recovery limitation. Preserve current frontend/backend revisions.
+2. Publish the complete reviewed backend through existing Sites with the same
+   DB binding, secrets, audience and two administrator grants. Sites applies
+   pending schema before Worker upload. Do not change DNS or hosting ownership.
+3. Confirm backend outcome before the complete frontend commit/push and existing
+   GitHub Pages Actions deployment. Keep old clients compatible throughout this
+   dependency ordering; do not disable features or stage separate audiences.
+4. In an actual authorized admin session, use Prepare / continue historical
+   reporting until the status says available history is ready. It is bounded,
+   resumable and idempotent. Inspect actual reports; no synthetic production rows.
+5. Complete L01-L07 on the live release: independent admins and denials, genuine
+   voluntary feedback storage/retrieval, mission/project ingestion, exports,
+   privacy and Cloudflare Visits. Record actual observations and limitations.
+
+PARTIAL MIGRATION / FAILED PUBLICATION — STOP BEFORE RETRY
+- A failure may leave schema objects even when code publication failed. Do not
+  blindly rerun CREATE, add IF NOT EXISTS to hide a mismatch, delete objects,
+  clear tables or stamp a journal entry manually to force success.
+- Keep/return to the known working code and retain every table and new response.
+  First inspect the actual migration status and exact object definitions through
+  supported Sites/hosting diagnostics. Compare with the reviewed SQL checksum.
+- If no statement applied and the journal confirms pending, retry unchanged SQL
+  only after the failure cause is resolved. If a verified prefix applied, only
+  a supported operator/runner that reconciles the exact prefix and bookkeeping
+  may resume; isolated suffix tests are not authorization to execute one live.
+- If all statements applied but Worker upload failed, use the supported recorded
+  migration state and publish the same code without reapplying DDL. Unknown or
+  conflicting state stays STOP; provider assistance becomes incident handling,
+  not a routine pre-release request. Never rewrite an applied migration.
+
+ROLLBACK AND RECOVERY LIMITATION
+Code rollback: restore saved backend11 and a normal frontend git revert/Actions.
+Retain the additive tables and all old/new responses; do not down-migrate or
+force-push. New capture triggers write only to new behavior tables and stay
+backward-compatible with prior event shapes under isolated checks.
+A code rollback does NOT undo schema/data changes. Production DB recoverability
+is UNVERIFIED, explicitly acknowledged by the owner on November21. Any actual
+restore/export/destructive repair is a separate reviewed authorization. Never
+overwrite newly received feedback to simulate a rollback or claim a source ZIP,
+CSV or local fixture is a complete production backup.
+
+HISTORICAL SETUP — EXISTING SUPPORTED ADMIN ACTION
+Existing bookmark: https://altwing-engineering-pathways.theanna.chatgpt.site/#/analytics
+After this release, dedicated login: https://altwing-engineering-pathways.theanna.chatgpt.site/admin/login
+Each administrator uses their own account; no passwords/tokens are shared.
+Choose Prepare / continue historical reporting. Each server call examines at
+most500 retained events; UI performs at most20 batches before Continue. Resume
+until the actual ready message/report appears. Existing raw rows are not deleted
+by initialization. Missing older history is not reconstructed. Unauthorized or
+cross-origin initialization must remain denied. Production setup has NOT run.

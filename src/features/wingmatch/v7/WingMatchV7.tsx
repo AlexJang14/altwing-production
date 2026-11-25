@@ -1,3 +1,4 @@
+import {preferredScrollBehavior} from '../../../design/golden-horizon/motion';
 import {
   useEffect,
   useMemo,
@@ -2941,8 +2942,7 @@ function WingMatchV7({
 
             window.scrollTo({
               top: 0,
-              behavior:
-                "smooth",
+              behavior: preferredScrollBehavior(),
             });
           },
           2850,
@@ -3128,8 +3128,7 @@ function WingMatchV7({
 
       window.scrollTo({
         top: 0,
-        behavior:
-          "smooth",
+        behavior: preferredScrollBehavior(),
       });
 
 
@@ -3162,8 +3161,7 @@ function WingMatchV7({
 
     window.scrollTo({
       top: 0,
-      behavior:
-        "smooth",
+      behavior: preferredScrollBehavior(),
     });
   }
 
@@ -3352,8 +3350,7 @@ function WingMatchV7({
 
     window.scrollTo({
       top: 0,
-      behavior:
-        "smooth",
+      behavior: preferredScrollBehavior(),
     });
   }
 

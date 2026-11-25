@@ -2,23 +2,13 @@
   padding: 24px;
 
   border: 1px solid
-    rgba(255, 255, 255, 0.09);
-  border-radius: 20px;
+    var(--gh-border);
+  border-radius: var(--gh-radius-card);
 
   background:
-    radial-gradient(
-      circle at 82% 4%,
-      rgba(255, 200, 87, 0.1),
-      transparent 28%
-    ),
-    radial-gradient(
-      circle at 5% 90%,
-      rgba(91, 141, 239, 0.08),
-      transparent 32%
-    ),
-    rgba(255, 255, 255, 0.035);
+    var(--gh-surface);
 
-  color: white;
+  color: var(--gh-text);
 }
 
 .final-mission__header {
@@ -28,10 +18,10 @@
 }
 
 .final-mission__header span {
-  color: #ffc857;
+  color: var(--gh-text-muted);
 
-  font-size: 8px;
-  font-weight: 850;
+  font-size: var(--gh-text-xs);
+  font-weight: 600;
   letter-spacing: 0.15em;
 }
 
@@ -45,10 +35,10 @@
 .final-mission__remaining {
   text-align: right;
 
-  color: #ffc857;
+  color: var(--gh-text-muted);
 
   font-size: 28px;
-  font-weight: 850;
+  font-weight: 600;
 }
 
 .final-mission__remaining small {
@@ -57,9 +47,9 @@
   margin-top: 2px;
 
   color:
-    rgba(255, 255, 255, 0.32);
+    var(--gh-text-muted);
 
-  font-size: 6px;
+  font-size: var(--gh-text-xs);
   letter-spacing: 0.1em;
 }
 
@@ -68,19 +58,19 @@
   padding: 15px;
 
   border-left:
-    2px solid #ffc857;
+    2px solid var(--gh-border);
 
   background:
-    rgba(255, 200, 87, 0.045);
+    var(--gh-surface);
 }
 
 .final-mission__brief > span {
   display: block;
 
-  color: #ffc857;
+  color: var(--gh-text-muted);
 
-  font-size: 6px;
-  font-weight: 850;
+  font-size: var(--gh-text-xs);
+  font-weight: 600;
   letter-spacing: 0.1em;
 }
 
@@ -89,16 +79,16 @@
 
   margin-top: 6px;
 
-  font-size: 14px;
+  font-size: var(--gh-text-sm);
 }
 
 .final-mission__brief p {
   margin: 7px 0 0;
 
   color:
-    rgba(255, 255, 255, 0.43);
+    var(--gh-text-muted);
 
-  font-size: 9px;
+  font-size: var(--gh-text-xs);
   line-height: 1.5;
 }
 
@@ -116,12 +106,12 @@
 
   border:
     1px solid
-    rgba(255, 255, 255, 0.07);
+    var(--gh-border);
 
-  border-radius: 12px;
+  border-radius: var(--gh-radius-card);
 
   background:
-    rgba(255, 255, 255, 0.025);
+    var(--gh-surface);
 }
 
 .priority-card__heading {
@@ -134,10 +124,10 @@
 .priority-card__heading span {
   display: block;
 
-  color: #5b8def;
+  color: var(--gh-text-muted);
 
-  font-size: 5px;
-  font-weight: 850;
+  font-size: var(--gh-text-xs);
+  font-weight: 600;
   letter-spacing: 0.1em;
 }
 
@@ -146,13 +136,13 @@
 
   margin-top: 4px;
 
-  font-size: 9px;
+  font-size: var(--gh-text-xs);
 }
 
 .priority-card__heading b {
-  color: white;
+  color: var(--gh-text);
 
-  font-size: 20px;
+  font-size: var(--gh-text-lead);
 }
 
 .priority-card p {
@@ -161,9 +151,9 @@
   margin: 9px 0 0;
 
   color:
-    rgba(255, 255, 255, 0.36);
+    var(--gh-text-muted);
 
-  font-size: 7px;
+  font-size: var(--gh-text-xs);
   line-height: 1.45;
 }
 
@@ -177,7 +167,7 @@
   border-radius: 999px;
 
   background:
-    rgba(255, 255, 255, 0.08);
+    var(--gh-surface);
 }
 
 .priority-card__bar div {
@@ -185,7 +175,7 @@
 
   border-radius: inherit;
 
-  background: #5b8def;
+  background: var(--gh-surface);
 
   transition:
     width 150ms ease;
@@ -207,16 +197,16 @@
 
   border:
     1px solid
-    rgba(255, 255, 255, 0.12);
+    var(--gh-border-control);
 
   border-radius: 8px;
 
   background:
-    rgba(255, 255, 255, 0.04);
+    var(--gh-surface-soft);
 
-  color: white;
+  color: var(--gh-text);
 
-  font-size: 18px;
+  font-size: var(--gh-text-lead);
   font-weight: 600;
 
   cursor: pointer;
@@ -226,10 +216,10 @@
     :disabled
   ) {
   border-color:
-    rgba(91, 141, 239, 0.55);
+    var(--gh-interactive);
 
   background:
-    rgba(91, 141, 239, 0.08);
+    var(--gh-selected);
 }
 
 .priority-card__controls button:disabled {
@@ -241,17 +231,17 @@
 .priority-card__controls > span {
   text-align: center;
 
-  color: white;
+  color: var(--gh-text);
 
-  font-size: 14px;
-  font-weight: 800;
+  font-size: var(--gh-text-sm);
+  font-weight: 600;
 }
 
 .priority-card__controls small {
   color:
-    rgba(255, 255, 255, 0.28);
+    var(--gh-text-muted);
 
-  font-size: 6px;
+  font-size: var(--gh-text-xs);
   font-weight: 700;
 }
 
@@ -269,22 +259,22 @@
 
   border:
     1px solid
-    rgba(255, 255, 255, 0.07);
+    var(--gh-border);
 
   border-radius: 9px;
 
   background:
-    rgba(255, 255, 255, 0.025);
+    var(--gh-surface);
 }
 
 .final-mission__summary span {
   display: block;
 
   color:
-    rgba(255, 255, 255, 0.3);
+    var(--gh-text-muted);
 
-  font-size: 6px;
-  font-weight: 850;
+  font-size: var(--gh-text-xs);
+  font-weight: 600;
   letter-spacing: 0.08em;
 }
 
@@ -293,12 +283,12 @@
 
   margin-top: 4px;
 
-  font-size: 15px;
+  font-size: var(--gh-text-body);
 }
 
 .final-mission__summary small {
   color:
-    rgba(255, 255, 255, 0.3);
+    var(--gh-text-muted);
 }
 
 .final-mission__feedback {
@@ -306,19 +296,19 @@
   padding: 12px 13px;
 
   border-left:
-    2px solid #ff6b6b;
+    2px solid var(--gh-border);
 
   background:
-    rgba(255, 107, 107, 0.045);
+    var(--gh-surface);
 }
 
 .final-mission__feedback span {
   display: block;
 
-  color: #ff6b6b;
+  color: var(--gh-text-muted);
 
-  font-size: 6px;
-  font-weight: 850;
+  font-size: var(--gh-text-xs);
+  font-weight: 600;
   letter-spacing: 0.1em;
 }
 
@@ -326,21 +316,21 @@
   margin: 5px 0 0;
 
   color:
-    rgba(255, 255, 255, 0.45);
+    var(--gh-text-muted);
 
-  font-size: 9px;
+  font-size: var(--gh-text-xs);
 }
 
 .final-mission__feedback--ready {
   border-left-color:
-    #7ddbb5;
+    var(--gh-border);
 
   background:
-    rgba(125, 219, 181, 0.045);
+    var(--gh-surface);
 }
 
 .final-mission__feedback--ready span {
-  color: #7ddbb5;
+  color: var(--gh-text-muted);
 }
 
 .final-mission__actions {
@@ -358,7 +348,7 @@
 
   border-radius: 999px;
 
-  font-weight: 800;
+  font-weight: 600;
 
   cursor: pointer;
 }
@@ -366,21 +356,21 @@
 .final-mission__reset {
   border:
     1px solid
-    rgba(255, 255, 255, 0.11);
+    var(--gh-border);
 
   background:
-    rgba(255, 255, 255, 0.025);
+    var(--gh-surface);
 
   color:
-    rgba(255, 255, 255, 0.72);
+    var(--gh-text-muted);
 }
 
 .final-mission__lock {
   border: 0;
 
-  background: #ff6b6b;
+  background: var(--gh-surface);
 
-  color: white;
+  color: var(--gh-text);
 }
 
 .final-mission__reset:disabled,

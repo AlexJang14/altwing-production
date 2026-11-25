@@ -8,15 +8,15 @@
 
 .thermal-heading > span,
 .thermal-label {
-  color: #6f9dff;
-  font-size: 9px;
-  font-weight: 900;
+  color: var(--gh-text-muted);
+  font-size: var(--gh-text-xs);
+  font-weight: 600;
   letter-spacing: .11em;
 }
 
 .thermal-heading h3 {
   margin: 9px 0 0;
-  color: #fff;
+  color: var(--gh-text);
   font-size: 30px;
   line-height: 1.06;
   letter-spacing: -.035em;
@@ -25,30 +25,30 @@
 .thermal-heading p,
 .thermal-note p,
 .thermal-explain p {
-  color: rgba(237,243,255,.6);
+  color: var(--gh-text-muted);
   line-height: 1.55;
 }
 
 .thermal-heading p {
-  font-size: 14px;
+  font-size: var(--gh-text-sm);
 }
 
 .thermal-note {
   margin-top: 18px;
   padding: 14px 16px;
-  border-left: 3px solid #ffc857;
-  background: rgba(255,200,87,.04);
+  border-left: 3px solid var(--gh-border);
+  background: var(--gh-surface);
 }
 
 .thermal-note strong {
-  color: #ffc857;
-  font-size: 9px;
+  color: var(--gh-text-muted);
+  font-size: var(--gh-text-xs);
   letter-spacing: .09em;
 }
 
 .thermal-note p {
   margin: 5px 0 0;
-  font-size: 11px;
+  font-size: var(--gh-text-xs);
 }
 
 .thermal-limits,
@@ -62,25 +62,25 @@
 .thermal-limits div,
 .thermal-results article {
   padding: 14px;
-  border: 1px solid rgba(255,255,255,.07);
-  border-radius: 10px;
-  background: #0a1125;
+  border: 1px solid var(--gh-border);
+  border-radius: var(--gh-radius-card);
+  background: var(--gh-surface);
 }
 
 .thermal-limits span,
 .thermal-results span {
   display: block;
-  color: rgba(235,242,255,.38);
-  font-size: 8px;
-  font-weight: 900;
+  color: var(--gh-text-muted);
+  font-size: var(--gh-text-xs);
+  font-weight: 600;
 }
 
 .thermal-limits strong,
 .thermal-results strong {
   display: block;
   margin-top: 6px;
-  color: #fff;
-  font-size: 16px;
+  color: var(--gh-text);
+  font-size: var(--gh-text-body);
 }
 
 .thermal-label {
@@ -96,10 +96,10 @@
 
 .thermal-options button,
 .thermal-small-options button {
-  border: 1px solid rgba(91,141,239,.15);
-  border-radius: 11px;
-  color: #fff;
-  background: #0c142c;
+  border: 1px solid var(--gh-border-control);
+  border-radius: var(--gh-radius-card);
+  color: var(--gh-text);
+  background: var(--gh-surface-soft);
   cursor: pointer;
 }
 
@@ -111,25 +111,25 @@
 
 .thermal-options button.selected,
 .thermal-small-options button.selected {
-  border-color: #ffc857;
+  border-color: var(--gh-interactive);
 }
 
 .thermal-options button > strong {
   display: block;
-  font-size: 13px;
+  font-size: var(--gh-text-sm);
 }
 
 .thermal-options button > span {
   display: block;
   margin-top: 10px;
-  color: #7ea5ff;
-  font-size: 9px;
+  color: var(--gh-interactive);
+  font-size: var(--gh-text-xs);
 }
 
 .thermal-options button p {
   margin-top: 15px;
-  color: rgba(235,242,255,.47);
-  font-size: 10px;
+  color: var(--gh-text-muted);
+  font-size: var(--gh-text-xs);
   line-height: 1.45;
 }
 
@@ -141,14 +141,14 @@
 
 .thermal-small-options button {
   min-height: 55px;
-  font-weight: 800;
+  font-weight: 600;
 }
 
 .thermal-slider {
   margin-top: 15px;
   padding: 17px;
-  border-radius: 11px;
-  background: #0a1125;
+  border-radius: var(--gh-radius-card);
+  background: var(--gh-surface-soft);
 }
 
 .thermal-slider > div {
@@ -157,19 +157,19 @@
 }
 
 .thermal-slider span {
-  color: rgba(235,242,255,.55);
-  font-size: 9px;
-  font-weight: 900;
+  color: var(--gh-text-muted);
+  font-size: var(--gh-text-xs);
+  font-weight: 600;
 }
 
 .thermal-slider strong {
-  color: #ffc857;
+  color: var(--gh-text-muted);
 }
 
 .thermal-slider input {
   width: 100%;
   margin-top: 12px;
-  accent-color: #5b8def;
+  accent-color: var(--gh-interactive);
 }
 
 .thermal-run,
@@ -178,11 +178,11 @@
   min-height: 48px;
   margin-top: 14px;
   border: 0;
-  border-radius: 10px;
-  color: #0d132b;
-  background: #ffc857;
-  font-size: 10px;
-  font-weight: 900;
+  border-radius: var(--gh-radius-card);
+  color: var(--gh-text);
+  background: var(--gh-surface-soft);
+  font-size: var(--gh-text-xs);
+  font-weight: 600;
   cursor: pointer;
 }
 
@@ -202,41 +202,41 @@
 .thermal-saved {
   margin-top: 13px;
   padding: 17px;
-  border-radius: 11px;
-  background: rgba(91,141,239,.05);
+  border-radius: var(--gh-radius-card);
+  background: var(--gh-surface);
 }
 
 .thermal-explain > strong,
 .thermal-saved span {
-  color: #6f9dff;
-  font-size: 9px;
-  font-weight: 900;
+  color: var(--gh-text-muted);
+  font-size: var(--gh-text-xs);
+  font-weight: 600;
   letter-spacing: .08em;
 }
 
 .thermal-explain p {
-  font-size: 11px;
+  font-size: var(--gh-text-xs);
 }
 
 .thermal-explain > span {
   display: block;
   margin-top: 12px;
-  color: #ffc857;
-  font-size: 10px;
+  color: var(--gh-text-muted);
+  font-size: var(--gh-text-xs);
 }
 
 .thermal-saved {
-  border: 1px solid rgba(119,225,195,.18);
+  border: 1px solid var(--gh-border);
 }
 
 .thermal-saved span {
-  color: #77e1c3;
+  color: var(--gh-text-muted);
 }
 
 .thermal-saved strong {
   display: block;
   margin-top: 6px;
-  color: #fff;
+  color: var(--gh-text);
 }
 
 @media (max-width:720px) {

@@ -2,7 +2,6 @@ import RouteBoundary from './components/RouteBoundary';
 import { trackNavigation, trackPage } from './features/analytics/analytics';
 import './features/analytics/analytics.css';
 import { lazy, Suspense, useEffect, useSyncExternalStore } from 'react';
-import './App.css';
 import { writeLocal } from './lib/storage';
 import StorageNotice from './components/StorageNotice';
 import { JourneyContext, PageLoading, SiteFooter, SiteHeader } from './components/SiteShell';
@@ -21,6 +20,7 @@ const BuildEngine = lazy(() => import('./features/wingmatch/build/engine/BuildEn
 const Projects = lazy(() => import('./features/projects/Projects'));
 const PrivacyPage = lazy(() => import('./components/PrivacyPage'));
 const SiteMap = lazy(() => import('./components/SiteMap'));
+const InformationPage = lazy(() => import('./components/InformationPage'));
 const AnalyticsPage = lazy(() => import('./features/analytics/AnalyticsPage'));
 const ProgressTransfer = lazy(() => import('./features/migration/ProgressTransfer'));
 function subscribe(listener: () => void) {
@@ -45,6 +45,7 @@ function App() {
   useEffect(() => {
     window.scrollTo({top: 0, behavior: 'instant'});
     const titles: Partial<Record<AppView,string>> = {home:'Your path. Your pace.',match:'Find My Wing',explore:'Explore Engineering',major:'Engineering Field Guide',colleges:'Unlock Opportunities',programs:'Student Programs',counselor:'Engineering Field Guide',projects:'Try Projects',universe:'My Universe',sitemap:'Site Map',privacy:'Privacy',analytics:'Analytics',aerospace:'Aerospace Labs','aerospace-build':'Aerospace Experiment','progress-transfer':'Transfer saved progress'};
+    Object.assign(titles,{research:'Research & Methodology',credits:'Third-Party Credits and Licenses',terms:'Terms of Use'});
     document.title = `AltWing · ${titles[route.view]}`;
   }, [hash, route.view]);
   let page;
@@ -58,8 +59,9 @@ function App() {
   else if (route.view === 'privacy') page = <PrivacyPage />;
   else if (route.view === 'analytics') page = <AnalyticsPage />;
   else if (route.view === 'sitemap') page = <SiteMap />;
+  else if (route.view === 'research'||route.view==='credits'||route.view==='terms') page = <InformationPage kind={route.view}/>;
   else if (route.view === 'progress-transfer') page = <ProgressTransfer />;
   else page = <GuidanceHome onRetakeMatch={startNewMatch} onStartMatch={() => openView('match')} onExploreEngineering={() => openView('explore')} onOpenCounselor={openCounselor} onOpenUniverse={() => openView('universe')} />;
-  return <><a className="skip-link" href="#main-content" onClick={event => {event.preventDefault();const main = document.querySelector<HTMLElement>('main');main?.setAttribute('tabindex','-1');main?.focus();}}>Skip to content</a><SiteHeader view={route.view} tab={route.tab}/><div className="aw-app-body"><StorageNotice/><JourneyContext view={route.view} tab={route.tab}/><RouteBoundary key={hash}><Suspense fallback={<PageLoading/>}>{page}</Suspense></RouteBoundary><SiteFooter/></div></>;
+  return <div className="aw-theme-black-gold aw-theme-golden-horizon" data-aw-kick="ion-blue" data-aw-kick-level="3"><a className="skip-link" href="#main-content" onClick={event => {event.preventDefault();const main = document.querySelector<HTMLElement>('main');main?.setAttribute('tabindex','-1');main?.focus();}}>Skip to content</a><SiteHeader view={route.view} tab={route.tab}/><div className="aw-app-body"><StorageNotice/><JourneyContext view={route.view} tab={route.tab}/><RouteBoundary key={hash}><Suspense fallback={<PageLoading/>}>{page}</Suspense></RouteBoundary><SiteFooter/></div></div>;
 }
 export default App;

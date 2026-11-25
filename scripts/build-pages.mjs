@@ -2,6 +2,11 @@ import {spawnSync} from 'node:child_process';
 import {readFileSync,writeFileSync} from 'node:fs';
 import {fileURLToPath} from 'node:url';
 import {pagesTarget} from '../deployment/domain.mjs';
+import {writePublicInformation} from './generate-public-information.mjs';
+const contentCheck=spawnSync('python3',['-B',fileURLToPath(new URL('./content-intelligence.py',import.meta.url)),'validate'],{stdio:'inherit'});
+if(contentCheck.error)throw contentCheck.error;
+if(contentCheck.status!==0)process.exit(contentCheck.status??1);
+await import('./generate-third-party-notices.mjs');
 
 const args=process.argv.slice(2);
 if(args.length>1||args.some(arg=>!['--legacy','--preview'].includes(arg)))throw Error('Use no flag, --legacy, or --preview.');
@@ -13,9 +18,10 @@ const build=spawnSync(process.execPath,[fileURLToPath(new URL('../node_modules/v
 if(build.error)throw build.error;
 if(build.status!==0)process.exit(build.status??1);
 writeFileSync(`${target.outDir}/.nojekyll`,'');
+writePublicInformation(target.outDir,target.canonical,Boolean(target.noindex));
 if(target.domain)writeFileSync(`${target.outDir}/CNAME`,`${target.domain}\n`);
 writeFileSync(`${target.outDir}/robots.txt`,`User-agent: *\n${target.noindex?'Disallow: /':'Allow: /'}\nSitemap: ${target.canonical}sitemap.xml\n`);
-writeFileSync(`${target.outDir}/sitemap.xml`,`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>${target.canonical}</loc></url><url><loc>${target.canonical}privacy.html</loc></url></urlset>\n`);
+writeFileSync(`${target.outDir}/sitemap.xml`,`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${['','privacy.html','research.html','credits.html','terms.html'].map(p=>`<url><loc>${target.canonical}${p}</loc></url>`).join('')}</urlset>\n`);
 const privacy=readFileSync(`${target.outDir}/privacy.html`,'utf8').replace('</title>','</title>'+[
   `<link rel="canonical" href="${target.canonical}privacy.html">`,
   '<meta name="description" content="How AltWing protects browser-local progress and respects your privacy choices.">',

@@ -8,15 +8,10 @@
 
   padding: 40px 28px 52px;
 
-  color: white;
+  color: var(--gh-text);
 
   background:
-    radial-gradient(
-      circle at 50% 25%,
-      rgba(91, 141, 239, 0.2),
-      transparent 35%
-    ),
-    #0d132b;
+    var(--gh-surface);
 }
 
 .wing-reveal-stars {
@@ -26,11 +21,7 @@
   opacity: 0.35;
 
   background-image:
-    radial-gradient(
-      circle,
-      white 1px,
-      transparent 1px
-    );
+    var(--gh-surface);
 
   background-size: 56px 56px;
 
@@ -84,12 +75,7 @@
   border-radius: 999px;
 
   background:
-    linear-gradient(
-      90deg,
-      transparent,
-      #5b8def,
-      #ffc857
-    );
+    var(--gh-surface);
 
   filter: blur(.5px);
 
@@ -111,10 +97,10 @@
 
   margin-bottom: 10px;
 
-  color: #5b8def;
+  color: var(--gh-text-muted);
 
-  font-size: 10px;
-  font-weight: 900;
+  font-size: var(--gh-text-xs);
+  font-weight: 600;
 
   letter-spacing: .18em;
 }
@@ -123,23 +109,23 @@
   margin: 0;
 
   font-size:
-    clamp(38px, 8vw, 56px);
+    var(--gh-text-title);
 
   line-height: .96;
   letter-spacing: -.05em;
 }
 
 .wing-reveal h1 strong {
-  color: #ff6b6b;
+  color: var(--gh-text-muted);
 }
 
 .wing-reveal-content > p {
   margin: 16px 0 26px;
 
   color:
-    rgba(255,255,255,.55);
+    var(--gh-text-muted);
 
-  font-size: 13px;
+  font-size: var(--gh-text-sm);
   line-height: 1.5;
 }
 
@@ -159,26 +145,26 @@
 
   border:
     1px solid
-    rgba(255,255,255,.08);
+    var(--gh-border);
 
-  border-radius: 13px;
+  border-radius: var(--gh-radius-card);
 
   background:
-    rgba(255,255,255,.035);
+    var(--gh-surface);
 
   opacity: 0;
   transform: translateY(8px);
 }
 
 .wing-reveal-check span {
-  font-size: 9px;
-  font-weight: 850;
+  font-size: var(--gh-text-xs);
+  font-weight: 600;
 
   letter-spacing: .1em;
 }
 
 .wing-reveal-check b {
-  color: #ffc857;
+  color: var(--gh-text-muted);
 }
 
 .check-one {
@@ -212,7 +198,7 @@
   border-radius: 999px;
 
   background:
-    rgba(255,255,255,.08);
+    var(--gh-surface);
 }
 
 .wing-reveal-progress div {
@@ -222,12 +208,7 @@
   border-radius: inherit;
 
   background:
-    linear-gradient(
-      90deg,
-      #5b8def,
-      #ff6b6b,
-      #ffc857
-    );
+    var(--gh-surface);
 
   animation:
     revealProgress

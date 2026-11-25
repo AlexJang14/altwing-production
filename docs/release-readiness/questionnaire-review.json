@@ -1,0 +1,289 @@
+{
+  "reviewedAtUTC": "2026-11-16T01:09:45+00:00",
+  "ownerLocalDate": "2026-11-15 America/New_York",
+  "questionnaireVersion": "impact-v2",
+  "sourceFile": "src/features/analytics/assessmentV2.ts",
+  "sourceFileSha256": "f3e1e8ad63adfbdd3d194a00ff3084a094865f4da78022b4d4a106b912208890",
+  "reviewType": "Bounded AI-assisted public-source wording and structure comparison; not legal clearance, human-independent certification or psychometric validation",
+  "publicScopeStatus": "PASS",
+  "publicScopeComplete": true,
+  "allPossibleOrRestrictedFormsCleared": false,
+  "originalityGuaranteeStatus": "UNVERIFIED",
+  "materialDistinctiveCopyIdentified": false,
+  "productionChanged": false,
+  "questionnaireWordingChanged": false,
+  "sourceQuestionBanksRepublished": false,
+  "method": [
+    "Inspect all five current stems/categories and main/three optional story prompts.",
+    "Compare inspected primary-source item wording, response formats and conceptual structure; identify closest comparators by item identifiers without publishing their text.",
+    "Check quoted full-stem web searches as a secondary cross-check. Returned broadened unrelated results are not proof of an exact negative search.",
+    "Use only public pages/author-hosted PDFs; record failed or limited access. No login/paywall bypass, purchase, provider contact or credentials."
+  ],
+  "sources": [
+    {
+      "id": "pear",
+      "reference": "PEAR Common Instrument Suite — Student",
+      "publicReviewStatus": "PASS",
+      "fullCurrentInstrumentStatus": "UNVERIFIED",
+      "urls": [
+        "https://www.pearinc.org/common-instrument-suite",
+        "https://www.pearinc.org/assessments"
+      ],
+      "inspected": "Nine named sample items on the official CIS-S page, all displayed dimensions, and assessment access links.",
+      "finding": "No matching full stem among displayed samples; concepts of interest and career awareness overlap.",
+      "uninspected": "Complete current age/grade-specific CIS-S forms and hidden item pool; public page offers samples/contact/client portal, not full forms. No credentials requested.",
+      "neededIfFullComparisonRequired": "A lawfully obtained complete form/version with permission for confidential comparison, or written provider confirmation. No item bank should be published."
+    },
+    {
+      "id": "activation",
+      "reference": "STEM Learning Activation — Lawrence Hall of Science / Activation Lab",
+      "publicReviewStatus": "PASS",
+      "fullCurrentInstrumentStatus": "UNVERIFIED",
+      "urls": [
+        "https://activationlab.lawrencehallofscience.org/tools/",
+        "https://activationlab.lawrencehallofscience.org/toolkit/"
+      ],
+      "documents": [
+        {
+          "url": "http://activationlab.org/wp-content/uploads/2018/03/Fascination_STEM-Report_20170403.pdf",
+          "inspected": "Version1, survey questions p2, all8 items f1–f8",
+          "retrieval": "Ordinary public HTTP/HTTPS GET; no login or access-control bypass",
+          "httpStatus": 200,
+          "bytes": 355605,
+          "sha256": "c19e862e0d424eb552263e652147aa6cd2ef756e3afd5d5607dc6fd4a533703a"
+        },
+        {
+          "url": "http://activationlab.org/wp-content/uploads/2018/04/Values_STEM-Report_20170403_online.pdf",
+          "inspected": "Version1, survey questions p2, all10 listed items",
+          "retrieval": "Ordinary public HTTP/HTTPS GET; no login or access-control bypass",
+          "httpStatus": 200,
+          "bytes": 380459,
+          "sha256": "bd1d271b1261e255e5fa220e1f317e3118329d5e91c08a5aa52925ab2196e07b"
+        },
+        {
+          "url": "http://activationlab.org/wp-content/uploads/2018/03/CompetencyBeliefs_STEM-Report_20170403.pdf",
+          "inspected": "Version1.0, survey questions p2, all12 items CB1–CB12",
+          "retrieval": "Ordinary public HTTP/HTTPS GET; no login or access-control bypass",
+          "httpStatus": 200,
+          "bytes": 293448,
+          "sha256": "aacacc34ef0075f669b3eef341d527b4b10cb0e2af61d480665c7666fd8ba60d"
+        },
+        {
+          "url": "http://activationlab.org/wp-content/uploads/2018/04/InnovationStance_STEM-Report_0425_2018.pdf",
+          "inspected": "Version1, survey questions p2, all12 items IS01–IS12",
+          "retrieval": "Ordinary public HTTP/HTTPS GET; no login or access-control bypass",
+          "httpStatus": 200,
+          "bytes": 584091,
+          "sha256": "78bf4b57139d069c52dc4d5e084c7750098df90013d7398228ba4718c1f0d640"
+        },
+        {
+          "url": "http://activationlab.org/wp-content/uploads/2018/03/Sensemaking-Report-3.2-20160331.pdf",
+          "inspected": "Version3.2 March2016, instrument Forms A and B, pp2–7",
+          "retrieval": "Ordinary public HTTP/HTTPS GET; no login or access-control bypass",
+          "httpStatus": 200,
+          "bytes": 746973,
+          "sha256": "4d0103bed6ee6ea5ff86491ec489333684f8abcb106182a4e651c012e0940591"
+        }
+      ],
+      "inspected": "Historical public author technical-brief item sections; current tools/toolkit descriptions.",
+      "finding": "No full-stem reproduction identified in historical inspected item sets. Q4 concerns recalled change, unlike standing fascination/value/competence/innovation items.",
+      "uninspected": "Any later unpublished/current revisions, administered app versions and Emerging STEM instrument. Current migrated pages list tools without full item downloads. Historical HTTP PDFs worked despite HTTPS/web-tool failures.",
+      "neededIfFullComparisonRequired": "Relevant current instrument revision supplied or confirmed by the authors, under any required inspection permission."
+    },
+    {
+      "id": "oecd",
+      "reference": "OECD (2021), Indicators of teenage career readiness: Guidance for policy makers",
+      "publicReviewStatus": "PASS",
+      "fullCurrentInstrumentStatus": "NOT_APPLICABLE",
+      "urls": [
+        "https://www.oecd.org/en/publications/indicators-of-teenage-career-readiness_6a80e0cc-en.html",
+        "https://www.oecd.org/content/dam/oecd/en/publications/reports/2021/10/indicators-of-teenage-career-readiness_8d6a5e77/6a80e0cc-en.pdf"
+      ],
+      "inspected": "Policy brief Table1, indicator definitions and Box10 (14 school-guidance questions, p22), through public web PDF text.",
+      "finding": "This is an indicator/policy synthesis, not a five-item source instrument. No matching AltWing stem identified.",
+      "uninspected": "All underlying national longitudinal questionnaires and PISA forms, translations, historical revisions; these are outside this bounded reference review."
+    },
+    {
+      "id": "ngss",
+      "reference": "NGSS HS-ETS1-3 Engineering Design",
+      "publicReviewStatus": "PASS",
+      "fullCurrentInstrumentStatus": "NOT_APPLICABLE",
+      "urls": [
+        "https://www.nextgenscience.org/pe/hs-ets1-3-engineering-design"
+      ],
+      "inspected": "Official performance-expectation page: design practices, criteria/constraints and trade-off considerations.",
+      "finding": "Q2 shares the trade-off concept, not an identified questionnaire item. A standard is not an attitude survey or validation of Q2."
+    },
+    {
+      "id": "ceds",
+      "reference": "McCowan et al. (2023), CEDS-Senior, DOI10.1177/10384162231164572",
+      "publicReviewStatus": "PASS",
+      "fullCurrentInstrumentStatus": "UNVERIFIED",
+      "urls": [
+        "https://journals.sagepub.com/doi/10.1177/10384162231164572",
+        "https://journals.sagepub.com/doi/abs/10.1177/10384162231164572"
+      ],
+      "inspected": "Public publisher article and indexed Table1: all24 stems, sel1–3/inf1–3/opp1–3/goa1–3/dec1–3/act1–3/ref1–3/con1–3.",
+      "finding": "Q3 relates conceptually to sel1/sel3; Q5 to con1; Q2 to dec3. No matching full stem or distinctive near-copy identified.",
+      "accessLimit": "Publisher retrieval was intermittent. Table1 was readable through publisher-indexed public text; university-repository PDF returned403 and was not bypassed.",
+      "uninspected": "Any separate current administration form, revisions, translations or unpublished items, beyond published Table1."
+    },
+    {
+      "id": "msc",
+      "reference": "Davies & Dart (2005), The Most Significant Change Technique: A Guide to Its Use",
+      "publicReviewStatus": "PASS",
+      "fullCurrentInstrumentStatus": "NOT_APPLICABLE",
+      "documents": [
+        {
+          "url": "https://www.mande.co.uk/wp-content/uploads/2005/MSCGuide.pdf",
+          "inspected": "Full104-page PDF accessible; relevant story elicitation pp19,23–26 and sample form p97 inspected",
+          "retrieval": "Ordinary public HTTP/HTTPS GET; no login or access-control bypass",
+          "httpStatus": 200,
+          "bytes": 1256491,
+          "sha256": "ed848420029d4f5e35391d1c049007749e227f1dbf06bf9e3d9db4f7fdbdd22d"
+        }
+      ],
+      "urls": [
+        "https://www.mande.co.uk/wp-content/uploads/2005/MSCGuide.htm"
+      ],
+      "finding": "Story structure overlaps event/significance/future implications. No matching long distinctive wording found; method-level inspiration must stay attributed.",
+      "licenseEvidence": "Author landing page links CC BY-NC-SA2.0 UK. Conceptual citation does not establish reuse permission for copied/adapted expression.",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/2.0/uk/"
+    },
+    {
+      "id": "pew",
+      "reference": "Pew Research Center, Writing Survey Questions",
+      "publicReviewStatus": "PASS",
+      "fullCurrentInstrumentStatus": "NOT_APPLICABLE",
+      "urls": [
+        "https://www.pewresearch.org/writing-survey-questions/"
+      ],
+      "inspected": "Question development, wording, open/closed formats, category order and examples on the public methods page.",
+      "finding": "Design guidance, not an educational outcome instrument. No matching AltWing stem among its examples.",
+      "uninspected": "Pew’s unrelated full survey archive; not a reasonable originality universe."
+    }
+  ],
+  "items": [
+    {
+      "id": "Q1",
+      "dimension": "Opportunity Access",
+      "status": "PASS",
+      "meaning": "Prior comparable experience count",
+      "sources": [
+        "pear",
+        "activation",
+        "oecd",
+        "ngss",
+        "ceds",
+        "msc",
+        "pew"
+      ],
+      "closestComparators": "OECD exploration/experience indicators; CEDS opportunity awareness.",
+      "finding": "Different operationalization: a prior-experience count, not agreement about awareness or attitudes. No full-stem match in inspected materials.",
+      "residual": "Uninspected current CIS-S/STEM revisions cannot be cleared."
+    },
+    {
+      "id": "Q2",
+      "dimension": "Engineering Reasoning",
+      "status": "PASS",
+      "meaning": "Recalled trade-off frequency",
+      "sources": [
+        "pear",
+        "activation",
+        "oecd",
+        "ngss",
+        "ceds",
+        "msc",
+        "pew"
+      ],
+      "closestComparators": "NGSS trade-off criteria; CEDS dec3; Activation scientific-sensemaking performance tasks.",
+      "finding": "Conceptual similarity; a retrospective mission-frequency question differs from career-choice agreement and science performance tasks.",
+      "residual": "Shared common decision language is not proof of copying or of originality."
+    },
+    {
+      "id": "Q3",
+      "dimension": "Career Self-Discovery",
+      "status": "PASS",
+      "meaning": "Perceived help discovering enjoyable engineering work",
+      "sources": [
+        "pear",
+        "activation",
+        "oecd",
+        "ngss",
+        "ceds",
+        "msc",
+        "pew"
+      ],
+      "closestComparators": "CEDS sel1/sel3; PEAR career-knowledge/interest samples.",
+      "finding": "Similar construct, distinct experience-specific help question. No matching distinctive wording identified.",
+      "residual": "Current complete CIS-S forms uninspected."
+    },
+    {
+      "id": "Q4",
+      "dimension": "Independent Learning Motivation",
+      "status": "PASS",
+      "meaning": "Retrospective change in interest beyond assignments",
+      "sources": [
+        "pear",
+        "activation",
+        "oecd",
+        "ngss",
+        "ceds",
+        "msc",
+        "pew"
+      ],
+      "closestComparators": "Activation Fascination f1–f8; PEAR engagement/enjoyment samples.",
+      "finding": "Retrospective school-independent change differs from standing preferences; common interest vocabulary alone is not an identified copied item.",
+      "residual": "Any later/current unpublished activation or CIS-S item remains unverified."
+    },
+    {
+      "id": "Q5",
+      "dimension": "Action Readiness",
+      "status": "PASS",
+      "meaning": "Clarity about one next activity",
+      "sources": [
+        "pear",
+        "activation",
+        "oecd",
+        "ngss",
+        "ceds",
+        "msc",
+        "pew"
+      ],
+      "closestComparators": "CEDS con1; OECD exploration/action concepts.",
+      "finding": "Conceptual next-step overlap, but specific possible-activity clarity differs from general career-planning agreement. No distinctive near-copy identified.",
+      "residual": "Not a copyrightability ruling; future source evidence could change the finding."
+    },
+    {
+      "id": "story",
+      "dimension": "Beyond the Flight main prompt and three optional reflections",
+      "status": "PASS",
+      "meaning": "Specific event, meaning, optional change and next action",
+      "sources": [
+        "pear",
+        "activation",
+        "oecd",
+        "ngss",
+        "ceds",
+        "msc",
+        "pew"
+      ],
+      "closestComparators": "MSC story elicitation pp23–26/sample p97; CEDS reflection constructs.",
+      "finding": "Acknowledged method-level event/significance/future structure; present phrasing and neutral no-change invitation differ. No long distinctive wording match identified.",
+      "residual": "Whether a particular use is a legally derivative adaptation is not adjudicated. Do not copy guide forms without reviewing its license."
+    }
+  ],
+  "responseCategories": {
+    "status": "PASS",
+    "finding": "Frequency/intensity/clarity and less/same/more categories are common formats; no distinctive source item/category package reproduced. This is not a legal conclusion that every short label is unprotectable."
+  },
+  "actionRequired": [
+    "Retain conceptual references and accurate AI-generated provenance; never label the custom questionnaire validated, endorsed, guaranteed original or licensed from referenced institutions.",
+    "Acknowledge full/current unavailable forms explicitly; obtain lawfully supplied forms/provider confirmation only if full-form clearance is required or concrete overlap evidence emerges.",
+    "If distinctive protected expression is identified later, pause its publication and obtain adequate permission or independently revise with a new wording/version review. No compulsory wording change is justified by the present evidence.",
+    "Do not apply the MSC guide license or any source-instrument license to AltWing proprietary code merely because concepts were cited."
+  ],
+  "sourceItemVerbatimWordsReproduced": 0,
+  "originalSourceFile": "src/features/analytics/assessmentModel.ts",
+  "scopeNote": "This completed review covers the exact archived impact-v2 wording. impact-v3 is a later documented plain-language usability revision; this historical review is not relabelled as a new instrument comparison or originality guarantee."
+}

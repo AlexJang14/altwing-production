@@ -1,18 +1,13 @@
 .thermal-allocation {
   padding: 24px;
 
-  border: 1px solid rgba(255, 255, 255, 0.09);
-  border-radius: 20px;
+  border: 1px solid var(--gh-border);
+  border-radius: var(--gh-radius-card);
 
   background:
-    radial-gradient(
-      circle at 85% 5%,
-      rgba(255, 107, 107, 0.12),
-      transparent 30%
-    ),
-    rgba(255, 255, 255, 0.035);
+    var(--gh-surface);
 
-  color: white;
+  color: var(--gh-text);
 }
 
 .thermal-header {
@@ -22,10 +17,10 @@
 }
 
 .thermal-header span {
-  color: #ff6b6b;
+  color: var(--gh-text-muted);
 
-  font-size: 8px;
-  font-weight: 850;
+  font-size: var(--gh-text-xs);
+  font-weight: 600;
   letter-spacing: 0.15em;
 }
 
@@ -43,25 +38,25 @@
 
   border-radius: 999px;
 
-  font-size: 7px;
-  font-weight: 850;
+  font-size: var(--gh-text-xs);
+  font-weight: 600;
   letter-spacing: 0.1em;
 }
 
 .thermal-state--balanced {
-  border: 1px solid rgba(121, 221, 176, 0.3);
+  border: 1px solid var(--gh-border);
 
-  color: #79ddb0;
+  color: var(--gh-text-muted);
 
-  background: rgba(121, 221, 176, 0.08);
+  background: var(--gh-surface);
 }
 
 .thermal-state:not(.thermal-state--balanced) {
-  border: 1px solid rgba(255, 200, 87, 0.3);
+  border: 1px solid var(--gh-border);
 
-  color: #ffc857;
+  color: var(--gh-text-muted);
 
-  background: rgba(255, 200, 87, 0.08);
+  background: var(--gh-surface);
 }
 
 .thermal-budget {
@@ -72,16 +67,16 @@
   align-items: baseline;
   gap: 8px;
 
-  border-radius: 12px;
+  border-radius: var(--gh-radius-card);
 
-  background: #0a1027;
+  background: var(--gh-surface);
 }
 
 .thermal-budget span {
-  color: rgba(255, 255, 255, 0.38);
+  color: var(--gh-text-muted);
 
-  font-size: 8px;
-  font-weight: 850;
+  font-size: var(--gh-text-xs);
+  font-weight: 600;
   letter-spacing: 0.1em;
 }
 
@@ -90,13 +85,13 @@
 
   font-size: 26px;
 
-  color: #ffc857;
+  color: var(--gh-text-muted);
 }
 
 .thermal-budget small {
-  color: rgba(255, 255, 255, 0.3);
+  color: var(--gh-text-muted);
 
-  font-size: 8px;
+  font-size: var(--gh-text-xs);
 }
 
 .thermal-controls {
@@ -113,15 +108,15 @@
 }
 
 .thermal-controls span {
-  color: rgba(255, 255, 255, 0.48);
+  color: var(--gh-text-muted);
 
-  font-size: 8px;
-  font-weight: 800;
+  font-size: var(--gh-text-xs);
+  font-weight: 600;
   letter-spacing: 0.09em;
 }
 
 .thermal-controls strong {
-  font-size: 15px;
+  font-size: var(--gh-text-body);
 }
 
 .thermal-controls input {
@@ -129,7 +124,7 @@
 
   margin-top: 8px;
 
-  accent-color: #ff6b6b;
+  accent-color: var(--gh-interactive);
 
   cursor: grab;
 }
@@ -141,23 +136,23 @@
   display: flex;
   justify-content: space-between;
 
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid var(--gh-border);
 }
 
 .thermal-total span {
-  color: rgba(255, 255, 255, 0.4);
+  color: var(--gh-text-muted);
 
-  font-size: 8px;
-  font-weight: 850;
+  font-size: var(--gh-text-xs);
+  font-weight: 600;
   letter-spacing: 0.1em;
 }
 
 .thermal-total strong {
-  font-size: 18px;
+  font-size: var(--gh-text-lead);
 }
 
 .thermal-total small {
-  color: rgba(255, 255, 255, 0.3);
+  color: var(--gh-text-muted);
 }
 
 .thermal-metrics {
@@ -171,19 +166,19 @@
 .thermal-metrics div {
   padding: 11px;
 
-  border: 1px solid rgba(255, 255, 255, 0.07);
-  border-radius: 10px;
+  border: 1px solid var(--gh-border);
+  border-radius: var(--gh-radius-card);
 
-  background: rgba(255, 255, 255, 0.025);
+  background: var(--gh-surface);
 }
 
 .thermal-metrics span {
   display: block;
 
-  color: rgba(255, 255, 255, 0.32);
+  color: var(--gh-text-muted);
 
-  font-size: 6px;
-  font-weight: 850;
+  font-size: var(--gh-text-xs);
+  font-weight: 600;
   letter-spacing: 0.1em;
 }
 
@@ -192,20 +187,20 @@
 
   margin-top: 5px;
 
-  font-size: 15px;
+  font-size: var(--gh-text-body);
 }
 
 .thermal-feedback {
   margin-top: 14px;
   padding: 12px;
 
-  border-left: 2px solid #ffc857;
+  border-left: 2px solid var(--gh-border);
 
-  background: rgba(255, 200, 87, 0.045);
+  background: var(--gh-surface);
 
-  color: rgba(255, 255, 255, 0.65);
+  color: var(--gh-text-muted);
 
-  font-size: 10px;
+  font-size: var(--gh-text-xs);
   line-height: 1.5;
 }
 
@@ -217,10 +212,10 @@
 
   border-radius: 999px;
 
-  background: #ff6b6b;
-  color: white;
+  background: var(--gh-surface);
+  color: var(--gh-text);
 
-  font-weight: 800;
+  font-weight: 600;
 
   cursor: pointer;
 }
@@ -241,9 +236,9 @@
     0 0 18px;
 
   color:
-    rgba(255,255,255,.42);
+    var(--gh-text-muted);
 
-  font-size: 10px;
+  font-size: var(--gh-text-xs);
   line-height: 1.65;
 }
 
@@ -259,14 +254,14 @@
   border-radius: 999px;
 
   background:
-    rgba(255,255,255,.07);
+    var(--gh-surface);
 }
 
 .thermal-budget-used {
   height: 100%;
 
   background:
-    #5b8def;
+    var(--gh-surface);
 
   transition:
     width .22s ease;
@@ -276,7 +271,7 @@
   height: 100%;
 
   background:
-    rgba(255,200,87,.72);
+    var(--gh-surface);
 
   transition:
     width .22s ease;
@@ -292,10 +287,10 @@
     7px 0 20px;
 
   color:
-    rgba(255,255,255,.3);
+    var(--gh-text-muted);
 
-  font-size: 7px;
-  font-weight: 800;
+  font-size: var(--gh-text-xs);
+  font-weight: 600;
   letter-spacing: .06em;
 }
 

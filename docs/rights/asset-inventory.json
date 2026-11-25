@@ -1,0 +1,49 @@
+{
+  "reviewedAt": "2026-11-15",
+  "upstreamTemplateRevision": "f898888222297aa56d6fc281c585d4d4e4d51f58",
+  "assets": [
+    {
+      "path": "public/brand/altwing-penguin.png",
+      "gitBlob": "7ffe9eb481faede47c5faf71e752feffb6b430e2",
+      "sha256": "ba5278a01945231847b44295d56e0617bf8a7b922c5bd26c00e685fcab76b975",
+      "status": "Active; AI-assisted provenance corroborated; live/repository/V2 byte identity verified; dated account-holder grant received within rights held; reference-input rights UNVERIFIED; branding retained",
+      "provenanceRecord": "docs/rights/mascot-provenance.json",
+      "provenanceRecordSha256": "32d84677923843fdea3ef1d2ce2bbce8246cca1a985ff81708e44bed2c8defc2",
+      "rightsCleared": false,
+      "permissionRecord": "docs/rights/mascot-permission.json",
+      "permissionRecordSha256": "fcd6ee74dde4a95a304e4365c6b2a9b861ff86b1fed340735fb4604eb88eb2e8"
+    },
+    {
+      "path": "src/assets/hero.png",
+      "gitBlob": "02251f4b956c55af2d76fd0788124d7eee2b45eb",
+      "sha256": "881ffbcaafc212e49addad08846a5b82761355fa20624253af3477ba33262c5c",
+      "status": "Unused; removed with explicit owner instruction; original rights unresolved"
+    },
+    {
+      "path": "public/favicon.svg",
+      "gitBlob": "6893eb13237060adc0c968a690149a49faa2d7d3",
+      "sha256": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66",
+      "status": "Active; exact upstream create-vite template match; MIT notice retained"
+    },
+    {
+      "path": "public/icons.svg",
+      "gitBlob": "e9522193d9f796a9748e9ad8c952a5df73c87db9",
+      "sha256": "b45fa506195cfcdef406ba9f0c77b36ddc1a7c224040926ec70abc2fdea7b93a",
+      "status": "Unused at runtime; public file copied by Vite; exact upstream template match; MIT notice retained"
+    },
+    {
+      "path": "src/assets/react.svg",
+      "gitBlob": "6c87de9bb3358469122cc991d5cf578927246184",
+      "sha256": "35ef61ed53b323ae94a16a8ec659b3d0af3880698791133f23b084085ab1c2e5",
+      "status": "Unused; exact upstream template match; MIT notice retained"
+    },
+    {
+      "path": "src/assets/vite.svg",
+      "gitBlob": "5101b674df391399da71c767aa5c976426c9dc7a",
+      "sha256": "5be21acd42eb7b896e517f4e0f0f11eb5c5d9e54fbbcebe9453f033008fcca6f",
+      "status": "Unused; exact upstream template match; MIT notice retained"
+    }
+  ],
+  "mascotUpdateDate": "2026-11-18",
+  "mascotPermissionUpdateDate": "2026-11-18"
+}

@@ -1,0 +1,736 @@
+{
+  "scope": "Final release-readiness source checks, existing record indexes 29\u201342 only; no catalog or production edits by this researcher.",
+  "checkedDateUtc": "2026-11-16",
+  "clientDate": "2026-11-15",
+  "clientTimezone": "America/New_York",
+  "verificationDefinition": "VERIFIED means live official source inspected and recommended retained facts supported, including an explicit older-cycle or unannounced-next-cycle warning where appropriate. It does not promise next-cycle admission or availability. PARTIAL identifies unresolved conflicts in official pages.",
+  "methods": [
+    "Read-only live HTTP fetching and HTML text inspection; HTTP status, retrieval timestamp and body SHA-256 retained as evidence.",
+    "Official web search/page extraction used as discovery only where direct retrieval was available. Stale indexed text was rejected when live source differed.",
+    "No browser interaction, organizer communication, application login or transaction performed."
+  ],
+  "accessNotes": [
+    "MITES and BWSI web-extraction returned 502, but direct official HTTPS requests succeeded with HTTP200.",
+    "BWSI search index is stale: live FAQ changes summer grades from9\u201311 to10\u201311, fee from$2,400 to$3,000, and schedule from2026 to2027.",
+    "No copyrighted full-page content is republished in this register; facts and changes are paraphrased."
+  ],
+  "records": [
+    {
+      "index": 29,
+      "id": "mit-mites-summer",
+      "status": "VERIFIED",
+      "checkedDateUtc": "2026-11-16",
+      "clientDate": "2026-11-15",
+      "clientTimezone": "America/New_York",
+      "cycleInspected": "Official FAQ still lists summer 2026 dates and explicitly says 2027 dates TBD.",
+      "sourceEvidence": [
+        {
+          "url": "https://mites.mit.edu/discover-mites/faq-for-prospective-students/faqs-mites-semester-and-mites-summer/",
+          "finalUrl": "https://mites.mit.edu/discover-mites/faq-for-prospective-students/faqs-mites-semester-and-mites-summer/",
+          "status": 200,
+          "checkedAtUtc": "2026-11-16T01:04:07.192426+00:00",
+          "sha256": "1747fefb68b310f1b6128af87e02acd10dcbd530bd0ede93fd1390564c3b8a8e",
+          "bytes": 171423
+        }
+      ],
+      "fieldReview": {
+        "titleOrganizationLocation": "Official program/organizer identity and physical or virtual location inspected.",
+        "timingStatus": "Published cycle and actual date checked; no expired application text interpreted as currently open.",
+        "eligibilityGrades": "Only published requirements retained; broad umbrella grades are explicitly qualified where needsGradeCheck remains true. Grade arrays mean current school grade before the summer, not a promise of admission.",
+        "costCostBand": "Program fees distinguished from travel/housing, financial aid eligibility, and older-cycle figures. Unknown future charges remain unknown.",
+        "formatDescription": "Program format and concise factual description inspected; discipline tags remain AltWing editorial mappings, not organizer endorsements."
+      },
+      "mismatches": [
+        "Free program-related costs were previously classified UNKNOWN."
+      ],
+      "unresolved": [
+        "No exact 2027 session dates or current-cycle application-open claim established."
+      ],
+      "recommendedUpdates": {
+        "status": "WATCH",
+        "timing": "Six-week residential program. The official FAQ still lists the 2026 cycle and says 2027 dates are to be determined; confirm the next application cycle.",
+        "eligibility": "Current 11th-grade students who are U.S. citizens or permanent residents with a current U.S. green card; public, private and homeschooled students may apply.",
+        "cost": "Program tuition, housing and food are covered; students arrange/pay transportation to and from MIT.",
+        "costBand": "FREE_PAID",
+        "grades": [
+          "11"
+        ],
+        "format": "IN PERSON",
+        "lastVerified": "2026-11-16"
+      }
+    },
+    {
+      "index": 30,
+      "id": "mit-mites-semester",
+      "status": "VERIFIED",
+      "checkedDateUtc": "2026-11-16",
+      "clientDate": "2026-11-15",
+      "clientTimezone": "America/New_York",
+      "cycleInspected": "Official FAQ still lists semester 2026 dates and explicitly says 2027 dates TBD.",
+      "sourceEvidence": [
+        {
+          "url": "https://mites.mit.edu/discover-mites/faq-for-prospective-students/faqs-mites-semester-and-mites-summer/",
+          "finalUrl": "https://mites.mit.edu/discover-mites/faq-for-prospective-students/faqs-mites-semester-and-mites-summer/",
+          "status": 200,
+          "checkedAtUtc": "2026-11-16T01:04:07.192426+00:00",
+          "sha256": "1747fefb68b310f1b6128af87e02acd10dcbd530bd0ede93fd1390564c3b8a8e",
+          "bytes": 171423
+        }
+      ],
+      "fieldReview": {
+        "titleOrganizationLocation": "Official program/organizer identity and physical or virtual location inspected.",
+        "timingStatus": "Published cycle and actual date checked; no expired application text interpreted as currently open.",
+        "eligibilityGrades": "Only published requirements retained; broad umbrella grades are explicitly qualified where needsGradeCheck remains true. Grade arrays mean current school grade before the summer, not a promise of admission.",
+        "costCostBand": "Program fees distinguished from travel/housing, financial aid eligibility, and older-cycle figures. Unknown future charges remain unknown.",
+        "formatDescription": "Program format and concise factual description inspected; discipline tags remain AltWing editorial mappings, not organizer endorsements."
+      },
+      "mismatches": [
+        "Free program-related costs were previously classified UNKNOWN."
+      ],
+      "unresolved": [
+        "No 2027 schedule or residential conference is promised."
+      ],
+      "recommendedUpdates": {
+        "status": "WATCH",
+        "timing": "Six-month online experience with summer STEM and fall college/career preparation. The official FAQ says 2027 dates are to be determined.",
+        "eligibility": "Current 11th graders who are U.S. citizens or permanent residents with a current U.S. green card. Participants must stay within the U.S. and its territories during the virtual program.",
+        "cost": "Program-related costs are covered. If a residential conference is offered, check travel arrangements separately.",
+        "costBand": "FREE_PAID",
+        "grades": [
+          "11"
+        ],
+        "format": "ONLINE",
+        "lastVerified": "2026-11-16"
+      }
+    },
+    {
+      "index": 31,
+      "id": "mit-beaver-works",
+      "status": "VERIFIED",
+      "checkedDateUtc": "2026-11-16",
+      "clientDate": "2026-11-15",
+      "clientTimezone": "America/New_York",
+      "cycleInspected": "Live official FAQ contains a 2027 schedule; indexed search text still describes 2026.",
+      "sourceEvidence": [
+        {
+          "url": "https://bwsi.mit.edu/faq/",
+          "finalUrl": "https://bwsi.mit.edu/faq/",
+          "status": 200,
+          "checkedAtUtc": "2026-11-16T01:04:07.225412+00:00",
+          "sha256": "fabe016077a80bc833d4e59aedd6b3a8ad72d863ccca9ec077b3590cc41faedd",
+          "bytes": 261553
+        }
+      ],
+      "fieldReview": {
+        "titleOrganizationLocation": "Official program/organizer identity and physical or virtual location inspected.",
+        "timingStatus": "Published cycle and actual date checked; no expired application text interpreted as currently open.",
+        "eligibilityGrades": "Only published requirements retained; broad umbrella grades are explicitly qualified where needsGradeCheck remains true. Grade arrays mean current school grade before the summer, not a promise of admission.",
+        "costCostBand": "Program fees distinguished from travel/housing, financial aid eligibility, and older-cycle figures. Unknown future charges remain unknown.",
+        "formatDescription": "Program format and concise factual description inspected; discipline tags remain AltWing editorial mappings, not organizer endorsements."
+      },
+      "mismatches": [
+        "Live FAQ excludes students below grade 10; old catalog and indexed FAQ allow grade 9.",
+        "Indexed FAQ reports $2,400/2026; current direct official HTML reports $3,000 and a 2027 schedule."
+      ],
+      "unresolved": [
+        "Summer application opening and exact current deadline are not established; WATCH avoids claiming applications are open.",
+        "Financial qualification and any exceptions must be confirmed with the organizer."
+      ],
+      "recommendedUpdates": {
+        "status": "WATCH",
+        "timing": "Official FAQ lists the 2027 summer program July 5\u2013August 1, following online preparation. Check the current summer application and course-specific deadlines.",
+        "eligibility": "For the summer program, students must be in grades 10\u201311, reside and physically attend high school in the U.S., and stay in the U.S. during BWSI. Course preparation and teacher/mentor recommendation requirements apply.",
+        "grades": [
+          "10",
+          "11"
+        ],
+        "cost": "Online prerequisite courses are free. Live FAQ lists a $3,000 summer fee for families at or above its $200,000 income/assets threshold, with free participation for qualifying families after verification. In-person housing is not provided.",
+        "costBand": "FEES",
+        "format": "VARIES",
+        "lastVerified": "2026-11-16"
+      }
+    },
+    {
+      "index": 32,
+      "id": "wpi-frontiers",
+      "status": "VERIFIED",
+      "checkedDateUtc": "2026-11-16",
+      "clientDate": "2026-11-15",
+      "clientTimezone": "America/New_York",
+      "cycleInspected": "Official Frontiers page lists two 2027 sessions and early-December application opening.",
+      "sourceEvidence": [
+        {
+          "url": "https://www.wpi.edu/academics/pre-collegiate/summer-programs/frontiers",
+          "finalUrl": "https://www.wpi.edu/academics/pre-collegiate/summer-programs/frontiers",
+          "status": 200,
+          "checkedAtUtc": "2026-11-16T01:04:07.960908+00:00",
+          "sha256": "9a42ccac8f75b638f42b02636e3c4cc063829055938da68735571804daa16763",
+          "bytes": 308654
+        },
+        {
+          "url": "https://www.wpi.edu/academics/pre-collegiate/about/policies",
+          "finalUrl": "https://www.wpi.edu/academics/pre-collegiate/about/policies",
+          "status": 200,
+          "checkedAtUtc": "2026-11-16T01:04:07.934817+00:00",
+          "sha256": "875c2727d5b4f9a4804cca1d8580fd992d7836c980e023a1502161c3f2d07700",
+          "bytes": 193021
+        }
+      ],
+      "fieldReview": {
+        "titleOrganizationLocation": "Official program/organizer identity and physical or virtual location inspected.",
+        "timingStatus": "Published cycle and actual date checked; no expired application text interpreted as currently open.",
+        "eligibilityGrades": "Only published requirements retained; broad umbrella grades are explicitly qualified where needsGradeCheck remains true. Grade arrays mean current school grade before the summer, not a promise of admission.",
+        "costCostBand": "Program fees distinguished from travel/housing, financial aid eligibility, and older-cycle figures. Unknown future charges remain unknown.",
+        "formatDescription": "Program format and concise factual description inspected; discipline tags remain AltWing editorial mappings, not organizer endorsements."
+      },
+      "mismatches": [
+        "Published 2027 tuition should be FEES, not UNKNOWN."
+      ],
+      "unresolved": [
+        "The aid-policy page still contains a March 2026 date; do not infer a 2027 aid deadline or guarantee an award."
+      ],
+      "recommendedUpdates": {
+        "status": "UPCOMING",
+        "timing": "Frontiers I: July 5\u201316, 2027; Frontiers II: July 18\u201330, 2027. Applications are scheduled to open in early December 2026.",
+        "eligibility": "Rising grades 10\u201312 (current grades 9\u201311 before the summer); transcripts and application required. International applicants submit an accepted English-proficiency test.",
+        "cost": "$4,995 per session, including tuition, housing, meals and listed program activities. Application is free; limited need-based tuition assistance is described in program policies.",
+        "costBand": "FEES",
+        "format": "IN PERSON",
+        "grades": [
+          "9",
+          "10",
+          "11"
+        ],
+        "lastVerified": "2026-11-16"
+      }
+    },
+    {
+      "index": 33,
+      "id": "rose-hulman-catapult",
+      "status": "VERIFIED",
+      "checkedDateUtc": "2026-11-16",
+      "clientDate": "2026-11-15",
+      "clientTimezone": "America/New_York",
+      "cycleInspected": "Official main page lists all 2027 sessions, price and application dates.",
+      "sourceEvidence": [
+        {
+          "url": "https://rose-hulman.edu/admissions-and-aid/early-planning/operation-catapult/index.html",
+          "finalUrl": "https://rose-hulman.edu/admissions-and-aid/early-planning/operation-catapult/index.html",
+          "status": 200,
+          "checkedAtUtc": "2026-11-16T01:04:07.165937+00:00",
+          "sha256": "d9fd4cf020a990bca390a2a85f370281547d468eab5136f47680914b2a03deff",
+          "bytes": 44573
+        },
+        {
+          "url": "https://rose-hulman.edu/admissions-and-aid/early-planning/operation-catapult/FAQs.html",
+          "finalUrl": "https://rose-hulman.edu/admissions-and-aid/early-planning/operation-catapult/FAQs.html",
+          "status": 200,
+          "checkedAtUtc": "2026-11-16T01:07:23.443479+00:00",
+          "sha256": "68e001a475e664a009ee1cc5798124fe6d3fd775ddd31ac30fe0de7cf93d2c5c",
+          "bytes": 36541
+        }
+      ],
+      "fieldReview": {
+        "titleOrganizationLocation": "Official program/organizer identity and physical or virtual location inspected.",
+        "timingStatus": "Published cycle and actual date checked; no expired application text interpreted as currently open.",
+        "eligibilityGrades": "Only published requirements retained; broad umbrella grades are explicitly qualified where needsGradeCheck remains true. Grade arrays mean current school grade before the summer, not a promise of admission.",
+        "costCostBand": "Program fees distinguished from travel/housing, financial aid eligibility, and older-cycle figures. Unknown future charges remain unknown.",
+        "formatDescription": "Program format and concise factual description inspected; discipline tags remain AltWing editorial mappings, not organizer endorsements."
+      },
+      "mismatches": [
+        "2027 published tuition was previously UNKNOWN; exact published sessions/deadline can replace vague timing."
+      ],
+      "unresolved": [
+        "No tuition scholarship or eligibility guarantee is made."
+      ],
+      "recommendedUpdates": {
+        "status": "UPCOMING",
+        "timing": "2027 sessions: June 7\u201317, June 21\u2013July 1, or July 12\u201322. Applications open December 1, 2026; listed deadline April 19, 2027.",
+        "eligibility": "Students completing grades 10 or 11. Check the current application for all admission requirements.",
+        "cost": "Published 2027 fee: $2,750. Residential housing is described in the FAQ; optional spending and travel should be budgeted separately.",
+        "costBand": "FEES",
+        "format": "IN PERSON",
+        "grades": [
+          "10",
+          "11"
+        ],
+        "lastVerified": "2026-11-16"
+      }
+    },
+    {
+      "index": 34,
+      "id": "purdue-step",
+      "status": "VERIFIED",
+      "checkedDateUtc": "2026-11-16",
+      "clientDate": "2026-11-15",
+      "clientTimezone": "America/New_York",
+      "cycleInspected": "Official STEP page now lists 2027 sessions, registration opening and fee.",
+      "sourceEvidence": [
+        {
+          "url": "https://engineering.purdue.edu/Honors/SeminarforTopEngineeringProspects",
+          "finalUrl": "https://engineering.purdue.edu/Honors/SeminarforTopEngineeringProspects",
+          "status": 200,
+          "checkedAtUtc": "2026-11-16T01:04:07.212012+00:00",
+          "sha256": "c00c98f906e97e8d9555a23257f291fc768fea98bd0a43c7f609a18bfe29f93f",
+          "bytes": 49056
+        }
+      ],
+      "fieldReview": {
+        "titleOrganizationLocation": "Official program/organizer identity and physical or virtual location inspected.",
+        "timingStatus": "Published cycle and actual date checked; no expired application text interpreted as currently open.",
+        "eligibilityGrades": "Only published requirements retained; broad umbrella grades are explicitly qualified where needsGradeCheck remains true. Grade arrays mean current school grade before the summer, not a promise of admission.",
+        "costCostBand": "Program fees distinguished from travel/housing, financial aid eligibility, and older-cycle figures. Unknown future charges remain unknown.",
+        "formatDescription": "Program format and concise factual description inspected; discipline tags remain AltWing editorial mappings, not organizer endorsements."
+      },
+      "mismatches": [
+        "Old record referred to closed 2026 registration and unconfirmed future fees; 2027 details are now published."
+      ],
+      "unresolved": [
+        "Scholarships are limited, individually awarded and not guaranteed."
+      ],
+      "recommendedUpdates": {
+        "status": "UPCOMING",
+        "timing": "2027 weeklong sessions: July 11\u201317, July 18\u201324, July 25\u201331, or August 1\u20137. Registration is scheduled to open January 2027.",
+        "eligibility": "Rising high-school seniors, class of 2028. Three years of high-school mathematics and one year of chemistry or physics are recommended by summer 2027. Transcript and standardized-test information are requested.",
+        "cost": "Published attendance fee: $2,500, with need-based scholarships described after acceptance. Travel to and from Purdue is the participant\u2019s responsibility.",
+        "costBand": "FEES",
+        "format": "IN PERSON",
+        "grades": [
+          "11"
+        ],
+        "lastVerified": "2026-11-16"
+      }
+    },
+    {
+      "index": 35,
+      "id": "cooper-summer-stem",
+      "status": "PARTIAL",
+      "checkedDateUtc": "2026-11-16",
+      "clientDate": "2026-11-15",
+      "clientTimezone": "America/New_York",
+      "cycleInspected": "Summer STEM main page and FAQ contain 2027 information but disagree on first session start.",
+      "sourceEvidence": [
+        {
+          "url": "https://cooper.edu/engineering/stem/summer",
+          "finalUrl": "https://cooper.edu/engineering/stem/summer",
+          "status": 200,
+          "checkedAtUtc": "2026-11-16T01:05:07.156600+00:00",
+          "sha256": "a0a2b6a4f016a526af1e7f31f5a8229a78d5f528e20069b84dcd543d1dcf7bf6",
+          "bytes": 134422
+        },
+        {
+          "url": "https://cooper.edu/engineering/stem/summer/frequently-asked-questions",
+          "finalUrl": "https://cooper.edu/engineering/stem/summer/frequently-asked-questions",
+          "status": 200,
+          "checkedAtUtc": "2026-11-16T01:04:07.348532+00:00",
+          "sha256": "4a9da0f717df043c2f07424ed4193e7d800d8bb036fd657859bc9e8d91fd5edb",
+          "bytes": 137097
+        }
+      ],
+      "fieldReview": {
+        "titleOrganizationLocation": "Official program/organizer identity and physical or virtual location inspected.",
+        "timingStatus": "Published cycle and actual date checked; no expired application text interpreted as currently open.",
+        "eligibilityGrades": "Only published requirements retained; broad umbrella grades are explicitly qualified where needsGradeCheck remains true. Grade arrays mean current school grade before the summer, not a promise of admission.",
+        "costCostBand": "Program fees distinguished from travel/housing, financial aid eligibility, and older-cycle figures. Unknown future charges remain unknown.",
+        "formatDescription": "Program format and concise factual description inspected; discipline tags remain AltWing editorial mappings, not organizer endorsements."
+      },
+      "mismatches": [
+        "FAQ lists July 5 while main page states Tuesday July 6 for the first 2027 session; do not silently select either.",
+        "Remove old-cycle exact tuition from the primary cost message to avoid presenting it as a current 2027 price."
+      ],
+      "unresolved": [
+        "Organizer must resolve July 5/6 session-start discrepancy.",
+        "2027 fees remain unpublished."
+      ],
+      "recommendedUpdates": {
+        "status": "UPCOMING",
+        "timing": "Applications are scheduled to launch December 11, 2026. Three- and six-week in-person Summer STEM options are listed for 2027; confirm exact session dates because the main page and FAQ disagree on the first start date.",
+        "eligibility": "Students who have completed grades 9\u201311; high-school graduates are excluded. International students may apply, but visa sponsorship is not provided; course prerequisites vary.",
+        "cost": "2027 Summer STEM fees are not yet determined. Limited fee waivers are described; international students are not eligible for financial aid.",
+        "costBand": "UNKNOWN",
+        "format": "IN PERSON",
+        "grades": [
+          "9",
+          "10",
+          "11"
+        ],
+        "lastVerified": "2026-11-16"
+      }
+    },
+    {
+      "index": 36,
+      "id": "rutgers-gset",
+      "status": "VERIFIED",
+      "checkedDateUtc": "2026-11-16",
+      "clientDate": "2026-11-15",
+      "clientTimezone": "America/New_York",
+      "cycleInspected": "Dedicated official GSET page still links the 2026 application; no 2027 schedule inspected.",
+      "sourceEvidence": [
+        {
+          "url": "https://soe.rutgers.edu/gset",
+          "finalUrl": "https://soe.rutgers.edu/gset",
+          "status": 200,
+          "checkedAtUtc": "2026-11-16T01:04:07.433607+00:00",
+          "sha256": "4a9050aee9288f6d559ccf39eff0c70d1e6197660cd497d6cac0e247ae5d0442",
+          "bytes": 123083
+        }
+      ],
+      "fieldReview": {
+        "titleOrganizationLocation": "Official program/organizer identity and physical or virtual location inspected.",
+        "timingStatus": "Published cycle and actual date checked; no expired application text interpreted as currently open.",
+        "eligibilityGrades": "Only published requirements retained; broad umbrella grades are explicitly qualified where needsGradeCheck remains true. Grade arrays mean current school grade before the summer, not a promise of admission.",
+        "costCostBand": "Program fees distinguished from travel/housing, financial aid eligibility, and older-cycle figures. Unknown future charges remain unknown.",
+        "formatDescription": "Program format and concise factual description inspected; discipline tags remain AltWing editorial mappings, not organizer endorsements."
+      },
+      "mismatches": [
+        "Old long URL redirects to the dedicated /gset page.",
+        "Published no-charge tuition should not be treated as an unknown program charge."
+      ],
+      "unresolved": [
+        "2027 dates, application packet and any changed eligibility remain unconfirmed."
+      ],
+      "recommendedUpdates": {
+        "officialUrl": "https://soe.rutgers.edu/gset",
+        "status": "WATCH",
+        "timing": "Approximately four-week residential summer program after junior year. The inspected official page still links a 2026 application; confirm 2027 dates and nomination deadlines.",
+        "eligibility": "New Jersey high-school juniors apply through school nomination. The published nomination policy permits one nominee per 325 students in the junior class; next-cycle instructions may change.",
+        "cost": "No program charge to families. The current FAQ describes a $65 refundable key deposit; confirm next-cycle terms.",
+        "costBand": "FREE_PAID",
+        "format": "IN PERSON",
+        "grades": [
+          "11"
+        ],
+        "lastVerified": "2026-11-16"
+      }
+    },
+    {
+      "index": 37,
+      "id": "illinois-wyse-camps",
+      "status": "VERIFIED",
+      "checkedDateUtc": "2026-11-16",
+      "clientDate": "2026-11-15",
+      "clientTimezone": "America/New_York",
+      "cycleInspected": "Official camp page and FAQ describe full/closed 2026 offerings; no 2027 listings inspected.",
+      "sourceEvidence": [
+        {
+          "url": "https://wyse.grainger.illinois.edu/summer-programs/summer-camps",
+          "finalUrl": "https://wyse.grainger.illinois.edu/summer-programs/summer-camps",
+          "status": 200,
+          "checkedAtUtc": "2026-11-16T01:04:09.010922+00:00",
+          "sha256": "f3a6164c2e8a746cab6f46e4ed48df8a56f62304335b6e7ee26a7d6c876a146e",
+          "bytes": 34974
+        },
+        {
+          "url": "https://wyse.grainger.illinois.edu/summer-programs/summer-camps/camp-faqs",
+          "finalUrl": "https://wyse.grainger.illinois.edu/summer-programs/summer-camps/camp-faqs",
+          "status": 200,
+          "checkedAtUtc": "2026-11-16T01:05:07.080484+00:00",
+          "sha256": "3b1c869e88a0ed778327f84724a352b524d85ba9d42103545231e10f1c23e904",
+          "bytes": 59807
+        }
+      ],
+      "fieldReview": {
+        "titleOrganizationLocation": "Official program/organizer identity and physical or virtual location inspected.",
+        "timingStatus": "Published cycle and actual date checked; no expired application text interpreted as currently open.",
+        "eligibilityGrades": "Only published requirements retained; broad umbrella grades are explicitly qualified where needsGradeCheck remains true. Grade arrays mean current school grade before the summer, not a promise of admission.",
+        "costCostBand": "Program fees distinguished from travel/housing, financial aid eligibility, and older-cycle figures. Unknown future charges remain unknown.",
+        "formatDescription": "Program format and concise factual description inspected; discipline tags remain AltWing editorial mappings, not organizer endorsements."
+      },
+      "mismatches": [
+        "Grade labels refer to the fall after camp, not grade when applying; broad high-school tags are not individual eligibility."
+      ],
+      "unresolved": [
+        "Next-cycle camp list, grade bands, exact dates and charges are unannounced in inspected pages."
+      ],
+      "recommendedUpdates": {
+        "status": "WATCH",
+        "timing": "The inspected official listing says all 2026 camps are full. The FAQ describes annual announcements around January and applications around February; no 2027 dates or deadlines are confirmed here.",
+        "eligibility": "Eligibility is camp-specific and uses the grade entered in the fall after camp, with no grade exceptions. The published 2026 family spans rising grades 7\u201312; verify the selected camp and next-cycle rules before relying on the broad high-school filter.",
+        "cost": "Fees vary by camp and residential/commuter/day option. The FAQ still quotes 2026 pricing; 2027 tuition and scholarship availability are not confirmed.",
+        "costBand": "UNKNOWN",
+        "needsGradeCheck": true,
+        "format": "IN PERSON",
+        "lastVerified": "2026-11-16"
+      }
+    },
+    {
+      "index": 38,
+      "id": "first-robotics",
+      "status": "VERIFIED",
+      "checkedDateUtc": "2026-11-16",
+      "clientDate": "2026-11-15",
+      "clientTimezone": "America/New_York",
+      "cycleInspected": "Official FRC page advertises the 2027 challenge release; team access and charges are local.",
+      "sourceEvidence": [
+        {
+          "url": "https://www.firstinspires.org/programs/frc/",
+          "finalUrl": "https://www.firstinspires.org/programs/frc/",
+          "status": 200,
+          "checkedAtUtc": "2026-11-16T01:04:07.859583+00:00",
+          "sha256": "58f47ce0d555a5fd05b27ac47f553351f8c45dc9c3cc408fd39f8e4036319971",
+          "bytes": 161134
+        },
+        {
+          "url": "https://www.firstinspires.org/programs/cost-and-registration",
+          "finalUrl": "https://www.firstinspires.org/programs/cost-and-registration",
+          "status": 200,
+          "checkedAtUtc": "2026-11-16T01:07:23.661051+00:00",
+          "sha256": "cf6d46b5b055c607c1d50c4ad2632590635c4b396aae01e73a916955d0a967bd",
+          "bytes": 283268
+        }
+      ],
+      "fieldReview": {
+        "titleOrganizationLocation": "Official program/organizer identity and physical or virtual location inspected.",
+        "timingStatus": "Published cycle and actual date checked; no expired application text interpreted as currently open.",
+        "eligibilityGrades": "Only published requirements retained; broad umbrella grades are explicitly qualified where needsGradeCheck remains true. Grade arrays mean current school grade before the summer, not a promise of admission.",
+        "costCostBand": "Program fees distinguished from travel/housing, financial aid eligibility, and older-cycle figures. Unknown future charges remain unknown.",
+        "formatDescription": "Program format and concise factual description inspected; discipline tags remain AltWing editorial mappings, not organizer endorsements."
+      },
+      "mismatches": [
+        "A specific 2027 challenge date is now published; it does not prove every local team is accepting members."
+      ],
+      "unresolved": [
+        "No global promise of open student enrollment, a particular student fee or funding award."
+      ],
+      "recommendedUpdates": {
+        "status": "UPCOMING",
+        "timing": "The 2027 BIOCORE challenge is scheduled to release January 9, 2027. Contact a local team about joining, practice and event dates.",
+        "eligibility": "Grades 9\u201312, ages 14\u201318. Participation requires access to a team and adult mentors; local team enrollment may have additional requirements.",
+        "cost": "Team registration, equipment, travel and local student contributions vary. Confirm the actual student cost and available support with the team.",
+        "costBand": "UNKNOWN",
+        "format": "IN PERSON",
+        "grades": [
+          "9",
+          "10",
+          "11",
+          "12"
+        ],
+        "lastVerified": "2026-11-16"
+      }
+    },
+    {
+      "index": 39,
+      "id": "isef-fair-pathway",
+      "status": "VERIFIED",
+      "checkedDateUtc": "2026-11-16",
+      "clientDate": "2026-11-15",
+      "clientTimezone": "America/New_York",
+      "cycleInspected": "Official FAQ describes the affiliated-fair pathway; official rules hub lists 2027 rules.",
+      "sourceEvidence": [
+        {
+          "url": "https://www.societyforscience.org/isef/faq/",
+          "finalUrl": "https://www.societyforscience.org/isef/faq/",
+          "status": 200,
+          "checkedAtUtc": "2026-11-16T01:04:08.851537+00:00",
+          "sha256": "834d4498a7d1ff1f6ed0e88be65433b7094dcd8c58fa3c9b4703d03ca6a9b488",
+          "bytes": 197738
+        },
+        {
+          "url": "https://www.societyforscience.org/isef/international-rules/",
+          "finalUrl": "https://www.societyforscience.org/isef/international-rules/",
+          "status": 200,
+          "checkedAtUtc": "2026-11-16T01:05:07.573889+00:00",
+          "sha256": "eae96b1d55b6110a5b77f6bbc608c4fcb218d1f2ddc0d7b958b152886e72b95b",
+          "bytes": 178534
+        },
+        {
+          "url": "https://www.societyforscience.org/isef/international-rules/rules-and-guidelines/",
+          "finalUrl": "https://www.societyforscience.org/isef/international-rules/rules-and-guidelines/",
+          "status": 200,
+          "checkedAtUtc": "2026-11-16T01:07:24.129192+00:00",
+          "sha256": "d17cd5af654a522faf9c5d9a4169d0c83761bbf332c0cbd52f1b7124fa6f597d",
+          "bytes": 205852
+        }
+      ],
+      "fieldReview": {
+        "titleOrganizationLocation": "Official program/organizer identity and physical or virtual location inspected.",
+        "timingStatus": "Published cycle and actual date checked; no expired application text interpreted as currently open.",
+        "eligibilityGrades": "Only published requirements retained; broad umbrella grades are explicitly qualified where needsGradeCheck remains true. Grade arrays mean current school grade before the summer, not a promise of admission.",
+        "costCostBand": "Program fees distinguished from travel/housing, financial aid eligibility, and older-cycle figures. Unknown future charges remain unknown.",
+        "formatDescription": "Program format and concise factual description inspected; discipline tags remain AltWing editorial mappings, not organizer endorsements."
+      },
+      "mismatches": [],
+      "unresolved": [
+        "Local fair availability, deadline and student charges are not uniform and were not verified for each location."
+      ],
+      "recommendedUpdates": {
+        "status": "WATCH",
+        "timing": "Start with the affiliated fair serving your location. Local application, research-approval and competition dates vary; use the current 2027 rules and your fair\u2019s schedule.",
+        "eligibility": "Grades 9\u201312 or equivalent; qualify through a Society-affiliated fair rather than direct ISEF entry. Full current age, research-approval, safety and project rules apply.",
+        "cost": "Local fair and participation expenses vary; verify with the specific affiliated fair.",
+        "costBand": "UNKNOWN",
+        "format": "VARIES",
+        "grades": [
+          "9",
+          "10",
+          "11",
+          "12"
+        ],
+        "lastVerified": "2026-11-16"
+      }
+    },
+    {
+      "index": 40,
+      "id": "sdsc-rehs",
+      "status": "VERIFIED",
+      "checkedDateUtc": "2026-11-16",
+      "clientDate": "2026-11-15",
+      "clientTimezone": "America/New_York",
+      "cycleInspected": "Live official REHS page still describes the closed June\u2013July 2026 cycle.",
+      "sourceEvidence": [
+        {
+          "url": "https://education.sdsc.edu/studenttech/rehs/",
+          "finalUrl": "https://education.sdsc.edu/studenttech/rehs/",
+          "status": 200,
+          "checkedAtUtc": "2026-11-16T01:04:09.638116+00:00",
+          "sha256": "1bb3c471e7ca144e9ff39f68348d7eb8f8cca5a2a784cd46f31d73251878078e",
+          "bytes": 130519
+        },
+        {
+          "url": "https://education.sdsc.edu/studenttech/rehs./",
+          "finalUrl": "https://education.sdsc.edu/studenttech/rehs./",
+          "status": 200,
+          "checkedAtUtc": "2026-11-16T01:04:09.536465+00:00",
+          "sha256": "1bb3c471e7ca144e9ff39f68348d7eb8f8cca5a2a784cd46f31d73251878078e",
+          "bytes": 130519
+        }
+      ],
+      "fieldReview": {
+        "titleOrganizationLocation": "Official program/organizer identity and physical or virtual location inspected.",
+        "timingStatus": "Published cycle and actual date checked; no expired application text interpreted as currently open.",
+        "eligibilityGrades": "Only published requirements retained; broad umbrella grades are explicitly qualified where needsGradeCheck remains true. Grade arrays mean current school grade before the summer, not a promise of admission.",
+        "costCostBand": "Program fees distinguished from travel/housing, financial aid eligibility, and older-cycle figures. Unknown future charges remain unknown.",
+        "formatDescription": "Program format and concise factual description inspected; discipline tags remain AltWing editorial mappings, not organizer endorsements."
+      },
+      "mismatches": [
+        "The clean /rehs/ URL and the old /rehs./ URL both return 200 and byte-identical content; use the clean canonical-style URL.",
+        "Old cost message lacked an explicit 2026 qualifier."
+      ],
+      "unresolved": [
+        "2027 details and any changed requirements are not published on the inspected page."
+      ],
+      "recommendedUpdates": {
+        "officialUrl": "https://education.sdsc.edu/studenttech/rehs/",
+        "status": "WATCH",
+        "timing": "The official page still lists June 8\u2013July 31, 2026 and says applications are closed. Watch for a newly announced cycle; no 2027 opening or deadline is confirmed.",
+        "eligibility": "Published 2026 rules: Southern California resident in grades 10\u201312, at least 16 by June 15 of the application year, minimum 3.0 unweighted GPA, plus mentor/project prerequisites and final-poster participation. Re-check next-cycle rules.",
+        "cost": "Published 2026 registration fee: $2,000; application free. Partial/full scholarships depend on need and funding. Future-cycle fees and awards are unconfirmed.",
+        "costBand": "UNKNOWN",
+        "needsGradeCheck": true,
+        "format": "IN PERSON",
+        "grades": [
+          "10",
+          "11",
+          "12"
+        ],
+        "lastVerified": "2026-11-16"
+      }
+    },
+    {
+      "index": 41,
+      "id": "tufts-precollege-engineering",
+      "status": "VERIFIED",
+      "checkedDateUtc": "2026-11-16",
+      "clientDate": "2026-11-15",
+      "clientTimezone": "America/New_York",
+      "cycleInspected": "Official umbrella and Engineering Design Lab pages list 2027 opening and example session details.",
+      "sourceEvidence": [
+        {
+          "url": "https://universitycollege.tufts.edu/pre-college/academics/engineering-computer-science-programs-high-school-students",
+          "finalUrl": "https://universitycollege.tufts.edu/pre-college/academics/engineering-computer-science-programs-high-school-students",
+          "status": 200,
+          "checkedAtUtc": "2026-11-16T01:04:10.564145+00:00",
+          "sha256": "3fbeb240f5632ce8155bdb4edf6ca9d25288e87e9701ef631380de5718f309c9",
+          "bytes": 142161
+        },
+        {
+          "url": "https://universitycollege.tufts.edu/pre-college/browse/engineering-design-lab",
+          "finalUrl": "https://universitycollege.tufts.edu/pre-college/browse/engineering-design-lab",
+          "status": 200,
+          "checkedAtUtc": "2026-11-16T01:04:07.564857+00:00",
+          "sha256": "005a9a6c3e26bb2927f9a4ae0736409fb74f464abc984524a05ffe0a90cf8f49",
+          "bytes": 172799
+        }
+      ],
+      "fieldReview": {
+        "titleOrganizationLocation": "Official program/organizer identity and physical or virtual location inspected.",
+        "timingStatus": "Published cycle and actual date checked; no expired application text interpreted as currently open.",
+        "eligibilityGrades": "Only published requirements retained; broad umbrella grades are explicitly qualified where needsGradeCheck remains true. Grade arrays mean current school grade before the summer, not a promise of admission.",
+        "costCostBand": "Program fees distinguished from travel/housing, financial aid eligibility, and older-cycle figures. Unknown future charges remain unknown.",
+        "formatDescription": "Program format and concise factual description inspected; discipline tags remain AltWing editorial mappings, not organizer endorsements."
+      },
+      "mismatches": [
+        "Application opening and concrete 2027 example prices/dates are now published.",
+        "Broad umbrella grade tags cannot establish eligibility for every program."
+      ],
+      "unresolved": [
+        "Other Tufts programs have their own age, prerequisites, tuition and format; only the linked Engineering Design Lab example was checked in detail."
+      ],
+      "recommendedUpdates": {
+        "status": "UPCOMING",
+        "timing": "Summer 2027 applications are scheduled to open December 14, 2026. Program dates vary; Engineering Design Lab lists July 11\u201323 and July 25\u2013August 6, 2027.",
+        "eligibility": "Requirements depend on the selected program. Engineering Design Lab lists entering grades 10\u201312 or 2027 high-school graduates; residential ages 15\u201319 and application requirements apply. Check the individual course before using broad grade tags.",
+        "cost": "Tuition depends on the program and commuter/residential option. Engineering Design Lab lists $4,425 commuter or $5,950 residential for 2027, with limited need-based scholarships. These prices are not prices for every Tufts program.",
+        "costBand": "FEES",
+        "needsGradeCheck": true,
+        "lastVerified": "2026-11-16"
+      }
+    },
+    {
+      "index": 42,
+      "id": "rutgers-rhex",
+      "status": "PARTIAL",
+      "checkedDateUtc": "2026-11-16",
+      "clientDate": "2026-11-15",
+      "clientTimezone": "America/New_York",
+      "cycleInspected": "Dedicated RHEx page describes June 28\u2013July 3, 2026 and differs from the general index on grade band.",
+      "sourceEvidence": [
+        {
+          "url": "https://soe.rutgers.edu/academics/pre-college-engineering-programs",
+          "finalUrl": "https://soe.rutgers.edu/academics/pre-college-engineering-programs",
+          "status": 200,
+          "checkedAtUtc": "2026-11-16T01:04:07.420228+00:00",
+          "sha256": "202fb7c9f2326d9078110e82a8fece225d9a29e047d985b2134a9293445a2d04",
+          "bytes": 137520
+        },
+        {
+          "url": "https://soe.rutgers.edu/RHEX",
+          "finalUrl": "https://soe.rutgers.edu/RHEX",
+          "status": 200,
+          "checkedAtUtc": "2026-11-16T01:05:07.073908+00:00",
+          "sha256": "278abb4834deb1ec8e036605634657f53a4624d580060c49f7b1afce58f1942b",
+          "bytes": 148063
+        }
+      ],
+      "fieldReview": {
+        "titleOrganizationLocation": "Official program/organizer identity and physical or virtual location inspected.",
+        "timingStatus": "Published cycle and actual date checked; no expired application text interpreted as currently open.",
+        "eligibilityGrades": "Only published requirements retained; broad umbrella grades are explicitly qualified where needsGradeCheck remains true. Grade arrays mean current school grade before the summer, not a promise of admission.",
+        "costCostBand": "Program fees distinguished from travel/housing, financial aid eligibility, and older-cycle figures. Unknown future charges remain unknown.",
+        "formatDescription": "Program format and concise factual description inspected; discipline tags remain AltWing editorial mappings, not organizer endorsements."
+      },
+      "mismatches": [
+        "General directory says rising seniors; dedicated program page explicitly says rising juniors and seniors.",
+        "The dedicated page supplies a past-cycle price but is not evidence of 2027 applications being open."
+      ],
+      "unresolved": [
+        "Rutgers should resolve the directory/program grade discrepancy and publish next-cycle timing/fees."
+      ],
+      "recommendedUpdates": {
+        "officialUrl": "https://soe.rutgers.edu/RHEX",
+        "status": "WATCH",
+        "timing": "The dedicated official page still lists June 28\u2013July 3, 2026. Its application-open text belongs to that past cycle; no 2027 opening or dates are confirmed.",
+        "eligibility": "The dedicated 2026 page accepts rising juniors and seniors (current grades 10\u201311 before camp), while the general index says seniors only. Verify next-cycle grade rules, transcripts, PSAT, video and essay requirements with Rutgers.",
+        "grades": [
+          "10",
+          "11"
+        ],
+        "needsGradeCheck": true,
+        "cost": "The dedicated 2026 page lists $2,500 including residential lodging and meals. The next cycle\u2019s charge and financial aid are unconfirmed.",
+        "costBand": "UNKNOWN",
+        "format": "IN PERSON",
+        "lastVerified": "2026-11-16"
+      }
+    }
+  ]
+}

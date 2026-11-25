@@ -1,3 +1,4 @@
+import {mergePublicContent} from '../../content/intelligence';
 import { SCORECARD_COLLEGES } from "./scorecardColleges";
 import { colleges } from "../wingmatch/path/collegeData";
 import type { EngineeringMajorId, StudentProfile } from "./guidanceTypes";
@@ -257,7 +258,8 @@ const CURATED_COLLEGES: GuidanceCollege[] = colleges
   }
 ]);
 
-export const GUIDANCE_COLLEGES: GuidanceCollege[] = [...CURATED_COLLEGES,...SCORECARD_COLLEGES];
+export const BASE_GUIDANCE_COLLEGES: GuidanceCollege[] = [...CURATED_COLLEGES,...SCORECARD_COLLEGES];
+export const GUIDANCE_COLLEGES=mergePublicContent(BASE_GUIDANCE_COLLEGES,'college');
 
 export type CollegeSort = "SCORE_FIT" | "MAJOR_LOCATION";
 type AcademicMeasure = "SAT" | "ACT" | "GPA";

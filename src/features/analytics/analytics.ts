@@ -1,8 +1,11 @@
 import { analyticsEndpoint } from './analyticsEndpoint';
 import { writeLocal,invalidateCachedLocal } from '../../lib/storage';
 import { EVENT_NAMES, pageContext, routeKey, safeProperties, type AnalyticsEventName } from './analyticsModel';
-import {browserPrivacyBlocked,usageTrackingAllowed,productionTrackingAllowed} from './trackingPolicy';
+import {browserPrivacyBlocked,usageTrackingAllowed,productionTrackingAllowed,privateAnalyticsRoute} from './trackingPolicy';
 import type {ImpactSubmission} from './impactTypes';
+import {ASSESSMENT_VERSION,type AssessmentSubmission,type AssessmentEventSubmission} from './assessmentModel';
+import {activateAssessment,activeAssessments} from './assessmentState';
+import {readEngineeringMatch} from '../guidance/guidanceStorage';
 const listeners=new Set<()=>void>();
 let revision=0,lastKey='',lastPage='',lastTime=0;
 let fallbackSession={id:crypto.randomUUID(),last:0};
@@ -35,6 +38,20 @@ function visitCapability(id:string){
   capabilityCache=entry;return entry.promise;
 }
 const milestones=new Set<string>();
+export function anonymousAssessmentVisit(){return sessionId();}
+const assessmentQueue=new Map<string,Promise<unknown>>();
+export function trackAssessmentEvent(value:Omit<AssessmentEventSubmission,'session_id'|'version'>){
+  if(!analyticsEnabled()||privateAnalyticsRoute(location.hash))return;
+  const visit=sessionId(),generation=revision;
+  if(value.event==='offered')activateAssessment(value.id,value.source,visit);
+  const previous=assessmentQueue.get(value.id)??Promise.resolve();
+  const pending=previous.catch(()=>{}).then(async()=>{
+    if(!analyticsEnabled()||privateAnalyticsRoute(location.hash)||generation!==revision)return;
+    const token=await visitCapability(visit);if(!token||!analyticsEnabled()||privateAnalyticsRoute(location.hash)||generation!==revision)return;
+    await fetch(analyticsEndpoint('/api/impact/assessment-events'),{method:'POST',headers:{'Content-Type':'application/json','X-AltWing-Visit':token},body:JSON.stringify({...value,version:ASSESSMENT_VERSION,session_id:visit}),credentials:'omit',referrerPolicy:'no-referrer',keepalive:true,signal:AbortSignal.timeout(8000)});
+  }).catch(()=>{});
+  assessmentQueue.set(value.id,pending);void pending.finally(()=>{if(assessmentQueue.get(value.id)===pending)assessmentQueue.delete(value.id);});
+}
 export function trackEvent(event:AnalyticsEventName,properties:Record<string,unknown>={}){
   if(/^#\/?progress-transfer(?:\?|$)/.test(location.hash))return;
   if(!EVENT_NAMES.includes(event) || !analyticsEnabled())return;
@@ -44,22 +61,41 @@ export function trackEvent(event:AnalyticsEventName,properties:Record<string,unk
   // First-party, anonymous, write-only ingestion. No history or identity in the browser.
   const generation=revision;
   const payload={id:crypto.randomUUID(),session_id:sessionId(),event,properties:clean};
-  if(['Mission Started','Mission Completed'].includes(event)){
-    const key=[payload.session_id,event,clean.project??clean.wing].join(':');if(milestones.has(key))return;milestones.add(key);
+  let milestoneKey:string|null=null;
+  if(['Mission Started','Mission Completed','Recommended Field Explored'].includes(event)){
+    milestoneKey=[payload.session_id,event,clean.project??clean.wing??clean.major].join(':');if(milestones.has(milestoneKey))return;milestones.add(milestoneKey);
   }
+  const release=()=>{if(milestoneKey)milestones.delete(milestoneKey);};
+  const eventCohorts=activeAssessments(payload.session_id);
   void visitCapability(payload.session_id).then(token=>{
-    if(!token || !analyticsEnabled() || generation!==revision)return;
+    if(!token || !analyticsEnabled() || generation!==revision){release();return;}
     return fetch(analyticsEndpoint('/api/analytics/events'),{method:'POST',headers:{'Content-Type':'application/json','X-AltWing-Visit':token},body:JSON.stringify(payload),credentials:'omit',referrerPolicy:'no-referrer',keepalive:true,signal:AbortSignal.timeout(8000)})
-      .then(response=>{if(response.status===403 && capabilityCache?.session===payload.session_id)capabilityCache=null;});
-  }).catch(()=>{});
+      .then(response=>{
+        if(response.status===403 && capabilityCache?.session===payload.session_id)capabilityCache=null;
+        if(!response.ok){release();return;}
+        const kind=event==='Recommended Field Explored'?'field_explored':event==='Mission Started'?clean.project?'project_started':'lab_started':event==='Mission Completed'?clean.project?'project_completed':'proof_saved':null;
+        if(kind)for(const cohort of eventCohorts)trackAssessmentEvent({id:cohort.id,source:cohort.source,event:kind,activity:String(clean.project??clean.wing??clean.major)});
+      });
+  }).catch(release);
 }
-export async function submitImpactFeedback(value:Omit<ImpactSubmission,'session_id'>){
+export async function submitImpactFeedback(value:Omit<ImpactSubmission,'session_id'>|Omit<AssessmentSubmission,'session_id'>){
   if(!productionTrackingAllowed())throw Error('Feedback submission is disabled in development and previews.');
   const id=sessionId(),token=await visitCapability(id);
-  if(!token)throw Error('Feedback could not be authorized. Please retry.');
-  const response=await fetch(analyticsEndpoint('/api/impact/surveys'),{method:'POST',headers:{'Content-Type':'application/json','X-AltWing-Visit':token},body:JSON.stringify({...value,session_id:id}),credentials:'omit',referrerPolicy:'no-referrer',signal:AbortSignal.timeout(10000)});
-  const result=await response.json() as {error?:string;accepted?:boolean};
-  if(!response.ok||!result.accepted){if(response.status===403)capabilityCache=null;throw Error(result.error??'Feedback was not saved. Please retry.');}
+  if(!token)throw Error('We could not start a secure submission. Your answers are still here. Check your connection and try again.');
+  let response:Response;
+  try{
+    response=await fetch(analyticsEndpoint('/api/impact/surveys'),{method:'POST',headers:{'Content-Type':'application/json','X-AltWing-Visit':token},body:JSON.stringify({...value,session_id:id}),credentials:'omit',referrerPolicy:'no-referrer',signal:AbortSignal.timeout(10000)});
+  }catch(error){
+    const timeout=error instanceof Error&&['AbortError','TimeoutError'].includes(error.name);
+    throw Error(timeout?'Submission took too long. Your answers are still here; try again.':'We could not reach AltWing. Your answers are still here. Check your connection and try again.');
+  }
+  let result:{error?:unknown;accepted?:unknown}|null=null;
+  try{const body:unknown=await response.json();if(body&&typeof body==='object')result=body as typeof result;}catch{/* An HTML/proxy error must not appear as a JSON parser exception. */}
+  if(!response.ok||result?.accepted!==true){
+    if(response.status===403)capabilityCache=null;
+    const fallback=response.status===429?'Please wait a moment before trying again. Your answers are still here.':response.status===409?'A response for this experience is already recorded. Your earned results and rewards are unchanged.':response.status===400?'Some responses could not be accepted. Review your answers and try again.':'AltWing could not confirm that your responses were saved. Your answers are still here; please try again.';
+    throw Error(typeof result?.error==='string'&&result.error.trim()?result.error:fallback);
+  }
   return true;
 }
 export function trackPage(hash:string){
@@ -71,6 +107,7 @@ export function trackPage(hash:string){
   lastKey=key;lastPage=String(context.page);lastTime=now;
   if(['analytics','privacy'].includes(String(context.page)))return;
   trackEvent('Page Viewed',{...context,...(previous && !['analytics','privacy'].includes(previous)?{from_page:previous,previous_page_seconds:seconds}:{})});
+  if(context.page==='major'&&readEngineeringMatch()?.rankings.slice(0,3).some(item=>item.majorId===context.major))trackEvent('Recommended Field Explored',context);
 }
 export function trackNavigation(event:MouseEvent){
   if(!(event.target instanceof Element))return;

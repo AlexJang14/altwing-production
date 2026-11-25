@@ -1,0 +1,33 @@
+{
+  "receivedDate": "2026-11-18",
+  "source": "Owner supplied named grantor confirmation in current conversation",
+  "accountContext": "theanna",
+  "privateGrantSha256": "23078971c9d58c6cd4c977403d87c420bf2f2b332f0794809386708fe89e53f5",
+  "privateGrantReference": "Private owner-supplied mascot permission, Nov18,2026; original/transcription retained outside repository",
+  "publicGrantorPersonalNameRedacted": true,
+  "independentIdentityAuthentication": false,
+  "writtenConfirmation": "Confirmed",
+  "recipient": "Alex Jang / AltWing",
+  "asset": "public/brand/altwing-penguin.png",
+  "scope": [
+    "use",
+    "reproduce",
+    "modify",
+    "adapt",
+    "publish",
+    "host",
+    "display",
+    "distribute",
+    "reasonable color/appearance/size/presentation changes"
+  ],
+  "terms": [
+    "perpetual",
+    "worldwide",
+    "royalty-free",
+    "only to extent grantor holds applicable rights"
+  ],
+  "exclusiveCopyrightClaimed": false,
+  "thirdPartyRightsIncluded": false,
+  "referenceInputRightsEstablished": false,
+  "productionApproval": false
+}

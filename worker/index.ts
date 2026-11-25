@@ -1,4 +1,5 @@
 import handler from "vinext/server/fetch-handler";
+import {withAnalyticsAccess} from "../lib/analytics-access";
 import { runWithConnectorBinding } from "../lib/connector-context";
 import type { ConnectorBinding } from "../lib/connector-contract.mjs";
 
@@ -23,7 +24,7 @@ const worker = {
         },
       };
     }
-    return runWithConnectorBinding(binding, () => handler.fetch(request, env, ctx));
+    return withAnalyticsAccess(request, () => runWithConnectorBinding(binding, () => handler.fetch(request, env, ctx)));
   },
 };
 

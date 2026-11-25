@@ -1,3 +1,4 @@
+import {preferredScrollBehavior} from '../../../design/golden-horizon/motion';
 import { useState } from "react";
 import "./build-wing.css";
 import "./project-evidence.css";
@@ -2260,7 +2261,7 @@ function BuildWing({
           "evidence-workspace",
         )
         ?.scrollIntoView({
-          behavior: "smooth",
+          behavior: preferredScrollBehavior(),
           block: "start",
         });
     }, 20);

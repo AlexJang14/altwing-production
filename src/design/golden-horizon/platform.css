@@ -1,0 +1,163 @@
+@import '../blackGoldHome.css';
+@import '../kickColorRoles.css';
+@import './tokens.css';
+
+/* Shared presentation, with separate print rules retained in report components. */
+@media screen{
+ :root{scroll-padding-top:calc(var(--gh-header) + 24px);background:var(--gh-bg)}
+ :root body{margin:0;background:var(--gh-bg);color:var(--gh-text);font-family:var(--gh-font-body);font-size:var(--gh-text-body);line-height:1.7;-webkit-font-smoothing:antialiased}
+ :root #root{max-width:none;width:100%;text-align:left}
+ :root :where(button,input,select,textarea){font-family:var(--gh-font-body)}
+ :root :where(h1,h2,h3,h4,h5,h6){color:var(--gh-text);font-family:var(--gh-font-display);font-weight:500;letter-spacing:-.035em}
+ :root :where(a,button,input,select,textarea,summary):focus-visible{outline:var(--gh-focus)!important;outline-offset:4px}
+ :root :where(input,textarea,select){accent-color:var(--gh-interactive);caret-color:var(--gh-interactive)}
+ :root :where(button,[role=button],summary){touch-action:manipulation}
+ :root :where(button,a){transition:color var(--gh-motion-fast),background-color var(--gh-motion-fast),border-color var(--gh-motion-fast),transform var(--gh-motion-fast)}
+ :root :where(button:disabled){cursor:not-allowed;opacity:.5}
+ :root :where(button):not(:disabled):hover{filter:none}
+ :root :where(input:not([type=radio]):not([type=checkbox]):not([type=range]),select,textarea){max-width:100%;min-width:0;background:var(--gh-surface-soft);color:var(--gh-text);border-color:var(--gh-border-control);border-radius:var(--gh-radius-small);font-size:var(--gh-text-body);line-height:1.5}
+ :root :where(input:not([type=radio]):not([type=checkbox]):not([type=range]),select){min-height:46px}
+ :root :where(input[type=range]){min-height:40px;accent-color:var(--gh-interactive)}
+ :root :where(textarea){padding:16px;resize:vertical}
+ :root :where(input,textarea)::placeholder{color:var(--gh-text-dim);opacity:1}
+ :root :where(p,li,blockquote,td,th){overflow-wrap:break-word}
+ :root :where(.guidance-page,.project-page,.aw-explore,.universe-page,.be-shell,.wing-path-page,.wm-page,.aw-loading,.aw-privacy-page){color:var(--gh-text);background:var(--gh-bg);font-family:var(--gh-font-body)}
+ :root :where(.guidance-page,.project-page,.universe-page,.aw-privacy-page,.aw-information,.aw-analytics-page){width:100%;max-width:var(--gh-page-width);margin-inline:auto;padding-inline:var(--gh-gutter)}
+ :root .aw-information{max-width:960px}
+ :root :where(.guidance-page,.project-page,.universe-page,.aw-explore,.be-shell,.aw-analytics-page,.aw-information,.aw-privacy-page) h1{font-family:var(--gh-font-display);font-weight:500;letter-spacing:-.05em;line-height:1.1;font-size:var(--gh-text-title);color:var(--gh-text)}
+ :root :where(.guidance-page,.project-page,.universe-page,.aw-explore,.be-shell,.aw-analytics-page,.aw-information,.aw-privacy-page) h2{font-family:var(--gh-font-display);font-weight:500;letter-spacing:-.035em;line-height:1.2;color:var(--gh-text)}
+ :root .aw-first-subtitle,:root .guidance-page .aw-first-subtitle,:root .universe-page .aw-first-subtitle{color:var(--gh-text-muted);font-family:var(--gh-font-body);font-weight:400;font-size:var(--gh-text-lead);line-height:1.65;max-width:760px}
+ :root :is(.project-intro,.explorer-hero,.scenario-prologue-copy,.aw-explore-hero,.universe-hero,.counselor-hero,.be-stage-heading){padding-top:var(--gh-space-12);padding-bottom:var(--gh-space-8)}
+ :root :is(.project-intro,.explorer-hero,.aw-explore-hero,.universe-hero,.counselor-hero) p{max-width:700px;color:var(--gh-text-muted);line-height:1.85}
+ :root :is(.aw-context,.module-toolbar){border-color:var(--gh-border-quiet);color:var(--gh-text-muted);font-family:var(--gh-font-body)}
+ :root .aw-context{max-width:var(--gh-page-width);padding:20px var(--gh-gutter);gap:20px}
+ :root .aw-context strong{color:var(--gh-text);font-weight:500}:root .aw-context a,:root .module-toolbar button{color:var(--gh-text-muted)}
+ :root .aw-context a:hover,:root .module-toolbar button:hover{color:var(--gh-interactive)}
+ :root .aw-eyebrow,:root :is(.be-kicker,.be-label,.project-eyebrow,.aw-explore-kicker,.research-panel>span,.counselor-kicker){font-family:var(--gh-font-mono);font-size:var(--gh-text-xs);font-weight:400;letter-spacing:.11em;color:var(--gh-antique)}
+ /* The two semantic action families are intentionally explicit. */
+ :root :is(.aw-button,.release-button,.guidance-primary-button,.be-primary,.build-main-button,.assessment-primary,.assessment-invite-button,.impact-submit,.project-next,.preflight-launch){min-height:48px;border:1px solid var(--gh-interactive);border-radius:var(--gh-radius-small);background:var(--gh-interactive);color:var(--gh-on-accent);font-family:var(--gh-font-body);font-weight:650;font-size:var(--gh-text-sm);line-height:1.45;padding:14px 22px;box-shadow:none}
+ :root :is(.aw-button,.release-button,.guidance-primary-button,.be-primary,.build-main-button,.assessment-primary,.assessment-invite-button,.impact-submit,.project-next,.preflight-launch):not(:disabled):hover{background:var(--gh-interactive);border-color:var(--gh-interactive);color:var(--gh-on-accent);transform:translateY(-1px)}
+ :root :is(.aw-button-quiet,.release-secondary,.guidance-secondary-button,.be-secondary,.impact-button,.research-button){min-height:44px;border:1px solid var(--gh-border-control);border-radius:var(--gh-radius-small);background:transparent;color:var(--gh-text);padding:12px 18px;font-size:var(--gh-text-sm);font-weight:500;box-shadow:none}
+ :root :is(.aw-button-quiet,.release-secondary,.guidance-secondary-button,.be-secondary,.impact-button,.research-button):hover{border-color:var(--gh-interactive);color:var(--gh-interactive);background:var(--gh-surface-soft)}
+ :root :is(.pack-finish,.be-pack-open,.pack-vault-card button,.pack-ready-banner button){min-height:46px;background:var(--gh-gold);border:1px solid var(--gh-gold);color:var(--gh-on-accent);font:600 var(--gh-text-sm)/1.45 var(--gh-font-body);border-radius:var(--gh-radius-small);padding:13px 20px;box-shadow:none}
+ :root :is(.aw-inline-link,.aw-text-button,.research-panel a,.aw-information a,.aw-privacy-page a){color:var(--gh-interactive);text-underline-offset:5px}
+ :root :is(.aw-inline-link,.aw-text-button){min-height:44px}
+ :root :is(button[aria-pressed=true],.counselor-tabs button.active,.counselor-tabs button.is-active,.project-support button.is-active,.scenario-options>button.is-selected,.assessment-options label.is-selected){border-color:var(--gh-interactive);background:var(--gh-selected);color:var(--gh-text)}
+ :root :is(.research-filters,.impact-filters,.aw-analytics-toolbar) button[aria-pressed=true]{color:var(--gh-interactive)}
+ :root :is(.scenario-progress-fill,.be-progress span,.project-stage-progress>i,.aw-loading-track i,.assessment-progress .is-active){background:var(--gh-interactive)}
+ :root :is(.engineering-major-card,.college-card,.college-result-card,.opportunity-card,.guidance-idea-card,.career-card,.be-panel,.project-catalog>article,.aw-wing-card,.research-panel,.aw-analytics-panel,.impact-metrics>article,.research-summary>article){background:var(--gh-surface);border:1px solid var(--gh-border);border-radius:var(--gh-radius-card);box-shadow:none;backdrop-filter:none}
+ :root :is(.engineering-major-card,.college-card,.college-result-card,.opportunity-card,.guidance-idea-card,.aw-wing-card,.project-catalog>article){padding:var(--gh-space-8);transition:border-color var(--gh-motion-normal),transform var(--gh-motion-normal)}
+ :root :is(.engineering-major-card,.college-card,.college-result-card,.opportunity-card,.aw-wing-card,.project-catalog>article):hover{border-color:var(--gh-border-control);box-shadow:none}
+ :root :is(.engineering-major-card,.college-result-card,.opportunity-card,.aw-wing-card,.project-catalog>article) :is(h2,h3){color:var(--gh-text);font-weight:500;line-height:1.25}
+ :root :is(.engineering-card-grid,.project-catalog,.aw-wing-grid){gap:var(--gh-space-5)}
+ :root .engineering-major-card{border-top:1px solid var(--gh-border)}:root .major-card-icon{background:var(--gh-surface-soft);box-shadow:none}
+ :root .major-card-actions{gap:12px;flex-wrap:wrap}:root .major-card-actions button{min-height:46px;background:transparent;color:var(--gh-interactive);border-color:var(--gh-border-control);font-size:var(--gh-text-sm)}
+ :root .major-card-actions .text-action{color:var(--gh-text-muted)}
+ :root .major-subjects span,:root .be-concepts span{background:var(--gh-surface-soft);border-color:var(--gh-border-quiet);color:var(--gh-text-muted);font-weight:400;font-size:var(--gh-text-xs)}
+ :root .explorer-match-strip,:root .college-score-order,:root .match-pattern-card,:root .project-match-entry,:root .project-boundary,:root .aw-result-next{background:var(--gh-surface-soft);border:1px solid var(--gh-border);border-radius:var(--gh-radius-card);box-shadow:none}
+ :root .college-score-order select,:root .college-score-order label,:root .college-score-order p,:root .guidance-page .college-score-order p,:root .guidance-page .college-score-explanation{background:transparent;color:var(--gh-text-muted)}
+ :root .college-score-order strong,:root .match-rank,:root .major-card-topline>b{color:var(--gh-gold)}
+ :root .counselor-tabs{background:var(--gh-bg);border-color:var(--gh-border-quiet);box-shadow:none;padding-block:8px;gap:8px}
+ :root .counselor-tabs button{min-height:46px;border-radius:var(--gh-radius-small);font-weight:500}
+ :root .counselor-profile-card{background:var(--gh-surface-soft);border:1px solid var(--gh-border);border-radius:var(--gh-radius-card);box-shadow:none}
+ :root .counselor-profile-card :is(label,summary,strong){color:var(--gh-text)}
+ :root .counselor-profile-card :is(p,small,label>span){color:var(--gh-text-muted)!important}
+ :root .opportunity-ai-banner,:root .opportunity-ai-mark,:root .college-score-explanation{box-shadow:none;backdrop-filter:none}
+ /* Labs: retain scientific canvases, plotted series, models and source legends. */
+ :root .be-shell{position:relative;inset:auto;z-index:auto;min-height:calc(100dvh - var(--gh-header));overflow:visible;background:var(--gh-bg)}
+ :root .be-content{width:min(1100px,calc(100% - 2 * var(--gh-gutter)));padding-block:var(--gh-space-12) var(--gh-space-16)}
+ :root .be-panel{padding:var(--gh-space-8);margin-top:var(--gh-space-8)}
+ :root .be-panel>p,:root .be-disclosure p,:root .build-draft-note p{color:var(--gh-text-muted);font-size:var(--gh-text-sm);line-height:1.85}
+ :root .be-panel textarea{background:var(--gh-surface-soft);border:1px solid var(--gh-border-control);color:var(--gh-text);border-radius:var(--gh-radius-small);line-height:1.8}
+ :root .be-disclosure,:root .build-draft-note{background:var(--gh-surface-soft);border-color:var(--gh-border);border-left-color:var(--gh-antique);border-radius:var(--gh-radius-small)}
+ :root .be-navigation{background:var(--gh-bg);border-color:var(--gh-border);gap:12px}
+ :root .be-stage-heading h1{font-size:clamp(2rem,4vw,3.5rem)}
+ :root .be-wing-tag,:root .be-proof-list span,:root .be-pack-signal{color:var(--gh-gold)}
+ :root .project-stage,:root .project-workspace,:root .project-controls,:root .project-notes{min-width:0}:root .project-stage h2{font-size:var(--gh-text-section)}
+ :root .project-promise span,:root .project-requirements,:root .project-secondary{color:var(--gh-text-muted);font-size:var(--gh-text-xs)}
+ :root .aw-project-motto,:root .project-page .aw-project-motto{color:var(--gh-gold);font-weight:500}
+ /* Progress and rewards: gold remains the value color. Rarity palettes live in
+    their original selectors and illustrated-object CSS, not in this theme. */
+ :root .cosmic-pack-vault,:root .my-universe-panel,:root .universe-profile-card,:root .universe-journey-card,:root .pack-ready-banner{background:var(--gh-surface);border:1px solid var(--gh-border);border-radius:var(--gh-radius-card);box-shadow:none}
+ :root .pack-vault-heading>div>small,:root .pack-vault-heading small,:root .pack-vault-card>div:nth-child(2)>span,:root .pack-summary b,:root .player-level,:root .player-xp-count{color:var(--gh-gold)}
+ :root .pack-vault-heading>b{background:var(--gh-gold);color:var(--gh-on-accent)}
+ :root .pack-vault-card{grid-template-columns:54px minmax(0,1fr) auto;gap:18px;padding:20px;background:var(--gh-surface-soft);border-color:var(--gh-border)}
+ :root .pack-vault-card strong{font-family:var(--gh-font-display);font-size:var(--gh-text-body);font-weight:500}:root .pack-vault-card p,:root .pack-vault-footer{color:var(--gh-text-muted);font-size:var(--gh-text-xs);line-height:1.7}
+ :root .pack-vault-card small,:root .pack-vault-card>div:nth-child(2)>span{font-size:var(--gh-text-xs);font-weight:400}
+ :root .pack-empty{padding:24px;background:var(--gh-surface-soft);border-color:var(--gh-border-control)}:root .pack-empty p,:root .pack-empty span{font-size:var(--gh-text-xs);color:var(--gh-text-muted)}:root .pack-empty strong{font-size:var(--gh-text-body)}
+ :root .cosmic-grid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:16px}:root .cosmic-object-card{background:var(--gh-surface-soft);box-shadow:none;border-radius:var(--gh-radius-card)}
+ :root .pack-opening{inset:0;z-index:var(--gh-dialog-layer);background:var(--gh-bg);overflow-y:auto;padding:64px var(--gh-gutter) 28px}
+ :root .pack-opening-stars{opacity:.2}:root .pack-opening-content{max-width:1000px;width:100%;margin:auto;padding:0}:root .pack-opening-content>h2{font:500 clamp(2rem,4vw,3rem)/1.2 var(--gh-font-display);color:var(--gh-gold)}
+ :root .pack-opening-content>span,:root .pack-opening-content>p{font:400 var(--gh-text-xs)/1.6 var(--gh-font-mono);letter-spacing:.1em;color:var(--gh-text-muted)}
+ :root .pack-reveal-card{border-radius:var(--gh-radius-card);padding:24px 20px;min-height:340px;box-shadow:none}:root .pack-reveal-card strong{font:500 var(--gh-text-card)/1.25 var(--gh-font-display)}
+ :root .pack-reveal-card :is(p,.pack-card-description){font:400 var(--gh-text-sm)/1.7 var(--gh-font-body);color:var(--gh-text-muted)}
+ :root .pack-reveal-card small,:root .pack-reveal-card>span{font-size:var(--gh-text-xs)}
+ :root .pack-opening>.aw-dialog-close{position:fixed;top:18px;right:24px;z-index:calc(var(--gh-dialog-layer) + 1);min-height:44px;padding:10px 16px;background:var(--gh-surface);border:1px solid var(--gh-border-control);border-radius:var(--gh-radius-small);color:var(--gh-text);font-size:var(--gh-text-sm)}
+ :root .pack-summary{border-color:var(--gh-border);margin-block:24px}:root .pack-summary span{color:var(--gh-text-muted);font-size:var(--gh-text-xs)}
+ /* Assessments and optional story share the same interaction language. */
+ :root .assessment-overlay{z-index:var(--gh-dialog-layer);background:var(--gh-overlay);backdrop-filter:none;padding:28px}
+ :root .assessment-dialog{background:var(--gh-surface);border:1px solid var(--gh-border-control);border-radius:var(--gh-radius-dialog);font-family:var(--gh-font-body);box-shadow:var(--gh-shadow-dialog)}
+ :root .assessment-art{background:var(--gh-bg);padding:32px}:root .assessment-art img{mix-blend-mode:normal;filter:none}:root .assessment-art>p{font-family:var(--gh-font-display);color:var(--gh-gold);font-size:1.75rem}:root .assessment-art>span{color:var(--gh-text-muted)}
+ :root .assessment-orbit{border-color:var(--gh-interactive);box-shadow:none;opacity:.3}
+ :root .assessment-content{padding:44px 44px 28px}:root .assessment-content :is(h2,.assessment-story-question){font-family:var(--gh-font-display);color:var(--gh-text)}
+ :root .assessment-content>h2,:root .assessment-story-mode h2{font:500 clamp(2.5rem,4vw,3.25rem)/1.1 var(--gh-font-display);letter-spacing:-.04em}
+ :root .assessment-content p{color:var(--gh-text-muted);line-height:1.8}:root .assessment-content .assessment-dimension{color:var(--gh-gold)!important}
+ :root .assessment-options label{background:var(--gh-surface-soft);border-color:var(--gh-border-control);border-radius:var(--gh-radius-small);color:var(--gh-text);font-weight:400}
+ :root .assessment-options .is-selected{background:var(--gh-selected);border-color:var(--gh-interactive);color:var(--gh-text)}:root .assessment-options .is-selected i{background:var(--gh-interactive);box-shadow:inset 0 0 0 4px var(--gh-selected)}
+ :root .assessment-options label:focus-within{outline:var(--gh-focus);outline-offset:3px}:root .assessment-story{background:var(--gh-surface-soft);color:var(--gh-text);border-color:var(--gh-border-control);border-radius:var(--gh-radius-small);font:400 var(--gh-text-body)/1.8 var(--gh-font-body)}
+ :root .assessment-share-notice{background:var(--gh-surface-soft);border-color:var(--gh-border-control);color:var(--gh-text)!important}:root .assessment-close{background:var(--gh-surface-soft);border-color:var(--gh-border-control);color:var(--gh-text);box-shadow:none}:root .assessment-privacy a{color:var(--gh-interactive)}
+ :root .assessment-prompts strong{color:var(--gh-gold)}:root .assessment-word-count,:root .assessment-neutral,:root .assessment-privacy,:root .assessment-context{color:var(--gh-text-muted)!important}
+ /* Administrator reports retain their exact counts, definitions and exports. */
+ :root .aw-analytics-page{padding-top:48px;padding-bottom:80px;font-family:var(--gh-font-body)}
+ :root .aw-analytics-page h1{max-width:900px}:root .aw-analytics-panel,:root .research-panel{padding:var(--gh-space-8);margin-block:var(--gh-space-5)}
+ :root .research-report-heading h2{font:500 var(--gh-text-section)/1.2 var(--gh-font-display);letter-spacing:-.04em}:root .research-summary,:root .impact-metrics,:root .aw-analytics-stats{gap:16px}
+ :root :is(.research-summary,.impact-metrics,.aw-analytics-stats)>article{padding:24px;background:var(--gh-surface);border:1px solid var(--gh-border);border-radius:var(--gh-radius-card)}
+ :root :is(.research-summary,.impact-metrics,.aw-analytics-stats) strong,:root .aw-analytics-milestones strong{color:var(--gh-gold);font-family:var(--gh-font-display);font-weight:500}
+ :root .research-filters,:root .impact-filters,:root .aw-analytics-toolbar{gap:16px;flex-wrap:wrap;align-items:flex-end}
+ :root :is(.research-filters,.impact-filters,.aw-analytics-toolbar) label{min-width:0;color:var(--gh-text-muted);font-size:var(--gh-text-xs);gap:8px}
+ :root :is(.research-filters,.impact-filters,.aw-analytics-toolbar) :is(input,select){border-color:var(--gh-border-control);background:var(--gh-surface-soft);color:var(--gh-text);font-size:var(--gh-text-sm);border-radius:var(--gh-radius-small);padding:12px;min-height:46px}
+ :root .research-note,:root .research-window,:root .impact-banner{background:var(--gh-surface-soft);border:1px solid var(--gh-border);color:var(--gh-text-muted);border-radius:var(--gh-radius-small);line-height:1.8}
+ :root :is(.aw-analytics-chart i,.aw-analytics-rank i,.research-distribution i){background:var(--gh-interactive)}
+ :root :is(.match-progress i,.pwg-progress span.is-active,.aw-tour-bars span.is-active,.awpath-progress i,.wing-reveal-progress div,.wm-beginner-progress i,.wm-v5-progress i,.awv7-progress span,.aw6-progress span){background:var(--gh-interactive)}
+ :root .cosmic-atlas-progress i{background:var(--gh-gold)}
+ :root .research-demo,:root .impact-demo,:root .impact-preview-notice{border-color:var(--gh-antique);background:var(--gh-surface-soft);color:var(--gh-gold);font-size:var(--gh-text-xs);line-height:1.8}
+ :root .research-story{border-color:var(--gh-border);background:var(--gh-surface-soft);border-radius:var(--gh-radius-small);padding:24px}:root .research-story blockquote{font-size:var(--gh-text-body);line-height:1.9;color:var(--gh-text);white-space:pre-wrap;overflow-wrap:anywhere}
+ :root .research-table-wrap,:root .impact-table-wrap{overflow-x:auto}:root .research-panel table,:root .impact-table{color:var(--gh-text);border-color:var(--gh-border);font-size:var(--gh-text-sm)}
+ :root .research-panel th,:root .research-panel td,:root .impact-table th,:root .impact-table td{border-color:var(--gh-border);padding:12px 14px}:root .research-panel th,:root .impact-table th{color:var(--gh-text-muted);font-size:var(--gh-text-xs);font-weight:500}
+ :root .research-actions button,:root .impact-actions button,:root .aw-analytics-toolbar button{min-height:44px;border-radius:var(--gh-radius-small);font-size:var(--gh-text-sm);box-shadow:none}
+ :root .aw-information :is(h1,h2),:root .aw-privacy-page :is(h1,h2){color:var(--gh-text)}:root .aw-information-intro{color:var(--gh-text-muted)}:root .aw-information nav{border-color:var(--gh-border);gap:12px 24px}:root .aw-information section{margin-bottom:48px}
+ :root .aw-loading{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;min-height:60vh;padding:64px var(--gh-gutter);color:var(--gh-text)}:root .aw-loading p{max-width:550px;color:var(--gh-text-muted)}:root .aw-loading .aw-penguin{mix-blend-mode:normal;filter:none}
+ :root .storage-notice{background:var(--gh-surface);border:1px solid var(--gh-warning);border-radius:var(--gh-radius-small);color:var(--gh-text);padding:16px;font-size:var(--gh-text-sm)}
+ :root .gh-access-page{min-height:100dvh;max-width:800px;margin:auto;padding:15vh var(--gh-gutter);color:var(--gh-text)}:root .gh-access-page>span{font:400 var(--gh-text-xs) var(--gh-font-mono);letter-spacing:.15em;color:var(--gh-antique)}:root .gh-access-page h1{font:500 var(--gh-text-title)/1.1 var(--gh-font-display);letter-spacing:-.05em;margin:24px 0}:root .gh-access-page p{color:var(--gh-text-muted);line-height:1.8;max-width:540px}:root .gh-access-page a{display:inline-flex;min-height:44px;align-items:center;color:var(--gh-interactive);margin-top:24px}
+}
+@media screen and (max-width:960px){
+ :root .counselor-tabs{overflow-x:auto;flex-wrap:nowrap}:root .counselor-tabs button{flex-shrink:0}
+ :root .aw-context{flex-wrap:wrap}:root .aw-context>div{min-width:0}:root .aw-journey-shortcuts{flex-wrap:wrap}
+ :root .be-panel{padding:24px}:root .be-stage-heading{gap:20px;flex-wrap:wrap}
+ :root .research-summary,:root .impact-metrics,:root .aw-analytics-stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media screen and (max-width:680px){
+ :root,:root.aw-theme-golden-horizon,.aw-theme-golden-horizon,.aw-theme-golden-horizon.aw-theme-black-gold{--gh-gutter:20px;--gh-text-title:clamp(2.25rem,9vw,3rem);--gh-text-section:clamp(1.65rem,6vw,2.25rem)}
+ :root :is(.guidance-page,.project-page,.universe-page,.aw-privacy-page,.aw-information,.aw-analytics-page){padding-inline:20px}
+ :root .engineering-card-grid,:root .project-catalog,:root .aw-wing-grid{grid-template-columns:minmax(0,1fr);gap:16px}
+ :root :is(.engineering-major-card,.college-result-card,.opportunity-card,.project-catalog>article,.aw-wing-card,.aw-analytics-panel,.research-panel){padding:24px}
+ :root :is(.explorer-hero,.project-intro,.counselor-hero,.universe-hero,.aw-explore-hero){padding-top:36px;padding-bottom:28px}
+ :root .counselor-hero-actions,:root .research-section-title,:root .research-filters,:root .impact-filters,:root .aw-analytics-toolbar{flex-wrap:wrap;gap:16px}
+ :root .counselor-tabs{margin-inline:0}:root .counselor-tabs button{font-size:var(--gh-text-xs);padding:12px}
+ :root .research-filters label,:root .impact-filters label{flex:1 1 140px}:root .research-filters input,:root .research-filters select,:root .impact-filters input,:root .impact-filters select{width:100%}
+ :root .research-summary,:root .impact-metrics,:root .aw-analytics-stats{gap:12px}:root .research-summary>article,:root .impact-metrics>article,:root .aw-analytics-stats>article{padding:18px;min-width:0}
+ :root .research-summary strong,:root .impact-metrics strong,:root .aw-analytics-stats strong{font-size:2rem;overflow-wrap:anywhere}
+ :root .assessment-overlay{padding:0}:root .assessment-dialog{max-width:none;width:100%;height:100dvh;max-height:100dvh;border-radius:0;border:0;display:block}:root .assessment-art{display:none}:root .assessment-content{padding:40px 22px 24px;height:100%;overflow-y:auto}:root .assessment-content h2{font-size:1.65rem}:root .assessment-content>h2,:root .assessment-story-mode h2{font-size:2.6rem}:root .assessment-actions{gap:12px}:root .assessment-primary{padding:14px 16px}:root .assessment-story-label{flex-direction:column}:root .assessment-invitation{display:block;padding:24px}
+ :root .be-content{width:calc(100% - 40px);padding-top:32px}:root .be-panel{padding:22px}:root .be-panel h2{font-size:1.75rem}:root .be-panel>p{font-size:var(--gh-text-sm)}:root .be-action-list,:root .be-proof-list{grid-template-columns:1fr}:root .be-navigation{flex-wrap:wrap;padding:16px 0}:root .be-navigation button{flex:1;min-width:120px}
+ :root .pack-vault-card{grid-template-columns:44px minmax(0,1fr);gap:16px;padding:18px}:root .pack-vault-card>button{grid-column:1/-1;width:100%}:root .pack-vault-heading{flex-wrap:wrap}:root .pack-vault-heading strong{font-size:var(--gh-text-body)}
+ :root .pack-opening{padding:78px 20px 28px}:root .pack-opening-content>h2{font-size:2rem}:root .pack-reveal-grid{grid-template-columns:minmax(0,1fr);gap:18px;max-width:380px;margin-inline:auto}:root .pack-reveal-card{min-height:340px;padding:24px}:root .pack-opening>.aw-dialog-close{right:20px;top:18px}:root .pack-summary{gap:20px}:root .pack-summary span{font-size:var(--gh-text-xs)}
+ :root .aw-analytics-columns{grid-template-columns:minmax(0,1fr)}:root .aw-analytics-page{padding-top:32px}:root .research-section-title{align-items:flex-start;flex-direction:column}:root .research-story{padding:20px}
+}
+@media(prefers-reduced-motion:reduce){
+ :root *,:root *::before,:root *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+ :root .aw-gold-home .aw-gold-button:hover,:root .engineering-major-card:hover,:root .aw-wing-card:hover{transform:none}
+}
+@media print{
+ :root,:root.aw-theme-golden-horizon,.aw-theme-golden-horizon,.aw-theme-golden-horizon.aw-theme-black-gold{color-scheme:light}html,body{background:#fff!important}
+ .aw-header,.aw-footer,.aw-context,.module-toolbar,.gh-preview-only{display:none!important}
+}

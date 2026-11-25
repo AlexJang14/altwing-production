@@ -1,0 +1,122 @@
+{
+  "checkedAtUTC": "2026-11-21T07:46:52.158459+00:00",
+  "candidate": "ALTWING-GH-RC1-ADDITIVE-2026-11-21",
+  "scope": "Focused changed-path checks only; prior unchanged evidence retained separately",
+  "checks": [
+    {
+      "name": "atomic-ingestion",
+      "exitCode": 0,
+      "status": "PASS",
+      "command": [
+        "node",
+        "scripts/check-atomic-ingestion.mjs"
+      ],
+      "log": "/workspace/altwing-golden-horizon-additive-rc/evidence/atomic-ingestion.log",
+      "checkedAtUTC": "2026-11-21T07:44:09.462937+00:00"
+    },
+    {
+      "name": "analytics",
+      "exitCode": 0,
+      "status": "PASS",
+      "command": [
+        "node",
+        "scripts/check-analytics.mjs"
+      ],
+      "log": "/workspace/altwing-golden-horizon-additive-rc/evidence/analytics.log",
+      "checkedAtUTC": "2026-11-21T07:40:38.607239+00:00"
+    },
+    {
+      "name": "impact",
+      "exitCode": 0,
+      "status": "PASS",
+      "command": [
+        "node",
+        "scripts/check-impact.mjs"
+      ],
+      "log": "/workspace/altwing-golden-horizon-additive-rc/evidence/impact.log",
+      "checkedAtUTC": "2026-11-21T07:41:40.100220+00:00"
+    },
+    {
+      "name": "research-assessment",
+      "exitCode": 0,
+      "status": "PASS",
+      "command": [
+        "node",
+        "scripts/check-research-assessment.mjs"
+      ],
+      "log": "/workspace/altwing-golden-horizon-additive-rc/evidence/research-assessment.log",
+      "checkedAtUTC": "2026-11-21T07:41:40.687229+00:00"
+    },
+    {
+      "name": "admin-access",
+      "exitCode": 0,
+      "status": "PASS",
+      "command": [
+        "node",
+        "scripts/check-admin-access.mjs"
+      ],
+      "log": "/workspace/altwing-golden-horizon-additive-rc/evidence/admin-access.log",
+      "checkedAtUTC": "2026-11-21T07:41:40.611612+00:00"
+    },
+    {
+      "name": "typecheck",
+      "exitCode": 0,
+      "status": "PASS",
+      "command": [
+        "node",
+        "node_modules/typescript/bin/tsc",
+        "--noEmit"
+      ],
+      "log": "/workspace/altwing-golden-horizon-additive-rc/evidence/typecheck.log",
+      "checkedAtUTC": "2026-11-21T07:40:49.363027+00:00"
+    },
+    {
+      "name": "backend-build",
+      "exitCode": 0,
+      "status": "PASS",
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "log": "/workspace/altwing-golden-horizon-additive-rc/evidence/backend-build.log",
+      "checkedAtUTC": "2026-11-21T07:42:10.924587+00:00"
+    },
+    {
+      "name": "pages-build",
+      "exitCode": 0,
+      "status": "PASS",
+      "command": [
+        "npm",
+        "run",
+        "build:pages"
+      ],
+      "log": "/workspace/altwing-golden-horizon-additive-rc/evidence/pages-build.log",
+      "checkedAtUTC": "2026-11-21T07:42:11.924421+00:00"
+    },
+    {
+      "name": "source-security",
+      "exitCode": 0,
+      "status": "PASS",
+      "command": [
+        "node",
+        "scripts/check-source-security.mjs"
+      ],
+      "log": "/workspace/altwing-golden-horizon-additive-rc/evidence/source-security.log",
+      "checkedAtUTC": "2026-11-21T07:44:54.812512+00:00"
+    },
+    {
+      "name": "release-policy",
+      "exitCode": 0,
+      "status": "PASS",
+      "command": [
+        "node",
+        "scripts/check-release-policy.mjs"
+      ],
+      "log": "/workspace/altwing-golden-horizon-additive-rc/evidence/release-policy.log",
+      "checkedAtUTC": "2026-11-21T07:45:39.786885+00:00"
+    }
+  ],
+  "productionChanged": false,
+  "recoveryVerified": false
+}

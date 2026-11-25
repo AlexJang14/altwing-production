@@ -3,13 +3,8 @@
 .awpath-shell {
   min-height: 100vh;
   background:
-    radial-gradient(
-      circle at 30% 8%,
-      rgba(34, 64, 139, 0.25),
-      transparent 38%
-    ),
-    #050b1a;
-  color: #f7f8fc;
+    var(--gh-surface);
+  color: var(--gh-text);
 }
 
 .awpath-nav {
@@ -19,7 +14,7 @@
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
   border-bottom:
-    1px solid rgba(255,255,255,.07);
+    1px solid var(--gh-border);
 }
 
 .awpath-nav button {
@@ -27,11 +22,11 @@
   padding: 0;
   border: 0;
   background: transparent;
-  color: #aeb7cc;
+  color: var(--gh-interactive);
   cursor: pointer;
   font: inherit;
-  font-size: 12px;
-  font-weight: 850;
+  font-size: var(--gh-text-xs);
+  font-weight: 600;
 }
 
 .awpath-nav button:last-child {
@@ -44,13 +39,13 @@
 }
 
 .awpath-nav > strong {
-  font-size: 23px;
+  font-size: var(--gh-text-card);
   letter-spacing: -.03em;
 }
 
 .awpath-nav > strong span,
 .awpath-cert-top > strong span {
-  color: #ff6277;
+  color: var(--gh-text-muted);
 }
 
 .awpath-wrap {
@@ -75,9 +70,9 @@
 .awpath-cert-section > header > span,
 .awpath-feedback > header > span,
 .awpath-evidence > span {
-  color: #68ddff;
-  font-size: 10px;
-  font-weight: 950;
+  color: var(--gh-text-muted);
+  font-size: var(--gh-text-xs);
+  font-weight: 600;
   letter-spacing: .18em;
 }
 
@@ -85,7 +80,7 @@
   max-width: 780px;
   margin: 10px 0 16px;
   font-size:
-    clamp(42px, 5.2vw, 70px);
+    var(--gh-text-title);
   line-height: .98;
   letter-spacing: -.055em;
 }
@@ -93,23 +88,23 @@
 .awpath-hero > div > p {
   max-width: 720px;
   margin: 0;
-  color: #a4aec5;
-  font-size: 17px;
+  color: var(--gh-text-muted);
+  font-size: var(--gh-text-body);
   line-height: 1.65;
 }
 
 .awpath-progress {
   padding: 22px;
   border:
-    1px solid rgba(115,139,196,.24);
-  border-radius: 20px;
-  background: rgba(18,32,70,.68);
+    1px solid var(--gh-border);
+  border-radius: var(--gh-radius-card);
+  background: var(--gh-surface);
 }
 
 .awpath-progress > span {
-  color: #8d99b7;
-  font-size: 9px;
-  font-weight: 900;
+  color: var(--gh-text-muted);
+  font-size: var(--gh-text-xs);
+  font-weight: 600;
   letter-spacing: .15em;
 }
 
@@ -123,7 +118,7 @@
   height: 9px;
   overflow: hidden;
   border-radius: 999px;
-  background: rgba(123,145,194,.16);
+  background: var(--gh-surface);
 }
 
 .awpath-progress i {
@@ -131,18 +126,14 @@
   height: 100%;
   border-radius: inherit;
   background:
-    linear-gradient(
-      90deg,
-      #67dcff,
-      #77efc5
-    );
+    var(--gh-surface);
   transition: width .35s ease;
 }
 
 .awpath-progress small {
   display: block;
   margin-top: 11px;
-  color: #7783a0;
+  color: var(--gh-text-muted);
   line-height: 1.45;
 }
 
@@ -158,9 +149,9 @@
   gap: 20px;
   align-items: center;
   border:
-    1px solid rgba(119,239,197,.22);
-  border-radius: 14px;
-  background: rgba(119,239,197,.05);
+    1px solid var(--gh-border);
+  border-radius: var(--gh-radius-card);
+  background: var(--gh-surface);
 }
 
 .awpath-discovered > div {
@@ -170,20 +161,20 @@
 }
 
 .awpath-discovered span {
-  color: #77efc5;
-  font-size: 9px;
-  font-weight: 950;
+  color: var(--gh-text-muted);
+  font-size: var(--gh-text-xs);
+  font-weight: 600;
   letter-spacing: .13em;
 }
 
 .awpath-discovered strong {
-  font-size: 12px;
+  font-size: var(--gh-text-xs);
 }
 
 .awpath-discovered small {
-  color: #ffc957;
-  font-size: 8px;
-  font-weight: 950;
+  color: var(--gh-text-muted);
+  font-size: var(--gh-text-xs);
+  font-weight: 600;
   letter-spacing: .13em;
 }
 
@@ -195,13 +186,13 @@
   align-items: center;
   justify-content: space-between;
   border: 0;
-  border-radius: 16px;
-  background: #ffc957;
-  color: #071022;
+  border-radius: var(--gh-radius-card);
+  background: var(--gh-interactive);
+  color: var(--gh-on-accent);
   cursor: pointer;
   font: inherit;
-  font-size: 13px;
-  font-weight: 950;
+  font-size: var(--gh-text-sm);
+  font-weight: 600;
   letter-spacing: .08em;
 }
 
@@ -218,9 +209,9 @@
   gap: 17px;
   align-items: center;
   border:
-    1px solid rgba(104,221,255,.2);
-  border-radius: 18px;
-  background: rgba(14,27,61,.6);
+    1px solid var(--gh-border);
+  border-radius: var(--gh-radius-card);
+  background: var(--gh-surface);
 }
 
 .awpath-coach img {
@@ -228,22 +219,22 @@
 }
 
 .awpath-coach span {
-  color: #68ddff;
-  font-size: 8px;
-  font-weight: 950;
+  color: var(--gh-text-muted);
+  font-size: var(--gh-text-xs);
+  font-weight: 600;
   letter-spacing: .16em;
 }
 
 .awpath-coach h2 {
   margin: 5px 0;
-  font-size: 19px;
+  font-size: var(--gh-text-lead);
 }
 
 .awpath-coach p {
   margin: 0;
   max-width: 800px;
-  color: #9da9c2;
-  font-size: 12px;
+  color: var(--gh-text-muted);
+  font-size: var(--gh-text-xs);
   line-height: 1.6;
 }
 
@@ -261,57 +252,57 @@
   gap: 18px;
   align-items: center;
   border:
-    1px solid rgba(116,136,183,.2);
-  border-radius: 17px;
-  background: rgba(10,21,49,.6);
+    1px solid var(--gh-border);
+  border-radius: var(--gh-radius-card);
+  background: var(--gh-surface);
 }
 
 .awpath-step > b {
-  color: #68ddff;
-  font-size: 11px;
+  color: var(--gh-text-muted);
+  font-size: var(--gh-text-xs);
 }
 
 .awpath-step > div > span {
-  color: #7f8ba8;
-  font-size: 8px;
-  font-weight: 950;
+  color: var(--gh-text-muted);
+  font-size: var(--gh-text-xs);
+  font-weight: 600;
   letter-spacing: .14em;
 }
 
 .awpath-step h3 {
   margin: 4px 0;
-  font-size: 15px;
+  font-size: var(--gh-text-body);
 }
 
 .awpath-step p {
   margin: 0;
-  color: #8f9bb4;
-  font-size: 11px;
+  color: var(--gh-text-muted);
+  font-size: var(--gh-text-xs);
   line-height: 1.5;
 }
 
 .awpath-step > strong {
-  color: #78839e;
-  font-size: 8px;
+  color: var(--gh-text-muted);
+  font-size: var(--gh-text-xs);
   letter-spacing: .12em;
 }
 
 .awpath-step.complete {
   border-color:
-    rgba(119,239,197,.25);
+    var(--gh-border);
 }
 
 .awpath-step.complete > strong {
-  color: #77efc5;
+  color: var(--gh-text-muted);
 }
 
 .awpath-step.current {
   border-color:
-    rgba(255,201,87,.48);
+    var(--gh-border);
 }
 
 .awpath-step.current > strong {
-  color: #ffc957;
+  color: var(--gh-text-muted);
 }
 
 .awpath-step.locked {
@@ -322,9 +313,9 @@
   margin: 28px 0 70px;
   padding: 20px;
   border:
-    1px solid rgba(255,201,87,.18);
-  border-radius: 20px;
-  background: rgba(255,201,87,.035);
+    1px solid var(--gh-border);
+  border-radius: var(--gh-radius-card);
+  background: var(--gh-surface);
 }
 
 .awpath-rewards > div:first-child {
@@ -332,22 +323,22 @@
 }
 
 .awpath-rewards span {
-  color: #ffc957;
-  font-size: 9px;
-  font-weight: 950;
+  color: var(--gh-gold);
+  font-size: var(--gh-text-xs);
+  font-weight: 600;
   letter-spacing: .16em;
 }
 
 .awpath-rewards strong {
   display: block;
   margin-top: 5px;
-  font-size: 15px;
+  font-size: var(--gh-text-body);
 }
 
 .awpath-rewards p {
   margin: 4px 0 0;
-  color: #818da8;
-  font-size: 11px;
+  color: var(--gh-text-muted);
+  font-size: var(--gh-text-xs);
 }
 
 .awpath-next,
@@ -381,8 +372,8 @@
 .awpath-evidence > p {
   margin: 0;
   max-width: 720px;
-  color: #9ba7c0;
-  font-size: 14px;
+  color: var(--gh-text-muted);
+  font-size: var(--gh-text-sm);
   line-height: 1.65;
 }
 
@@ -398,32 +389,32 @@
   display: flex;
   flex-direction: column;
   border:
-    1px solid rgba(113,134,184,.22);
-  border-radius: 20px;
-  background: rgba(14,27,61,.7);
+    1px solid var(--gh-border);
+  border-radius: var(--gh-radius-card);
+  background: var(--gh-surface);
 }
 
 .awpath-next-grid > article.selected {
-  border-color: rgba(255,201,87,.75);
+  border-color: var(--gh-interactive);
 }
 
 .awpath-next-grid > article > span {
-  color: #ffc957;
-  font-size: 9px;
-  font-weight: 950;
+  color: var(--gh-text-muted);
+  font-size: var(--gh-text-xs);
+  font-weight: 600;
   letter-spacing: .15em;
 }
 
 .awpath-next-grid > article > h3 {
   margin: 9px 0;
-  font-size: 20px;
+  font-size: var(--gh-text-lead);
   line-height: 1.25;
 }
 
 .awpath-next-grid > article > p {
   margin: 0 0 17px;
-  color: #919db6;
-  font-size: 12px;
+  color: var(--gh-text-muted);
+  font-size: var(--gh-text-xs);
   line-height: 1.6;
 }
 
@@ -438,9 +429,9 @@
   padding: 14px;
   display: block;
   border:
-    1px solid rgba(113,134,184,.16);
-  border-radius: 13px;
-  background: rgba(4,10,28,.34);
+    1px solid var(--gh-border);
+  border-radius: var(--gh-radius-card);
+  background: var(--gh-surface);
   color: inherit;
   text-decoration: none;
 }
@@ -448,9 +439,9 @@
 .awpath-resource-list small,
 .awpath-project small {
   display: block;
-  color: #68ddff;
-  font-size: 8px;
-  font-weight: 900;
+  color: var(--gh-text-muted);
+  font-size: var(--gh-text-xs);
+  font-weight: 600;
   letter-spacing: .11em;
 }
 
@@ -458,20 +449,20 @@
 .awpath-project strong {
   display: block;
   margin-top: 4px;
-  font-size: 12px;
+  font-size: var(--gh-text-xs);
 }
 
 .awpath-resource-list p,
 .awpath-project p {
   margin: 6px 0 8px !important;
-  color: #8e99b2 !important;
-  font-size: 10px !important;
+  color: var(--gh-text-muted) !important;
+  font-size: var(--gh-text-xs) !important;
   line-height: 1.5 !important;
 }
 
 .awpath-resource-list b {
-  color: #ffc957;
-  font-size: 7px;
+  color: var(--gh-text-muted);
+  font-size: var(--gh-text-xs);
   letter-spacing: .1em;
 }
 
@@ -483,29 +474,29 @@
   min-height: 48px;
   margin-top: auto;
   border:
-    1px solid rgba(255,201,87,.38);
-  border-radius: 13px;
-  background: rgba(255,201,87,.08);
-  color: #ffc957;
+    1px solid var(--gh-border-control);
+  border-radius: var(--gh-radius-card);
+  background: var(--gh-surface-soft);
+  color: var(--gh-text-muted);
   cursor: pointer;
   font: inherit;
-  font-size: 9px;
-  font-weight: 950;
+  font-size: var(--gh-text-xs);
+  font-weight: 600;
 }
 
 .awpath-launch-complete {
   margin-top: 17px;
   padding: 17px 19px;
   border:
-    1px solid rgba(119,239,197,.28);
-  border-radius: 15px;
-  background: rgba(119,239,197,.05);
+    1px solid var(--gh-border);
+  border-radius: var(--gh-radius-card);
+  background: var(--gh-interactive);
 }
 
 .awpath-launch-complete span {
-  color: #77efc5;
-  font-size: 8px;
-  font-weight: 950;
+  color: var(--gh-on-accent);
+  font-size: var(--gh-text-xs);
+  font-weight: 600;
   letter-spacing: .13em;
 }
 
@@ -516,29 +507,20 @@
 
 .awpath-launch-complete p {
   margin: 4px 0 0;
-  color: #909cb4;
-  font-size: 11px;
+  color: var(--gh-on-accent);
+  font-size: var(--gh-text-xs);
 }
 
 .awpath-certificate {
   padding:
     clamp(28px,5vw,58px);
   border:
-    1px solid rgba(255,201,87,.43);
-  border-radius: 24px;
+    1px solid var(--gh-border);
+  border-radius: var(--gh-radius-card);
   background:
-    radial-gradient(
-      circle at 0 0,
-      rgba(83,116,207,.2),
-      transparent 40%
-    ),
-    linear-gradient(
-      145deg,
-      #0b1735,
-      #071021
-    );
+    var(--gh-surface);
   box-shadow:
-    0 35px 100px rgba(0,0,0,.26);
+    none;
 }
 
 .awpath-cert-top {
@@ -548,21 +530,21 @@
 }
 
 .awpath-cert-top > strong {
-  font-size: 22px;
+  font-size: var(--gh-text-card);
 }
 
 .awpath-cert-top small {
-  color: #ffc957;
-  font-size: 8px;
-  font-weight: 950;
+  color: var(--gh-text-muted);
+  font-size: var(--gh-text-xs);
+  font-weight: 600;
   letter-spacing: .16em;
 }
 
 .awpath-certificate > p:first-of-type {
   margin: 48px 0 9px;
-  color: #68ddff;
-  font-size: 8px;
-  font-weight: 950;
+  color: var(--gh-text-muted);
+  font-size: var(--gh-text-xs);
+  font-weight: 600;
   letter-spacing: .2em;
 }
 
@@ -580,9 +562,9 @@
 }
 
 .awpath-certificate label span {
-  color: #77839f;
-  font-size: 8px;
-  font-weight: 900;
+  color: var(--gh-text-muted);
+  font-size: var(--gh-text-xs);
+  font-weight: 600;
   letter-spacing: .14em;
 }
 
@@ -591,19 +573,19 @@
   padding: 8px 0;
   border: 0;
   border-bottom:
-    1px solid rgba(255,255,255,.28);
+    1px solid var(--gh-border-control);
   outline: none;
   background: transparent;
-  color: white;
+  color: var(--gh-text);
   font: inherit;
-  font-size: 24px;
-  font-weight: 800;
+  font-size: var(--gh-text-card);
+  font-weight: 600;
 }
 
 .awpath-cert-body {
   max-width: 760px;
-  color: #a7b2ca;
-  font-size: 13px;
+  color: var(--gh-text-muted);
+  font-size: var(--gh-text-sm);
   line-height: 1.7;
 }
 
@@ -617,10 +599,10 @@
 .awpath-skills span {
   padding: 7px 10px;
   border:
-    1px solid rgba(104,221,255,.17);
+    1px solid var(--gh-border);
   border-radius: 999px;
-  color: #acb8d0;
-  font-size: 8px;
+  color: var(--gh-text-muted);
+  font-size: var(--gh-text-xs);
 }
 
 .awpath-certificate footer {
@@ -631,7 +613,7 @@
     repeat(3,1fr);
   gap: 12px;
   border-top:
-    1px solid rgba(255,255,255,.08);
+    1px solid var(--gh-border);
 }
 
 .awpath-certificate footer div {
@@ -640,14 +622,14 @@
 }
 
 .awpath-certificate footer span {
-  color: #6f7b97;
-  font-size: 7px;
-  font-weight: 900;
+  color: var(--gh-text-muted);
+  font-size: var(--gh-text-xs);
+  font-weight: 600;
   letter-spacing: .11em;
 }
 
 .awpath-certificate footer strong {
-  font-size: 10px;
+  font-size: var(--gh-text-xs);
 }
 
 .awpath-cert-actions {
@@ -660,22 +642,22 @@
 .awpath-secondary {
   min-height: 66px;
   border:
-    1px solid rgba(124,143,187,.3);
-  border-radius: 16px;
+    1px solid var(--gh-border);
+  border-radius: var(--gh-radius-card);
   background: transparent;
-  color: #b4bed2;
+  color: var(--gh-text-muted);
   cursor: pointer;
   font: inherit;
-  font-size: 10px;
-  font-weight: 900;
+  font-size: var(--gh-text-xs);
+  font-weight: 600;
 }
 
 .awpath-evidence {
   padding: 26px;
   border:
-    1px solid rgba(112,133,184,.2);
-  border-radius: 20px;
-  background: rgba(14,27,61,.55);
+    1px solid var(--gh-border);
+  border-radius: var(--gh-radius-card);
+  background: var(--gh-surface);
 }
 
 .awpath-evidence > div {
@@ -689,19 +671,19 @@
 .awpath-evidence article {
   padding: 14px;
   border:
-    1px solid rgba(112,133,184,.16);
-  border-radius: 13px;
+    1px solid var(--gh-border);
+  border-radius: var(--gh-radius-card);
 }
 
 .awpath-evidence article b {
-  color: #ffc957;
-  font-size: 8px;
+  color: var(--gh-text-muted);
+  font-size: var(--gh-text-xs);
 }
 
 .awpath-evidence article p {
   margin: 6px 0 0;
-  color: #929eb6;
-  font-size: 10px;
+  color: var(--gh-text-muted);
+  font-size: var(--gh-text-xs);
   line-height: 1.55;
 }
 
@@ -709,9 +691,9 @@
 .awpath-thanks {
   padding: 25px;
   border:
-    1px solid rgba(112,133,184,.22);
-  border-radius: 20px;
-  background: rgba(14,27,61,.6);
+    1px solid var(--gh-border);
+  border-radius: var(--gh-radius-card);
+  background: var(--gh-surface);
 }
 
 .awpath-rating {
@@ -722,13 +704,13 @@
   gap: 18px;
   align-items: center;
   border-bottom:
-    1px solid rgba(255,255,255,.06);
+    1px solid var(--gh-border);
 }
 
 .awpath-rating p {
   margin: 0;
-  color: #d3daea;
-  font-size: 12px;
+  color: var(--gh-text);
+  font-size: var(--gh-text-xs);
 }
 
 .awpath-rating > div {
@@ -740,18 +722,18 @@
   width: 38px;
   height: 38px;
   border:
-    1px solid rgba(124,143,184,.28);
-  border-radius: 10px;
-  background: rgba(255,255,255,.025);
-  color: #9ca8c0;
+    1px solid var(--gh-border-control);
+  border-radius: var(--gh-radius-card);
+  background: var(--gh-surface-soft);
+  color: var(--gh-interactive);
   cursor: pointer;
-  font-weight: 900;
+  font-weight: 600;
 }
 
 .awpath-rating button.selected {
-  border-color: #ffc957;
-  background: #ffc957;
-  color: #071022;
+  border-color: var(--gh-interactive);
+  background: var(--gh-selected);
+  color: var(--gh-interactive);
 }
 
 .awpath-reflection {
@@ -761,13 +743,13 @@
 }
 
 .awpath-reflection > span {
-  font-size: 12px;
-  font-weight: 800;
+  font-size: var(--gh-text-xs);
+  font-weight: 600;
 }
 
 .awpath-reflection small {
-  color: #78849f;
-  font-size: 8px;
+  color: var(--gh-text-muted);
+  font-size: var(--gh-text-xs);
 }
 
 .awpath-reflection textarea {
@@ -775,36 +757,36 @@
   padding: 15px;
   resize: vertical;
   border:
-    1px solid rgba(124,143,184,.24);
-  border-radius: 14px;
+    1px solid var(--gh-border-control);
+  border-radius: var(--gh-radius-card);
   outline: none;
-  background: #071025;
-  color: white;
+  background: var(--gh-surface-soft);
+  color: var(--gh-text);
   font: inherit;
   line-height: 1.55;
 }
 
 .awpath-thanks {
   border-color:
-    rgba(119,239,197,.25);
+    var(--gh-border);
 }
 
 .awpath-thanks span {
-  color: #77efc5;
-  font-size: 8px;
-  font-weight: 950;
+  color: var(--gh-text-muted);
+  font-size: var(--gh-text-xs);
+  font-weight: 600;
   letter-spacing: .13em;
 }
 
 .awpath-thanks h3 {
   margin: 7px 0;
-  font-size: 25px;
+  font-size: var(--gh-text-card);
 }
 
 .awpath-thanks p {
   margin: 0;
   max-width: 620px;
-  color: #99a5bd;
+  color: var(--gh-text-muted);
   line-height: 1.6;
 }
 

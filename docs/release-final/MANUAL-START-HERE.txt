@@ -1,0 +1,19 @@
+ALTWING GOLDEN HORIZON RC1 - MANUAL ACCEPTANCE GUIDE
+Status: NO-GO. Reviewer tests: 0. Manual PASS: 0. Manual FAIL: 0.
+Design approval is separate from test execution. Initial status for every case: UNVERIFIED.
+
+1. Download Preview-and-Acceptance.zip and extract it into a local folder.
+2. Open Golden-Horizon-Preview.html in your browser. Choose Desktop or Mobile and use Scene shortcut.
+3. Open Acceptance-Guide.html alongside it. This is the existing interactive 38-case checklist with evidence, progress and CSV/JSON downloads.
+4. Application.html runs the actual app outside the review frame for native browser widths/zoom.
+5. Use separate private browser profiles. Do not clear altwing.org data or import personal student records into the preview.
+6. The comprehensive preview stores progress in memory and blocks production requests. Use its dedicated assessment scene for simulated successful submission. Private reports/rewards are labeled synthetic.
+7. The old manual guide's full local preview procedure is copied into LEGACY-MANUAL-INSTRUCTIONS.txt for tests that require reload persistence. The in-memory comprehensive preview cannot prove persistence across reload. Record the environment actually used.
+8. Record browser/device, time, case ID, actual result and a private evidence reference. Do not mark a case PASS before running it.
+9. Overlapping GH visual workflows and original cases can share the same actual execution/evidence. These are not 50 new independent executions.
+10. L01-L07 run only after an approved production deployment. No real production feedback, authentication, Cloudflare Visits or database storage is proven by the offline demos.
+
+Required device observations: desktop Chrome/Edge plus Firefox; Safari and physical iPhone/Android where available. Emulation is supplemental. Missing device/screen-reader/PDF coverage stays UNVERIFIED.
+Required PDF observations: print the actual research report on A4 and US Letter, with/without separately permitted demo quotes; inspect all pages for clipping, blank pages and missing limitations. This guide PDF is NOT an application-report PDF test.
+
+CURRENT PRIVATE AUTH TESTS: I01-I03 use the existing production bookmark https://altwing-engineering-pathways.theanna.chatgpt.site/#/analytics, separate legitimate accounts and read-only actions. Do not click historical preparation, submit feedback, change configuration or share credentials. The future /admin/login path is not yet deployed.

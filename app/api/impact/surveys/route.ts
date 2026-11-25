@@ -3,6 +3,8 @@ import {analyticsDb,analyticsOriginAllowed,analyticsCors,analyticsPreflight,json
 import {verifyVisit} from '../../../../lib/analytics-capability';
 import {validateImpact} from '../../../../lib/impact-validation';
 import {cleanImpactRetention} from '../../../../lib/impact-retention';
+import {saveAssessment} from '../../../../lib/assessment-server';
+import {isAssessmentVersion} from '../../../../src/features/analytics/assessmentModel';
 const canonicalOrigin=(request:Request)=>['https://altwing.org','https://www.altwing.org'].includes(request.headers.get('Origin')??'');
 export const OPTIONS=(request:Request)=>canonicalOrigin(request)?analyticsPreflight(request):json({error:'Feedback is enabled on the production website only.'},403);
 export async function POST(request:Request){return analyticsCors(request,await submit(request));}
@@ -10,8 +12,10 @@ async function submit(request:Request){
   if(!canonicalOrigin(request)||!analyticsOriginAllowed(request)||!request.headers.get('content-type')?.startsWith('application/json'))return json({error:'Production-origin JSON requests only.'},403);
   const reader=request.body?.getReader();if(!reader)return json({error:'Missing feedback.'},400);
   const chunks:Uint8Array[]=[];let size=0;
-  while(true){const {done,value}=await reader.read();if(done)break;size+=value.byteLength;if(size>8192){await reader.cancel();return json({error:'Feedback is too large.'},413);}chunks.push(value);}
+  while(true){const {done,value}=await reader.read();if(done)break;size+=value.byteLength;if(size>24000){await reader.cancel();return json({error:'Feedback is too large.'},413);}chunks.push(value);}
   let input:unknown;try{input=JSON.parse(new TextDecoder().decode(Uint8Array.from(chunks.flatMap(c=>Array.from(c)))));}catch{return json({error:'Invalid JSON.'},400);}
+  if(input&&typeof input==='object'&&isAssessmentVersion((input as {version?:unknown}).version))return saveAssessment(request,input);
+  if(size>8192)return json({error:'Feedback is too large.'},413);
   const data=validateImpact(input);if(!data)return json({error:'Check the ratings and permissions. Do not include names, contact details or links in a testimonial.'},400);
   if(!await verifyVisit(request.headers.get('X-AltWing-Visit'),data.session_id,env.ANALYTICS_INGEST_SECRET))return json({error:'Visit authorization expired. Please retry.'},403);
   try{

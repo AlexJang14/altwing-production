@@ -26,10 +26,13 @@ for(const name of requested?[requested]:['custom','legacy','preview']){
   assert.ok(existsSync(path.join(dir,relative||'index.html')),`Missing ${reference} referenced by ${from}`);references++;
  }
  const all=files(dir),js=all.filter(file=>file.endsWith('.js')).map(file=>readFileSync(file,'utf8')).join('\n');
+ assert.ok(!js.includes('altwing-manual-acceptance-v1:')&&!js.includes('One guided acceptance review.'),'The manual acceptance tool must remain preview-only, outside the production product.');
  for(const key of ['ANALYTICS_ADMIN_EMAIL','ANALYTICS_ADDITIONAL_ADMIN_EMAILS','ANALYTICS_INGEST_SECRET'])assert.ok(!js.includes(key),`Server administrator configuration must not be bundled: ${key}`);
+ assert.ok(!js.includes('Understand the journey.')&&!all.some(file=>path.basename(file).startsWith('AnalyticsDashboard-')),'Private dashboard implementation belongs to the server-protected entry, not the public Pages app.');
  assert.ok(js.includes(API_ORIGIN),'Keep the existing backend endpoint');
  assert.ok(js.includes(`${target.base}brand/altwing-penguin.png`),'Runtime brand image must use the correct deployment base');
- for(const name of ['EngineeringMatch','EngineeringExplorer','CounselorHub','MyUniversePage','ExploreAerospace','BuildEngine','Projects','PrivacyPage','SiteMap','AnalyticsPage','ProgressTransfer'])assert.ok(all.some(file=>path.basename(file).startsWith(`${name}-`)),`Missing lazy feature ${name}`);
+ if(target.base!=='/')assert.ok(!/["']\/brand\//.test(js),'Every runtime brand asset must respect the deployment base');
+ for(const name of ['EngineeringMatch','EngineeringExplorer','CounselorHub','MyUniversePage','ExploreAerospace','BuildEngine','Projects','PrivacyPage','SiteMap','AnalyticsPage','ProgressTransfer','InformationPage'])assert.ok(all.some(file=>path.basename(file).startsWith(`${name}-`)),`Missing lazy feature ${name}`);
  for(const file of all){
   const text=/\.(?:html|css|js)$/.test(file)?readFileSync(file,'utf8'):'';
   if(file.endsWith('.html'))for(const match of text.matchAll(/(?:src|href)="([^"]+)"/g))check(match[1],file);

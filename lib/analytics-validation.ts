@@ -8,6 +8,7 @@ export function validateEvent(input:unknown){
   const properties=safeProperties(value.properties as Record<string,unknown>);
   if(!properties.page || ['analytics','privacy'].includes(String(properties.page)))return null;
   if(['Mission Started','Mission Completed'].includes(String(value.event))&&!(properties.page==='projects'&&properties.project||properties.page==='aerospace-build'&&properties.wing))return null;
+  if(value.event==='Recommended Field Explored'&&!(properties.page==='major'&&properties.major))return null;
   return {id:value.id,sessionId:value.session_id,event:String(value.event),properties};
 }
 export function reportDays(value:string|null){return value==='1'?1:value==='30'?30:7;}

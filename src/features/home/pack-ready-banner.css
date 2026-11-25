@@ -28,25 +28,15 @@
 
   border:
     1px solid
-    rgba(255,200,87,.27);
+    var(--gh-border);
 
-  border-radius: 18px;
+  border-radius: var(--gh-radius-card);
 
   background:
-    radial-gradient(
-      circle at 10% 50%,
-      rgba(91,141,239,.14),
-      transparent 34%
-    ),
-    linear-gradient(
-      135deg,
-      #111a36,
-      #0b1228
-    );
+    var(--gh-surface);
 
   box-shadow:
-    0 16px 45px
-    rgba(13,19,43,.12);
+    none;
 }
 
 
@@ -61,7 +51,7 @@
   border-radius: 50%;
 
   background:
-    rgba(91,141,239,.09);
+    var(--gh-surface);
 }
 
 
@@ -77,7 +67,7 @@
 
   border:
     1px solid
-    rgba(91,141,239,.24);
+    var(--gh-border);
 
   border-radius: 50%;
 }
@@ -92,7 +82,7 @@
 
   border:
     1px dashed
-    rgba(255,200,87,.26);
+    var(--gh-border);
 
   border-radius: 50%;
 
@@ -120,11 +110,11 @@
 
 
 .prb-copy > span {
-  color: #ffc857;
+  color: var(--gh-text-muted);
 
-  font-size: 9px;
+  font-size: var(--gh-text-xs);
 
-  font-weight: 900;
+  font-weight: 600;
 
   letter-spacing: .11em;
 }
@@ -134,9 +124,9 @@
   margin:
     4px 0 0;
 
-  color: #fff;
+  color: var(--gh-text);
 
-  font-size: 20px;
+  font-size: var(--gh-text-lead);
 
   letter-spacing: -.02em;
 }
@@ -147,9 +137,9 @@
     4px 0 0;
 
   color:
-    rgba(236,242,255,.55);
+    var(--gh-text-muted);
 
-  font-size: 11px;
+  font-size: var(--gh-text-xs);
 }
 
 
@@ -161,12 +151,12 @@
 
   border:
     1px solid
-    rgba(255,200,87,.25);
+    var(--gh-border);
 
-  border-radius: 11px;
+  border-radius: var(--gh-radius-card);
 
   background:
-    rgba(255,255,255,.025);
+    var(--gh-surface);
 }
 
 
@@ -174,11 +164,11 @@
   display: block;
 
   color:
-    rgba(236,242,255,.37);
+    var(--gh-text-muted);
 
-  font-size: 7px;
+  font-size: var(--gh-text-xs);
 
-  font-weight: 900;
+  font-weight: 600;
 
   letter-spacing: .09em;
 }
@@ -189,9 +179,9 @@
 
   margin-top: 3px;
 
-  color: #ffc857;
+  color: var(--gh-gold);
 
-  font-size: 10px;
+  font-size: var(--gh-text-xs);
 
   letter-spacing: .06em;
 }
@@ -203,9 +193,9 @@
   margin-top: 4px;
 
   color:
-    rgba(236,242,255,.55);
+    var(--gh-text-muted);
 
-  font-size: 8px;
+  font-size: var(--gh-text-xs);
 }
 
 
@@ -223,15 +213,15 @@
 
   border: 0;
 
-  border-radius: 10px;
+  border-radius: var(--gh-radius-card);
 
-  color: #0d132b;
+  color: var(--gh-text);
 
-  background: #ffc857;
+  background: var(--gh-surface-soft);
 
-  font-size: 9px;
+  font-size: var(--gh-text-xs);
 
-  font-weight: 900;
+  font-weight: 600;
 
   letter-spacing: .045em;
 
@@ -240,7 +230,7 @@
 
 
 .prb > button strong {
-  font-size: 16px;
+  font-size: var(--gh-text-body);
 }
 
 

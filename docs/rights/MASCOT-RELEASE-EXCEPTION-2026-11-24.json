@@ -1,0 +1,20 @@
+{
+  "proposedException": "Retain the unchanged AltWing penguin under the already-recorded November 18 account-holder grant, only to the extent of rights held. I accept the unresolved provenance and permissions of reference images as a release-policy exception. This does not establish third-party permission, verified copyright clearance, or exclusive copyright.",
+  "scope": "Initial integrated release; existing asset unchanged",
+  "asset": "public/brand/altwing-penguin.png",
+  "assetSha256": "ba5278a01945231847b44295d56e0617bf8a7b922c5bd26c00e685fcab76b975",
+  "grantAlreadyRecorded": true,
+  "unknownReferenceImagesMayContainProtectedThirdPartyArtwork": true,
+  "grantCannotConveyRightsNotHeld": true,
+  "exceptionAccepted": true,
+  "status": "APPROVED \u2014 INITIAL-RELEASE POLICY EXCEPTION",
+  "underlyingReferenceRights": "UNVERIFIED",
+  "exclusiveCopyrightClaimed": false,
+  "thirdPartyPermissionInferred": false,
+  "replacementAuthorized": false,
+  "acceptedAtUTC": "2026-11-24T06:05:25+00:00",
+  "clientDate": "2026-11-24",
+  "decisionSource": "Explicit owner reply to the pending mascot question in this conversation",
+  "ownerConfirmation": "I select Option 1 \u2014 Accept the stated initial-release exception. Keep the existing penguin unchanged. Do not reopen the mascot decision unless genuinely new evidence changes the risk.",
+  "doNotReopenWithoutGenuinelyNewEvidence": true
+}

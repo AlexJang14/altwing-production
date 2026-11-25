@@ -1,0 +1,30 @@
+PAUSED — November21 owner approved the narrower additive approach and acknowledged UNVERIFIED recovery. Do not send this historical request routinely. Current STATUS.json and MIGRATION-SAFETY-AND-ROLLBACK.txt supersede its pre-release gate wording.
+
+ALTWING RC1 - HOSTING OWNER / PROVIDER ACTION
+Prepared request only. Not sent to anyone. Do not share credentials or private rows.
+
+The existing Site owner (theanna) should use their own account to ask the current hosting operator or OpenAI Support for the following, for the existing Site only:
+
+Site: https://altwing-engineering-pathways.theanna.chatgpt.site
+Project: appgprj_6ade62e44e9081919499f0bdeb1a7261
+Existing binding: DB
+Current code rollback: saved version11, source ca46e2305d8ad14ff2f627126dcea23af73a7b6b
+
+REQUEST
+1. Confirm a supported recovery path for the current database in this existing Site: an operator-accessible in-place recovery bookmark with retention and restore procedure, or a complete database schema/data export with a supported, tested restore procedure. Return the reference/time, retention, responsible restore operator and scope. Do not restore or overwrite production for this inquiry.
+2. Confirm supported read-only SQL access, or have the authorized operator run PRODUCTION-PREFLIGHT-SELECT-ONLY.sql. Return schema/index/trigger definitions, aggregate counts for the eight named user tables, pending-object collision count and Recommended Field duplicate-group count. Do not return student rows, written feedback, session identifiers, secrets or tokens.
+3. Confirm migration bookkeeping/applied state. Any name collision, duplicate group, missing column or uncertain partial application is a STOP requiring inspection. Do not delete or rewrite historical records to force a migration through.
+4. Preserve the DB binding, Site ownership/public audience, current server-only administrator settings, and all historical data. Do not create another Site/database, change DNS or buy services.
+5. Return metadata only. Nothing in this request authorizes production deployment, SQL schema changes, data deletion or a destructive restore.
+
+WHAT IS ALREADY VERIFIED
+The read-only Sites connection reports the same eight user tables and analytics event columns needed for the duplicate check. Version11 and its source archive remain available. This is not proof of complete schema/index definitions, row counts, duplicate freedom, a backup or a restore path.
+
+WHAT IS DOCUMENTED, NOT CONFIRMED FOR THIS ACCOUNT
+OpenAI documents that a Site code-version restore does not restore database/files, and that Sites lacks a built-in combined database/file backup-and-restore workflow into a new Site. This statement does not prove that every provider-assisted in-place recovery option is unavailable.
+https://help.openai.com/en/articles/20001339-creating-and-using-chatgpt-sites
+Cloudflare documents D1 Time Travel and SQL export. Their use requires access to the actual hosted database/provider; owning altwing.org DNS in a different Cloudflare account does not establish that access. No command is authorized here against an assumed database name.
+https://developers.cloudflare.com/d1/reference/time-travel/
+https://developers.cloudflare.com/d1/best-practices/import-export-data/
+
+A D1 restore overwrites the database; an SQL export can block database requests. An operator must plan either operation. Do not use code ZIPs, analytics CSVs, capped row browsing or local fixture tests as complete production recovery evidence.

@@ -1,3 +1,4 @@
+import {preferredScrollBehavior} from '../../../../design/golden-horizon/motion';
 import {trackEvent} from '../../../analytics/analytics';
 import { readBuildDraft } from "./buildDraft";
 import { writeLocal, downloadText } from "../../../../lib/storage";
@@ -512,7 +513,7 @@ export default function BuildEngine({
 
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: preferredScrollBehavior(),
     });
   }
 
@@ -530,7 +531,7 @@ export default function BuildEngine({
 
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: preferredScrollBehavior(),
     });
   }
 

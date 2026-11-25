@@ -1,0 +1,11 @@
+/* One application stylesheet for Pages, Worker and actual-component previews.
+   Keep the Golden Horizon system last; legacy component aliases consume it. */
+@import '../App.css';
+@import './global.css';
+@import './readability-final.css';
+@import './readability-sitewide.css';
+@import './readiness-rescue.css';
+@import './submission.css';
+@import './experience.css';
+@import '../design/golden-horizon/platform.css';
+@import '../design/golden-horizon/interactions.css';

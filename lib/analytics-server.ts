@@ -8,18 +8,29 @@ function additionalAdminEmails(value:unknown):string[]{
     // Configuration errors deny additional grants; the existing owner is
     // checked separately so a bad optional setting cannot lock that account out.
     if(!Array.isArray(entries)||entries.length>100||entries.some(entry=>typeof entry!=='string'||!/^[^\s@*]+@[^\s@*]+\.[^\s@*]+$/.test(entry.trim())))return [];
-    return entries.map(entry=>entry.trim().toLowerCase());
+    return [...new Set(entries.map(entry=>entry.trim().toLowerCase()))];
   }catch{return [];}
 }
 
-export async function analyticsAuthorization(){
-  const user=await getChatGPTUser();
-  if(!user)return 401;
+function analyticsIdentityAuthorization(user:{userId:string;email:string}|null){
+  if(!user?.userId.trim()||!user.email.trim())return 401;
   const email=user.email.trim().toLowerCase();
-  const allowed=env.ANALYTICS_ADMIN_EMAIL?.trim().toLowerCase();
-  if(allowed&&email===allowed)return 200;
-  return additionalAdminEmails(env.ANALYTICS_ADDITIONAL_ADMIN_EMAILS).includes(email)?200:403;
+  const owner=env.ANALYTICS_ADMIN_EMAIL?.trim().toLowerCase();
+  if(owner&&email===owner)return 200;
+  // Exactly the existing owner plus at most one distinct additional grant.
+  // An unexpected third account fails closed without locking out the owner.
+  const additional=additionalAdminEmails(env.ANALYTICS_ADDITIONAL_ADMIN_EMAILS).filter(value=>value!==owner);
+  return owner&&additional.length===1&&additional[0]===email?200:403;
 }
+export async function analyticsAuthorization(){return analyticsIdentityAuthorization(await getChatGPTUser());}
+// Sites dispatch supplies these verified identity headers and strips visitor
+// imitations. This entry-point check runs before the framework renders /admin;
+// every report/export handler still performs its own authorization as well.
+export function analyticsRequestAuthorization(request:Request){
+  const userId=request.headers.get('oai-authenticated-user-id'),email=request.headers.get('oai-authenticated-user-email');
+  return analyticsIdentityAuthorization(userId&&email?{userId,email}:null);
+}
+
 export function json(data:unknown,status=200){return Response.json(data,{status,headers:{'Cache-Control':'private, no-store','X-Content-Type-Options':'nosniff','Vary':'Cookie'}});}
 export function analyticsDb(){if(!env.DB)throw Error('Analytics database is unavailable.');return env.DB;}
 export function analyticsOriginAllowed(request:Request){

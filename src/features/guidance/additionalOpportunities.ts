@@ -9,10 +9,10 @@ export const ADDITIONAL_OPPORTUNITIES:GuidanceOpportunity[] = [
     "format": "IN PERSON",
     "category": "SUMMER PROGRAM",
     "status": "WATCH",
-    "timing": "Six-week summer residential program; organizer says 2027 dates TBD.",
-    "eligibility": "Current grade 11 at application; U.S. citizen or permanent resident with a current green card.",
-    "cost": "Program costs covered; participants pay transportation to and from MIT.",
-    "costBand": "UNKNOWN",
+    "timing": "Six-week residential program. The official FAQ still lists the 2026 cycle and says 2027 dates are to be determined; confirm the next application cycle.",
+    "eligibility": "Current 11th-grade students who are U.S. citizens or permanent residents with a current U.S. green card; public, private and homeschooled students may apply.",
+    "cost": "Program tuition, housing and food are covered; students arrange/pay transportation to and from MIT.",
+    "costBand": "FREE_PAID",
     "description": "STEM coursework, hands-on projects, mentoring, and college guidance.",
     "majors": [
       "mechanical",
@@ -26,7 +26,7 @@ export const ADDITIONAL_OPPORTUNITIES:GuidanceOpportunity[] = [
       "11"
     ],
     "officialUrl": "https://mites.mit.edu/discover-mites/faq-for-prospective-students/faqs-mites-semester-and-mites-summer/",
-    "lastVerified": "2026-10-25"
+    "lastVerified": "2026-11-15"
   },
   {
     "id": "mit-mites-semester",
@@ -37,10 +37,10 @@ export const ADDITIONAL_OPPORTUNITIES:GuidanceOpportunity[] = [
     "format": "ONLINE",
     "category": "SUMMER PROGRAM",
     "status": "WATCH",
-    "timing": "Six-month experience beginning in summer; organizer says 2027 dates TBD.",
-    "eligibility": "Current grade 11; U.S. citizen or permanent resident; must remain within the U.S. and its territories during virtual participation.",
-    "cost": "Program-related costs covered; check organizer for any travel component.",
-    "costBand": "UNKNOWN",
+    "timing": "Six-month online experience with summer STEM and fall college/career preparation. The official FAQ says 2027 dates are to be determined.",
+    "eligibility": "Current 11th graders who are U.S. citizens or permanent residents with a current U.S. green card. Participants must stay within the U.S. and its territories during the virtual program.",
+    "cost": "Program-related costs are covered. If a residential conference is offered, check travel arrangements separately.",
+    "costBand": "FREE_PAID",
     "description": "Online STEM coursework, projects, mentoring, and research discussions.",
     "majors": [
       "computer",
@@ -53,7 +53,7 @@ export const ADDITIONAL_OPPORTUNITIES:GuidanceOpportunity[] = [
       "11"
     ],
     "officialUrl": "https://mites.mit.edu/discover-mites/faq-for-prospective-students/faqs-mites-semester-and-mites-summer/",
-    "lastVerified": "2026-10-25"
+    "lastVerified": "2026-11-15"
   },
   {
     "id": "mit-beaver-works",
@@ -64,10 +64,10 @@ export const ADDITIONAL_OPPORTUNITIES:GuidanceOpportunity[] = [
     "format": "VARIES",
     "category": "SUMMER PROGRAM",
     "status": "WATCH",
-    "timing": "Summer program with online preparation; verify the next course cycle.",
-    "eligibility": "Grades 9–11 when applying; must reside in and physically attend high school in the United States and remain in the U.S. during BWSI. Course and preparation requirements apply.",
-    "cost": "Check current program fees and financial aid with organizer.",
-    "costBand": "UNKNOWN",
+    "timing": "Official FAQ lists the 2027 summer program July 5–August 1, following online preparation. Check the current summer application and course-specific deadlines.",
+    "eligibility": "For the summer program, students must be in grades 10–11, reside and physically attend high school in the U.S., and stay in the U.S. during BWSI. Course preparation and teacher/mentor recommendation requirements apply.",
+    "cost": "Online prerequisite courses are free. Live FAQ lists a $3,000 summer fee for families at or above its $200,000 income/assets threshold, with free participation for qualifying families after verification. In-person housing is not provided.",
+    "costBand": "FEES",
     "description": "Project-based work in autonomous vehicles, microelectronics, embedded systems, remote sensing, and related technologies.",
     "majors": [
       "aerospace",
@@ -77,12 +77,11 @@ export const ADDITIONAL_OPPORTUNITIES:GuidanceOpportunity[] = [
       "software"
     ],
     "grades": [
-      "9",
       "10",
       "11"
     ],
     "officialUrl": "https://bwsi.mit.edu/faq/",
-    "lastVerified": "2026-10-25"
+    "lastVerified": "2026-11-15"
   },
   {
     "id": "wpi-frontiers",
@@ -92,11 +91,11 @@ export const ADDITIONAL_OPPORTUNITIES:GuidanceOpportunity[] = [
     "state": "MA",
     "format": "IN PERSON",
     "category": "SUMMER PROGRAM",
-    "status": "WATCH",
-    "timing": "Two-week sessions in July 2027; applications expected early December. Confirm current listing.",
-    "eligibility": "Rising grades 10–12; application and international language requirements apply. Grade list refers to current grades before that summer.",
-    "cost": "Organizer lists $4,995 per 2027 session; financial assistance details on program policies page.",
-    "costBand": "UNKNOWN",
+    "status": "UPCOMING",
+    "timing": "Frontiers I: July 5–16, 2027; Frontiers II: July 18–30, 2027. Applications are scheduled to open in early December 2026.",
+    "eligibility": "Rising grades 10–12 (current grades 9–11 before the summer); transcripts and application required. International applicants submit an accepted English-proficiency test.",
+    "cost": "$4,995 per session, including tuition, housing, meals and listed program activities. Application is free; limited need-based tuition assistance is described in program policies.",
+    "costBand": "FEES",
     "description": "Residential STEM exploration paired with humanities, arts, or business study.",
     "majors": [
       "mechanical",
@@ -112,7 +111,7 @@ export const ADDITIONAL_OPPORTUNITIES:GuidanceOpportunity[] = [
       "11"
     ],
     "officialUrl": "https://www.wpi.edu/academics/pre-collegiate/summer-programs/frontiers",
-    "lastVerified": "2026-10-25"
+    "lastVerified": "2026-11-15"
   },
   {
     "id": "rose-hulman-catapult",
@@ -122,11 +121,11 @@ export const ADDITIONAL_OPPORTUNITIES:GuidanceOpportunity[] = [
     "state": "IN",
     "format": "IN PERSON",
     "category": "SUMMER PROGRAM",
-    "status": "WATCH",
-    "timing": "11-day summer camp; official page lists 2027 sessions and December 1, 2026 application opening.",
-    "eligibility": "Students completing grades 10 or 11; review all current application requirements.",
-    "cost": "Organizer lists $2,750 for 2027; confirm inclusions and aid.",
-    "costBand": "UNKNOWN",
+    "status": "UPCOMING",
+    "timing": "2027 sessions: June 7–17, June 21–July 1, or July 12–22. Applications open December 1, 2026; listed deadline April 19, 2027.",
+    "eligibility": "Students completing grades 10 or 11. Check the current application for all admission requirements.",
+    "cost": "Published 2027 fee: $2,750. Residential housing is described in the FAQ; optional spending and travel should be budgeted separately.",
+    "costBand": "FEES",
     "description": "Faculty-supported laboratory experiments and engineering projects, including machines and energy topics.",
     "majors": [
       "mechanical",
@@ -140,7 +139,7 @@ export const ADDITIONAL_OPPORTUNITIES:GuidanceOpportunity[] = [
       "11"
     ],
     "officialUrl": "https://rose-hulman.edu/admissions-and-aid/early-planning/operation-catapult/index.html",
-    "lastVerified": "2026-10-25"
+    "lastVerified": "2026-11-15"
   },
   {
     "id": "purdue-step",
@@ -150,11 +149,11 @@ export const ADDITIONAL_OPPORTUNITIES:GuidanceOpportunity[] = [
     "state": "IN",
     "format": "IN PERSON",
     "category": "SUMMER PROGRAM",
-    "status": "WATCH",
-    "timing": "Weeklong summer residential program; 2026 registration closed. Verify next cycle.",
-    "eligibility": "Rising high-school seniors; recommended three years of math and one year chemistry or physics. Transcript and test information requested in 2026.",
-    "cost": "2026 attendance fee was $2,500; need-based scholarships described. Future fees unconfirmed.",
-    "costBand": "UNKNOWN",
+    "status": "UPCOMING",
+    "timing": "2027 weeklong sessions: July 11–17, July 18–24, July 25–31, or August 1–7. Registration is scheduled to open January 2027.",
+    "eligibility": "Rising high-school seniors, class of 2028. Three years of high-school mathematics and one year of chemistry or physics are recommended by summer 2027. Transcript and standardized-test information are requested.",
+    "cost": "Published attendance fee: $2,500, with need-based scholarships described after acceptance. Travel to and from Purdue is the participant’s responsibility.",
+    "costBand": "FEES",
     "description": "Hands-on engineering design, teamwork, programming, modeling, and robotics.",
     "majors": [
       "mechanical",
@@ -167,7 +166,7 @@ export const ADDITIONAL_OPPORTUNITIES:GuidanceOpportunity[] = [
       "11"
     ],
     "officialUrl": "https://engineering.purdue.edu/Honors/SeminarforTopEngineeringProspects",
-    "lastVerified": "2026-10-25"
+    "lastVerified": "2026-11-15"
   },
   {
     "id": "cooper-summer-stem",
@@ -177,10 +176,10 @@ export const ADDITIONAL_OPPORTUNITIES:GuidanceOpportunity[] = [
     "state": "NY",
     "format": "IN PERSON",
     "category": "SUMMER PROGRAM",
-    "status": "WATCH",
-    "timing": "Three- or six-week summer classes; 2027 applications scheduled to launch December 11, 2026.",
-    "eligibility": "Completed grades 9–11; high-school graduates excluded; course prerequisites may apply. International applicants allowed, but no housing or visa sponsorship.",
-    "cost": "2027 costs not determined; 2026 three-week fee $3,150 and six-week fee $5,150. Limited financial aid.",
+    "status": "UPCOMING",
+    "timing": "Applications are scheduled to launch December 11, 2026. Three- and six-week in-person Summer STEM options are listed for 2027; confirm exact session dates because the main page and FAQ disagree on the first start date.",
+    "eligibility": "Students who have completed grades 9–11; high-school graduates are excluded. International students may apply, but visa sponsorship is not provided; course prerequisites vary.",
+    "cost": "2027 Summer STEM fees are not yet determined. Limited fee waivers are described; international students are not eligible for financial aid.",
     "costBand": "UNKNOWN",
     "description": "Engineering and computer science projects with design, prototyping, teamwork, and presentations.",
     "majors": [
@@ -198,7 +197,7 @@ export const ADDITIONAL_OPPORTUNITIES:GuidanceOpportunity[] = [
       "11"
     ],
     "officialUrl": "https://cooper.edu/engineering/stem/summer/frequently-asked-questions",
-    "lastVerified": "2026-10-25"
+    "lastVerified": "2026-11-15"
   },
   {
     "id": "rutgers-gset",
@@ -209,10 +208,10 @@ export const ADDITIONAL_OPPORTUNITIES:GuidanceOpportunity[] = [
     "format": "IN PERSON",
     "category": "SUMMER PROGRAM",
     "status": "WATCH",
-    "timing": "Residential summer program after junior year; verify next cycle with organizer.",
-    "eligibility": "New Jersey high-school students after junior year; nomination through high school required; confirm complete state eligibility.",
-    "cost": "No program charge to families; refundable key deposit described.",
-    "costBand": "UNKNOWN",
+    "timing": "Approximately four-week residential summer program after junior year. The inspected official page still links a 2026 application; confirm 2027 dates and nomination deadlines.",
+    "eligibility": "New Jersey high-school juniors apply through school nomination. The published nomination policy permits one nominee per 325 students in the junior class; next-cycle instructions may change.",
+    "cost": "No program charge to families. The current FAQ describes a $65 refundable key deposit; confirm next-cycle terms.",
+    "costBand": "FREE_PAID",
     "description": "Collaborative engineering research, courses, site visits, and a final paper and presentation.",
     "majors": [
       "aerospace",
@@ -233,8 +232,8 @@ export const ADDITIONAL_OPPORTUNITIES:GuidanceOpportunity[] = [
     "grades": [
       "11"
     ],
-    "officialUrl": "https://soe.rutgers.edu/academics/pre-college-engineering-programs/new-jersey-governors-school-engineering-and-technology",
-    "lastVerified": "2026-10-25"
+    "officialUrl": "https://soe.rutgers.edu/gset",
+    "lastVerified": "2026-11-15"
   },
   {
     "id": "illinois-wyse-camps",
@@ -245,9 +244,9 @@ export const ADDITIONAL_OPPORTUNITIES:GuidanceOpportunity[] = [
     "format": "IN PERSON",
     "category": "SUMMER PROGRAM",
     "status": "WATCH",
-    "timing": "Summer camp family; 2026 camps full. Verify next-cycle offerings.",
-    "eligibility": "Camp-specific rising grade bands within grades 7–12. Individual camp grade requirements need checking; broad grades below are not confirmed eligibility.",
-    "cost": "Varies by camp; confirm current tuition and aid.",
+    "timing": "The inspected official listing says all 2026 camps are full. The FAQ describes annual announcements around January and applications around February; no 2027 dates or deadlines are confirmed here.",
+    "eligibility": "Eligibility is camp-specific and uses the grade entered in the fall after camp, with no grade exceptions. The published 2026 family spans rising grades 7–12; verify the selected camp and next-cycle rules before relying on the broad high-school filter.",
+    "cost": "Fees vary by camp and residential/commuter/day option. The FAQ still quotes 2026 pricing; 2027 tuition and scholarship availability are not confirmed.",
     "costBand": "UNKNOWN",
     "description": "Engineering projects and laboratory exposure across aerospace, electronics, computing, materials, and other fields.",
     "majors": [
@@ -273,7 +272,7 @@ export const ADDITIONAL_OPPORTUNITIES:GuidanceOpportunity[] = [
       "12"
     ],
     "officialUrl": "https://wyse.grainger.illinois.edu/summer-programs/summer-camps",
-    "lastVerified": "2026-10-25",
+    "lastVerified": "2026-11-15",
     "needsGradeCheck": true
   },
   {
@@ -283,10 +282,10 @@ export const ADDITIONAL_OPPORTUNITIES:GuidanceOpportunity[] = [
     "location": "Teams and events across the United States",
     "format": "IN PERSON",
     "category": "COMPETITION",
-    "status": "WATCH",
-    "timing": "Annual team season; verify local team enrollment and the current game calendar.",
-    "eligibility": "Grades 9–12, ages 14–18; team participation, adult mentorship, and local access required.",
-    "cost": "Team fees, travel, materials, and financial support vary; confirm with the local team.",
+    "status": "UPCOMING",
+    "timing": "The 2027 BIOCORE challenge is scheduled to release January 9, 2027. Contact a local team about joining, practice and event dates.",
+    "eligibility": "Grades 9–12, ages 14–18. Participation requires access to a team and adult mentors; local team enrollment may have additional requirements.",
+    "cost": "Team registration, equipment, travel and local student contributions vary. Confirm the actual student cost and available support with the team.",
     "costBand": "UNKNOWN",
     "description": "Teams design, program, and build robots for an engineering competition.",
     "majors": [
@@ -304,7 +303,7 @@ export const ADDITIONAL_OPPORTUNITIES:GuidanceOpportunity[] = [
       "12"
     ],
     "officialUrl": "https://www.firstinspires.org/programs/frc/",
-    "lastVerified": "2026-10-25"
+    "lastVerified": "2026-11-15"
   },
   {
     "id": "isef-fair-pathway",
@@ -314,9 +313,9 @@ export const ADDITIONAL_OPPORTUNITIES:GuidanceOpportunity[] = [
     "format": "VARIES",
     "category": "COMPETITION",
     "status": "WATCH",
-    "timing": "Begin with the affiliated fair serving your location; local schedules and approval deadlines vary.",
-    "eligibility": "Grades 9–12 or equivalent; must qualify through an affiliated fair. Age, research approval, and project rules apply. No direct entry to ISEF.",
-    "cost": "Local fair costs vary; check your affiliated fair.",
+    "timing": "Start with the affiliated fair serving your location. Local application, research-approval and competition dates vary; use the current 2027 rules and your fair’s schedule.",
+    "eligibility": "Grades 9–12 or equivalent; qualify through a Society-affiliated fair rather than direct ISEF entry. Full current age, research-approval, safety and project rules apply.",
+    "cost": "Local fair and participation expenses vary; verify with the specific affiliated fair.",
     "costBand": "UNKNOWN",
     "description": "A pathway to present original science or engineering research, beginning with a local affiliated fair.",
     "majors": [
@@ -342,7 +341,7 @@ export const ADDITIONAL_OPPORTUNITIES:GuidanceOpportunity[] = [
       "12"
     ],
     "officialUrl": "https://www.societyforscience.org/isef/faq/",
-    "lastVerified": "2026-10-25"
+    "lastVerified": "2026-11-15"
   },
   {
     "id": "sdsc-rehs",
@@ -353,9 +352,9 @@ export const ADDITIONAL_OPPORTUNITIES:GuidanceOpportunity[] = [
     "format": "IN PERSON",
     "category": "RESEARCH",
     "status": "WATCH",
-    "timing": "2026 applications are closed. Watch the official page for the next cycle.",
-    "eligibility": "The closed 2026 cycle required Southern California residency, grades 10–12, age 16+, and a 3.0 unweighted GPA. Confirm next-cycle rules and mentor prerequisites.",
-    "cost": "Official page lists $2,000 registration with need- and funding-dependent partial/full scholarships; application free.",
+    "timing": "The official page still lists June 8–July 31, 2026 and says applications are closed. Watch for a newly announced cycle; no 2027 opening or deadline is confirmed.",
+    "eligibility": "Published 2026 rules: Southern California resident in grades 10–12, at least 16 by June 15 of the application year, minimum 3.0 unweighted GPA, plus mentor/project prerequisites and final-poster participation. Re-check next-cycle rules.",
+    "cost": "Published 2026 registration fee: $2,000; application free. Partial/full scholarships depend on need and funding. Future-cycle fees and awards are unconfirmed.",
     "costBand": "UNKNOWN",
     "description": "Mentor-supported computational science research projects.",
     "majors": [
@@ -368,8 +367,8 @@ export const ADDITIONAL_OPPORTUNITIES:GuidanceOpportunity[] = [
       "11",
       "12"
     ],
-    "officialUrl": "https://education.sdsc.edu/studenttech/rehs./",
-    "lastVerified": "2026-10-25",
+    "officialUrl": "https://education.sdsc.edu/studenttech/rehs/",
+    "lastVerified": "2026-11-15",
     "needsGradeCheck": true
   },
   {
@@ -380,11 +379,11 @@ export const ADDITIONAL_OPPORTUNITIES:GuidanceOpportunity[] = [
     "state": "MA",
     "format": "VARIES",
     "category": "SUMMER PROGRAM",
-    "status": "WATCH",
-    "timing": "Summer 2027 applications expected December 14, 2026. Specific course dates vary.",
-    "eligibility": "High-school students; individual program grade, age, and prerequisite requirements need checking.",
-    "cost": "Program-specific tuition, housing, and aid; confirm official selected program.",
-    "costBand": "UNKNOWN",
+    "status": "UPCOMING",
+    "timing": "Summer 2027 applications are scheduled to open December 14, 2026. Program dates vary; Engineering Design Lab lists July 11–23 and July 25–August 6, 2027.",
+    "eligibility": "Requirements depend on the selected program. Engineering Design Lab lists entering grades 10–12 or 2027 high-school graduates; residential ages 15–19 and application requirements apply. Check the individual course before using broad grade tags.",
+    "cost": "Tuition depends on the program and commuter/residential option. Engineering Design Lab lists $4,425 commuter or $5,950 residential for 2027, with limited need-based scholarships. These prices are not prices for every Tufts program.",
+    "costBand": "FEES",
     "description": "Engineering design, coding, and prototype projects, with some undergraduate course options.",
     "majors": [
       "mechanical",
@@ -400,7 +399,7 @@ export const ADDITIONAL_OPPORTUNITIES:GuidanceOpportunity[] = [
       "12"
     ],
     "officialUrl": "https://universitycollege.tufts.edu/pre-college/academics/engineering-computer-science-programs-high-school-students",
-    "lastVerified": "2026-10-25",
+    "lastVerified": "2026-11-15",
     "needsGradeCheck": true
   },
   {
@@ -412,9 +411,9 @@ export const ADDITIONAL_OPPORTUNITIES:GuidanceOpportunity[] = [
     "format": "IN PERSON",
     "category": "SUMMER PROGRAM",
     "status": "WATCH",
-    "timing": "One-week residential summer immersion; verify next-cycle details.",
-    "eligibility": "Rising high-school seniors; additional application requirements need checking.",
-    "cost": "Current fee and financial aid unconfirmed; check official program details.",
+    "timing": "The dedicated official page still lists June 28–July 3, 2026. Its application-open text belongs to that past cycle; no 2027 opening or dates are confirmed.",
+    "eligibility": "The dedicated 2026 page accepts rising juniors and seniors (current grades 10–11 before camp), while the general index says seniors only. Verify next-cycle grade rules, transcripts, PSAT, video and essay requirements with Rutgers.",
+    "cost": "The dedicated 2026 page lists $2,500 including residential lodging and meals. The next cycle’s charge and financial aid are unconfirmed.",
     "costBand": "UNKNOWN",
     "description": "Engineering discipline exploration through workshops, practical activities, labs, and projects.",
     "majors": [
@@ -434,9 +433,11 @@ export const ADDITIONAL_OPPORTUNITIES:GuidanceOpportunity[] = [
       "petroleum"
     ],
     "grades": [
+      "10",
       "11"
     ],
-    "officialUrl": "https://soe.rutgers.edu/academics/pre-college-engineering-programs",
-    "lastVerified": "2026-10-25"
+    "officialUrl": "https://soe.rutgers.edu/RHEX",
+    "lastVerified": "2026-11-15",
+    "needsGradeCheck": true
   }
 ];

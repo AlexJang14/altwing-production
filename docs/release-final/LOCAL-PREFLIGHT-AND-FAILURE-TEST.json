@@ -1,0 +1,26 @@
+{
+  "checkedAtUTC": "2026-11-20T01:21:58.636517+00:00",
+  "environment": "IN-MEMORY SYNTHETIC SQLITE ONLY",
+  "productionSqlExecuted": false,
+  "productionBackupOrRecoveryVerified": false,
+  "productionRecordsReadOrWritten": false,
+  "selectOnlyPreflightStatements": 4,
+  "appliedBaselineMigrations": [
+    "0000",
+    "0001"
+  ],
+  "syntheticHistoricalTablesPopulated": 8,
+  "cleanFixtureNameCollisions": 0,
+  "cleanFixtureDuplicateGroups": 0,
+  "allEightHistoricalTablesPreservedExactlyAfterCreateOnlyMigration": true,
+  "postMigrationCollisionGuardCount": 13,
+  "oldShapeEventInsertAccepted": true,
+  "legacyWriteEffectsEquivalentToPreMigrationSchema": true,
+  "newBehaviorCaptureWorked": true,
+  "duplicateFixtureGroupsDetected": 1,
+  "forcedUniqueIndexFailureObserved": true,
+  "historicalRowsPreservedAfterForcedFailure": true,
+  "partialSchemaObjectsAfterForcedFailure": 11,
+  "blindRetryWouldBeUnsafe": true,
+  "conclusion": "Existing additive migration preserves synthetic historical rows and accepts old-shaped writes, but can leave partial schema on failure. This is not production SQL preflight, a production backup, a verified restore route or permission to deploy."
+}

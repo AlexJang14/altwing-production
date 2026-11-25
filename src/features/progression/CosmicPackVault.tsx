@@ -1,3 +1,4 @@
+import {reducedMotion} from '../../design/golden-horizon/motion';
 import { createPortal } from 'react-dom';
 import CelestialVisual from './CelestialVisual';
 import { useDialogFocus } from '../../lib/useDialogFocus';
@@ -208,7 +209,8 @@ export function PackReveal({
   useEffect(() => {
     // A newly opened pack starts a fresh reveal sequence.
     // eslint-disable-next-line react-hooks/set-state-in-effect
-    setRevealCount(0);
+    setRevealCount(reducedMotion() ? result.cards.length : 0);
+    if(reducedMotion())return;
 
     const timers =
       result.cards.map(

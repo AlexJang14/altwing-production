@@ -1,5 +1,5 @@
-import { analyticsBackendOrigin } from '../features/analytics/analyticsEndpoint';
-import { useState } from 'react';
+import {COPYRIGHT_NOTICE} from '../../deployment/public-information.mjs';
+import { useRef, useState } from 'react';
 import { routeTo, type AppView } from '../lib/routes';
 
 export const JOURNEY = [
@@ -18,13 +18,13 @@ export function Brand() {
 }
 
 export function SiteHeader({ view, tab }: { view: AppView; tab: string }) {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false),menuButton=useRef<HTMLButtonElement>(null);
   const active = view === 'major' || view === 'aerospace' ? 'explore' : view === 'aerospace-build' ? 'projects' : view === 'programs' || view === 'counselor' && ['COLLEGES','OPPORTUNITIES'].includes(tab) ? 'colleges' : view;
   return <header className="aw-header">
     <div className="aw-header-inner">
       <Brand />
-      <button type="button" className="aw-menu-toggle" aria-expanded={open} aria-controls="aw-main-nav" onClick={() => setOpen(!open)}>{open ? 'Close ×' : 'Menu ☰'}</button>
-      <nav id="aw-main-nav" className={`aw-main-nav ${open ? 'is-open' : ''}`} aria-label="Main navigation" onClick={() => setOpen(false)} onKeyDown={event => { if(event.key === 'Escape') setOpen(false); }}>
+      <button ref={menuButton} type="button" className="aw-menu-toggle" aria-expanded={open} aria-controls="aw-main-nav" onClick={() => setOpen(!open)}>{open ? 'Close ×' : 'Menu ☰'}</button>
+      <nav id="aw-main-nav" className={`aw-main-nav ${open ? 'is-open' : ''}`} aria-label="Main navigation" onClick={() => setOpen(false)} onKeyDown={event => { if(event.key === 'Escape'){setOpen(false);menuButton.current?.focus();} }}>
         {JOURNEY.map(item => <a key={item.view} href={routeTo(item.view)} aria-current={active === item.view ? 'page' : undefined}><span>{item.number}</span>{item.label}</a>)}
         <a className="aw-universe-link" href="#/universe" aria-current={view === 'universe' ? 'page' : undefined}><span aria-hidden="true">✦</span> My Universe</a>
         <a className="aw-map-link" href="#/sitemap" aria-current={view === 'sitemap' ? 'page' : undefined}>Site map</a>
@@ -36,7 +36,7 @@ export function SiteHeader({ view, tab }: { view: AppView; tab: string }) {
 export function JourneyContext({ view, tab }: { view: AppView; tab: string }) {
   if(view === 'home') return null;
   const step = view === 'match' ? 0 : view === 'explore' || view === 'major' || view === 'aerospace' ? 1 : view === 'projects' || view === 'aerospace-build' ? 2 : view === 'colleges' || view === 'programs' || view === 'counselor' ? 3 : -1;
-  const title = view === 'programs' || tab === 'OPPORTUNITIES' && view === 'counselor' ? 'Student programs' : step >= 0 ? JOURNEY.find((_,index) => index === step)?.label : view === 'universe' ? 'My Universe · progress & rewards' : view === 'privacy' ? 'Privacy' : view === 'analytics' ? 'Site analytics' : view === 'progress-transfer' ? 'Transfer saved progress' : 'Site map';
+  const title = view === 'programs' || tab === 'OPPORTUNITIES' && view === 'counselor' ? 'Student programs' : step >= 0 ? JOURNEY.find((_,index) => index === step)?.label : view === 'universe' ? 'My Universe · progress & rewards' : view === 'privacy' ? 'Privacy' : view === 'analytics' ? 'Site analytics' : view === 'research' ? 'Research & Methodology' : view === 'credits' ? 'Third-Party Credits and Licenses' : view === 'terms' ? 'Terms of Use' : view === 'progress-transfer' ? 'Transfer saved progress' : 'Site map';
   return <div className="aw-context"><div><a href="#/">Home</a><span aria-hidden="true">/</span><strong>{title}</strong>{step >= 0 && <small>STEP {step + 1} OF 4 · Explore in any order</small>}</div><nav className="aw-journey-shortcuts" aria-label="Journey shortcuts">{step > 0 && <a href={routeTo(JOURNEY.find((_,index)=>index===step-1)?.view ?? 'match')}>← Previous step</a>}{step >= 0 && <a href={routeTo(JOURNEY.find((_,index)=>index===step+1)?.view ?? 'universe')}>Next: {JOURNEY.find((_,index)=>index===step+1)?.label ?? 'My Universe'} →</a>}<a href="#/sitemap">Site map</a></nav></div>;
 }
 
@@ -45,5 +45,5 @@ export function PageLoading() {
 }
 
 export function SiteFooter() {
-  return <footer className="aw-footer"><div><Penguin /><strong>Your path. Your pace.</strong><p>Every explorer starts somewhere. Your next step can be small.</p></div><nav aria-label="Footer navigation"><a href="#/">Home</a><a href="#/sitemap">Site map & getting started</a><a href="#/universe">My saved progress</a><a href="#/privacy">Privacy</a><a href="#/progress-transfer">Transfer saved progress</a><a href={analyticsBackendOrigin?analyticsBackendOrigin+'/#/analytics':'#/analytics'}>Site analytics</a></nav><small>Progress is saved in this browser. Export project records to keep a copy.</small></footer>;
+  return <footer className="aw-footer"><div><Penguin /><strong>Your path. Your pace.</strong><p>Every explorer starts somewhere. Your next step can be small.</p></div><nav aria-label="Footer navigation"><a href="#/">Home</a><a href="#/sitemap">Site map & getting started</a><a href="#/universe">My saved progress</a><a href="#/privacy">Privacy</a><a href="research.html">Research & Methodology</a><a href="credits.html">Credits & licenses</a><a href="terms.html">Terms of Use</a><a href="#/progress-transfer">Transfer saved progress</a></nav><small>Progress is saved in this browser. Export project records to keep a copy.</small><small>{COPYRIGHT_NOTICE}</small></footer>;
 }

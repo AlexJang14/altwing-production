@@ -1,0 +1,89 @@
+CONTROLLED COMPLETE LAUNCH — DO NOT EXECUTE BEFORE FINAL EXPLICIT APPROVAL
+
+This procedure includes the owner's requested daily/weekly automation activation.
+Design/feature approval is recorded; it is not deployment approval. Initial
+release gates are applicable manual acceptance and an explicit mascot decision.
+The optional College Scorecard key is NOT a gate. Its collector and all 126
+unreviewed sources stay disabled. Monthly automatic execution is not armed.
+No new feature, database migration or infrastructure is introduced by these
+public-content jobs. The previously reviewed additive backend migration remains
+part of the complete product launch; its safeguards are unchanged.
+
+BEFORE REQUESTING THE ONE FINAL APPROVAL
+- Reconcile actual results for D01-D11, M01-M04, A01-A07, P01-P06, I01-I03 (31).
+  Preserve prior evidence only if its exact criteria and candidate scope match.
+  Record environment, errors and references. Do not infer PASS from design
+  approval or automated DOM checks. L01-L07 are after-deployment cases.
+- Record the owner's explicit mascot exception decision or actual rights evidence.
+  An accepted exception changes release policy, not unknown third-party rights.
+  Preserve the existing recorded grant and unchanged asset; do not ask again.
+- Confirm the same frozen app/public snapshot, valid evidence and exact source
+  revision. Retain the approved candidate manifest and prior deployed revisions.
+- Include complete backend + frontend publication, the narrow additive migration,
+  and verified daily/weekly automated public-content publication in that ONE
+  approval. State that DB recovery remains unverified and acknowledged. No new
+  generic waiver or routine OpenAI Support request is a prerequisite.
+
+AFTER THAT APPROVAL — ONE COORDINATED RELEASE
+1. Refresh production Git revision and supported hosting metadata/migration state.
+   Stop on conflicting/partial/applied-unknown state. Do not rewrite applied SQL,
+   stamp a ledger, DROP tables, clean historical rows or blindly retry a prefix.
+2. Publish the complete reviewed backend through the existing Site with unchanged
+   DB binding, audience, secrets and two administrator grants. Verify its actual
+   outcome before frontend publication. If migration/upload fails, follow the
+   existing MIGRATION-SAFETY-AND-ROLLBACK.txt; do not proceed by assumption.
+3. Commit/push the reviewed complete frontend/config/content through the existing
+   AlexJang14/altwing-production process. Wait for the exact-SHA Pages workflow
+   success and verify altwing.org assets/routes/progress. No DNS/domain changes.
+4. On the PUBLISHED workflow, run Actions -> AltWing public content intelligence:
+   first mode=weekly, dry_run=true, then mode=daily, dry_run=true. These are real
+   official-source runs. Inspect their actual artifacts/statuses, enabled source
+   IDs, parser failures, retained733 IDs and unchanged private/backend scope.
+   No facts may publish from incomplete/conflicting/over-threshold collection.
+5. Only after approved launch and healthy dry runs, set repository Actions
+   VARIABLES (not secrets) in Settings -> Secrets and variables -> Actions:
+       ALTWING_CONTENT_AUTOMATION_ENABLED = true
+       ALTWING_CONTENT_PUBLISH_ENABLED = true
+   Do not set them during pre-deployment acceptance. If the integration cannot
+   write repository variables, the owner performs this exact step then; do not
+   bypass provider permissions. This is already included in final approval,
+   not a request to approve each routine execution again.
+6. Run mode=weekly, dry_run=false and mode=daily, dry_run=false. Verify each actual
+   collection/publication outcome, bot commit if changed, and explicit reusable
+   Pages deployment for its returned SHA. GITHUB_TOKEN pushes do not themselves
+   trigger the ordinary push workflow. Keep normal branch protections; a denied
+   fast-forward push is a STOP, not permission to force-push or weaken rules.
+7. Verify the published content commit and live hashed assets/snapshot identity
+   where available. Compare official observation timestamps, selected-field
+   freshness labels, source links and retained733 IDs. Same-day rechecks need
+   not change the displayed calendar day; never invent a newer date for proof.
+   Confirm daily link checks did NOT advance field-verification timestamps.
+   All imported records remain non-new; all126 unreviewed sources and optional
+   Scorecard remain disabled. Do not manufacture a new opportunity discovery.
+8. Confirm schedules: daily05:37 and Monday06:17 America/New_York, with the native
+   IANA timezone handling daylight saving. No monthly cron for initial launch.
+   Record exact Actions run IDs, commit/snapshot IDs, UTC times, failures and live
+   checks. A local test or prepared cron is not actual post-deployment execution.
+
+LIVE APPLICATION VERIFICATION (L01-L07)
+Use actual authorized sessions for both administrators and real signed-out and
+unlisted denial checks. Anonymous students remain login-free. Use genuine,
+voluntary feedback for real storage/retrieval verification; never seed fabricated
+production testimonials/statistics. Test mission/project tracking, exports/print,
+privacy choices and DNT/GPC. Cloudflare Page Views and Visits remain separate.
+Use the existing bounded/resumable historical reporting action with a real
+administrator session. Do not imply that deployment credentials establish a
+browser administrator login or that historical setup has already run.
+
+FAILURE AND ROLLBACK
+Retain last verified facts on source failures; inspect the report. If needed,
+turn the publishing variable false while keeping collection/reporting available.
+Do not bypass access policies, source verification or denied pushes. Restore
+public content from validated snapshot history through the existing reviewed
+workflow; no application database is touched by a content rollback.
+For backend/migration incidents, stop and preserve old/new rows and additive
+objects. Code rollback to the preserved version does NOT restore database
+contents. Production DB recovery remains UNVERIFIED. Use supported operator
+reconciliation for an uncertain partial migration; provider help is incident
+handling, not a routine pre-release demand. No down-migration, deletion, force
+push, DNS changes or paid services are authorized by this procedure.

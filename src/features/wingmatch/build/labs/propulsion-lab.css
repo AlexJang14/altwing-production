@@ -9,10 +9,10 @@
 .plab-intro > span,
 .plab-control-head span,
 .plab-comparison header > span {
-  color: #6f9dff;
+  color: var(--gh-text-muted);
 
-  font-size: 9px;
-  font-weight: 900;
+  font-size: var(--gh-text-xs);
+  font-weight: 600;
 
   letter-spacing: .11em;
 }
@@ -21,7 +21,7 @@
 .plab-comparison h3 {
   margin: 9px 0 0;
 
-  color: #fff;
+  color: var(--gh-text);
 
   font-size: 29px;
 
@@ -33,15 +33,15 @@
 .plab-intro p {
   margin: 12px 0 0;
 
-  color: rgba(237,243,255,.66);
+  color: var(--gh-text-muted);
 
-  font-size: 14px;
+  font-size: var(--gh-text-sm);
 
   line-height: 1.6;
 }
 
 .plab-intro p strong {
-  color: #fff;
+  color: var(--gh-text);
 }
 
 .plab-disclosure {
@@ -49,15 +49,15 @@
 
   padding: 14px 16px;
 
-  border-left: 3px solid #ffc857;
+  border-left: 3px solid var(--gh-border);
 
-  background: rgba(255,200,87,.04);
+  background: var(--gh-surface);
 }
 
 .plab-disclosure strong {
-  color: #ffc857;
+  color: var(--gh-text-muted);
 
-  font-size: 9px;
+  font-size: var(--gh-text-xs);
 
   letter-spacing: .09em;
 }
@@ -65,9 +65,9 @@
 .plab-disclosure p {
   margin: 6px 0 0;
 
-  color: rgba(234,241,255,.55);
+  color: var(--gh-text-muted);
 
-  font-size: 12px;
+  font-size: var(--gh-text-xs);
 
   line-height: 1.5;
 }
@@ -78,11 +78,11 @@
   padding: 20px;
 
   border:
-    1px solid rgba(255,255,255,.07);
+    1px solid var(--gh-border);
 
-  border-radius: 15px;
+  border-radius: var(--gh-radius-card);
 
-  background: rgba(255,255,255,.02);
+  background: var(--gh-surface);
 }
 
 .plab-control-head {
@@ -104,17 +104,17 @@
 .plab-control-head strong {
   margin-top: 4px;
 
-  color: #fff;
+  color: var(--gh-text);
 
-  font-size: 23px;
+  font-size: var(--gh-text-card);
 }
 
 .plab-control-head small {
   max-width: 310px;
 
-  color: rgba(231,239,255,.45);
+  color: var(--gh-text-muted);
 
-  font-size: 11px;
+  font-size: var(--gh-text-xs);
 
   line-height: 1.4;
 
@@ -126,7 +126,7 @@
 
   margin-top: 20px;
 
-  accent-color: #ffc857;
+  accent-color: var(--gh-interactive);
 }
 
 .plab-scale {
@@ -136,9 +136,9 @@
 
   justify-content: space-between;
 
-  color: rgba(230,238,255,.36);
+  color: var(--gh-text-muted);
 
-  font-size: 9px;
+  font-size: var(--gh-text-xs);
 }
 
 .plab-engine-grid {
@@ -162,26 +162,26 @@
   flex-direction: column;
 
   border:
-    1px solid rgba(124,154,229,.16);
+    1px solid var(--gh-border);
 
-  border-radius: 18px;
+  border-radius: var(--gh-radius-card);
 
-  background: #0d152e;
+  background: var(--gh-surface);
 }
 
 .plab-engine.is-selected {
-  border-color: #ffc857;
+  border-color: var(--gh-interactive);
 
   box-shadow:
-    0 0 0 2px rgba(255,200,87,.055);
+    none;
 }
 
 .plab-engine > span {
-  color: #82a9ff;
+  color: var(--gh-text-muted);
 
-  font-size: 9px;
+  font-size: var(--gh-text-xs);
 
-  font-weight: 900;
+  font-weight: 600;
 
   letter-spacing: .1em;
 }
@@ -189,7 +189,7 @@
 .plab-engine h4 {
   margin: 10px 0 0;
 
-  color: #fff;
+  color: var(--gh-text);
 
   font-size: 27px;
 }
@@ -208,17 +208,17 @@
 .plab-engine-numbers > div {
   padding: 12px;
 
-  border-radius: 10px;
+  border-radius: var(--gh-radius-card);
 
-  background: rgba(255,255,255,.035);
+  background: var(--gh-surface);
 }
 
 .plab-engine-numbers small {
   display: block;
 
-  color: rgba(226,235,255,.4);
+  color: var(--gh-text-muted);
 
-  font-size: 8px;
+  font-size: var(--gh-text-xs);
 }
 
 .plab-engine-numbers strong {
@@ -226,17 +226,17 @@
 
   margin-top: 5px;
 
-  color: #fff;
+  color: var(--gh-text);
 
-  font-size: 15px;
+  font-size: var(--gh-text-body);
 }
 
 .plab-engine > p {
   margin: 17px 0 0;
 
-  color: rgba(235,241,255,.58);
+  color: var(--gh-text-muted);
 
-  font-size: 12px;
+  font-size: var(--gh-text-xs);
 
   line-height: 1.5;
 }
@@ -259,17 +259,17 @@
 
   border-radius: 9px;
 
-  background: rgba(91,141,239,.055);
+  background: var(--gh-surface);
 }
 
 .plab-result-preview span {
   display: block;
 
-  color: #6f9dff;
+  color: var(--gh-text-muted);
 
-  font-size: 8px;
+  font-size: var(--gh-text-xs);
 
-  font-weight: 900;
+  font-weight: 600;
 }
 
 .plab-result-preview strong {
@@ -277,9 +277,9 @@
 
   margin-top: 4px;
 
-  color: #fff;
+  color: var(--gh-text);
 
-  font-size: 15px;
+  font-size: var(--gh-text-body);
 }
 
 .plab-engine button,
@@ -290,20 +290,20 @@
 
   padding: 0 15px;
 
-  border-radius: 10px;
+  border-radius: var(--gh-radius-card);
 
-  font-size: 10px;
+  font-size: var(--gh-text-xs);
 
-  font-weight: 900;
+  font-weight: 600;
 
   cursor: pointer;
 }
 
 .plab-engine button {
   border:
-    1px solid rgba(255,200,87,.24);
+    1px solid var(--gh-border-control);
 
-  color: #ffc857;
+  color: var(--gh-text-muted);
 
   background: transparent;
 }
@@ -313,9 +313,9 @@
 
   border: 0;
 
-  color: #0d132b;
+  color: var(--gh-text);
 
-  background: #ffc857;
+  background: var(--gh-surface);
 }
 
 .plab-comparison {
@@ -324,7 +324,7 @@
   padding-top: 24px;
 
   border-top:
-    1px solid rgba(255,255,255,.08);
+    1px solid var(--gh-border);
 }
 
 .plab-compare-grid {
@@ -342,19 +342,19 @@
   padding: 17px;
 
   border:
-    1px solid rgba(255,255,255,.07);
+    1px solid var(--gh-border);
 
-  border-radius: 12px;
+  border-radius: var(--gh-radius-card);
 
-  background: rgba(255,255,255,.02);
+  background: var(--gh-surface);
 }
 
 .plab-compare-grid article > span {
-  color: #82a9ff;
+  color: var(--gh-text-muted);
 
-  font-size: 9px;
+  font-size: var(--gh-text-xs);
 
-  font-weight: 900;
+  font-weight: 600;
 }
 
 .plab-compare-grid article > strong {
@@ -362,17 +362,17 @@
 
   margin-top: 8px;
 
-  color: #fff;
+  color: var(--gh-text);
 
-  font-size: 22px;
+  font-size: var(--gh-text-card);
 }
 
 .plab-compare-grid p {
   margin: 8px 0 0;
 
-  color: rgba(234,241,255,.55);
+  color: var(--gh-text-muted);
 
-  font-size: 11px;
+  font-size: var(--gh-text-xs);
 }
 
 .plab-compare-grid b.pass {
@@ -392,17 +392,17 @@
 
   padding: 17px;
 
-  border-radius: 11px;
+  border-radius: var(--gh-radius-card);
 
-  background: rgba(91,141,239,.055);
+  background: var(--gh-surface);
 }
 
 .plab-insight span {
-  color: #5b8def;
+  color: var(--gh-text-muted);
 
-  font-size: 8px;
+  font-size: var(--gh-text-xs);
 
-  font-weight: 900;
+  font-weight: 600;
 
   letter-spacing: .09em;
 }
@@ -410,9 +410,9 @@
 .plab-insight p {
   margin: 7px 0 0;
 
-  color: rgba(236,242,255,.64);
+  color: var(--gh-text-muted);
 
-  font-size: 12px;
+  font-size: var(--gh-text-xs);
 
   line-height: 1.55;
 }

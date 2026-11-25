@@ -1,0 +1,32 @@
+{
+  "checked_at": "2026-11-24T06:17:44Z",
+  "schema_version": 1,
+  "snapshot_id": "abeeea53dfa0d1018d32abf5f33b4f8d3360cd77bbead3a641094e93f2676fd7",
+  "sources": {
+    "college-scorecard": {
+      "last_sample_verified_at": "2026-11-24T01:10:41Z",
+      "reason": "Existing public API sample integrated field by field. Full collection disabled pending free API key and complete-source verification.",
+      "status": "sample_verified_refresh_disabled"
+    },
+    "nasa-official-feed": {
+      "content_sha256": "b0548cb14c652e3018e820c915a01afc00519a4dc673eb01c2157cc1a4ee1aa3",
+      "last_attempt_at": "2026-11-24T02:10:10Z",
+      "last_success_at": "2026-11-24T02:10:10Z",
+      "record_id": null,
+      "status": "ok"
+    },
+    "nasa-stem-gateway-public": {
+      "content_sha256": "cb5295579cd9b70a6ca45fa4754ea0733eeb3890ba8e18aa2e3dd5bb8d9e40e0",
+      "last_attempt_at": "2026-11-24T02:10:10Z",
+      "last_success_at": "2026-11-24T02:10:10Z",
+      "record_id": "opportunity:nasa-stem-gateway",
+      "status": "ok"
+    },
+    "opportunity-lockheed-high-school-2027": {
+      "last_attempt_at": "2026-11-24T06:17:44Z",
+      "reason": "Official source HTTP403; factual verification not advanced",
+      "record_id": "opportunity:lockheed-high-school-2027",
+      "status": "unavailable"
+    }
+  }
+}

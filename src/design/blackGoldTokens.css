@@ -1,0 +1,16 @@
+/* AltWing Black & Gold, staged on the homepage until visual direction approval. */
+@font-face{font-family:'AltWing Manrope';font-style:normal;font-weight:400 800;font-display:swap;src:url('../assets/black-gold/fonts/manrope-latin.woff2') format('woff2')}
+@font-face{font-family:'AltWing Space';font-style:normal;font-weight:400 700;font-display:swap;src:url('../assets/black-gold/fonts/spacegrotesk-latin.woff2') format('woff2')}
+.aw-theme-black-gold{
+ --aw-color-obsidian:#101216;--aw-color-graphite:#1B1E24;--aw-color-antique:#B99252;--aw-color-gold:#E6BB65;--aw-color-champagne:#F2D89D;--aw-color-pearl:#F7F2E6;
+ --aw-color-muted:#B7B5B0;--aw-color-dim:#98968F;--aw-color-line:#383A3E;--aw-color-line-quiet:#2A2D32;--aw-color-control-line:#9B845D;--aw-color-panel-soft:#15181D;--aw-color-selected:#30291F;--aw-color-dark-ink:#101216;
+ --aw-color-success:#9BC6AC;--aw-color-warning:#E6BB65;--aw-color-error:#F3A5A0;--aw-color-info:#A5C4E8;
+ --aw-font-body:'AltWing Manrope',ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;--aw-font-display:'AltWing Space',ui-sans-serif,system-ui,sans-serif;--aw-font-mono:ui-monospace,'SFMono-Regular',Consolas,monospace;
+ --aw-text-xs:.6875rem;--aw-text-sm:.8125rem;--aw-text-base:.9375rem;--aw-text-lead:1.0625rem;--aw-text-card:1.25rem;--aw-text-section:clamp(2rem,3.2vw,3rem);--aw-text-hero:clamp(3.25rem,5.8vw,5.6rem);
+ --aw-space-1:.25rem;--aw-space-2:.5rem;--aw-space-3:.75rem;--aw-space-4:1rem;--aw-space-5:1.25rem;--aw-space-6:1.5rem;--aw-space-8:2rem;--aw-space-10:2.5rem;--aw-space-12:3rem;--aw-space-16:4rem;--aw-space-20:5rem;--aw-space-24:6rem;--aw-space-28:7rem;
+ --aw-radius-xs:4px;--aw-radius-sm:8px;--aw-radius-md:12px;--aw-radius-pill:999px;--aw-border:1px solid var(--aw-color-line);--aw-border-quiet:1px solid var(--aw-color-line-quiet);--aw-shadow-none:none;--aw-shadow-menu:0 12px 20px #00000018;
+ --aw-motion-fast:160ms;--aw-motion-medium:280ms;--aw-motion-enter:540ms;--aw-motion-ease:cubic-bezier(.22,.7,.25,1);--aw-focus-ring:2px solid var(--aw-color-champagne);--aw-page-width:1280px;--aw-page-gutter:clamp(22px,4.5vw,72px);--aw-header-height:80px;
+ /* Compatibility bridge for existing shared chrome, not scientific/rarity colors. */
+ --aw-bg:var(--aw-color-obsidian);--aw-panel:var(--aw-color-graphite);--aw-ink:var(--aw-color-pearl);--aw-muted:var(--aw-color-muted);--aw-mint:var(--aw-color-gold);--aw-gold:var(--aw-color-gold);--aw-line:var(--aw-color-line);
+ color-scheme:dark;color:var(--aw-color-pearl);background:var(--aw-color-obsidian);font-family:var(--aw-font-body);font-size:var(--aw-text-base);font-weight:400;line-height:1.65;min-height:100dvh;
+}

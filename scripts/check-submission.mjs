@@ -6,10 +6,11 @@ import { createRequire } from 'node:module';
 const nativeRequire=createRequire(import.meta.url),cache=new Map();
 function load(file) {
   const absolute=path.resolve(file);
+  if(absolute.endsWith('.json'))return {__esModule:true,default:JSON.parse(fs.readFileSync(absolute,'utf8'))};
   if(cache.has(absolute))return cache.get(absolute).exports;
   const module={exports:{}};cache.set(absolute,module);
   const output=ts.transpileModule(fs.readFileSync(absolute,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText;
-  const require=(name)=>name.endsWith('/posthog')?{default:{capture(){}},isPostHogConfigured:false}:name.startsWith('.')?load(path.resolve(path.dirname(absolute),name)+'.ts'):nativeRequire(name);
+  const require=(name)=>name.endsWith('/posthog')?{default:{capture(){}},isPostHogConfigured:false}:name.startsWith('.')?load(path.resolve(path.dirname(absolute),name)+(name.endsWith('.json')?'':'.ts')):nativeRequire(name);
   new Function('require','module','exports',output)(require,module,module.exports);
   return module.exports;
 }
@@ -64,18 +65,25 @@ globalThis.localStorage={getItem(){throw Error('blocked')},setItem(){throw Error
 assert.equal(local.writeLocal('test-resilience','preserved'),false);assert.equal(local.readLocal('test-resilience'),'preserved');assert.equal(local.isMemoryOnly(),true);
 console.log('PASS: 14-major × 4-grade eligibility, budget/location exclusions, routes, profile validation, 3 project models, completion gates, draft round-trips, export content, and blocked storage recovery');
 const colleges=load('src/features/guidance/collegeCatalog.ts');
-assert.equal(colleges.GUIDANCE_COLLEGES.length,663,'Keep the reviewed snapshot and curated record count stable');
-assert.equal(new Set(colleges.GUIDANCE_COLLEGES.map(c=>c.id)).size,663,'No duplicate university IDs');
+assert.equal(colleges.BASE_GUIDANCE_COLLEGES.length,663,'Preserve the original reviewed college baseline');
+assert.ok(colleges.GUIDANCE_COLLEGES.length>=663,'Retain every original college while allowing reviewed new records');
+assert.ok(colleges.BASE_GUIDANCE_COLLEGES.every(base=>colleges.GUIDANCE_COLLEGES.some(current=>current.id===base.id)),'Original saved college IDs must remain available');
+assert.equal(new Set(colleges.GUIDANCE_COLLEGES.map(c=>c.id)).size,colleges.GUIDANCE_COLLEGES.length,'No duplicate university IDs');
 const directory=colleges.GUIDANCE_COLLEGES.filter(c=>c.majorCoverage==='ENGINEERING_GENERAL');
-assert.equal(directory.length,626);assert.ok(directory.every(c=>c.engineeringMajors.length===0 && c.sourceYear.includes('2025') && c.sourceUrl),'Broad engineering leads must not imply exact-major confirmation');
-assert.equal(catalog.GUIDANCE_OPPORTUNITIES.length,42);
+const baseDirectory=colleges.BASE_GUIDANCE_COLLEGES.filter(c=>c.majorCoverage==='ENGINEERING_GENERAL');
+assert.equal(baseDirectory.length,626);assert.ok(baseDirectory.every(c=>c.engineeringMajors.length===0&&c.sourceYear.includes('2025')&&c.sourceUrl),'Preserve explicit historical baseline context');
+assert.ok(directory.every(c=>c.sourceYear&&c.sourceUrl),'Live directory entries require explicit provenance/cohort context');
+const snapshot=JSON.parse(fs.readFileSync('content/intelligence/published.json','utf8'));
+for(const college of directory)if(college.engineeringMajors.length){const record=snapshot.records.find(r=>r.id==='college:'+college.id);assert.ok(record?.verification.verified_fields.includes('program_information'),'An exact-major claim requires reviewed program evidence');}
+assert.equal(catalog.BASE_GUIDANCE_OPPORTUNITIES.length,42);
+assert.ok(catalog.BASE_GUIDANCE_OPPORTUNITIES.every(base=>catalog.GUIDANCE_OPPORTUNITIES.some(current=>current.id===base.id)),'Original saved opportunity IDs must remain available');
 for(const major of Object.keys(majors))for(const grade of ['9','10','11','12'])assert.ok(catalog.rankOpportunities(major,{...profile,grade}).every(x=>!x.opportunity.needsGradeCheck),'Grade-unknown programs must not pass a selected-grade filter');
 const recommendations=load('src/features/projects/projectRecommendations.ts');
 assert.equal(recommendations.recommendProjects([{majorId:'civil'}])[0].project.id,'bridge');
 assert.equal(recommendations.recommendProjects([{majorId:'electrical'}])[0].project.id,'solar');
 assert.equal(recommendations.recommendProjects([{majorId:'mechanical'}])[0].project.id,'cooling');
 for(const major of Object.keys(majors))assert.equal(new Set(recommendations.recommendProjects([{majorId:major}]).map(x=>x.project.id)).size,3);
-console.log('PASS: 663 unique universities with explicit snapshot coverage, 42 programs with grade-unknown exclusions, and matching-project recommendations for all 14 directions');
+console.log(`PASS: ${colleges.GUIDANCE_COLLEGES.length} unique universities and ${catalog.GUIDANCE_OPPORTUNITIES.length} programs; all 663/42 baseline IDs preserved, honest snapshot coverage, grade-unknown exclusions, and recommendations for all 14 directions`);
 
 // Navigation compatibility and one-time reward transactions.
 for (const view of ['sitemap','major','colleges','programs']) assert.equal(route.parseRoute(route.routeTo(view,{major:'civil'})).view,view);

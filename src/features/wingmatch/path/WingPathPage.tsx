@@ -1,3 +1,4 @@
+import {preferredScrollBehavior} from '../../../design/golden-horizon/motion';
 import {
   useEffect,
   useState,
@@ -1217,8 +1218,7 @@ export default function WingPathPage({
             "awpath-certificate",
           )
           ?.scrollIntoView({
-            behavior:
-              "smooth",
+            behavior: preferredScrollBehavior(),
 
             block:
               "start",
@@ -1477,8 +1477,7 @@ export default function WingPathPage({
         target,
       )
       ?.scrollIntoView({
-        behavior:
-          "smooth",
+        behavior: preferredScrollBehavior(),
 
         block:
           "start",

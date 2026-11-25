@@ -1,5 +1,6 @@
 from pathlib import Path
 import sys
+import subprocess
 
 
 checks = [
@@ -59,21 +60,6 @@ checks = [
         "Evidence portfolio",
     ),
 
-    (
-        Path(
-            "src/features/progression/MyUniversePanel.tsx"
-        ),
-        "Deep Space Packs",
-        "Cosmic Pack Vault",
-    ),
-
-    (
-        Path(
-            "src/features/progression/MyUniversePanel.tsx"
-        ),
-        "VERIFIED ACCOUNTS REQUIRED",
-        "Honest leaderboard lock",
-    ),
 ]
 
 
@@ -120,6 +106,13 @@ for path, phrase, label in checks:
 
 print("")
 
+# The old pack title and decorative account-lock marker described a different
+# layout. Test the current real reward transactions and rendered states instead.
+# This does not add, certify, or pretend to protect a nonexistent leaderboard.
+reward_check = subprocess.run(["node", "scripts/check-legacy-rewards.mjs"], check=False)
+if reward_check.returncode != 0:
+    failed.append("Current universe reward behavior / honest product boundary")
+
 
 if failed:
 
@@ -136,5 +129,5 @@ if failed:
 
 
 print(
-    "PASS: required AltWing V2 systems are present."
+    "PASS: retained legacy systems and current universe reward behavior; no competitive leaderboard is offered. Browser QA remains separate."
 )

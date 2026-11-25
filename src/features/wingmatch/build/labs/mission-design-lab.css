@@ -9,15 +9,15 @@
 .mdlab-intro > span,
 .mdlab-result-top span,
 .mdlab-insight > span {
-  color: #6f9dff;
-  font-size: 9px;
-  font-weight: 900;
+  color: var(--gh-text-muted);
+  font-size: var(--gh-text-xs);
+  font-weight: 600;
   letter-spacing: .11em;
 }
 
 .mdlab-intro h3 {
   margin: 9px 0 0;
-  color: #fff;
+  color: var(--gh-text);
   font-size: 31px;
   line-height: 1.05;
   letter-spacing: -.04em;
@@ -25,28 +25,28 @@
 
 .mdlab-intro p {
   max-width: 720px;
-  color: rgba(237,243,255,.64);
-  font-size: 14px;
+  color: var(--gh-text-muted);
+  font-size: var(--gh-text-sm);
   line-height: 1.6;
 }
 
 .mdlab-disclosure {
   margin-top: 18px;
   padding: 14px 16px;
-  border-left: 3px solid #ffc857;
-  background: rgba(255,200,87,.04);
+  border-left: 3px solid var(--gh-border);
+  background: var(--gh-surface);
 }
 
 .mdlab-disclosure strong {
-  color: #ffc857;
-  font-size: 9px;
+  color: var(--gh-text-muted);
+  font-size: var(--gh-text-xs);
   letter-spacing: .09em;
 }
 
 .mdlab-disclosure p {
   margin: 6px 0 0;
-  color: rgba(234,241,255,.53);
-  font-size: 11px;
+  color: var(--gh-text-muted);
+  font-size: var(--gh-text-xs);
   line-height: 1.5;
 }
 
@@ -59,23 +59,23 @@
 
 .mdlab-budget > div {
   padding: 15px;
-  border: 1px solid rgba(255,255,255,.07);
-  border-radius: 11px;
-  background: #0a1125;
+  border: 1px solid var(--gh-border);
+  border-radius: var(--gh-radius-card);
+  background: var(--gh-surface);
 }
 
 .mdlab-budget span {
   display: block;
-  color: rgba(235,242,255,.38);
-  font-size: 8px;
-  font-weight: 900;
+  color: var(--gh-text-muted);
+  font-size: var(--gh-text-xs);
+  font-weight: 600;
 }
 
 .mdlab-budget strong {
   display: block;
   margin-top: 6px;
-  color: #fff;
-  font-size: 16px;
+  color: var(--gh-text);
+  font-size: var(--gh-text-body);
 }
 
 .mdlab .pass {
@@ -97,9 +97,9 @@
 }
 
 .mdlab-choice-section header > span {
-  color: #6f9dff;
-  font-size: 9px;
-  font-weight: 900;
+  color: var(--gh-interactive);
+  font-size: var(--gh-text-xs);
+  font-weight: 600;
 }
 
 .mdlab-choice-section header div {
@@ -108,14 +108,14 @@
 }
 
 .mdlab-choice-section header strong {
-  color: #fff;
-  font-size: 15px;
+  color: var(--gh-text);
+  font-size: var(--gh-text-body);
 }
 
 .mdlab-choice-section header small {
   margin-top: 3px;
-  color: rgba(235,242,255,.42);
-  font-size: 9px;
+  color: var(--gh-text-muted);
+  font-size: var(--gh-text-xs);
 }
 
 .mdlab-choices {
@@ -131,23 +131,23 @@
   display: flex;
   flex-direction: column;
   text-align: left;
-  border: 1px solid rgba(91,141,239,.14);
-  border-radius: 12px;
-  color: #fff;
-  background: #0c142c;
+  border: 1px solid var(--gh-border-control);
+  border-radius: var(--gh-radius-card);
+  color: var(--gh-text);
+  background: var(--gh-surface-soft);
   cursor: pointer;
 }
 
 .mdlab-choices button.is-selected {
-  border-color: #ffc857;
-  box-shadow: 0 0 0 2px rgba(255,200,87,.05);
+  border-color: var(--gh-interactive);
+  box-shadow: none;
 }
 
 .mdlab-choices button > span {
   margin-bottom: 13px;
-  color: #fff;
-  font-size: 11px;
-  font-weight: 900;
+  color: var(--gh-text);
+  font-size: var(--gh-text-xs);
+  font-weight: 600;
 }
 
 .mdlab-choices button > div {
@@ -157,20 +157,20 @@
 }
 
 .mdlab-choices button small {
-  color: rgba(235,242,255,.34);
-  font-size: 7px;
+  color: var(--gh-text-muted);
+  font-size: var(--gh-text-xs);
 }
 
 .mdlab-choices button div strong {
-  color: #7ea5ff;
-  font-size: 9px;
+  color: var(--gh-interactive);
+  font-size: var(--gh-text-xs);
 }
 
 .mdlab-choices button p {
   margin: auto 0 0;
   padding-top: 13px;
-  color: rgba(235,242,255,.48);
-  font-size: 10px;
+  color: var(--gh-text-muted);
+  font-size: var(--gh-text-xs);
   line-height: 1.45;
 }
 
@@ -180,31 +180,31 @@
   width: 100%;
   min-height: 49px;
   margin-top: 15px;
-  border-radius: 10px;
-  font-size: 10px;
-  font-weight: 900;
+  border-radius: var(--gh-radius-card);
+  font-size: var(--gh-text-xs);
+  font-weight: 600;
   cursor: pointer;
 }
 
 .mdlab-run,
 .mdlab-lock {
   border: 0;
-  color: #0d132b;
-  background: #ffc857;
+  color: var(--gh-text);
+  background: var(--gh-surface);
 }
 
 .mdlab-revise {
-  border: 1px solid rgba(255,200,87,.25);
-  color: #ffc857;
+  border: 1px solid var(--gh-border);
+  color: var(--gh-text-muted);
   background: transparent;
 }
 
 .mdlab-result {
   margin-top: 16px;
   padding: 20px;
-  border: 1px solid rgba(255,255,255,.08);
-  border-radius: 14px;
-  background: #0a1125;
+  border: 1px solid var(--gh-border);
+  border-radius: var(--gh-radius-card);
+  background: var(--gh-surface);
 }
 
 .mdlab-result-top {
@@ -216,38 +216,38 @@
 
 .mdlab-result-top h3 {
   margin: 6px 0 0;
-  color: #fff;
-  font-size: 24px;
+  color: var(--gh-text);
+  font-size: var(--gh-text-card);
 }
 
 .mdlab-result-top > strong {
-  font-size: 9px;
+  font-size: var(--gh-text-xs);
   letter-spacing: .07em;
 }
 
 .mdlab-score {
   margin-top: 18px;
   padding: 14px;
-  border-radius: 10px;
-  background: rgba(91,141,239,.05);
+  border-radius: var(--gh-radius-card);
+  background: var(--gh-surface);
 }
 
 .mdlab-score span {
-  color: #6f9dff;
-  font-size: 8px;
-  font-weight: 900;
+  color: var(--gh-text-muted);
+  font-size: var(--gh-text-xs);
+  font-weight: 600;
 }
 
 .mdlab-score strong {
   display: block;
   margin-top: 4px;
-  color: #fff;
+  color: var(--gh-text);
   font-size: 28px;
 }
 
 .mdlab-score small {
-  color: rgba(235,242,255,.35);
-  font-size: 8px;
+  color: var(--gh-text-muted);
+  font-size: var(--gh-text-xs);
 }
 
 .mdlab-status-grid {
@@ -260,62 +260,62 @@
 .mdlab-status-grid div {
   padding: 12px;
   border-radius: 9px;
-  background: rgba(255,255,255,.025);
+  background: var(--gh-surface);
 }
 
 .mdlab-status-grid span {
   display: block;
-  color: rgba(235,242,255,.35);
-  font-size: 7px;
-  font-weight: 900;
+  color: var(--gh-text-muted);
+  font-size: var(--gh-text-xs);
+  font-weight: 600;
 }
 
 .mdlab-status-grid strong {
   display: block;
   margin-top: 4px;
-  font-size: 11px;
+  font-size: var(--gh-text-xs);
 }
 
 .mdlab-insight {
   margin-top: 12px;
   padding: 15px;
-  border-left: 3px solid #5b8def;
-  background: rgba(91,141,239,.045);
+  border-left: 3px solid var(--gh-border);
+  background: var(--gh-surface);
 }
 
 .mdlab-insight p {
   margin: 6px 0 0;
-  color: rgba(235,242,255,.55);
-  font-size: 11px;
+  color: var(--gh-text-muted);
+  font-size: var(--gh-text-xs);
   line-height: 1.5;
 }
 
 .mdlab-locked {
   margin-top: 13px;
   padding: 17px;
-  border: 1px solid rgba(119,225,195,.18);
-  border-radius: 11px;
-  background: rgba(119,225,195,.045);
+  border: 1px solid var(--gh-border);
+  border-radius: var(--gh-radius-card);
+  background: var(--gh-surface);
 }
 
 .mdlab-locked span {
-  color: #77e1c3;
-  font-size: 8px;
-  font-weight: 900;
+  color: var(--gh-text-muted);
+  font-size: var(--gh-text-xs);
+  font-weight: 600;
   letter-spacing: .09em;
 }
 
 .mdlab-locked strong {
   display: block;
   margin-top: 7px;
-  color: #fff;
-  font-size: 19px;
+  color: var(--gh-text);
+  font-size: var(--gh-text-lead);
 }
 
 .mdlab-locked p {
   margin: 5px 0 0;
-  color: rgba(235,242,255,.48);
-  font-size: 10px;
+  color: var(--gh-text-muted);
+  font-size: var(--gh-text-xs);
 }
 
 @media (max-width: 720px) {
