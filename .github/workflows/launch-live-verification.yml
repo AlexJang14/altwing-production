@@ -24,6 +24,9 @@ jobs:
       - name: Install Chromium and Firefox
         run: node qa/AltWing-Browser-QA/node_modules/playwright/cli.js install --with-deps chromium firefox
       - name: Verify actual deployed site with metrics opted out
+        env:
+          ALTWING_CONTENT_AUTOMATION_ENABLED: ${{ vars.ALTWING_CONTENT_AUTOMATION_ENABLED }}
+          ALTWING_CONTENT_PUBLISH_ENABLED: ${{ vars.ALTWING_CONTENT_PUBLISH_ENABLED }}
         run: node qa/run-live-verification.mjs
       - name: Upload actual screenshots, requests and results
         if: always()

@@ -1,8 +1,13 @@
 {
   "origin": "https://altwing.org",
-  "commit": "eeccd2da467c243b614c7f3e8f6af87203aafb45",
-  "sourceFingerprint": "9ac38bc651421859dd21b296725c84f29562e70880254afdf9e717db63525e66",
-  "indexSha256": "8a460d87b370510d3206540774fd80dd316a20d95b64c59bd27137c0472e7ead",
-  "backendVersion": 12,
-  "scope": "Focused live verification only; no synthetic production survey/event writes. Original24PASS and7UNVERIFIED manual deferrals preserved."
+  "commit": "f23651c0837d42941205c7a505b5e662f24d6347",
+  "sourceFingerprint": "4f0474a5f62d4fcf520df19777dfae412bcc30a3688fb116097dd50281843bbd",
+  "indexSha256": "a004408d0c515fc155cbcddd9f5a5f9227d6b9d0d478bdf1585c4b2521ff98cf",
+  "backendVersion": 13,
+  "focusedChecks": [
+    "live-project-and-pack-persistence",
+    "live-mobile-emulation-and-privacy"
+  ],
+  "reusedPassingRun": 45523329135,
+  "applicationCorrection": "Production handler now preserves completedAt on unchanged saves, prevents duplicate completion events/reward attempts, and allows actual edited re-completion. The strict timestamp assertion is retained. Original failed evidence is preserved."
 }
