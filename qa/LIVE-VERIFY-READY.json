@@ -6,7 +6,7 @@
   "backendVersion": 13,
   "reusedPassingRun": 45523329135,
   "applicationCorrection": "Production handler now preserves completedAt on unchanged saves, prevents duplicate completion events/reward attempts, and allows actual edited re-completion. The strict timestamp assertion is retained. Original failed evidence is preserved.",
-  "testSuite": "Actual public app + isolated intercepted survey transport + read-only anonymous API denial",
+  "testSuite": "Focused actual Chromium200%/400% scroll and keyboard reachability through all five questions and optional story. No submission.",
   "productionDatabaseWrites": false,
   "requiresRealVisitorSessionForPrivateReads": true,
   "ownerRequestedAt": "2026-11-24 America/New_York",
@@ -23,5 +23,6 @@
     "chromiumOriginalFailure": "Immediate assertion ran before requestAnimationFrame focus restoration; rerun awaits actual focus up to2.5sec without changing the requirement or product."
   },
   "chromiumPriorRun": 45533493613,
-  "runnerCorrection": "Allow IEEE floating-point rounding in verified chrome.tabs.getZoom(4) =3.9999999999999996; always restore zoom in finally. Original expected factor and strict layout assertions retained. No product change."
+  "runnerCorrection": "Allow IEEE floating-point rounding in verified chrome.tabs.getZoom(4) =3.9999999999999996; always restore zoom in finally. Original expected factor and strict layout assertions retained. No product change.",
+  "reuseChromiumEvidence": 45533869158
 }
