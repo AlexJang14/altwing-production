@@ -1,7 +1,7 @@
 {
-  "checked_at": "2026-11-24T06:17:44Z",
+  "checked_at": "2026-11-25T01:08:28Z",
   "schema_version": 1,
-  "snapshot_id": "abeeea53dfa0d1018d32abf5f33b4f8d3360cd77bbead3a641094e93f2676fd7",
+  "snapshot_id": "befd15bd3b2550d79b4308010a374634c6aff630a478807c7b0c840c6f272bb8",
   "sources": {
     "college-scorecard": {
       "last_sample_verified_at": "2026-11-24T01:10:41Z",
@@ -9,16 +9,16 @@
       "status": "sample_verified_refresh_disabled"
     },
     "nasa-official-feed": {
-      "content_sha256": "b0548cb14c652e3018e820c915a01afc00519a4dc673eb01c2157cc1a4ee1aa3",
-      "last_attempt_at": "2026-11-24T02:10:10Z",
-      "last_success_at": "2026-11-24T02:10:10Z",
+      "content_sha256": "21e31a236a02d74adb834108354bc18fc68347478db980862323e0fe51f2b0d9",
+      "last_attempt_at": "2026-11-25T01:08:28Z",
+      "last_success_at": "2026-11-25T01:08:28Z",
       "record_id": null,
       "status": "ok"
     },
     "nasa-stem-gateway-public": {
-      "content_sha256": "cb5295579cd9b70a6ca45fa4754ea0733eeb3890ba8e18aa2e3dd5bb8d9e40e0",
-      "last_attempt_at": "2026-11-24T02:10:10Z",
-      "last_success_at": "2026-11-24T02:10:10Z",
+      "content_sha256": "886f52df28645bc9940023729a84017a3baec7db6bcb9f2d073262cc9a51a7ab",
+      "last_attempt_at": "2026-11-25T01:08:28Z",
+      "last_success_at": "2026-11-25T01:08:28Z",
       "record_id": "opportunity:nasa-stem-gateway",
       "status": "ok"
     },

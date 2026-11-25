@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-24T06:22:01Z",
-  "previous_snapshot_id": "7383f24062a3ed4cdf6b55a7ad7d26845dabdfbd78bd01bb8166acd4ad2b8bb4",
+  "generated_at": "2026-11-25T01:08:28Z",
+  "previous_snapshot_id": "abeeea53dfa0d1018d32abf5f33b4f8d3360cd77bbead3a641094e93f2676fd7",
   "records": [
     {
       "display": {},
@@ -51216,19 +51216,19 @@
             "url": "https://www.nasa.gov/stem-content/nasa-stem-gateway/"
           },
           {
-            "content_sha256": "cb5295579cd9b70a6ca45fa4754ea0733eeb3890ba8e18aa2e3dd5bb8d9e40e0",
+            "content_sha256": "886f52df28645bc9940023729a84017a3baec7db6bcb9f2d073262cc9a51a7ab",
             "field": "name",
-            "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
-            "observed_at": "2026-11-24T06:09:53Z",
-            "source_id": "opportunity-nasa-stem-gateway",
+            "method": "html",
+            "observed_at": "2026-11-25T01:08:28Z",
+            "source_id": "nasa-stem-gateway-public",
             "url": "https://www.nasa.gov/stem-content/nasa-stem-gateway/"
           },
           {
-            "content_sha256": "cb5295579cd9b70a6ca45fa4754ea0733eeb3890ba8e18aa2e3dd5bb8d9e40e0",
+            "content_sha256": "886f52df28645bc9940023729a84017a3baec7db6bcb9f2d073262cc9a51a7ab",
             "field": "organization",
-            "method": "direct HTTPS GET; response-body SHA-256; human review of parsed official program text",
-            "observed_at": "2026-11-24T06:09:53Z",
-            "source_id": "opportunity-nasa-stem-gateway",
+            "method": "html",
+            "observed_at": "2026-11-25T01:08:28Z",
+            "source_id": "nasa-stem-gateway-public",
             "url": "https://www.nasa.gov/stem-content/nasa-stem-gateway/"
           },
           {
@@ -51248,7 +51248,7 @@
             "url": "https://www.nasa.gov/stem-content/nasa-stem-gateway/"
           }
         ],
-        "last_verified_at": "2026-11-24T06:17:44Z",
+        "last_verified_at": "2026-11-25T01:08:28Z",
         "status": "partially_verified",
         "verified_fields": [
           "application_url",
@@ -55224,5 +55224,5 @@
     }
   ],
   "schema_version": 1,
-  "snapshot_id": "abeeea53dfa0d1018d32abf5f33b4f8d3360cd77bbead3a641094e93f2676fd7"
+  "snapshot_id": "befd15bd3b2550d79b4308010a374634c6aff630a478807c7b0c840c6f272bb8"
 }
