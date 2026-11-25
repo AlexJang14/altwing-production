@@ -1,10 +1,10 @@
 {
-  "checked_at": "2026-11-25T01:12:16Z",
+  "checked_at": "2026-11-25T20:08:20Z",
   "schema_version": 1,
   "snapshot_id": "befd15bd3b2550d79b4308010a374634c6aff630a478807c7b0c840c6f272bb8",
   "sources": {
     "bls-engineering": {
-      "last_link_check_at": "2026-11-25T01:12:16Z",
+      "last_link_check_at": "2026-11-25T20:08:20Z",
       "link_failure": null,
       "link_status": 200,
       "record_id": null,
@@ -18,7 +18,7 @@
     "nasa-official-feed": {
       "content_sha256": "21e31a236a02d74adb834108354bc18fc68347478db980862323e0fe51f2b0d9",
       "last_attempt_at": "2026-11-25T01:08:28Z",
-      "last_link_check_at": "2026-11-25T01:12:16Z",
+      "last_link_check_at": "2026-11-25T20:08:20Z",
       "last_success_at": "2026-11-25T01:08:28Z",
       "link_failure": null,
       "link_status": 200,
@@ -28,7 +28,7 @@
     "nasa-stem-gateway-public": {
       "content_sha256": "886f52df28645bc9940023729a84017a3baec7db6bcb9f2d073262cc9a51a7ab",
       "last_attempt_at": "2026-11-25T01:08:28Z",
-      "last_link_check_at": "2026-11-25T01:12:16Z",
+      "last_link_check_at": "2026-11-25T20:08:20Z",
       "last_success_at": "2026-11-25T01:08:28Z",
       "link_failure": null,
       "link_status": 200,
