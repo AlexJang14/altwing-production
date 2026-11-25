@@ -15,7 +15,7 @@
     "db:generate": "drizzle-kit generate",
     "guidance:freshness": "node scripts/check-guidance-freshness.mjs",
     "guidance:balance": "python3 scripts/check-engineering-match-balance.py",
-    "test:submission": "node scripts/check-submission.mjs",
+    "test:submission": "node scripts/check-submission.mjs && npm run test:project-completion",
     "data:scorecard-probe": "node scripts/scorecard-api.mjs --probe",
     "data:scorecard-api": "node scripts/scorecard-api.mjs",
     "test:analytics": "node scripts/check-analytics.mjs",
@@ -51,7 +51,8 @@
     "content:validate": "python3 -B scripts/content-intelligence.py validate",
     "test:content": "python3 -B -m unittest discover -s scripts/content_intelligence -p \"test_*.py\" -v",
     "test:content:ui": "node scripts/check-content-ui.mjs",
-    "test:content:workflows": "node scripts/check-content-workflows.mjs"
+    "test:content:workflows": "node scripts/check-content-workflows.mjs",
+    "test:project-completion": "node scripts/check-project-completion.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",
