@@ -1,0 +1,66 @@
+name: AltWing automated operations QA
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/check-operations-smoke.mjs'
+      - '.github/workflows/operations-smoke.yml'
+  workflow_dispatch:
+  schedule:
+    - cron: '13 11 * * *'
+    - cron: '17 12 * * 1'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: altwing-operations-qa-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  production-read-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Probe actual public site and anonymous private gate; no writes
+        run: node scripts/check-operations-smoke.mjs
+      - name: Preserve check results even on failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: altwing-read-only-operations-report
+          path: .sites-runtime/operations-smoke/report.json
+          retention-days: 30
+          if-no-files-found: warn
+
+  isolated-regression:
+    if: github.event_name != 'schedule' || github.event.schedule == '17 12 * * 1'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+      - name: Run isolated two-account and unauthorized identity guards
+        run: npm run test:admin-access
+      - name: Run isolated survey and impact handler checks
+        run: npm run test:research-assessment
+      - name: Run project completion and reward regression checks
+        run: npm run test:project-completion
+      - name: Verify full release invariants without publishing
+        run: npm run verify:release
+      - name: Preserve release evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: altwing-operations-regression-report
+          path: .sites-runtime/migration-validation/
+          retention-days: 30
+          if-no-files-found: warn
