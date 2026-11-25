@@ -1,0 +1,8 @@
+{
+  "origin": "https://altwing.org",
+  "commit": "eeccd2da467c243b614c7f3e8f6af87203aafb45",
+  "sourceFingerprint": "9ac38bc651421859dd21b296725c84f29562e70880254afdf9e717db63525e66",
+  "indexSha256": "8a460d87b370510d3206540774fd80dd316a20d95b64c59bd27137c0472e7ead",
+  "backendVersion": 12,
+  "scope": "Focused live verification only; no synthetic production survey/event writes. Original24PASS and7UNVERIFIED manual deferrals preserved."
+}

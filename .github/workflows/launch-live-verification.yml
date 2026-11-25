@@ -1,0 +1,35 @@
+name: AltWing actual production browser verification
+on:
+  push:
+    branches: [qa/golden-horizon-corrective-20261124]
+    paths: [qa/LIVE-VERIFY-READY.json]
+permissions:
+  contents: read
+jobs:
+  live-browser:
+    if: github.ref == 'refs/heads/qa/golden-horizon-corrective-20261124'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: qa/AltWing-Browser-QA/package-lock.json
+      - name: Install existing pinned browser-test dependencies
+        run: npm ci --prefix qa/AltWing-Browser-QA --ignore-scripts --no-audit --no-fund
+      - name: Install Chromium and Firefox
+        run: node qa/AltWing-Browser-QA/node_modules/playwright/cli.js install --with-deps chromium firefox
+      - name: Verify actual deployed site with metrics opted out
+        run: node qa/run-live-verification.mjs
+      - name: Upload actual screenshots, requests and results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: AltWing-Actual-Live-Verification-${{ github.run_id }}
+          path: qa/live-verification-results/
+          if-no-files-found: error
+          retention-days: 14
