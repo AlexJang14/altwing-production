@@ -1,0 +1,1086 @@
+{
+  "recordedAtUTC": "2026-11-25T02:42:39.278098+00:00",
+  "noProductionChanges": true,
+  "productionRecordsWritten": 0,
+  "privateDataRowsCopied": 0,
+  "actualAdminSessionAvailable": false,
+  "reportedCurrentDashboard": {
+    "evidenceType": "Owner-reported",
+    "dashboardAccessible": true,
+    "impactV3Renders": true,
+    "notProofOf": [
+      "both accounts on all new endpoints",
+      "counts correctness",
+      "new response persistence"
+    ]
+  },
+  "previousAcceptance": {
+    "PASS": 24,
+    "FAIL": 0,
+    "UNVERIFIED": [
+      "M01",
+      "M02",
+      "M03",
+      "M04",
+      "A03",
+      "A04",
+      "I02"
+    ],
+    "evidencePreserved": true
+  },
+  "currentBrowserRun": {
+    "id": 45533869158,
+    "url": "https://github.com/AlexJang14/altwing-production/actions/runs/45533869158",
+    "status": "SUCCESS \u2014 actual Chromium UI and intercepted transport",
+    "qaCommit": "3703a88552dfe175ff95657528e50a2fdd2f6f2c"
+  },
+  "remainingPrivateVerification": {
+    "I02": "Genuinely unlisted account must use actual top-level ChatGPT login and try protected report/stories/export URLs. Anonymous requests and isolated identities do not satisfy this.",
+    "L03": "No safely excluded production QA record exists. Use a genuine voluntary response or inspect an already-received genuine row in an authorized report/export. No invented response or testimonial.",
+    "L05": "Current owner dashboard observation recorded. New response retrieval/counts need actual authorized visitor session.",
+    "L02": "Cloudflare Visits and new consented transmission remain unverified. Prior owner page-view receipt preserved."
+  },
+  "testHarnessCorrections": [
+    {
+      "run": 45532981985,
+      "status": "FAIL \u2014 raw evidence preserved",
+      "finding": "Chromium checked focus synchronously before application requestAnimationFrame. Awaiting actual restoration passed in45533493613; no product change.",
+      "firefoxChecks": "9 PASS",
+      "anonymousEndpoints": "13 PASS"
+    },
+    {
+      "run": 45533493613,
+      "status": "FAIL \u2014 raw evidence preserved",
+      "finding": "getZoom(4) returned3.9999999999999996. Exact floating-point assertion failed and skipped zoom reset, leaving subsequent form interactions at400%. Corrected precision tolerance and unconditional reset; product source unchanged.",
+      "chromiumChecksCompletedBeforeStop": 4,
+      "newZoomStatus": "Pending actual400% layout check;200% measurements passed"
+    }
+  ],
+  "runtime": {
+    "backendVersion": 13,
+    "environmentRevision": 5,
+    "adminSecretsConfigured": [
+      "ANALYTICS_ADMIN_EMAIL",
+      "ANALYTICS_ADDITIONAL_ADMIN_EMAILS"
+    ],
+    "secretValuesReadOrChanged": false,
+    "tableCount": 12,
+    "noPrivateRowsRead": true
+  },
+  "productionAssessmentAggregate": {
+    "source": "Read-only Sites owner database inspection; not an authenticated administrator API session",
+    "table": "impact_assessments",
+    "rowsReturned": 0,
+    "hasMore": false,
+    "projection": {
+      "truncated": false,
+      "truncated_values": 0,
+      "omitted_columns": 0,
+      "omitted_rows": 0,
+      "next_offset": null
+    },
+    "submittedRowsInPage": 0,
+    "submittedVersionsInPage": {},
+    "completeTableCountSupported": true,
+    "privateRowsOrValuesStored": false,
+    "reportApiRetrievalVerified": false,
+    "respondentGenuinenessNotInferred": true
+  },
+  "currentReadOnlyState": {
+    "main": {
+      "sha": "e7e0bb357b04f83154a455e2a51d7fe0434d8ca9",
+      "tree": "76e8cb1494b5d47eec7d5731a70e5f85a1b1141b"
+    },
+    "qa": {
+      "sha": "ae506e822f21bb6f16766b3d815137151c2d9436",
+      "tree": "6e6ccbcdb369d452b2ea087d23a3fb0714338856"
+    },
+    "sinceReviewedFrontend": {
+      "status": "ahead",
+      "files": [
+        ".github/workflows/operations-smoke.yml",
+        "scripts/check-operations-smoke.mjs"
+      ]
+    },
+    "liveIndexSha256": "a004408d0c515fc155cbcddd9f5a5f9227d6b9d0d478bdf1585c4b2521ff98cf",
+    "matchesReviewedIndex": true
+  },
+  "browserResults": {
+    "firefox": {
+      "run": 45532981985,
+      "status": "PASS for9 recorded UI checks; overall historical job FAIL because Chromium harness timing",
+      "browser": "153.0",
+      "artifact": 14986020177,
+      "sha256": "cfcbea1217e1f02a67e045528c4243f9148e51a05dc6889d9efe207fe6f96098"
+    },
+    "chromium": {
+      "run": 45533869158,
+      "status": "PASS",
+      "browser": "151.0.7922.34",
+      "artifact": 14985778648,
+      "sha256": "7e26d89b87caa13644db6ae71a0d57160a2082ab635994ec624b5985d05facdc",
+      "checks": 9,
+      "actualZoom200And400": "PASS \u2014 measured real browser tab zoom; all questions/story/actions separately passed in45534512699"
+    },
+    "anonymous": {
+      "run": 45532981985,
+      "checks": 13,
+      "status": "PASS"
+    },
+    "actualZoomFullForm": {
+      "run": 45534512699,
+      "status": "PASS",
+      "artifact": 14987095793,
+      "sha256": "d04481949a92cc3332554d45551aaf6cc94c7b9854bf26454c0301a8e38e66b4",
+      "method": "Actual chrome.tabs.setZoom, getZoom, innerWidth/devicePixelRatio, native viewport screenshots, keyboard interaction and scroll reachability",
+      "questionsTestedAtEachZoom": 5,
+      "storyTestedAtEachZoom": true,
+      "productionSubmissionPerformed": false
+    }
+  },
+  "newApplicationFailuresConfirmed": 0,
+  "surveyProductionWrite": "BLOCKED: no supported QA exclusion or cleanup. Production impact_assessments currently0 rows.",
+  "status": "AUTOMATABLE SCOPE PASS; real production survey QA BLOCKED; real identity, physical device and recovery scopes remain UNVERIFIED",
+  "actualBrowserChecks": {
+    "firefox": {
+      "browserVersion": "153.0",
+      "checks": [
+        {
+          "id": "wingmatch-eight-to-automatic-assessment",
+          "caseIds": [
+            "D02"
+          ],
+          "status": "PASS",
+          "detail": {
+            "decisions": [
+              {
+                "scenario": 1,
+                "choices": 4,
+                "selected": 0
+              },
+              {
+                "scenario": 2,
+                "choices": 4,
+                "selected": 1
+              },
+              {
+                "scenario": 3,
+                "choices": 4,
+                "selected": 2
+              },
+              {
+                "scenario": 4,
+                "choices": 4,
+                "selected": 3
+              },
+              {
+                "scenario": 5,
+                "choices": 4,
+                "selected": 0
+              },
+              {
+                "scenario": 6,
+                "choices": 4,
+                "selected": 1
+              },
+              {
+                "scenario": 7,
+                "choices": 4,
+                "selected": 2
+              },
+              {
+                "scenario": 8,
+                "choices": 4,
+                "selected": 3
+              }
+            ],
+            "celebrationMs": 86,
+            "firstQuestionMs": 2599,
+            "automatic": true,
+            "rankedFields": 14,
+            "productionEventsSent": 0,
+            "videoDirectory": "videos/"
+          },
+          "screenshot": "firefox-wingmatch-eight-to-automatic-assessment.jpg"
+        },
+        {
+          "id": "keyboard-focus-and-named-radios",
+          "caseIds": [
+            "A01",
+            "A02"
+          ],
+          "status": "PASS",
+          "detail": {
+            "dialogNamed": true,
+            "nativeRadioKeyboard": true,
+            "focusContained": true,
+            "escapeClosed": true,
+            "focusReturnedToInvitation": true
+          },
+          "screenshot": "firefox-keyboard-focus-and-named-radios.jpg"
+        },
+        {
+          "id": "mobile-rotation-dialog-reflow",
+          "caseIds": [
+            "M01 (automated viewport portion)"
+          ],
+          "status": "PASS",
+          "detail": {
+            "physicalPhone": false,
+            "softwareKeyboard": false,
+            "measurements": [
+              {
+                "close": {
+                  "x": 253,
+                  "y": 23,
+                  "width": 44,
+                  "height": 44
+                },
+                "viewport": {
+                  "width": 320,
+                  "height": 640,
+                  "doc": 320
+                }
+              },
+              {
+                "close": {
+                  "x": 323,
+                  "y": 45.66666793823242,
+                  "width": 44,
+                  "height": 44.000003814697266
+                },
+                "viewport": {
+                  "width": 390,
+                  "height": 844,
+                  "doc": 390
+                }
+              },
+              {
+                "close": {
+                  "x": 683,
+                  "y": 169.6666717529297,
+                  "width": 44,
+                  "height": 44
+                },
+                "viewport": {
+                  "width": 768,
+                  "height": 1024,
+                  "doc": 768
+                }
+              },
+              {
+                "close": {
+                  "x": 759,
+                  "y": 31.600000381469727,
+                  "width": 44,
+                  "height": 43.99999809265137
+                },
+                "viewport": {
+                  "width": 844,
+                  "height": 390,
+                  "doc": 844
+                }
+              },
+              {
+                "close": {
+                  "x": 253,
+                  "y": 23,
+                  "width": 44,
+                  "height": 44
+                },
+                "viewport": {
+                  "width": 320,
+                  "height": 568,
+                  "doc": 320
+                }
+              }
+            ]
+          },
+          "screenshot": "firefox-mobile-rotation-dialog-reflow.jpg"
+        },
+        {
+          "id": "question-accessibility",
+          "caseIds": [
+            "A06 (automated portion)"
+          ],
+          "status": "PASS",
+          "detail": {
+            "axe": {
+              "passes": 19,
+              "violations": 0,
+              "incomplete": [
+                "color-contrast"
+              ]
+            },
+            "privacy": {
+              "name": "Privacy details",
+              "decoration": "underline"
+            }
+          },
+          "screenshot": "firefox-question-accessibility.jpg"
+        },
+        {
+          "id": "five-question-validation-and-optional-story",
+          "caseIds": [
+            "D04",
+            "D05",
+            "D07"
+          ],
+          "status": "PASS",
+          "detail": {
+            "questions": [
+              "Before today, how many chances did you have to try an engineering activity like this one?",
+              "How often did you think about the pros and cons of your options before making a choice?",
+              "How much did your choices help you learn what engineering work you might enjoy or dislike?",
+              "Compared with before this activity, how interested are you in exploring engineering outside your schoolwork?",
+              "How clear are you about one activity you could try next to explore engineering?"
+            ],
+            "fiveRequired": true,
+            "backPreservesAndEdits": true,
+            "blankStoryAllowed": true,
+            "noMandatoryConsentCheckbox": true,
+            "quoteHiddenWhenBlank": true,
+            "quoteOptionalAndResets": true,
+            "wordLimitEnforced": true
+          },
+          "screenshot": "firefox-five-question-validation-and-optional-story.jpg"
+        },
+        {
+          "id": "story-mobile-keyboard-accessibility",
+          "caseIds": [
+            "M01 (story viewport portion)",
+            "A01",
+            "A06 (automated portion)"
+          ],
+          "status": "PASS",
+          "detail": {
+            "views": [
+              {
+                "close": {
+                  "x": 253,
+                  "y": 23,
+                  "width": 44,
+                  "height": 44
+                },
+                "viewport": {
+                  "width": 320,
+                  "height": 640,
+                  "doc": 320
+                }
+              },
+              {
+                "close": {
+                  "x": 759,
+                  "y": 31.600000381469727,
+                  "width": 44,
+                  "height": 43.99999809265137
+                },
+                "viewport": {
+                  "width": 844,
+                  "height": 390,
+                  "doc": 844
+                }
+              },
+              {
+                "close": {
+                  "x": 323,
+                  "y": 23,
+                  "width": 44,
+                  "height": 44
+                },
+                "viewport": {
+                  "width": 390,
+                  "height": 844,
+                  "doc": 390
+                }
+              }
+            ],
+            "axe": {
+              "passes": 21,
+              "violations": 0,
+              "incomplete": [
+                "color-contrast"
+              ]
+            },
+            "focusContained": true,
+            "realSoftKeyboard": false
+          },
+          "screenshot": "firefox-story-mobile-keyboard-accessibility.jpg"
+        },
+        {
+          "id": "isolated-submission-error-loading-and-duplicate-guard",
+          "caseIds": [
+            "D06 (intercepted transport only)"
+          ],
+          "status": "PASS",
+          "detail": {
+            "networkIntercepted": true,
+            "productionStored": false,
+            "immediateLoading": true,
+            "duplicateClicksOneRequest": true,
+            "understandableError": true,
+            "answersRetained": true,
+            "axe": {
+              "passes": 21,
+              "violations": 0,
+              "incomplete": [
+                "color-contrast"
+              ]
+            }
+          },
+          "screenshot": "firefox-isolated-submission-error-loading-and-duplicate-guard.jpg"
+        },
+        {
+          "id": "isolated-submission-success-and-refresh",
+          "caseIds": [
+            "D06 (intercepted success only)",
+            "D03",
+            "D08"
+          ],
+          "status": "PASS",
+          "detail": {
+            "serverResponse": "INTERCEPTED202 \u2014 not a production receipt",
+            "productionStored": false,
+            "localSubmittedSuppression": true,
+            "blankStory": true,
+            "quotePermission": false,
+            "rewardsAndResultsPreserved": true,
+            "refreshNoReopen": true,
+            "axe": {
+              "passes": 16,
+              "violations": 0,
+              "incomplete": [
+                "color-contrast"
+              ]
+            }
+          },
+          "screenshot": "firefox-isolated-submission-success-and-refresh.jpg"
+        },
+        {
+          "id": "read-only-network-and-console",
+          "caseIds": [
+            "D01",
+            "L07 (statistics-off portion)"
+          ],
+          "status": "PASS",
+          "detail": {
+            "statisticsOff": true,
+            "DNT": 1,
+            "GPC": true,
+            "unexpectedRequests": 0,
+            "pageErrors": 0,
+            "unplannedResourceFailures": 0,
+            "expectedIsolated503ConsoleEntries": 0,
+            "productionPosts": 0
+          },
+          "screenshot": "firefox-read-only-network-and-console.jpg"
+        }
+      ],
+      "unexpectedRequests": 0,
+      "pageErrors": [],
+      "axeUnresolvedRule": "color-contrast reported incomplete; no new blanket accessibility/contrast pass inferred",
+      "productionPosts": 0
+    },
+    "chromium": {
+      "browserVersion": "151.0.7922.34",
+      "checks": [
+        {
+          "id": "wingmatch-eight-to-automatic-assessment",
+          "caseIds": [
+            "D02"
+          ],
+          "status": "PASS",
+          "detail": {
+            "decisions": [
+              {
+                "scenario": 1,
+                "choices": 4,
+                "selected": 0
+              },
+              {
+                "scenario": 2,
+                "choices": 4,
+                "selected": 1
+              },
+              {
+                "scenario": 3,
+                "choices": 4,
+                "selected": 2
+              },
+              {
+                "scenario": 4,
+                "choices": 4,
+                "selected": 3
+              },
+              {
+                "scenario": 5,
+                "choices": 4,
+                "selected": 0
+              },
+              {
+                "scenario": 6,
+                "choices": 4,
+                "selected": 1
+              },
+              {
+                "scenario": 7,
+                "choices": 4,
+                "selected": 2
+              },
+              {
+                "scenario": 8,
+                "choices": 4,
+                "selected": 3
+              }
+            ],
+            "celebrationMs": 65,
+            "firstQuestionMs": 2584,
+            "automatic": true,
+            "rankedFields": 14,
+            "productionEventsSent": 0,
+            "videoDirectory": "videos/"
+          },
+          "screenshot": "chromium-wingmatch-eight-to-automatic-assessment.jpg"
+        },
+        {
+          "id": "keyboard-focus-and-named-radios",
+          "caseIds": [
+            "A01",
+            "A02"
+          ],
+          "status": "PASS",
+          "detail": {
+            "dialogNamed": true,
+            "nativeRadioKeyboard": true,
+            "focusContained": true,
+            "escapeClosed": true,
+            "focusReturnedToInvitation": true
+          },
+          "screenshot": "chromium-keyboard-focus-and-named-radios.jpg"
+        },
+        {
+          "id": "mobile-rotation-dialog-reflow",
+          "caseIds": [
+            "M01 (automated viewport portion)"
+          ],
+          "status": "PASS",
+          "detail": {
+            "physicalPhone": false,
+            "softwareKeyboard": false,
+            "measurements": [
+              {
+                "close": {
+                  "x": 253,
+                  "y": 23,
+                  "width": 44,
+                  "height": 44
+                },
+                "viewport": {
+                  "width": 320,
+                  "height": 640,
+                  "doc": 320
+                }
+              },
+              {
+                "close": {
+                  "x": 323,
+                  "y": 45.6875,
+                  "width": 44,
+                  "height": 44
+                },
+                "viewport": {
+                  "width": 390,
+                  "height": 844,
+                  "doc": 390
+                }
+              },
+              {
+                "close": {
+                  "x": 683,
+                  "y": 155.703125,
+                  "width": 44,
+                  "height": 44
+                },
+                "viewport": {
+                  "width": 768,
+                  "height": 1024,
+                  "doc": 768
+                }
+              },
+              {
+                "close": {
+                  "x": 759,
+                  "y": 31.609375,
+                  "width": 44,
+                  "height": 44
+                },
+                "viewport": {
+                  "width": 844,
+                  "height": 390,
+                  "doc": 844
+                }
+              },
+              {
+                "close": {
+                  "x": 253,
+                  "y": 23,
+                  "width": 44,
+                  "height": 44
+                },
+                "viewport": {
+                  "width": 320,
+                  "height": 568,
+                  "doc": 320
+                }
+              }
+            ]
+          },
+          "screenshot": "chromium-mobile-rotation-dialog-reflow.jpg"
+        },
+        {
+          "id": "question-accessibility",
+          "caseIds": [
+            "A06 (automated portion)"
+          ],
+          "status": "PASS",
+          "detail": {
+            "axe": {
+              "passes": 19,
+              "violations": 0,
+              "incomplete": [
+                "color-contrast"
+              ]
+            },
+            "privacy": {
+              "name": "Privacy details",
+              "decoration": "underline"
+            }
+          },
+          "screenshot": "chromium-question-accessibility.jpg"
+        },
+        {
+          "id": "five-question-validation-and-optional-story",
+          "caseIds": [
+            "D04",
+            "D05",
+            "D07"
+          ],
+          "status": "PASS",
+          "detail": {
+            "questions": [
+              "Before today, how many chances did you have to try an engineering activity like this one?",
+              "How often did you think about the pros and cons of your options before making a choice?",
+              "How much did your choices help you learn what engineering work you might enjoy or dislike?",
+              "Compared with before this activity, how interested are you in exploring engineering outside your schoolwork?",
+              "How clear are you about one activity you could try next to explore engineering?"
+            ],
+            "fiveRequired": true,
+            "backPreservesAndEdits": true,
+            "blankStoryAllowed": true,
+            "noMandatoryConsentCheckbox": true,
+            "quoteHiddenWhenBlank": true,
+            "quoteOptionalAndResets": true,
+            "wordLimitEnforced": true
+          },
+          "screenshot": "chromium-five-question-validation-and-optional-story.jpg"
+        },
+        {
+          "id": "story-mobile-keyboard-accessibility",
+          "caseIds": [
+            "M01 (story viewport portion)",
+            "A01",
+            "A06 (automated portion)"
+          ],
+          "status": "PASS",
+          "detail": {
+            "views": [
+              {
+                "close": {
+                  "x": 253,
+                  "y": 23,
+                  "width": 44,
+                  "height": 44
+                },
+                "viewport": {
+                  "width": 320,
+                  "height": 640,
+                  "doc": 320
+                }
+              },
+              {
+                "close": {
+                  "x": 759,
+                  "y": 31.609375,
+                  "width": 44,
+                  "height": 44
+                },
+                "viewport": {
+                  "width": 844,
+                  "height": 390,
+                  "doc": 844
+                }
+              },
+              {
+                "close": {
+                  "x": 323,
+                  "y": 23,
+                  "width": 44,
+                  "height": 44
+                },
+                "viewport": {
+                  "width": 390,
+                  "height": 844,
+                  "doc": 390
+                }
+              }
+            ],
+            "axe": {
+              "passes": 21,
+              "violations": 0,
+              "incomplete": [
+                "color-contrast"
+              ]
+            },
+            "focusContained": true,
+            "realSoftKeyboard": false
+          },
+          "screenshot": "chromium-story-mobile-keyboard-accessibility.jpg"
+        },
+        {
+          "id": "isolated-submission-error-loading-and-duplicate-guard",
+          "caseIds": [
+            "D06 (intercepted transport only)"
+          ],
+          "status": "PASS",
+          "detail": {
+            "networkIntercepted": true,
+            "productionStored": false,
+            "immediateLoading": true,
+            "duplicateClicksOneRequest": true,
+            "understandableError": true,
+            "answersRetained": true,
+            "axe": {
+              "passes": 21,
+              "violations": 0,
+              "incomplete": [
+                "color-contrast"
+              ]
+            }
+          },
+          "screenshot": "chromium-isolated-submission-error-loading-and-duplicate-guard.jpg"
+        },
+        {
+          "id": "isolated-submission-success-and-refresh",
+          "caseIds": [
+            "D06 (intercepted success only)",
+            "D03",
+            "D08"
+          ],
+          "status": "PASS",
+          "detail": {
+            "serverResponse": "INTERCEPTED202 \u2014 not a production receipt",
+            "productionStored": false,
+            "localSubmittedSuppression": true,
+            "blankStory": true,
+            "quotePermission": false,
+            "rewardsAndResultsPreserved": true,
+            "refreshNoReopen": true,
+            "axe": {
+              "passes": 16,
+              "violations": 0,
+              "incomplete": [
+                "color-contrast"
+              ]
+            }
+          },
+          "screenshot": "chromium-isolated-submission-success-and-refresh.jpg"
+        },
+        {
+          "id": "read-only-network-and-console",
+          "caseIds": [
+            "D01",
+            "L07 (statistics-off portion)"
+          ],
+          "status": "PASS",
+          "detail": {
+            "statisticsOff": true,
+            "DNT": 1,
+            "GPC": true,
+            "unexpectedRequests": 0,
+            "pageErrors": 0,
+            "unplannedResourceFailures": 0,
+            "expectedIsolated503ConsoleEntries": 1,
+            "productionPosts": 0
+          },
+          "screenshot": "chromium-read-only-network-and-console.jpg"
+        }
+      ],
+      "unexpectedRequests": 0,
+      "pageErrors": [],
+      "axeUnresolvedRule": "color-contrast reported incomplete; no new blanket accessibility/contrast pass inferred",
+      "productionPosts": 0
+    }
+  },
+  "anonymousPrivateEndpoints": [
+    {
+      "path": "/admin",
+      "status": "PASS",
+      "httpStatus": 404,
+      "expected": 404,
+      "hasRedirect": false,
+      "cacheControl": "private, no-store",
+      "privateDataReturned": false,
+      "bodyStored": false
+    },
+    {
+      "path": "/admin/reports",
+      "status": "PASS",
+      "httpStatus": 404,
+      "expected": 404,
+      "hasRedirect": false,
+      "cacheControl": "private, no-store",
+      "privateDataReturned": false,
+      "bodyStored": false
+    },
+    {
+      "path": "/%61dmin",
+      "status": "PASS",
+      "httpStatus": 404,
+      "expected": 404,
+      "hasRedirect": false,
+      "cacheControl": "private, no-store",
+      "privateDataReturned": false,
+      "bodyStored": false
+    },
+    {
+      "path": "/admin?__rsc=acceptance",
+      "status": "PASS",
+      "httpStatus": 404,
+      "expected": 404,
+      "hasRedirect": false,
+      "cacheControl": "private, no-store",
+      "privateDataReturned": false,
+      "bodyStored": false
+    },
+    {
+      "path": "/api/analytics/report",
+      "status": "PASS",
+      "httpStatus": 401,
+      "expected": 401,
+      "hasRedirect": false,
+      "cacheControl": "private, no-store",
+      "privateDataReturned": false,
+      "bodyStored": false
+    },
+    {
+      "path": "/api/impact/report",
+      "status": "PASS",
+      "httpStatus": 401,
+      "expected": 401,
+      "hasRedirect": false,
+      "cacheControl": "private, no-store",
+      "privateDataReturned": false,
+      "bodyStored": false
+    },
+    {
+      "path": "/api/impact/export?kind=feedback",
+      "status": "PASS",
+      "httpStatus": 401,
+      "expected": 401,
+      "hasRedirect": false,
+      "cacheControl": "private, no-store",
+      "privateDataReturned": false,
+      "bodyStored": false
+    },
+    {
+      "path": "/api/impact/assessment-report?version=impact-v3",
+      "status": "PASS",
+      "httpStatus": 401,
+      "expected": 401,
+      "hasRedirect": false,
+      "cacheControl": "private, no-store",
+      "privateDataReturned": false,
+      "bodyStored": false
+    },
+    {
+      "path": "/api/impact/assessment-report?version=impact-v2",
+      "status": "PASS",
+      "httpStatus": 401,
+      "expected": 401,
+      "hasRedirect": false,
+      "cacheControl": "private, no-store",
+      "privateDataReturned": false,
+      "bodyStored": false
+    },
+    {
+      "path": "/api/impact/stories?version=impact-v3",
+      "status": "PASS",
+      "httpStatus": 401,
+      "expected": 401,
+      "hasRedirect": false,
+      "cacheControl": "private, no-store",
+      "privateDataReturned": false,
+      "bodyStored": false
+    },
+    {
+      "path": "/api/impact/assessment-export?version=impact-v3&kind=responses",
+      "status": "PASS",
+      "httpStatus": 401,
+      "expected": 401,
+      "hasRedirect": false,
+      "cacheControl": "private, no-store",
+      "privateDataReturned": false,
+      "bodyStored": false
+    },
+    {
+      "path": "/api/impact/assessment-export?version=impact-v3&kind=stories",
+      "status": "PASS",
+      "httpStatus": 401,
+      "expected": 401,
+      "hasRedirect": false,
+      "cacheControl": "private, no-store",
+      "privateDataReturned": false,
+      "bodyStored": false
+    },
+    {
+      "path": "/api/impact/assessment-export?version=impact-v3&kind=quotes",
+      "status": "PASS",
+      "httpStatus": 401,
+      "expected": 401,
+      "hasRedirect": false,
+      "cacheControl": "private, no-store",
+      "privateDataReturned": false,
+      "bodyStored": false
+    }
+  ],
+  "actualZoomChecks": [
+    {
+      "id": "A04-Chromium-200",
+      "status": "PASS",
+      "actualZoom": 2,
+      "questions": 5,
+      "storyAndControlsReachable": true,
+      "actualNativeScreenshotsVisuallyInspected": [
+        "chromium-actual-browser-zoom-200-viewport.jpg",
+        "chromium-actual-browser-zoom-400-viewport.jpg",
+        "zoom-400-story-controls.jpg"
+      ]
+    },
+    {
+      "id": "A04-Chromium-400",
+      "status": "PASS",
+      "actualZoom": 3.9999999999999996,
+      "questions": 5,
+      "storyAndControlsReachable": true,
+      "actualNativeScreenshotsVisuallyInspected": [
+        "chromium-actual-browser-zoom-200-viewport.jpg",
+        "chromium-actual-browser-zoom-400-viewport.jpg",
+        "zoom-400-story-controls.jpg"
+      ]
+    }
+  ],
+  "originalManualDeferralsStillUnverified": {
+    "M01-M04": "Physical phones/rotation/software keyboard/touch; automated viewport/browser persistence evidence supplements but does not replace this scope",
+    "A03": "Actual NVDA/VoiceOver; axe did not substitute for a screen reader",
+    "A04": "Chromium actual200/400% PASS. Firefox true zoom and mobile OS text size remain UNVERIFIED; original full case not promoted",
+    "I02": "Actual genuinely signed-in unlisted account not available; anonymous and synthetic handler checks do not replace this"
+  },
+  "humanActionsRemaining": [
+    {
+      "id": "I02 / L05",
+      "status": "UNVERIFIED",
+      "action": "A willing tester with a genuinely unlisted ChatGPT account signs in through https://altwing-engineering-pathways.theanna.chatgpt.site/admin/login, then tries /admin and the following direct URLs in that same profile. Record actual HTTP statuses/no private content; do not share credentials. Dashboard expected generic404; authenticated unlisted APIs expected403. If blocked upstream or sign-in cannot complete, record that limitation rather than claiming application denial.",
+      "urls": [
+        "https://altwing-engineering-pathways.theanna.chatgpt.site/api/impact/assessment-report?range=all&source=all&version=impact-v3",
+        "https://altwing-engineering-pathways.theanna.chatgpt.site/api/impact/stories?range=all&source=all&version=impact-v3",
+        "https://altwing-engineering-pathways.theanna.chatgpt.site/api/impact/assessment-export?range=all&source=all&version=impact-v3&kind=responses",
+        "https://altwing-engineering-pathways.theanna.chatgpt.site/api/impact/assessment-export?range=all&source=all&version=impact-v3&kind=stories",
+        "https://altwing-engineering-pathways.theanna.chatgpt.site/api/impact/assessment-export?range=all&source=all&version=impact-v3&kind=quotes",
+        "https://altwing-engineering-pathways.theanna.chatgpt.site/api/analytics/report",
+        "https://altwing-engineering-pathways.theanna.chatgpt.site/api/impact/report",
+        "https://altwing-engineering-pathways.theanna.chatgpt.site/api/impact/export?kind=feedback"
+      ]
+    },
+    {
+      "id": "L03 / L05",
+      "status": "BLOCKED for synthetic production QA; genuine evidence UNVERIFIED",
+      "action": "Observe the next genuine voluntary WingMatch response during normal use, using real answers rather than invented QA answers. Record the success receipt/time only. In the already-working administrator dashboard select matching version/source/period, match the response in the private CSV, and compare the report response count against that same filtered CSV. Quotation permission stays optional; do not send private answers or stories to this evidence register. No synthetic QA record is authorized until a supported exclusion/cleanup strategy exists. The DB currently contains0 impact_assessments rows. Ask the other administrator only for any new v3 endpoint check they have not already performed; preserve previous independent I01/I03 PASS."
+    },
+    {
+      "id": "L04",
+      "status": "UNVERIFIED \u2014 real behavioral ingestion",
+      "action": "During genuine, voluntarily statistics-enabled use, observe a recommended-field exploration and project start/completion; an authorized administrator compares matching cohort/daily metrics. Automated browser tests opted out and do not prove production ingestion."
+    },
+    {
+      "id": "L02 / L07 positive telemetry",
+      "status": "UNVERIFIED",
+      "action": "During one normal direct visit, in a browser whose user willingly permits statistics and whose existing privacy signals allow them, observe successful Cloudflare telemetry in Network. In your own Cloudflare Web Analytics account select altwing.org and the matching period/timezone; record actual Page views and Visits. Do not manufacture repeat traffic, infer verified unique students or expect an exact immediate+1."
+    },
+    {
+      "id": "M01-M04 / A03 / A04 residual",
+      "status": "UNVERIFIED \u2014 owner-approved post-launch deferral",
+      "action": "When completing the deferred device scope, use real phones to rotate Q1/story, open/dismiss the software keyboard, tap labels/Back/Continue/close, use the mobile menu and saved project/lab across refresh. Do not submit synthetic production responses. Use actual NVDA/Firefox (or Chrome) and VoiceOver/Safari for named modal, full questions, optional story/quotation/notice/error/receipt announcements. Check Firefox200/400% and mobile OS text size. Existing Chromium zoom and keyboard results need not be repeated."
+    }
+  ],
+  "recoveryReview": {
+    "status": "UNVERIFIED \u2014 owner-acknowledged limitation",
+    "supportedConnectorCapabilities": [
+      "Table inventory",
+      "Bounded row viewing (not used; could disclose private records)"
+    ],
+    "recoveryExportOrSQLToolsAvailable": false,
+    "timeTravelAndD1ExportApplicability": "Not established for this Site owner",
+    "sourceRollbackIsDataRollback": false,
+    "supportRequest": "Remains paused; not reinstated as launch prerequisite",
+    "siteTables": [
+      "analytics_events",
+      "impact_activity",
+      "impact_assessment_activity",
+      "impact_assessments",
+      "impact_behavior_activity",
+      "impact_behavior_daily",
+      "impact_daily",
+      "impact_meta",
+      "impact_replay",
+      "impact_sessions",
+      "impact_surveys",
+      "impact_totals"
+    ]
+  },
+  "cloudflareReview": {
+    "beacon": "src/features/analytics/cloudflareBeacon.ts",
+    "trackingPolicy": "src/features/analytics/trackingPolicy.ts",
+    "unchangedFromPreviouslyVerifiedCandidate": true,
+    "productionOrigin": "https://altwing.org",
+    "publicBeaconTokenMatchesSupplied": true,
+    "guards": [
+      "single module script",
+      "usage opt-out",
+      "DNT/GPC",
+      "private routes",
+      "unsafe query strings",
+      "post-load fetch/sendBeacon/XHR revocation"
+    ],
+    "freshProductionTransmission": "UNVERIFIED \u2014 no synthetic telemetry sent",
+    "existingPageViewEvidence": "Owner previously confirmed0 to1",
+    "officialModuleHead": {
+      "atUTC": "2026-11-25T02:31:56.760684+00:00",
+      "url": "https://static.cloudflareinsights.com/beacon.min.js",
+      "httpStatus": 200,
+      "contentType": "text/javascript;charset=UTF-8",
+      "telemetryPostPerformed": false
+    }
+  },
+  "evidencePreservation": {
+    "earlier24PassSevenDeferralsUnchanged": true,
+    "originalFailedRunsPreserved": [
+      45532981985,
+      45533493613
+    ],
+    "failedRunsAttributedInEvidenceNotErased": true,
+    "noFrontendBackendOrDBChange": true,
+    "noAdminOrAutomationSettingChange": true,
+    "noFakeProductionRecord": true,
+    "noRealPrivateDataIncluded": true
+  }
+}
