@@ -1,13 +1,14 @@
 {
   "origin": "https://altwing.org",
-  "commit": "f23651c0837d42941205c7a505b5e662f24d6347",
+  "commit": "e7e0bb357b04f83154a455e2a51d7fe0434d8ca9",
   "sourceFingerprint": "4f0474a5f62d4fcf520df19777dfae412bcc30a3688fb116097dd50281843bbd",
   "indexSha256": "a004408d0c515fc155cbcddd9f5a5f9227d6b9d0d478bdf1585c4b2521ff98cf",
   "backendVersion": 13,
-  "focusedChecks": [
-    "live-project-and-pack-persistence",
-    "live-mobile-emulation-and-privacy"
-  ],
   "reusedPassingRun": 45523329135,
-  "applicationCorrection": "Production handler now preserves completedAt on unchanged saves, prevents duplicate completion events/reward attempts, and allows actual edited re-completion. The strict timestamp assertion is retained. Original failed evidence is preserved."
+  "applicationCorrection": "Production handler now preserves completedAt on unchanged saves, prevents duplicate completion events/reward attempts, and allows actual edited re-completion. The strict timestamp assertion is retained. Original failed evidence is preserved.",
+  "testSuite": "Actual public app + isolated intercepted survey transport + read-only anonymous API denial",
+  "productionDatabaseWrites": false,
+  "requiresRealVisitorSessionForPrivateReads": true,
+  "ownerRequestedAt": "2026-11-24 America/New_York",
+  "previousReviewedFrontend": "f23651c0837d42941205c7a505b5e662f24d6347"
 }

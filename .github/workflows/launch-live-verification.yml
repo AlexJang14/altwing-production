@@ -27,7 +27,7 @@ jobs:
         env:
           ALTWING_CONTENT_AUTOMATION_ENABLED: ${{ vars.ALTWING_CONTENT_AUTOMATION_ENABLED }}
           ALTWING_CONTENT_PUBLISH_ENABLED: ${{ vars.ALTWING_CONTENT_PUBLISH_ENABLED }}
-        run: node qa/run-live-verification.mjs
+        run: node qa/run-production-acceptance.mjs
       - name: Upload actual screenshots, requests and results
         if: always()
         uses: actions/upload-artifact@v4
