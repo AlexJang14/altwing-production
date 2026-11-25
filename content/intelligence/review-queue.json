@@ -1,5 +1,17 @@
 {
-  "base_snapshot_id": "abeeea53dfa0d1018d32abf5f33b4f8d3360cd77bbead3a641094e93f2676fd7",
-  "items": [],
+  "base_snapshot_id": "befd15bd3b2550d79b4308010a374634c6aff630a478807c7b0c840c6f272bb8",
+  "items": [
+    {
+      "decision": "pending",
+      "item_hash": "bd2ae694ce1b1b0e9c60f7ac944229b46ffebe88b25a37a01b6319c7b4ac6b6f",
+      "payload": {
+        "content_sha256": null,
+        "source_id": "nasa-stem-gateway-public",
+        "source_url": "https://www.nasa.gov/stem-content/nasa-stem-gateway/"
+      },
+      "reason": "Public page observed/changed, but no approved field-level extractor; no fact refresh inferred.",
+      "type": "source_page_changed"
+    }
+  ],
   "schema_version": 1
 }
