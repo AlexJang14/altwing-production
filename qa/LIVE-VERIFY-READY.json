@@ -21,5 +21,7 @@
     "artifact": 14986020177,
     "digest": "sha256:cfcbea1217e1f02a67e045528c4243f9148e51a05dc6889d9efe207fe6f96098",
     "chromiumOriginalFailure": "Immediate assertion ran before requestAnimationFrame focus restoration; rerun awaits actual focus up to2.5sec without changing the requirement or product."
-  }
+  },
+  "chromiumPriorRun": 45533493613,
+  "runnerCorrection": "Allow IEEE floating-point rounding in verified chrome.tabs.getZoom(4) =3.9999999999999996; always restore zoom in finally. Original expected factor and strict layout assertions retained. No product change."
 }
