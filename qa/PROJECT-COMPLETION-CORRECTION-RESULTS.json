@@ -1,0 +1,248 @@
+{
+  "recordedAtUTC": "2026-11-25T01:38:29.445009+00:00",
+  "status": "DEPLOYED \u2014 PROJECT CORRECTION VERIFIED",
+  "website": "https://altwing.org",
+  "frontendCommit": "f23651c0837d42941205c7a505b5e662f24d6347",
+  "frontendWorkflow": 45525726315,
+  "frontendWorkflowStatus": "success",
+  "backendVersion": 13,
+  "backendSourceCommit": "9ab69e5ecf0983461e113490310b0f9424ebf396",
+  "backendDeploymentId": "appgdep_6b063906acb4819188f0d4812cf120ea",
+  "backendDeploymentStatus": "succeeded",
+  "sourceFingerprint": "4f0474a5f62d4fcf520df19777dfae412bcc30a3688fb116097dd50281843bbd",
+  "baseProductionCommit": "ae165b0491407e6161a82d994ca42ae192659300",
+  "changedFiles": [
+    "src/features/projects/Projects.tsx",
+    "scripts/check-project-completion.mjs",
+    "package.json"
+  ],
+  "rootCause": "The stage5 save handler unconditionally assigned a new completedAt and emitted both completion events on every click. That changed assessment context and repeated reward attempts.",
+  "fix": "Use the synchronous current draft, return before writes/events/rewards for an existing completion, invalidate completion only on actual evidence changes, and preserve genuine edited re-completion with the existing one-reward-per-project policy.",
+  "regressionEvidence": {
+    "actualComponentHandlersAndRewardStore": {
+      "checkedAt": "2026-11-25T01:22:11.168Z",
+      "isolatedInMemoryOnly": true,
+      "productionModified": false,
+      "actualComponentHandlers": true,
+      "actualRewardStorage": true,
+      "results": [
+        {
+          "project": "solar",
+          "invalidSaveBlocked": true,
+          "firstSave": true,
+          "rapidRepeatIdempotent": true,
+          "repeatTimestampAndContextPreserved": true,
+          "refreshPreserved": true,
+          "metadataAndNoopEditPreserved": true,
+          "editedRecompletion": true,
+          "oneRewardPerProject": true
+        },
+        {
+          "project": "cooling",
+          "invalidSaveBlocked": true,
+          "firstSave": true,
+          "rapidRepeatIdempotent": true,
+          "repeatTimestampAndContextPreserved": true,
+          "refreshPreserved": true,
+          "metadataAndNoopEditPreserved": true,
+          "editedRecompletion": true,
+          "oneRewardPerProject": true
+        },
+        {
+          "project": "bridge",
+          "invalidSaveBlocked": true,
+          "firstSave": true,
+          "rapidRepeatIdempotent": true,
+          "repeatTimestampAndContextPreserved": true,
+          "refreshPreserved": true,
+          "metadataAndNoopEditPreserved": true,
+          "editedRecompletion": true,
+          "oneRewardPerProject": true
+        }
+      ]
+    },
+    "productionBuildAndReleaseChecks": "PASS in run45525726315",
+    "liveAssetHashes": {
+      "matched": 46,
+      "checked": 46
+    },
+    "liveBrowserRun": 45526454007,
+    "liveBrowserStatus": "success",
+    "artifact": "https://github.com/AlexJang14/altwing-production/actions/runs/45526454007/artifacts/14983260529",
+    "artifactSha256": "7d52e52f6c99323c940c1e1e68a31b0cfe9974b8c7aa3af502b8b190000ad417",
+    "engines": [
+      {
+        "engine": "chromium",
+        "browserVersion": "151.0.7922.34",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "checks": [
+          {
+            "id": "live-project-and-pack-persistence",
+            "status": "PASS",
+            "detail": {
+              "initialCompletedAt": "2026-11-25T01:33:23.657Z",
+              "repeatCompletedAt": "2026-11-25T01:33:23.657Z",
+              "editedCompletedAt": "2026-11-25T01:33:29.357Z",
+              "repeatAndRefreshPreserved": true,
+              "editedCycleSavedOnce": true,
+              "assessmentReopenedAfterRepeat": false,
+              "oneRewardPerProject": true,
+              "packDialogOpened": true,
+              "productionAnalyticsOptedOut": true,
+              "completionEventCountsVerifiedSeparately": "Actual-handler in-memory regression tests; no synthetic production events emitted"
+            },
+            "screenshot": "chromium-live-project-and-pack-persistence.jpg"
+          },
+          {
+            "id": "live-mobile-emulation-and-privacy",
+            "status": "PASS",
+            "detail": {
+              "physicalDevice": false,
+              "statsConsent": "no",
+              "DNT": "1",
+              "GPC": true,
+              "unintendedAnalyticsOrApiRequests": 0
+            },
+            "screenshot": "chromium-live-mobile-emulation-and-privacy.jpg"
+          }
+        ],
+        "consoleErrors": [],
+        "pageErrors": [],
+        "unexpectedRequests": [],
+        "failedResources": []
+      },
+      {
+        "engine": "firefox",
+        "browserVersion": "153.0",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "checks": [
+          {
+            "id": "live-project-and-pack-persistence",
+            "status": "PASS",
+            "detail": {
+              "initialCompletedAt": "2026-11-25T01:33:41.284Z",
+              "repeatCompletedAt": "2026-11-25T01:33:41.284Z",
+              "editedCompletedAt": "2026-11-25T01:33:48.609Z",
+              "repeatAndRefreshPreserved": true,
+              "editedCycleSavedOnce": true,
+              "assessmentReopenedAfterRepeat": false,
+              "oneRewardPerProject": true,
+              "packDialogOpened": true,
+              "productionAnalyticsOptedOut": true,
+              "completionEventCountsVerifiedSeparately": "Actual-handler in-memory regression tests; no synthetic production events emitted"
+            },
+            "screenshot": "firefox-live-project-and-pack-persistence.jpg"
+          },
+          {
+            "id": "live-mobile-emulation-and-privacy",
+            "status": "PASS",
+            "detail": {
+              "physicalDevice": false,
+              "statsConsent": "no",
+              "DNT": "1",
+              "GPC": true,
+              "unintendedAnalyticsOrApiRequests": 0
+            },
+            "screenshot": "firefox-live-mobile-emulation-and-privacy.jpg"
+          }
+        ],
+        "consoleErrors": [],
+        "pageErrors": [],
+        "unexpectedRequests": [],
+        "failedResources": []
+      }
+    ]
+  },
+  "originalFailure": {
+    "run": 45523329135,
+    "status": "FAIL \u2014 historical actual timestamp defect",
+    "preserved": true,
+    "supersededByApplicationFix": true,
+    "strictTimestampAssertionRetained": true
+  },
+  "preservation": {
+    "newMigrationInThisCorrection": false,
+    "existingTwelveTablesUnchanged": true,
+    "runtimeEnvironmentRevision": 5,
+    "bothAdministratorSettingsPreserved": true,
+    "stylingAndAssetsChanged": false,
+    "existingUserRecordsRewritten": false,
+    "automationSettingsChangedByCorrection": false,
+    "mascotExceptionPreserved": true,
+    "frozenEarlierCandidatesPreserved": true,
+    "qaProductionSurveyOrEventWrites": false
+  },
+  "liveIntelligence": {
+    "status": "ACTIVATED AND ACTUAL PUBLISHING VERIFIED",
+    "ownerConfirmedBothVariablesTrue": true,
+    "ciObservedSwitches": {
+      "automationEnabled": true,
+      "publishingEnabled": true
+    },
+    "weeklyPublishRun": 45523397495,
+    "dailyPublishRun": 45523867979,
+    "bothPublishingAndPagesSucceeded": true,
+    "recordsRetained": 733,
+    "recordsDeleted": 0,
+    "unreviewedSourcesDisabled": 126,
+    "scorecardCollectorDisabled": true,
+    "monthlyCronDisabled": true,
+    "firstScheduledCronInvocation": "UNVERIFIED \u2014 future occurrence; manual publishing and active configuration verified",
+    "doNotRepeatActivation": true
+  },
+  "manualDeferrals": {
+    "M01": "UNVERIFIED",
+    "M02": "UNVERIFIED",
+    "M03": "UNVERIFIED",
+    "M04": "UNVERIFIED",
+    "A03": "UNVERIFIED",
+    "A04": "UNVERIFIED",
+    "I02": "UNVERIFIED"
+  },
+  "remainingProductionVerification": [
+    {
+      "id": "I02 / L05",
+      "status": "UNVERIFIED",
+      "priority": "FIRST",
+      "scope": "Genuinely signed-in unauthorized account denial on private reports, stories and exports. Anonymous live404/401 and isolated server authorization tests pass."
+    },
+    {
+      "id": "L03",
+      "status": "UNVERIFIED",
+      "scope": "Genuine voluntary participant submission receipt matched to stored response and authorized report/export retrieval. No synthetic production feedback was submitted."
+    },
+    {
+      "id": "L05 authenticated new endpoints",
+      "status": "UNVERIFIED",
+      "scope": "Both actual accounts on the new private routes. Existing I01/I03 owner-reported PASS retained; this connection does not supply visitor identities."
+    },
+    {
+      "id": "L06",
+      "status": "UNVERIFIED",
+      "scope": "Historical reporting preparation through the existing authenticated administrator action."
+    },
+    {
+      "id": "L02 / L04 / L07 remaining scope",
+      "status": "UNVERIFIED",
+      "scope": "Cloudflare Visits and genuinely consented positive transmission; real behavioral ingestion; remaining privacy scenarios beyond the tested opt-out. Browser project tests opted out of production metrics."
+    },
+    {
+      "id": "M01-M04 / A03-A04",
+      "status": "UNVERIFIED \u2014 ACCEPTED POST-LAUNCH DEFERRAL",
+      "scope": "Physical phones, software keyboard/touch, screen readers and actual OS/browser zoom."
+    },
+    {
+      "id": "production database recovery",
+      "status": "UNVERIFIED \u2014 PREVIOUSLY ACKNOWLEDGED",
+      "scope": "Code rollback does not restore database contents."
+    }
+  ],
+  "administratorLogin": "https://altwing-engineering-pathways.theanna.chatgpt.site/admin/login",
+  "rollback": "Normal frontend revert of f23651c and supported backendversion12; no database down-migration or record deletion. The initial complete release remains in history."
+}
